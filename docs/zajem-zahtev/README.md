@@ -72,27 +72,20 @@ nefunkcionalne zahteve: delovanje funkcionalnosti v 100 ms, dostopno za različn
 4. Pregled uporabniškega profila
 5. Ureditev profila
 6. Brisanje profila
-7. Sprememba gesla
-8. Dodajanje novice o dogodkih, spremembah v občini, aktualnih dogajanj...
-9. Urejanje novice
-10. Brisanje novice
-11. Pregled novice
-12. Dodajanje predlogov o poškodbah, idejah, težavah... 
-13. Glasovanje med predlogi
-14. Urejanje predlogov
-15. Pregled predlogov
-16. Brisanje predlogov
-17. Pošiljanje sporočil
-18. Iskanje novice/predlogov
-19. Pregled profilov ostalih uporabnikov
-20. Komentiranje
+7. Dodajanje novic o dogodkih, spremembah v občini, aktualnih dogajanj...
+8. Urejanje novic
+9. Brisanje novic
+10. Pregled novic
+11. Dodajanje predlogov o odpravljanju poškodb, novih idej, težavah... 
+12. Glasovanje med predlogi
+13. Urejanje predlogov
+14. Pregled predlogov
+15. Brisanje predlogov
+16. Pošiljanje sporočil
+17. Iskanje novice/predlogov
+18. Pregled profilov ostalih uporabnikov
+19. Komentiranje
 
-
-V tem razdelku podrobno opišite posamezne funkcionalnosti, ki jih vaša aplikacija ponuja svojim uporabnikom. Za vsako funkcionalnost navedite naslednje podatke:
-
-### TO-DO Naziv zahteve
-
-#### Povzetek funkcionalnosti
 
 :dart: **TO-DO**
 
@@ -144,10 +137,6 @@ Neregistriran uporabnik lahko registrira račun, kar predstavlja osnovno funkcio
   - vhod in
   - pričakovan rezultat.
 
-#### Povzetek funkcionalnosti
-
-:dart: **TO-DO**
-
 ## 2. Prijava
 Registiran uporabnik, občni delavec, predstavnik občine ter administrator lahko s procesom prijave dostopajo do svojih računov in vseh funkcionalnosti, ki jih njihova vloga omogoča.
 
@@ -196,10 +185,6 @@ Registiran uporabnik, občni delavec, predstavnik občine ter administrator lahk
   - vhod in
   - pričakovan rezultat.
 
-#### Povzetek funkcionalnosti
-
-:dart: **TO-DO**
-
 ## 3. Odjava
 Registiran uporabnik, občni delavec, predstavnik občine ter administrator se lahko tudi odjavijo iz svojega računa ter aplikaciji pristopijo kot gostje.
 
@@ -247,10 +232,6 @@ Registiran uporabnik, občni delavec, predstavnik občine ter administrator se l
   - začetno stanje sistema,
   - vhod in
   - pričakovan rezultat.
-
-#### Povzetek funkcionalnosti
-
-:dart: **TO-DO**
 
 ## 4. Pregled uporabniškega profila
 Registriran uporabnik, občni delavec, predstavnik občine in administrator lahko pregledajo svoj račun ter informacije, ki jih delijo z drugimi.
@@ -302,10 +283,6 @@ Registriran uporabnik, občni delavec, predstavnik občine in administrator lahk
   - začetno stanje sistema,
   - vhod in
   - pričakovan rezultat.
-
-#### Povzetek funkcionalnosti
-
-:dart: **TO-DO**
 
 ## 5. Ureditev profila
 Registriran uporabnik, občni delavec, predstavnik občine in administrator lahko urejajo svoj profil ter posodabljajo osnovne informacije, kot so ime, priimek, geslo, itn.
@@ -453,11 +430,7 @@ Občni delavec in predstavnik občine lahko dodajajo novice o trenutnih dogajanj
   - vhod in
   - pričakovan rezultat.
 
-#### Povzetek funkcionalnosti
-
-:dart: **TO-DO**
-
-## 8. Urejanje novice
+## 8. Urejanje novic
 Občni delavec in predstavnik občine lahko urejata objavljenje novice. To je lahko potrebno zgolj zaradi manjše pravopisne napake ali pa kakšne bolj resne spremembe.
 
 #### Osnovni tok
@@ -504,10 +477,6 @@ Občni delavec in predstavnik občine lahko urejata objavljenje novice. To je la
   - začetno stanje sistema,
   - vhod in
   - pričakovan rezultat.
-
-#### Povzetek funkcionalnosti
-
-:dart: **TO-DO**
 
 ## 9. Brisanje novic
 Občni delavec in predstavnik občine lahko tudi pobrišeta novice, kar je izjemno koristno v primeru, da ugotovita, da je novica napačna ali pa, da je prišlo do neke spremembe.
@@ -557,11 +526,7 @@ Občni delavec in predstavnik občine lahko tudi pobrišeta novice, kar je izjem
   - vhod in
   - pričakovan rezultat.
 
-#### Povzetek funkcionalnosti
-
-:dart: **TO-DO**
-
-## 10. Pregled novice
+## 10. Pregled novic
 Registriran uporabnik, občni delavec, predstavnik občine in administrator lahko pregledujejo novice o aktualnih dogajanj v občini, del, aktivnosti, ipd.
 
 #### Osnovni tok
@@ -661,10 +626,6 @@ Registriran uporabnik, občni delavec, predstavnik občine in administrator lahk
   - vhod in
   - pričakovan rezultat.
 
-#### Povzetek funkcionalnosti
-
-:dart: **TO-DO**
-
 ## 12. Glasovanje med predlogi
 Registriran uporabnik, občni delavec, predstavnik občine in administrator lahko glasujejo med predlogi, izbirajo tistega, ki njim najbolj ustreza in ki bo bil v največji meri pomagal prosperitetu občine.
 
@@ -712,10 +673,6 @@ Registriran uporabnik, občni delavec, predstavnik občine in administrator lahk
   - začetno stanje sistema,
   - vhod in
   - pričakovan rezultat.
-
-#### Povzetek funkcionalnosti
-
-:dart: **TO-DO**
 
 ## 13. Urejanje predlogov
 Registriran uporabnik (autore predloga), občni delavec, predstavnik občine in administrator lahko urejajo predloge, kar bo še posebej koristno za boljše oblikovanje cilja predlogov, odpravljanje pravopisnih napak, ipd.
@@ -813,10 +770,6 @@ Registriran uporabnik, občni delavec, predstavnik občine in administrator lahk
   - vhod in
   - pričakovan rezultat.
 
-#### Povzetek funkcionalnosti
-
-:dart: **TO-DO**
-
 ## 15. Brisanje predlogov
 Registriran uporabnik (autor predloga), občni delavec, predstavnik občine in administrator lahko brišejo predloge, za katere menijo, da ne ustrezajo standardom in pogojem uporabe aplikacije.
 
@@ -864,10 +817,6 @@ Registriran uporabnik (autor predloga), občni delavec, predstavnik občine in a
   - začetno stanje sistema,
   - vhod in
   - pričakovan rezultat.
-
-#### Povzetek funkcionalnosti
-
-:dart: **TO-DO**
 
 ## 16. Pošiljanje sporočil
 Registriran uporabnik, občni delavec, predstavnik občine in administrator si lahko izmenjujejo sporočila med sabo, kar bo močno olajšalo povezovanje in komunikacijo članov občine.
@@ -917,11 +866,7 @@ Registriran uporabnik, občni delavec, predstavnik občine in administrator si l
   - vhod in
   - pričakovan rezultat.
 
-#### Povzetek funkcionalnosti
-
-:dart: **TO-DO**
-
-## 17. Iskanje novice/predlogov
+## 17. Iskanje novic/predlogov
 Registriran uporabnik, občni delavec, predstavnik občine in administrator lahko iščejo novice in predloge, ki jih zanimajo. Na ta način bodo hitreje dostopali do zase koristnih vsebin.
 
 #### Osnovni tok
@@ -968,11 +913,6 @@ Registriran uporabnik, občni delavec, predstavnik občine in administrator lahk
   - začetno stanje sistema,
   - vhod in
   - pričakovan rezultat.
-
-
-#### Povzetek funkcionalnosti
-
-:dart: **TO-DO**
 
 ## 18. Pregled profilov ostalih uporabnikov
 Registriran uporabnik, občni delavec, predstavnik občine in administrator lahko pregledujejo profile ostalih uporabnikov in na ta način lažje ustvarijo interakcijo med sabo.
@@ -1021,10 +961,6 @@ Registriran uporabnik, občni delavec, predstavnik občine in administrator lahk
   - začetno stanje sistema,
   - vhod in
   - pričakovan rezultat.
-
-  #### Povzetek funkcionalnosti
-
-:dart: **TO-DO**
 
 ## 19. Komentiranje
 Registriran uporabnik, občni delavec, predstavnik občine in administrator lahko komentirajo predloge/novice, kar bo prispevalo k lažjemu razumevanju ter hitrejši izmenjavi informacij, ki lahko koristijo večjem številu ljudi.
