@@ -3,14 +3,14 @@
 |                             |                                                         |
 | :-------------------------- | :------------------------------------------------------ |
 | **Naziv projekta**          | Občinski obveščevalnik |
-| **Člani projektne skupine** | :dart: **TO-DO** 1. član, 2. član, 3. član, 4. član in 5. član |
-| **Kraj in datum**           | :dart: **TO-DO** kraj, datum                                   |
+| **Člani projektne skupine** | Luka Markićević, Haris Kupinić, Luka Brodnik, Elena Najdova, Luka Pantar |
+| **Kraj in datum**           | Ljubljana, 28.3.2022                                   |
 
 ## Povzetek projekta
 
-:dart: **TO-DO**
+Tekom vsakdanjega življenja, marsikdo opazi napake, poškodbe in zlorabe prometnih infrastruktur ter občinskih posesti. Marskido se tudi spomni idej oziroma načinov kako bi lahko izboljšal vsakodnevno življenje. Zaradi kompliciranih pristopov k obveščanju občinskih delavcev se veliko teh opažanj oziroma idej ne izrazi in posledično tudi ne razreši. S skupino si želimo razviri aplikacijo, ki bi ta problem rešila in omogočala tekočo komunikacijo med občani ter občinskimi delavci. Uporabniki bi dobili obvestila o dogodkih in delih v občini kar preko aplikacije, preko nje pa bi lahko sporočali svoja mnenja in opažanja naravnost v pisarne upravnih enot. Aplikacija bi pravtako omogočala registriranim uporabnikom glasovati na predlogah njihovih soobčanov. Splošne novice s strani občine bi lahko objavljal samo predstavnik občine, ki bi bil tudi zadolžen za preverjanje verodostojnosti podatkov prejetih od občanov. Pravilne podatke bi nato tudo posredoval občni organizaciji, ki bi se s predlogom oziroma problemom tudi soočila.
 
-- Povzetek je, kot že vemo, celoten dokument, strnjen v največ 150 besed.
+Na trgu že obstajajo podobne rešitve za zadan problem. Od naše aplikacije se razlikujejo, ker so predvsem namenjene določeni občini, kar pomeni da se jih ne da uporabljati vsepovsod, ali pa delujejo na obsegu celotne države, kar pa je za posamične občine neučinkovito.
 
 ## 1. Uvod
 
