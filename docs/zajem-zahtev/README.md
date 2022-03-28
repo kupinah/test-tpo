@@ -94,36 +94,56 @@ Neregistriran uporabnik lahko registrira račun, kar predstavlja osnovno funkcio
 
 #### Osnovni tok
 
-:dart: **TO-DO**
+1. Neregistriran uporabnik lahko izbere gumb za registracijo.
+2. Uporabnik dobi regrstracijski obrazec
+3. Uporabnik izpolni osebne podatke
+4. Uporabnik izbere občino v kateri živi
+5. Uporabnik odda vlogo za registracijo
+6. Uporabnik prejme potrdilo o uspešni registraciji
 
-#### Alternativni tok(ovi)
+#### Alternativni tok 1  ***ali je izjemna? vaje
 
-:dart: **TO-DO**
+1. Neregistriran uporabnik lahko izbere gumb za registracijo.
+2. Uporabnik dobi regrstracijski obrazec
+3. Uporabnik neustrezno izpolni osebne podatke
+4. Uporabnik izbere občino v kateri živi
+5. Uporabnik odda vlogo za registracijo
+7. Uporabnik dobi obvestilo da so podatki neustrezno izpolnjeni in zavrne registracijo
+
+#### Alternativni tok 2
+
+1. Registriran uporabnik lahko izbere gumb za registracijo.
+2. Uporabnik dobi regrstracijski obrazec
+3. Uporabnik izpolni osebne podatke
+4. Uporabnik izbere občino v kateri živi
+5. Uporabnik odda vlogo za registracijo
+7. Uporabnik dobi obvestilo da je uporabnik že registriran in zavrne registracijo
 
 - Navesti je potrebno vse alternativne tokove, ki jih označite kot **Alternativni tok 1**, **Alternativni tok 2**, itd.
 
 #### Pogoji
 
-:dart: **TO-DO**
-
+Uporabnik ne sme biti že registriran.
+Ne obstaja uporabnik z istimi osebnimi podatki.
 - Navesti je potrebno pogoje, ki morajo biti izpolnjeni, da se funkcionalnost lahko prične izvajati?
 
 #### Posledice
 
-:dart: **TO-DO**
+Ob uspešni registraciji, se v bazi doda nov račun. Registriran uporabnik lahko nadaljuje s prijavo in dostopa do ostalih funkcionalnosti.
 
 - Navedite, kakšen je rezultat izvedbe osnovnega toka funkcionalnosti?
 
 #### Posebnosti
 
-:dart: **TO-DO**
+- Geslo mora biti sestavljeni iz vsaj 8 znakov, vsebovati mora vsaj eno številko in znak
+- Vsi podatki so shranjeni u skladu z varstvom osebnih podatkov v EU
 
 - Ali realizacija funkcionalnosti zahteva kakšne posebnosti, kot je npr. dodatna strojna oprema?
 - Se je potrebno držati kakšnih posebnih standardov?
 
 #### Prioritete identificiranih funkcionalnosti
 
-:dart: **TO-DO**
+Funkcionalnost spada pod MUST have prioriteto, saj brez registracije je aplikacija nima uporabnikov.
 
 - Za identificirane funkcionalnosti se z metodo **MoSCoW** (MUST have, SHOULD have, COULD have in WOULD have) določi prioritete.
 
@@ -142,36 +162,44 @@ Registiran uporabnik, občni delavec, predstavnik občine ter administrator lahk
 
 #### Osnovni tok
 
-:dart: **TO-DO**
+1. Registriran uporabnik izbere gumb za prijavo
+2. Registriran uporabnik dobi prijavni obrazec
+3. Registriran uporabnik izpolni obrazec s email-om in geslom
+4. Registriran uporabnik odda obrazec
+5. Registriran uporabnik ob uspešni prijavi dobi začetno stran
+6. Uporabnik lahko uporablja funkcionalnosti glede njegovo vlogo  *** ali različni tokovi? 
 
-#### Alternativni tok(ovi)
+#### Alternativni tok 1
 
-:dart: **TO-DO**
+1. Registriran uporabnik izbere gumb za prijavo
+2. Registriran uporabnik dobi prijavni obrazec
+3. Registriran uporabnik napačno izpolni obrazec s email-om in geslom
+4. Registriran uporabnik odda obrazec
+5. Registriran uporabnik dobi obvestilo da je email ali geslo napačno in je prijava zavrnjena
 
 - Navesti je potrebno vse alternativne tokove, ki jih označite kot **Alternativni tok 1**, **Alternativni tok 2**, itd.
 
 #### Pogoji
 
-:dart: **TO-DO**
-
+Uporabnik je že registriran in ni prijavljen. 
 - Navesti je potrebno pogoje, ki morajo biti izpolnjeni, da se funkcionalnost lahko prične izvajati?
 
 #### Posledice
 
-:dart: **TO-DO**
+Ob prijavi, uporabnik lahko uporablja funkcionalosti glede njegovo vlogo. Registriran uporabnik lahko pregleda/objavlja/briše predloge, bere novice, komenitra, glasuje, uredi svoj profil. Administrator lahko pregleda in briše predloge in novice, pa tudi poregleda/spremeni/briše uporabniške račune. Občni delavec lahko doda/spemeni/briše novice in pregleda predloge. Pretstavnik občine lahko obdela predloge in novice. 
 
 - Navedite, kakšen je rezultat izvedbe osnovnega toka funkcionalnosti?
 
 #### Posebnosti
 
-:dart: **TO-DO**
+Ni posebnosti.
 
 - Ali realizacija funkcionalnosti zahteva kakšne posebnosti, kot je npr. dodatna strojna oprema?
 - Se je potrebno držati kakšnih posebnih standardov?
 
 #### Prioritete identificiranih funkcionalnosti
 
-:dart: **TO-DO**
+Prijava spada pod MUST have prioriteto, saj brez prijavo uporabniki ne morejo dostopat do funkcionalnosti.
 
 - Za identificirane funkcionalnosti se z metodo **MoSCoW** (MUST have, SHOULD have, COULD have in WOULD have) določi prioritete.
 
@@ -191,35 +219,38 @@ Registiran uporabnik, občni delavec, predstavnik občine ter administrator se l
 #### Osnovni tok
 
 :dart: **TO-DO**
+1. Prijavljen uporabnik izbere gumb za odjavo
+2. Uporabnik potrdi odjavo
+3. Uporabnik je odjavljen iz sistema
 
 #### Alternativni tok(ovi)
 
-:dart: **TO-DO**
+Ni alternativnih tokov.
 
 - Navesti je potrebno vse alternativne tokove, ki jih označite kot **Alternativni tok 1**, **Alternativni tok 2**, itd.
 
 #### Pogoji
 
-:dart: **TO-DO**
+Uporabnik mora biti prijavljen.
 
 - Navesti je potrebno pogoje, ki morajo biti izpolnjeni, da se funkcionalnost lahko prične izvajati?
 
 #### Posledice
 
-:dart: **TO-DO**
+Uporabnik je odjavljen iz sistema in lahko uporablja aplikacijo kot neregistrirani uporabnik.
 
 - Navedite, kakšen je rezultat izvedbe osnovnega toka funkcionalnosti?
 
 #### Posebnosti
 
-:dart: **TO-DO**
+Ni posebnosti.
 
 - Ali realizacija funkcionalnosti zahteva kakšne posebnosti, kot je npr. dodatna strojna oprema?
 - Se je potrebno držati kakšnih posebnih standardov?
 
 #### Prioritete identificiranih funkcionalnosti
 
-:dart: **TO-DO**
+Funkcionalnost ima MUST have prioriteto, da se lahko drug uporabnik prijavi v aplikacijo.
 
 - Za identificirane funkcionalnosti se z metodo **MoSCoW** (MUST have, SHOULD have, COULD have in WOULD have) določi prioritete.
 
@@ -241,36 +272,37 @@ Registriran uporabnik, občni delavec, predstavnik občine in administrator lahk
 
 #### Osnovni tok
 
-:dart: **TO-DO**
+1. Registrirani uporabnik izbere gumb za pregled profila
+2. Uporabniku se prikaže njegov profil kjer lahko pregleda svoje osebne podatke, izbrano občino, objavljene novice/predloge/komentarje
 
 #### Alternativni tok(ovi)
 
-:dart: **TO-DO**
+Ni alternativnih tokov.  ***vaje
 
 - Navesti je potrebno vse alternativne tokove, ki jih označite kot **Alternativni tok 1**, **Alternativni tok 2**, itd.
 
 #### Pogoji
 
-:dart: **TO-DO**
+Uporabnik mora biti prijavljen.
 
 - Navesti je potrebno pogoje, ki morajo biti izpolnjeni, da se funkcionalnost lahko prične izvajati?
 
 #### Posledice
 
-:dart: **TO-DO**
+Uporabnik lahko pregleda svoj profil in vse kar je povezano z njim.
 
 - Navedite, kakšen je rezultat izvedbe osnovnega toka funkcionalnosti?
 
 #### Posebnosti
 
-:dart: **TO-DO**
+Ni posebnosti.
 
 - Ali realizacija funkcionalnosti zahteva kakšne posebnosti, kot je npr. dodatna strojna oprema?
 - Se je potrebno držati kakšnih posebnih standardov?
 
 #### Prioritete identificiranih funkcionalnosti
 
-:dart: **TO-DO**
+Funkcionalnost ima SHOULD have prioriteto. Spletna stran bo še vedno delovala brez pregleda profila, vendar otežuje uporabo aplikacijo. 
 
 - Za identificirane funkcionalnosti se z metodo **MoSCoW** (MUST have, SHOULD have, COULD have in WOULD have) določi prioritete.
 
@@ -289,36 +321,52 @@ Registriran uporabnik, občni delavec, predstavnik občine in administrator lahk
 
 #### Osnovni tok
 
-:dart: **TO-DO**
+1. Registrirani uporabnik izbere gumb za pregled profila
+2. Uporabniku se prikaže njegov profil
+3. Uporabnik izbere gumb za spremembo podatke
+4. Uporabnik izpolni obrazec z novimi podatki
+5. Uporabnik odda obrazec
+6. Ob uspešni spremembi, se uporabniku prikaže njegov profil s spremenjenimi podatki
 
-#### Alternativni tok(ovi)
+#### Alternativni tok 1
 
-:dart: **TO-DO**
+1. Administrator izbere uporabniški profil
+2. Administrator izbere gumb za spemembo profila
+3. Administrator izpolni obrazec z novimi podatki
+4. Administrator odda obrazec
+5. Ob uspešni spremembi, se administratoru prikaže izbran profil s spremenjenimi podatki
 
-- Navesti je potrebno vse alternativne tokove, ki jih označite kot **Alternativni tok 1**, **Alternativni tok 2**, itd.
+#### Alternativni tok 
+
+1. Registrirani uporabnik izbere gumb za pregled profila
+2. Uporabniku se prikaže njegov profil
+3. Uporabnik izbere gumb za spremembo podatke
+4. Uporabnik izpolni obrazec z neustreznimi podatki
+5. Uporabnik odda obrazec
+6. Uporabniku se prikaže obvestilo o neuspešni spremembi
 
 #### Pogoji
 
-:dart: **TO-DO**
+Uporabnik mora biti prijavljen.
 
 - Navesti je potrebno pogoje, ki morajo biti izpolnjeni, da se funkcionalnost lahko prične izvajati?
 
 #### Posledice
 
-:dart: **TO-DO**
+Spremenjen profil.
 
 - Navedite, kakšen je rezultat izvedbe osnovnega toka funkcionalnosti?
 
 #### Posebnosti
 
-:dart: **TO-DO**
+Ni posebnosti.
 
 - Ali realizacija funkcionalnosti zahteva kakšne posebnosti, kot je npr. dodatna strojna oprema?
 - Se je potrebno držati kakšnih posebnih standardov?
 
 #### Prioritete identificiranih funkcionalnosti
 
-:dart: **TO-DO**
+Funkcionalnost ima SHOULD have prioriteto. Aplikacija bo delovala brez nje, vendar spreminjanje podatkov postane zelo neunčikovito.
 
 - Za identificirane funkcionalnosti se z metodo **MoSCoW** (MUST have, SHOULD have, COULD have in WOULD have) določi prioritete.
 
