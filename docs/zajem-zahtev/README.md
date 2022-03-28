@@ -52,6 +52,28 @@ Na trgu že obstajajo podobne rešitve za zadan problem. Od naše aplikacije se 
 
 ## 5. Funkcionalne zahteve
 
+1. Registracija
+2. Prijava
+3. Odjava
+4. Pregled uporabniškega profila
+5. Ureditev profila
+6. Brisanje profila
+7. Sprememba gesla
+8. Dodajanje novice o dogodkih, spremembah v občini, aktualnih dogajanj...
+9. Urejanje novice
+10. Brisanje novice
+11. Pregled novice
+12. Dodajanje predlogov o poškodbah, idejah, težavah... 
+13. Glasovanje med predlogi
+14. Urejanje predlogov
+15. Pregled predlogov
+16. Brisanje predlogov
+17. Pošiljanje sporočil
+18. Iskanje novice/predlogov
+19. Pregled profilov ostalih uporabnikov
+20. Komentiranje
+
+
 V tem razdelku podrobno opišite posamezne funkcionalnosti, ki jih vaša aplikacija ponuja svojim uporabnikom. Za vsako funkcionalnost navedite naslednje podatke:
 
 ### TO-DO Naziv zahteve
