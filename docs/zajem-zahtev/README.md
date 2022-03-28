@@ -20,7 +20,11 @@ Na trgu že obstajajo podobne rešitve za zadan problem. Od naše aplikacije se 
 
 ## 2. Uporabniške vloge
 
-:dart: **TO-DO**
+- Neregistriran uporabnik - Vsak uporabnik, ki ni registriran. Neregistriran uporabnik si lahko ogleda novice, vendar ne more objavljati, pošiljati predloge in komunicirati s ostalimi uporabniki.  
+- Registriran uporabniki - Uporabniki ki so že naredili registracijo in prijavo na spletno stran. Registrirani uporabniki lahko sledijo novice za svojo občino, pošiljajo predloge in komunicirati s ostalimi uporabniki. 
+- Upravitelji občine - Upravljateli občine so zaposleni na občinskem uradu. Upravljateli lahko obljavljajo novice, pregledajo predloge, komunicirajo s ostalimi oupravljateli in s uporabniki. 
+- Administrator - Administrator skrbi za pravilno delovanje in uporabljanje spletno stran. Lahko ogleda in briše objave in profilov. 
+- :dart: **TO-DO**
 
 - Opredelite glavne tipe uporabnikov vaše aplikacije glede na funkcionalnosti, ki jih imajo na voljo.
 - Zelo pomembno je, da uporabniške vloge konsistentno imenujete. Na primer, če ste definirali vlogo **učitelj**, morate povsod uporabljati samostalnik **učitelj**, ne pa morda **profesor** ali **pedagog**. Tehniška besedila žal ne morejo dosegati leposlovnih standardov, tudi če so še tako dobro napisana.
