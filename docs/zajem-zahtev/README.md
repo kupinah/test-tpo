@@ -82,6 +82,997 @@ V tem razdelku podrobno opišite posamezne funkcionalnosti, ki jih vaša aplikac
 
 :dart: **TO-DO**
 
+## 1. Registracija
+Registracija predstavlja osnovno funkcionalnost, ki še neregistriranemu uporabniku omogoča polno izkušnjo pri uporabi naše aplikacije. Po izpolnjeni registracijski formi in uspešni registraciji, uporabnik si bo ustvaril račun s pomočjo, katerega bo lahko dostopal do različnih vsebin in funkionalnosti aplikacije.
+
+- **Povzetek funkcionalnosti** v enem ali največ nekaj stavkih.
+- Prvi stavek naj se prične z nazivom uporabniške vloge (ali uporabniških vlog, če se funkcionalnost nanaša na več kot eno vlogo), nato pa naj sledita beseda **lahko** in navedba funkcionalnosti.
+
+#### Osnovni tok
+
+:dart: **TO-DO**
+
+#### Alternativni tok(ovi)
+
+:dart: **TO-DO**
+
+- Navesti je potrebno vse alternativne tokove, ki jih označite kot **Alternativni tok 1**, **Alternativni tok 2**, itd.
+
+#### Pogoji
+
+:dart: **TO-DO**
+
+- Navesti je potrebno pogoje, ki morajo biti izpolnjeni, da se funkcionalnost lahko prične izvajati?
+
+#### Posledice
+
+:dart: **TO-DO**
+
+- Navedite, kakšen je rezultat izvedbe osnovnega toka funkcionalnosti?
+
+#### Posebnosti
+
+:dart: **TO-DO**
+
+- Ali realizacija funkcionalnosti zahteva kakšne posebnosti, kot je npr. dodatna strojna oprema?
+- Se je potrebno držati kakšnih posebnih standardov?
+
+#### Prioritete identificiranih funkcionalnosti
+
+:dart: **TO-DO**
+
+- Za identificirane funkcionalnosti se z metodo **MoSCoW** (MUST have, SHOULD have, COULD have in WOULD have) določi prioritete.
+
+#### Sprejemni testi
+
+:dart: **TO-DO**
+
+- Navedite sprejmne teste, kjer opišete:
+  - funkcijo, ki se testira,
+  - začetno stanje sistema,
+  - vhod in
+  - pričakovan rezultat.
+
+#### Povzetek funkcionalnosti
+
+:dart: **TO-DO**
+
+## 1. Registracija
+Registracija predstavlja osnovno funkcionalnost, ki še neregistriranemu uporabniku omogoča polno izkušnjo pri uporabi naše aplikacije. Po izpolnjeni registracijski formi in uspešni registraciji, uporabnik si bo ustvaril račun s pomočjo, katerega bo lahko dostopal do različnih vsebin in funkionalnosti aplikacije.
+
+- **Povzetek funkcionalnosti** v enem ali največ nekaj stavkih.
+- Prvi stavek naj se prične z nazivom uporabniške vloge (ali uporabniških vlog, če se funkcionalnost nanaša na več kot eno vlogo), nato pa naj sledita beseda **lahko** in navedba funkcionalnosti.
+
+#### Osnovni tok
+
+:dart: **TO-DO**
+
+#### Alternativni tok(ovi)
+
+:dart: **TO-DO**
+
+- Navesti je potrebno vse alternativne tokove, ki jih označite kot **Alternativni tok 1**, **Alternativni tok 2**, itd.
+
+#### Pogoji
+
+:dart: **TO-DO**
+
+- Navesti je potrebno pogoje, ki morajo biti izpolnjeni, da se funkcionalnost lahko prične izvajati?
+
+#### Posledice
+
+:dart: **TO-DO**
+
+- Navedite, kakšen je rezultat izvedbe osnovnega toka funkcionalnosti?
+
+#### Posebnosti
+
+:dart: **TO-DO**
+
+- Ali realizacija funkcionalnosti zahteva kakšne posebnosti, kot je npr. dodatna strojna oprema?
+- Se je potrebno držati kakšnih posebnih standardov?
+
+#### Prioritete identificiranih funkcionalnosti
+
+:dart: **TO-DO**
+
+- Za identificirane funkcionalnosti se z metodo **MoSCoW** (MUST have, SHOULD have, COULD have in WOULD have) določi prioritete.
+
+#### Sprejemni testi
+
+:dart: **TO-DO**
+
+- Navedite sprejmne teste, kjer opišete:
+  - funkcijo, ki se testira,
+  - začetno stanje sistema,
+  - vhod in
+  - pričakovan rezultat.
+
+#### Povzetek funkcionalnosti
+
+:dart: **TO-DO**
+
+## 1. Registracija
+Registracija predstavlja osnovno funkcionalnost, ki še neregistriranemu uporabniku omogoča polno izkušnjo pri uporabi naše aplikacije. Po izpolnjeni registracijski formi in uspešni registraciji, uporabnik si bo ustvaril račun s pomočjo, katerega bo lahko dostopal do različnih vsebin in funkionalnosti aplikacije.
+
+- **Povzetek funkcionalnosti** v enem ali največ nekaj stavkih.
+- Prvi stavek naj se prične z nazivom uporabniške vloge (ali uporabniških vlog, če se funkcionalnost nanaša na več kot eno vlogo), nato pa naj sledita beseda **lahko** in navedba funkcionalnosti.
+
+#### Osnovni tok
+
+:dart: **TO-DO**
+
+#### Alternativni tok(ovi)
+
+:dart: **TO-DO**
+
+- Navesti je potrebno vse alternativne tokove, ki jih označite kot **Alternativni tok 1**, **Alternativni tok 2**, itd.
+
+#### Pogoji
+
+:dart: **TO-DO**
+
+- Navesti je potrebno pogoje, ki morajo biti izpolnjeni, da se funkcionalnost lahko prične izvajati?
+
+#### Posledice
+
+:dart: **TO-DO**
+
+- Navedite, kakšen je rezultat izvedbe osnovnega toka funkcionalnosti?
+
+#### Posebnosti
+
+:dart: **TO-DO**
+
+- Ali realizacija funkcionalnosti zahteva kakšne posebnosti, kot je npr. dodatna strojna oprema?
+- Se je potrebno držati kakšnih posebnih standardov?
+
+#### Prioritete identificiranih funkcionalnosti
+
+:dart: **TO-DO**
+
+- Za identificirane funkcionalnosti se z metodo **MoSCoW** (MUST have, SHOULD have, COULD have in WOULD have) določi prioritete.
+
+#### Sprejemni testi
+
+:dart: **TO-DO**
+
+- Navedite sprejmne teste, kjer opišete:
+  - funkcijo, ki se testira,
+  - začetno stanje sistema,
+  - vhod in
+  - pričakovan rezultat.
+
+#### Povzetek funkcionalnosti
+
+:dart: **TO-DO**
+
+## 1. Registracija
+Registracija predstavlja osnovno funkcionalnost, ki še neregistriranemu uporabniku omogoča polno izkušnjo pri uporabi naše aplikacije. Po izpolnjeni registracijski formi in uspešni registraciji, uporabnik si bo ustvaril račun s pomočjo, katerega bo lahko dostopal do različnih vsebin in funkionalnosti aplikacije.
+
+- **Povzetek funkcionalnosti** v enem ali največ nekaj stavkih.
+- Prvi stavek naj se prične z nazivom uporabniške vloge (ali uporabniških vlog, če se funkcionalnost nanaša na več kot eno vlogo), nato pa naj sledita beseda **lahko** in navedba funkcionalnosti.
+
+#### Osnovni tok
+
+:dart: **TO-DO**
+
+#### Alternativni tok(ovi)
+
+:dart: **TO-DO**
+
+- Navesti je potrebno vse alternativne tokove, ki jih označite kot **Alternativni tok 1**, **Alternativni tok 2**, itd.
+
+#### Pogoji
+
+:dart: **TO-DO**
+
+- Navesti je potrebno pogoje, ki morajo biti izpolnjeni, da se funkcionalnost lahko prične izvajati?
+
+#### Posledice
+
+:dart: **TO-DO**
+
+- Navedite, kakšen je rezultat izvedbe osnovnega toka funkcionalnosti?
+
+#### Posebnosti
+
+:dart: **TO-DO**
+
+- Ali realizacija funkcionalnosti zahteva kakšne posebnosti, kot je npr. dodatna strojna oprema?
+- Se je potrebno držati kakšnih posebnih standardov?
+
+#### Prioritete identificiranih funkcionalnosti
+
+:dart: **TO-DO**
+
+- Za identificirane funkcionalnosti se z metodo **MoSCoW** (MUST have, SHOULD have, COULD have in WOULD have) določi prioritete.
+
+#### Sprejemni testi
+
+:dart: **TO-DO**
+
+- Navedite sprejmne teste, kjer opišete:
+  - funkcijo, ki se testira,
+  - začetno stanje sistema,
+  - vhod in
+  - pričakovan rezultat.
+
+#### Povzetek funkcionalnosti
+
+:dart: **TO-DO**
+
+## 1. Registracija
+Registracija predstavlja osnovno funkcionalnost, ki še neregistriranemu uporabniku omogoča polno izkušnjo pri uporabi naše aplikacije. Po izpolnjeni registracijski formi in uspešni registraciji, uporabnik si bo ustvaril račun s pomočjo, katerega bo lahko dostopal do različnih vsebin in funkionalnosti aplikacije.
+
+- **Povzetek funkcionalnosti** v enem ali največ nekaj stavkih.
+- Prvi stavek naj se prične z nazivom uporabniške vloge (ali uporabniških vlog, če se funkcionalnost nanaša na več kot eno vlogo), nato pa naj sledita beseda **lahko** in navedba funkcionalnosti.
+
+#### Osnovni tok
+
+:dart: **TO-DO**
+
+#### Alternativni tok(ovi)
+
+:dart: **TO-DO**
+
+- Navesti je potrebno vse alternativne tokove, ki jih označite kot **Alternativni tok 1**, **Alternativni tok 2**, itd.
+
+#### Pogoji
+
+:dart: **TO-DO**
+
+- Navesti je potrebno pogoje, ki morajo biti izpolnjeni, da se funkcionalnost lahko prične izvajati?
+
+#### Posledice
+
+:dart: **TO-DO**
+
+- Navedite, kakšen je rezultat izvedbe osnovnega toka funkcionalnosti?
+
+#### Posebnosti
+
+:dart: **TO-DO**
+
+- Ali realizacija funkcionalnosti zahteva kakšne posebnosti, kot je npr. dodatna strojna oprema?
+- Se je potrebno držati kakšnih posebnih standardov?
+
+#### Prioritete identificiranih funkcionalnosti
+
+:dart: **TO-DO**
+
+- Za identificirane funkcionalnosti se z metodo **MoSCoW** (MUST have, SHOULD have, COULD have in WOULD have) določi prioritete.
+
+#### Sprejemni testi
+
+:dart: **TO-DO**
+
+- Navedite sprejmne teste, kjer opišete:
+  - funkcijo, ki se testira,
+  - začetno stanje sistema,
+  - vhod in
+  - pričakovan rezultat.
+
+#### Povzetek funkcionalnosti
+
+:dart: **TO-DO**
+
+## 1. Registracija
+Registracija predstavlja osnovno funkcionalnost, ki še neregistriranemu uporabniku omogoča polno izkušnjo pri uporabi naše aplikacije. Po izpolnjeni registracijski formi in uspešni registraciji, uporabnik si bo ustvaril račun s pomočjo, katerega bo lahko dostopal do različnih vsebin in funkionalnosti aplikacije.
+
+- **Povzetek funkcionalnosti** v enem ali največ nekaj stavkih.
+- Prvi stavek naj se prične z nazivom uporabniške vloge (ali uporabniških vlog, če se funkcionalnost nanaša na več kot eno vlogo), nato pa naj sledita beseda **lahko** in navedba funkcionalnosti.
+
+#### Osnovni tok
+
+:dart: **TO-DO**
+
+#### Alternativni tok(ovi)
+
+:dart: **TO-DO**
+
+- Navesti je potrebno vse alternativne tokove, ki jih označite kot **Alternativni tok 1**, **Alternativni tok 2**, itd.
+
+#### Pogoji
+
+:dart: **TO-DO**
+
+- Navesti je potrebno pogoje, ki morajo biti izpolnjeni, da se funkcionalnost lahko prične izvajati?
+
+#### Posledice
+
+:dart: **TO-DO**
+
+- Navedite, kakšen je rezultat izvedbe osnovnega toka funkcionalnosti?
+
+#### Posebnosti
+
+:dart: **TO-DO**
+
+- Ali realizacija funkcionalnosti zahteva kakšne posebnosti, kot je npr. dodatna strojna oprema?
+- Se je potrebno držati kakšnih posebnih standardov?
+
+#### Prioritete identificiranih funkcionalnosti
+
+:dart: **TO-DO**
+
+- Za identificirane funkcionalnosti se z metodo **MoSCoW** (MUST have, SHOULD have, COULD have in WOULD have) določi prioritete.
+
+#### Sprejemni testi
+
+:dart: **TO-DO**
+
+- Navedite sprejmne teste, kjer opišete:
+  - funkcijo, ki se testira,
+  - začetno stanje sistema,
+  - vhod in
+  - pričakovan rezultat.
+
+#### Povzetek funkcionalnosti
+
+:dart: **TO-DO**
+
+## 1. Registracija
+Registracija predstavlja osnovno funkcionalnost, ki še neregistriranemu uporabniku omogoča polno izkušnjo pri uporabi naše aplikacije. Po izpolnjeni registracijski formi in uspešni registraciji, uporabnik si bo ustvaril račun s pomočjo, katerega bo lahko dostopal do različnih vsebin in funkionalnosti aplikacije.
+
+- **Povzetek funkcionalnosti** v enem ali največ nekaj stavkih.
+- Prvi stavek naj se prične z nazivom uporabniške vloge (ali uporabniških vlog, če se funkcionalnost nanaša na več kot eno vlogo), nato pa naj sledita beseda **lahko** in navedba funkcionalnosti.
+
+#### Osnovni tok
+
+:dart: **TO-DO**
+
+#### Alternativni tok(ovi)
+
+:dart: **TO-DO**
+
+- Navesti je potrebno vse alternativne tokove, ki jih označite kot **Alternativni tok 1**, **Alternativni tok 2**, itd.
+
+#### Pogoji
+
+:dart: **TO-DO**
+
+- Navesti je potrebno pogoje, ki morajo biti izpolnjeni, da se funkcionalnost lahko prične izvajati?
+
+#### Posledice
+
+:dart: **TO-DO**
+
+- Navedite, kakšen je rezultat izvedbe osnovnega toka funkcionalnosti?
+
+#### Posebnosti
+
+:dart: **TO-DO**
+
+- Ali realizacija funkcionalnosti zahteva kakšne posebnosti, kot je npr. dodatna strojna oprema?
+- Se je potrebno držati kakšnih posebnih standardov?
+
+#### Prioritete identificiranih funkcionalnosti
+
+:dart: **TO-DO**
+
+- Za identificirane funkcionalnosti se z metodo **MoSCoW** (MUST have, SHOULD have, COULD have in WOULD have) določi prioritete.
+
+#### Sprejemni testi
+
+:dart: **TO-DO**
+
+- Navedite sprejmne teste, kjer opišete:
+  - funkcijo, ki se testira,
+  - začetno stanje sistema,
+  - vhod in
+  - pričakovan rezultat.
+
+#### Povzetek funkcionalnosti
+
+:dart: **TO-DO**
+
+## 1. Registracija
+Registracija predstavlja osnovno funkcionalnost, ki še neregistriranemu uporabniku omogoča polno izkušnjo pri uporabi naše aplikacije. Po izpolnjeni registracijski formi in uspešni registraciji, uporabnik si bo ustvaril račun s pomočjo, katerega bo lahko dostopal do različnih vsebin in funkionalnosti aplikacije.
+
+- **Povzetek funkcionalnosti** v enem ali največ nekaj stavkih.
+- Prvi stavek naj se prične z nazivom uporabniške vloge (ali uporabniških vlog, če se funkcionalnost nanaša na več kot eno vlogo), nato pa naj sledita beseda **lahko** in navedba funkcionalnosti.
+
+#### Osnovni tok
+
+:dart: **TO-DO**
+
+#### Alternativni tok(ovi)
+
+:dart: **TO-DO**
+
+- Navesti je potrebno vse alternativne tokove, ki jih označite kot **Alternativni tok 1**, **Alternativni tok 2**, itd.
+
+#### Pogoji
+
+:dart: **TO-DO**
+
+- Navesti je potrebno pogoje, ki morajo biti izpolnjeni, da se funkcionalnost lahko prične izvajati?
+
+#### Posledice
+
+:dart: **TO-DO**
+
+- Navedite, kakšen je rezultat izvedbe osnovnega toka funkcionalnosti?
+
+#### Posebnosti
+
+:dart: **TO-DO**
+
+- Ali realizacija funkcionalnosti zahteva kakšne posebnosti, kot je npr. dodatna strojna oprema?
+- Se je potrebno držati kakšnih posebnih standardov?
+
+#### Prioritete identificiranih funkcionalnosti
+
+:dart: **TO-DO**
+
+- Za identificirane funkcionalnosti se z metodo **MoSCoW** (MUST have, SHOULD have, COULD have in WOULD have) določi prioritete.
+
+#### Sprejemni testi
+
+:dart: **TO-DO**
+
+- Navedite sprejmne teste, kjer opišete:
+  - funkcijo, ki se testira,
+  - začetno stanje sistema,
+  - vhod in
+  - pričakovan rezultat.
+
+#### Povzetek funkcionalnosti
+
+:dart: **TO-DO**
+
+## 1. Registracija
+Registracija predstavlja osnovno funkcionalnost, ki še neregistriranemu uporabniku omogoča polno izkušnjo pri uporabi naše aplikacije. Po izpolnjeni registracijski formi in uspešni registraciji, uporabnik si bo ustvaril račun s pomočjo, katerega bo lahko dostopal do različnih vsebin in funkionalnosti aplikacije.
+
+- **Povzetek funkcionalnosti** v enem ali največ nekaj stavkih.
+- Prvi stavek naj se prične z nazivom uporabniške vloge (ali uporabniških vlog, če se funkcionalnost nanaša na več kot eno vlogo), nato pa naj sledita beseda **lahko** in navedba funkcionalnosti.
+
+#### Osnovni tok
+
+:dart: **TO-DO**
+
+#### Alternativni tok(ovi)
+
+:dart: **TO-DO**
+
+- Navesti je potrebno vse alternativne tokove, ki jih označite kot **Alternativni tok 1**, **Alternativni tok 2**, itd.
+
+#### Pogoji
+
+:dart: **TO-DO**
+
+- Navesti je potrebno pogoje, ki morajo biti izpolnjeni, da se funkcionalnost lahko prične izvajati?
+
+#### Posledice
+
+:dart: **TO-DO**
+
+- Navedite, kakšen je rezultat izvedbe osnovnega toka funkcionalnosti?
+
+#### Posebnosti
+
+:dart: **TO-DO**
+
+- Ali realizacija funkcionalnosti zahteva kakšne posebnosti, kot je npr. dodatna strojna oprema?
+- Se je potrebno držati kakšnih posebnih standardov?
+
+#### Prioritete identificiranih funkcionalnosti
+
+:dart: **TO-DO**
+
+- Za identificirane funkcionalnosti se z metodo **MoSCoW** (MUST have, SHOULD have, COULD have in WOULD have) določi prioritete.
+
+#### Sprejemni testi
+
+:dart: **TO-DO**
+
+- Navedite sprejmne teste, kjer opišete:
+  - funkcijo, ki se testira,
+  - začetno stanje sistema,
+  - vhod in
+  - pričakovan rezultat.
+
+#### Povzetek funkcionalnosti
+
+:dart: **TO-DO**
+
+## 1. Registracija
+Registracija predstavlja osnovno funkcionalnost, ki še neregistriranemu uporabniku omogoča polno izkušnjo pri uporabi naše aplikacije. Po izpolnjeni registracijski formi in uspešni registraciji, uporabnik si bo ustvaril račun s pomočjo, katerega bo lahko dostopal do različnih vsebin in funkionalnosti aplikacije.
+
+- **Povzetek funkcionalnosti** v enem ali največ nekaj stavkih.
+- Prvi stavek naj se prične z nazivom uporabniške vloge (ali uporabniških vlog, če se funkcionalnost nanaša na več kot eno vlogo), nato pa naj sledita beseda **lahko** in navedba funkcionalnosti.
+
+#### Osnovni tok
+
+:dart: **TO-DO**
+
+#### Alternativni tok(ovi)
+
+:dart: **TO-DO**
+
+- Navesti je potrebno vse alternativne tokove, ki jih označite kot **Alternativni tok 1**, **Alternativni tok 2**, itd.
+
+#### Pogoji
+
+:dart: **TO-DO**
+
+- Navesti je potrebno pogoje, ki morajo biti izpolnjeni, da se funkcionalnost lahko prične izvajati?
+
+#### Posledice
+
+:dart: **TO-DO**
+
+- Navedite, kakšen je rezultat izvedbe osnovnega toka funkcionalnosti?
+
+#### Posebnosti
+
+:dart: **TO-DO**
+
+- Ali realizacija funkcionalnosti zahteva kakšne posebnosti, kot je npr. dodatna strojna oprema?
+- Se je potrebno držati kakšnih posebnih standardov?
+
+#### Prioritete identificiranih funkcionalnosti
+
+:dart: **TO-DO**
+
+- Za identificirane funkcionalnosti se z metodo **MoSCoW** (MUST have, SHOULD have, COULD have in WOULD have) določi prioritete.
+
+#### Sprejemni testi
+
+:dart: **TO-DO**
+
+- Navedite sprejmne teste, kjer opišete:
+  - funkcijo, ki se testira,
+  - začetno stanje sistema,
+  - vhod in
+  - pričakovan rezultat.
+
+#### Povzetek funkcionalnosti
+
+:dart: **TO-DO**
+
+## 1. Registracija
+Registracija predstavlja osnovno funkcionalnost, ki še neregistriranemu uporabniku omogoča polno izkušnjo pri uporabi naše aplikacije. Po izpolnjeni registracijski formi in uspešni registraciji, uporabnik si bo ustvaril račun s pomočjo, katerega bo lahko dostopal do različnih vsebin in funkionalnosti aplikacije.
+
+- **Povzetek funkcionalnosti** v enem ali največ nekaj stavkih.
+- Prvi stavek naj se prične z nazivom uporabniške vloge (ali uporabniških vlog, če se funkcionalnost nanaša na več kot eno vlogo), nato pa naj sledita beseda **lahko** in navedba funkcionalnosti.
+
+#### Osnovni tok
+
+:dart: **TO-DO**
+
+#### Alternativni tok(ovi)
+
+:dart: **TO-DO**
+
+- Navesti je potrebno vse alternativne tokove, ki jih označite kot **Alternativni tok 1**, **Alternativni tok 2**, itd.
+
+#### Pogoji
+
+:dart: **TO-DO**
+
+- Navesti je potrebno pogoje, ki morajo biti izpolnjeni, da se funkcionalnost lahko prične izvajati?
+
+#### Posledice
+
+:dart: **TO-DO**
+
+- Navedite, kakšen je rezultat izvedbe osnovnega toka funkcionalnosti?
+
+#### Posebnosti
+
+:dart: **TO-DO**
+
+- Ali realizacija funkcionalnosti zahteva kakšne posebnosti, kot je npr. dodatna strojna oprema?
+- Se je potrebno držati kakšnih posebnih standardov?
+
+#### Prioritete identificiranih funkcionalnosti
+
+:dart: **TO-DO**
+
+- Za identificirane funkcionalnosti se z metodo **MoSCoW** (MUST have, SHOULD have, COULD have in WOULD have) določi prioritete.
+
+#### Sprejemni testi
+
+:dart: **TO-DO**
+
+- Navedite sprejmne teste, kjer opišete:
+  - funkcijo, ki se testira,
+  - začetno stanje sistema,
+  - vhod in
+  - pričakovan rezultat.
+
+#### Povzetek funkcionalnosti
+
+:dart: **TO-DO**
+
+## 1. Registracija
+Registracija predstavlja osnovno funkcionalnost, ki še neregistriranemu uporabniku omogoča polno izkušnjo pri uporabi naše aplikacije. Po izpolnjeni registracijski formi in uspešni registraciji, uporabnik si bo ustvaril račun s pomočjo, katerega bo lahko dostopal do različnih vsebin in funkionalnosti aplikacije.
+
+- **Povzetek funkcionalnosti** v enem ali največ nekaj stavkih.
+- Prvi stavek naj se prične z nazivom uporabniške vloge (ali uporabniških vlog, če se funkcionalnost nanaša na več kot eno vlogo), nato pa naj sledita beseda **lahko** in navedba funkcionalnosti.
+
+#### Osnovni tok
+
+:dart: **TO-DO**
+
+#### Alternativni tok(ovi)
+
+:dart: **TO-DO**
+
+- Navesti je potrebno vse alternativne tokove, ki jih označite kot **Alternativni tok 1**, **Alternativni tok 2**, itd.
+
+#### Pogoji
+
+:dart: **TO-DO**
+
+- Navesti je potrebno pogoje, ki morajo biti izpolnjeni, da se funkcionalnost lahko prične izvajati?
+
+#### Posledice
+
+:dart: **TO-DO**
+
+- Navedite, kakšen je rezultat izvedbe osnovnega toka funkcionalnosti?
+
+#### Posebnosti
+
+:dart: **TO-DO**
+
+- Ali realizacija funkcionalnosti zahteva kakšne posebnosti, kot je npr. dodatna strojna oprema?
+- Se je potrebno držati kakšnih posebnih standardov?
+
+#### Prioritete identificiranih funkcionalnosti
+
+:dart: **TO-DO**
+
+- Za identificirane funkcionalnosti se z metodo **MoSCoW** (MUST have, SHOULD have, COULD have in WOULD have) določi prioritete.
+
+#### Sprejemni testi
+
+:dart: **TO-DO**
+
+- Navedite sprejmne teste, kjer opišete:
+  - funkcijo, ki se testira,
+  - začetno stanje sistema,
+  - vhod in
+  - pričakovan rezultat.
+
+#### Povzetek funkcionalnosti
+
+:dart: **TO-DO**
+
+## 1. Registracija
+Registracija predstavlja osnovno funkcionalnost, ki še neregistriranemu uporabniku omogoča polno izkušnjo pri uporabi naše aplikacije. Po izpolnjeni registracijski formi in uspešni registraciji, uporabnik si bo ustvaril račun s pomočjo, katerega bo lahko dostopal do različnih vsebin in funkionalnosti aplikacije.
+
+- **Povzetek funkcionalnosti** v enem ali največ nekaj stavkih.
+- Prvi stavek naj se prične z nazivom uporabniške vloge (ali uporabniških vlog, če se funkcionalnost nanaša na več kot eno vlogo), nato pa naj sledita beseda **lahko** in navedba funkcionalnosti.
+
+#### Osnovni tok
+
+:dart: **TO-DO**
+
+#### Alternativni tok(ovi)
+
+:dart: **TO-DO**
+
+- Navesti je potrebno vse alternativne tokove, ki jih označite kot **Alternativni tok 1**, **Alternativni tok 2**, itd.
+
+#### Pogoji
+
+:dart: **TO-DO**
+
+- Navesti je potrebno pogoje, ki morajo biti izpolnjeni, da se funkcionalnost lahko prične izvajati?
+
+#### Posledice
+
+:dart: **TO-DO**
+
+- Navedite, kakšen je rezultat izvedbe osnovnega toka funkcionalnosti?
+
+#### Posebnosti
+
+:dart: **TO-DO**
+
+- Ali realizacija funkcionalnosti zahteva kakšne posebnosti, kot je npr. dodatna strojna oprema?
+- Se je potrebno držati kakšnih posebnih standardov?
+
+#### Prioritete identificiranih funkcionalnosti
+
+:dart: **TO-DO**
+
+- Za identificirane funkcionalnosti se z metodo **MoSCoW** (MUST have, SHOULD have, COULD have in WOULD have) določi prioritete.
+
+#### Sprejemni testi
+
+:dart: **TO-DO**
+
+- Navedite sprejmne teste, kjer opišete:
+  - funkcijo, ki se testira,
+  - začetno stanje sistema,
+  - vhod in
+  - pričakovan rezultat.
+
+#### Povzetek funkcionalnosti
+
+:dart: **TO-DO**
+
+## 1. Registracija
+Registracija predstavlja osnovno funkcionalnost, ki še neregistriranemu uporabniku omogoča polno izkušnjo pri uporabi naše aplikacije. Po izpolnjeni registracijski formi in uspešni registraciji, uporabnik si bo ustvaril račun s pomočjo, katerega bo lahko dostopal do različnih vsebin in funkionalnosti aplikacije.
+
+- **Povzetek funkcionalnosti** v enem ali največ nekaj stavkih.
+- Prvi stavek naj se prične z nazivom uporabniške vloge (ali uporabniških vlog, če se funkcionalnost nanaša na več kot eno vlogo), nato pa naj sledita beseda **lahko** in navedba funkcionalnosti.
+
+#### Osnovni tok
+
+:dart: **TO-DO**
+
+#### Alternativni tok(ovi)
+
+:dart: **TO-DO**
+
+- Navesti je potrebno vse alternativne tokove, ki jih označite kot **Alternativni tok 1**, **Alternativni tok 2**, itd.
+
+#### Pogoji
+
+:dart: **TO-DO**
+
+- Navesti je potrebno pogoje, ki morajo biti izpolnjeni, da se funkcionalnost lahko prične izvajati?
+
+#### Posledice
+
+:dart: **TO-DO**
+
+- Navedite, kakšen je rezultat izvedbe osnovnega toka funkcionalnosti?
+
+#### Posebnosti
+
+:dart: **TO-DO**
+
+- Ali realizacija funkcionalnosti zahteva kakšne posebnosti, kot je npr. dodatna strojna oprema?
+- Se je potrebno držati kakšnih posebnih standardov?
+
+#### Prioritete identificiranih funkcionalnosti
+
+:dart: **TO-DO**
+
+- Za identificirane funkcionalnosti se z metodo **MoSCoW** (MUST have, SHOULD have, COULD have in WOULD have) določi prioritete.
+
+#### Sprejemni testi
+
+:dart: **TO-DO**
+
+- Navedite sprejmne teste, kjer opišete:
+  - funkcijo, ki se testira,
+  - začetno stanje sistema,
+  - vhod in
+  - pričakovan rezultat.
+
+#### Povzetek funkcionalnosti
+
+## IN PROCESS - TODO
+
+## 1. Registracija
+Registracija predstavlja osnovno funkcionalnost, ki še neregistriranemu uporabniku omogoča polno izkušnjo pri uporabi naše aplikacije. Po izpolnjeni registracijski formi in uspešni registraciji, uporabnik si bo ustvaril račun s pomočjo, katerega bo lahko dostopal do različnih vsebin in funkionalnosti aplikacije.
+
+#### Osnovni tok
+
+:dart: **TO-DO**
+
+#### Alternativni tok(ovi)
+
+:dart: **TO-DO**
+
+- Navesti je potrebno vse alternativne tokove, ki jih označite kot **Alternativni tok 1**, **Alternativni tok 2**, itd.
+
+#### Pogoji
+
+:dart: **TO-DO**
+
+- Navesti je potrebno pogoje, ki morajo biti izpolnjeni, da se funkcionalnost lahko prične izvajati?
+
+#### Posledice
+
+:dart: **TO-DO**
+
+- Navedite, kakšen je rezultat izvedbe osnovnega toka funkcionalnosti?
+
+#### Posebnosti
+
+:dart: **TO-DO**
+
+- Ali realizacija funkcionalnosti zahteva kakšne posebnosti, kot je npr. dodatna strojna oprema?
+- Se je potrebno držati kakšnih posebnih standardov?
+
+#### Prioritete identificiranih funkcionalnosti
+
+:dart: **TO-DO**
+
+- Za identificirane funkcionalnosti se z metodo **MoSCoW** (MUST have, SHOULD have, COULD have in WOULD have) določi prioritete.
+
+#### Sprejemni testi
+
+:dart: **TO-DO**
+
+- Navedite sprejmne teste, kjer opišete:
+  - funkcijo, ki se testira,
+  - začetno stanje sistema,
+  - vhod in
+  - pričakovan rezultat.
+
+#### Povzetek funkcionalnosti
+
+:dart: **TO-DO**
+
+## 1. Registracija
+Registracija predstavlja osnovno funkcionalnost, ki še neregistriranemu uporabniku omogoča polno izkušnjo pri uporabi naše aplikacije. Po izpolnjeni registracijski formi in uspešni registraciji, uporabnik si bo ustvaril račun s pomočjo, katerega bo lahko dostopal do različnih vsebin in funkionalnosti aplikacije.
+
+- **Povzetek funkcionalnosti** v enem ali največ nekaj stavkih.
+- Prvi stavek naj se prične z nazivom uporabniške vloge (ali uporabniških vlog, če se funkcionalnost nanaša na več kot eno vlogo), nato pa naj sledita beseda **lahko** in navedba funkcionalnosti.
+
+#### Osnovni tok
+
+:dart: **TO-DO**
+
+#### Alternativni tok(ovi)
+
+:dart: **TO-DO**
+
+- Navesti je potrebno vse alternativne tokove, ki jih označite kot **Alternativni tok 1**, **Alternativni tok 2**, itd.
+
+#### Pogoji
+
+:dart: **TO-DO**
+
+- Navesti je potrebno pogoje, ki morajo biti izpolnjeni, da se funkcionalnost lahko prične izvajati?
+
+#### Posledice
+
+:dart: **TO-DO**
+
+- Navedite, kakšen je rezultat izvedbe osnovnega toka funkcionalnosti?
+
+#### Posebnosti
+
+:dart: **TO-DO**
+
+- Ali realizacija funkcionalnosti zahteva kakšne posebnosti, kot je npr. dodatna strojna oprema?
+- Se je potrebno držati kakšnih posebnih standardov?
+
+#### Prioritete identificiranih funkcionalnosti
+
+:dart: **TO-DO**
+
+- Za identificirane funkcionalnosti se z metodo **MoSCoW** (MUST have, SHOULD have, COULD have in WOULD have) določi prioritete.
+
+#### Sprejemni testi
+
+:dart: **TO-DO**
+
+- Navedite sprejmne teste, kjer opišete:
+  - funkcijo, ki se testira,
+  - začetno stanje sistema,
+  - vhod in
+  - pričakovan rezultat.
+
+#### Povzetek funkcionalnosti
+
+:dart: **TO-DO**
+
+## 1. Registracija
+Registracija predstavlja osnovno funkcionalnost, ki še neregistriranemu uporabniku omogoča polno izkušnjo pri uporabi naše aplikacije. Po izpolnjeni registracijski formi in uspešni registraciji, uporabnik si bo ustvaril račun s pomočjo, katerega bo lahko dostopal do različnih vsebin in funkionalnosti aplikacije.
+
+- **Povzetek funkcionalnosti** v enem ali največ nekaj stavkih.
+- Prvi stavek naj se prične z nazivom uporabniške vloge (ali uporabniških vlog, če se funkcionalnost nanaša na več kot eno vlogo), nato pa naj sledita beseda **lahko** in navedba funkcionalnosti.
+
+#### Osnovni tok
+
+:dart: **TO-DO**
+
+#### Alternativni tok(ovi)
+
+:dart: **TO-DO**
+
+- Navesti je potrebno vse alternativne tokove, ki jih označite kot **Alternativni tok 1**, **Alternativni tok 2**, itd.
+
+#### Pogoji
+
+:dart: **TO-DO**
+
+- Navesti je potrebno pogoje, ki morajo biti izpolnjeni, da se funkcionalnost lahko prične izvajati?
+
+#### Posledice
+
+:dart: **TO-DO**
+
+- Navedite, kakšen je rezultat izvedbe osnovnega toka funkcionalnosti?
+
+#### Posebnosti
+
+:dart: **TO-DO**
+
+- Ali realizacija funkcionalnosti zahteva kakšne posebnosti, kot je npr. dodatna strojna oprema?
+- Se je potrebno držati kakšnih posebnih standardov?
+
+#### Prioritete identificiranih funkcionalnosti
+
+:dart: **TO-DO**
+
+- Za identificirane funkcionalnosti se z metodo **MoSCoW** (MUST have, SHOULD have, COULD have in WOULD have) določi prioritete.
+
+#### Sprejemni testi
+
+:dart: **TO-DO**
+
+- Navedite sprejmne teste, kjer opišete:
+  - funkcijo, ki se testira,
+  - začetno stanje sistema,
+  - vhod in
+  - pričakovan rezultat.
+
+#### Povzetek funkcionalnosti
+
+:dart: **TO-DO**
+
+## 1. Registracija
+Registracija predstavlja osnovno funkcionalnost, ki še neregistriranemu uporabniku omogoča polno izkušnjo pri uporabi naše aplikacije. Po izpolnjeni registracijski formi in uspešni registraciji, uporabnik si bo ustvaril račun s pomočjo, katerega bo lahko dostopal do različnih vsebin in funkionalnosti aplikacije.
+
+- **Povzetek funkcionalnosti** v enem ali največ nekaj stavkih.
+- Prvi stavek naj se prične z nazivom uporabniške vloge (ali uporabniških vlog, če se funkcionalnost nanaša na več kot eno vlogo), nato pa naj sledita beseda **lahko** in navedba funkcionalnosti.
+
+#### Osnovni tok
+
+:dart: **TO-DO**
+
+#### Alternativni tok(ovi)
+
+:dart: **TO-DO**
+
+- Navesti je potrebno vse alternativne tokove, ki jih označite kot **Alternativni tok 1**, **Alternativni tok 2**, itd.
+
+#### Pogoji
+
+:dart: **TO-DO**
+
+- Navesti je potrebno pogoje, ki morajo biti izpolnjeni, da se funkcionalnost lahko prične izvajati?
+
+#### Posledice
+
+:dart: **TO-DO**
+
+- Navedite, kakšen je rezultat izvedbe osnovnega toka funkcionalnosti?
+
+#### Posebnosti
+
+:dart: **TO-DO**
+
+- Ali realizacija funkcionalnosti zahteva kakšne posebnosti, kot je npr. dodatna strojna oprema?
+- Se je potrebno držati kakšnih posebnih standardov?
+
+#### Prioritete identificiranih funkcionalnosti
+
+:dart: **TO-DO**
+
+- Za identificirane funkcionalnosti se z metodo **MoSCoW** (MUST have, SHOULD have, COULD have in WOULD have) določi prioritete.
+
+#### Sprejemni testi
+
+:dart: **TO-DO**
+
+- Navedite sprejmne teste, kjer opišete:
+  - funkcijo, ki se testira,
+  - začetno stanje sistema,
+  - vhod in
+  - pričakovan rezultat.
+
+
+#### Povzetek funkcionalnosti
+
+:dart: **TO-DO**
+
+## 1. Registracija
+Registracija predstavlja osnovno funkcionalnost, ki še neregistriranemu uporabniku omogoča polno izkušnjo pri uporabi naše aplikacije. Po izpolnjeni registracijski formi in uspešni registraciji, uporabnik si bo ustvaril račun s pomočjo, katerega bo lahko dostopal do različnih vsebin in funkionalnosti aplikacije.
+
 - **Povzetek funkcionalnosti** v enem ali največ nekaj stavkih.
 - Prvi stavek naj se prične z nazivom uporabniške vloge (ali uporabniških vlog, če se funkcionalnost nanaša na več kot eno vlogo), nato pa naj sledita beseda **lahko** in navedba funkcionalnosti.
 
