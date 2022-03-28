@@ -39,12 +39,12 @@ nefunkcionalne zahteve: delovanje funkcionalnosti v 100 ms, dostopno za različn
 
 ## 3. Slovar pojmov
 
-**Občina** - osnovna lokalna skupnost, ki v okviru zakonodaje samostojno ureja svoje zadeve in izvaja določene zakonske predpise na področjih, ki so ji dodeljena.
-**Prebivalec** - oseba, ki v občini živi oziroma se v njej nahaja, nima pa v njej prijavljenega stalnega prebivališča.
-**Občan** - prebivalec v občini, ki ima v njej prijavljeno stalno prebivališče.
-**Občni delavec** - oseba zaposlena na upravni enoti občine.
-**Predstavnik občine** - občni delavec zadolžen za preverjanje pristnosti in posredovanje uporabniških opažanj in priporočil.
-**Občna organizacija** - normalna organizacija, ki se nahaja v občini (npr. gasilci), če v občini ni take organizacije se nanaša na najbližjo oziroma najprimernejšo organizacijo izven občine.
+-**Občina** - osnovna lokalna skupnost, ki v okviru zakonodaje samostojno ureja svoje zadeve in izvaja določene zakonske predpise na področjih, ki so ji dodeljena.
+-**Prebivalec** - oseba, ki v občini živi oziroma se v njej nahaja, nima pa v njej prijavljenega stalnega prebivališča.
+-**Občan** - prebivalec v občini, ki ima v njej prijavljeno stalno prebivališče.
+-**Občni delavec** - oseba zaposlena na upravni enoti občine.
+-**Predstavnik občine** - občni delavec zadolžen za preverjanje pristnosti in posredovanje uporabniških opažanj in priporočil.
+-**Občna organizacija** - normalna organizacija, ki se nahaja v občini (npr. gasilci), če v občini ni take organizacije se nanaša na najbližjo oziroma najprimernejšo organizacijo izven občine.
 
 ## 4. Diagram primerov uporabe
 
