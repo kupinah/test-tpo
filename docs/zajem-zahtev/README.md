@@ -149,15 +149,13 @@ Funkcionalnost spada pod MUST have prioriteto, saj brez registracije je aplikaci
 
 - Za identificirane funkcionalnosti se z metodo **MoSCoW** (MUST have, SHOULD have, COULD have in WOULD have) določi prioritete.
 
-#### Sprejemni testi
+#### Sprejemni testi ? vaje - en test na en osnoven tok ali?
 
-:dart: **TO-DO**
-
-- Navedite sprejmne teste, kjer opišete:
-  - funkcijo, ki se testira,
-  - začetno stanje sistema,
-  - vhod in
-  - pričakovan rezultat.
+| Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
+| --- | --- | --- | --- |
+| Registracija | Uporabnik še ni registriran | Vnos podatkov za registracijo | Uspešno registriran uporabnik vpisan v podatkovno bazo |
+| Registracija | Uporabnik še ni registriran | Vnos pomanjkljivih podatkov za registracijo | Neuspešna registracija uporabnika | 
+| Registracija | Uporabnik je že registriran | Vnos podatkov za registracijo | Neuspešna registracija uporabnika | 
 
 ## 2. Prijava
 Registiran uporabnik, občni delavec, predstavnik občine ter administrator lahko s procesom prijave dostopajo do svojih računov in vseh funkcionalnosti, ki jih njihova vloga omogoča.
@@ -207,20 +205,16 @@ Prijava spada pod MUST have prioriteto, saj brez prijavo uporabniki ne morejo do
 
 #### Sprejemni testi
 
-:dart: **TO-DO**
-
-- Navedite sprejmne teste, kjer opišete:
-  - funkcijo, ki se testira,
-  - začetno stanje sistema,
-  - vhod in
-  - pričakovan rezultat.
+| Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
+| --- | --- | --- | --- |
+| Prijava | Registriran uporabnik | Vnos podatkov za prijavo | Uspešno prijavljenemu uporabniku se prikaže začetna stran |
+| Prijava | Registriran uporabnik | Vnos napačnih podatkov za prijavo | Ob neuspešni prijavi se uporabniku prikaže obvestilo, da so podatki napačni |
 
 ## 3. Odjava
 Registiran uporabnik, občni delavec, predstavnik občine ter administrator se lahko tudi odjavijo iz svojega računa ter aplikaciji pristopijo kot gostje.
 
 #### Osnovni tok
 
-:dart: **TO-DO**
 1. Prijavljen uporabnik izbere gumb za odjavo
 2. Uporabnik potrdi odjavo
 3. Uporabnik je odjavljen iz sistema
@@ -228,8 +222,6 @@ Registiran uporabnik, občni delavec, predstavnik občine ter administrator se l
 #### Alternativni tok(ovi)
 
 Ni alternativnih tokov.
-
-- Navesti je potrebno vse alternativne tokove, ki jih označite kot **Alternativni tok 1**, **Alternativni tok 2**, itd.
 
 #### Pogoji
 
@@ -258,13 +250,9 @@ Funkcionalnost ima MUST have prioriteto, da se lahko drug uporabnik prijavi v ap
 
 #### Sprejemni testi
 
-:dart: **TO-DO**
-
-- Navedite sprejmne teste, kjer opišete:
-  - funkcijo, ki se testira,
-  - začetno stanje sistema,
-  - vhod in
-  - pričakovan rezultat.
+| Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
+| --- | --- | --- | --- |
+| Odjava | Prijavljen uporabnik | Izbira gumba za odjavo | Uporabnik je odjavljen iz sistema |
 
 ## 4. Pregled uporabniškega profila
 Registriran uporabnik, občni delavec, predstavnik občine in administrator lahko pregledajo svoj račun ter informacije, ki jih delijo z drugimi.
@@ -310,13 +298,9 @@ Funkcionalnost ima SHOULD have prioriteto. Spletna stran bo še vedno delovala b
 
 #### Sprejemni testi
 
-:dart: **TO-DO**
-
-- Navedite sprejmne teste, kjer opišete:
-  - funkcijo, ki se testira,
-  - začetno stanje sistema,
-  - vhod in
-  - pričakovan rezultat.
+| Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
+| --- | --- | --- | --- |
+| Pregled uporabniškega profila | Prijavljen uporabnik | Izbira gumba za prikaz profila | Neuspešna registracija uporabnika |
 
 ## 5. Ureditev profila
 Registriran uporabnik, občni delavec, predstavnik občine in administrator lahko urejajo svoj profil ter posodabljajo osnovne informacije, kot so ime, priimek, geslo, itn.
@@ -374,13 +358,10 @@ Funkcionalnost ima SHOULD have prioriteto. Aplikacija bo delovala brez nje, vend
 
 #### Sprejemni testi
 
-:dart: **TO-DO**
-
-- Navedite sprejmne teste, kjer opišete:
-  - funkcijo, ki se testira,
-  - začetno stanje sistema,
-  - vhod in
-  - pričakovan rezultat.
+| --- | --- | --- | --- |
+| Urejanje profila | Prijavljen uporabnik na strani svojega profila | Izbira gumba za urejanje profila ter vnos novih podatkov | Stran uporabniškega profila z spremenjenimi podatki | 
+| Urejanje profila | Administrator na uporabnikovemu profilu | Izbira gumba za urejanje profila ter vnos novih podatkov | Stran uporabniškega profila z spremenjenimi podatki |
+| Urejanje profila | Prijavljen uporabnik na strani svojega profila | Izbira gumba za urejanje profila ter vnos neustreznih podatkov | Prikaz obvestila o neuspešni spremembi |
 
 #### Povzetek funkcionalnosti
 
@@ -420,13 +401,10 @@ Funkcionalnost ima MUST have prioriteto. Če uporabnik lahko ustavi nov profil, 
 
 #### Sprejemni testi
 
-:dart: **TO-DO**
-
-- Navedite sprejmne teste, kjer opišete:
-  - funkcijo, ki se testira,
-  - začetno stanje sistema,
-  - vhod in
-  - pričakovan rezultat.
+| Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
+| --- | --- | --- | --- |
+| Brisanje profila | Prijavljen uporabnik na svojemu profilu | Izbira gumba za brisanje profila | Zbrisan profil uporabnika in odprta začetna stran |
+| Brisanje profila | Administrator na profilu uporabnika | Izbira gumba za brisanje profila | Zbrisan profil uporabnika in odprta začetna stran |
 
 ## 7. Dodajanje novic o dogodkih, spremembah v občini, aktualnih dogajanj...
 Občni delavec in predstavnik občine lahko dodajajo novice o trenutnih dogajanj v občini. S promocijo dogodkov in del v občini, promovirajo tudi svoje delo in pa tudi obveščajo stanovalce o vseh aktualnostih.
@@ -463,13 +441,11 @@ Funkcionalnost ima MUST have prioriteto, ker to je glavni namen spletno strani.
 
 #### Sprejemni testi
 
-:dart: **TO-DO**
+| Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
+| --- | --- | --- | --- |
+| Dodajanje nove vsebine | Stran z vsebino | Nova vsebina in dodajanje gumba za objavo | Nova vsebina dodana med že obstoječo vsebino |
+| Dodajanje nove vsebine | Stran z vsebino | Nova vsebin z neustrezno izpolnjenimi podatki | Obvestilo o neuspešni objavi |
 
-- Navedite sprejmne teste, kjer opišete:
-  - funkcijo, ki se testira,
-  - začetno stanje sistema,
-  - vhod in
-  - pričakovan rezultat.
 
 ## 8. Urejanje novic
 Občni delavec in predstavnik občine lahko urejata objavljenje novice. To je lahko potrebno zgolj zaradi manjše pravopisne napake ali pa kakšne bolj resne spremembe.
@@ -508,13 +484,11 @@ Funkcionalnost ima SHOULD have prioriteto. Spletna stran bo delovaval tudi brez 
 
 #### Sprejemni testi
 
-:dart: **TO-DO**
+| Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
+| --- | --- | --- | --- |
+| Urejanje novic | Stran z vsebino | Izbira gumba za ureditev določene strani ter vnos in oddaja podatkov | Prikazana začetna stran |
+| Urejanje novic | Stran z vsebino | Izbira gumba za ureditev določene strani ter vnos in oddaja neustreznih podatkov | Obvestilo o neuspešni spremembi |
 
-- Navedite sprejmne teste, kjer opišete:
-  - funkcijo, ki se testira,
-  - začetno stanje sistema,
-  - vhod in
-  - pričakovan rezultat.
 
 ## 9. Brisanje novic
 Občni delavec, predstavnik občine in administrator lahko tudi pobrišeta novice, kar je izjemno koristno v primeru, da ugotovita, da je novica napačna ali pa, da je prišlo do neke spremembe.
@@ -552,13 +526,11 @@ Funkcionalnost ima SHOULD have prioriteto. Spletna stran bo delovala tudi brez t
 
 #### Sprejemni testi
 
-:dart: **TO-DO**
+| Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
+| --- | --- | --- | --- |
+| Brisanje lastne novic | Profil uporabnika | Izbira gumba za brisanje določene lastne novice ter potrditev brisanja | Obvestilo o uspešnem brisanju |
+| Brisanje novic | Stran z vsebino | Izbira gumba za brisanje določene novice ter potrditev brisanja | Obvestilo o uspešnem brisanju 
 
-- Navedite sprejmne teste, kjer opišete:
-  - funkcijo, ki se testira,
-  - začetno stanje sistema,
-  - vhod in
-  - pričakovan rezultat.
 
 ## 10. Pregled novic
 Registriran uporabnik, občni delavec, predstavnik občine in administrator lahko pregledujejo novice o aktualnih dogajanj v občini, del, aktivnosti, ipd.
@@ -591,13 +563,9 @@ Funkcionalnost ima MUST have funkcionalnost. Spletna stran ne bo uporabna brez p
 
 #### Sprejemni testi
 
-:dart: **TO-DO**
-
-- Navedite sprejmne teste, kjer opišete:
-  - funkcijo, ki se testira,
-  - začetno stanje sistema,
-  - vhod in
-  - pričakovan rezultat.
+| Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
+| --- | --- | --- | --- |
+| Pregled novic | Začetna stran | Izbira novice | Prikaz dodatnih informacij o izbrani novici |
 
 #### Povzetek funkcionalnosti
 
@@ -638,13 +606,11 @@ Funkcionalnost ima MUST have prioriteto, ker to je to ena od najbolj pomembnih f
 
 #### Sprejemni testi
 
-:dart: **TO-DO**
+| Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
+| --- | --- | --- | --- |
+| Dodajanje predlogov | Začetna stran | Izbira gumba za dodajanje predlogov ter vnos in oddaja podatkov | Prikaz novega predloga na začetni strani |
+| Dodajanje predlogov | Začetna stran | Izbira gumba za dodajanje predlogov ter vnos in oddaja neustreznih podatkov | Prikaz obvestila o neuspešni objavi |
 
-- Navedite sprejmne teste, kjer opišete:
-  - funkcijo, ki se testira,
-  - začetno stanje sistema,
-  - vhod in
-  - pričakovan rezultat.
 
 ## 12. Glasovanje med predlogi
 Registriran uporabnik lahko glasujejo med predlogi, izbirajo tistega, ki njim najbolj ustreza in ki bo bil v največji meri pomagal prosperitetu občine.
@@ -678,13 +644,9 @@ Funkcionalnost ima COULD have prioriteto. Spletna stran bo delovala in bo korist
 
 #### Sprejemni testi
 
-:dart: **TO-DO**
-
-- Navedite sprejmne teste, kjer opišete:
-  - funkcijo, ki se testira,
-  - začetno stanje sistema,
-  - vhod in
-  - pričakovan rezultat.
+| Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
+| --- | --- | --- | --- |
+| Glasovanje za predloge | Začetna stran s predlogi | Glas za ali proti predlogu | Obvestilo o uspešnem glasovanju |
 
 ## 13. Urejanje predlogov
 Registriran uporabnik (autore predloga) in administrator lahko urejajo predloge, kar bo še posebej koristno za boljše oblikovanje cilja predlogov, odpravljanje pravopisnih napak, ipd.
@@ -722,13 +684,10 @@ Funkcionalnost ima SHOULD have prioriteto. Spletna stran bo delovala tudi brez n
 
 #### Sprejemni testi
 
-:dart: **TO-DO**
-
-- Navedite sprejmne teste, kjer opišete:
-  - funkcijo, ki se testira,
-  - začetno stanje sistema,
-  - vhod in
-  - pričakovan rezultat.
+| Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
+| --- | --- | --- | --- |
+| Urejanje predlogov | Lastni profil uporabnika | Izbira gumba za urejanje lastnega predloga ter vnos in oddaja novih podatkov | Začetna stran |
+| Urejanje predlogov | Profil uporabnika | Izbira gumba za urejanje predloga ter vnos in oddaja novih podatkov | Začetna stran |
 
 ## 14. Pregled predlogov
 Registriran uporabnik, občni delavec, predstavnik občine in administrator lahko pregledajo predloge in na podlagi tega vpogleda formirajo svoje mnenje o le-tem.
@@ -761,13 +720,9 @@ Funkcionalnost ima MUST have funkcionalnost. Spletna stran ne bo uporabna brez p
 
 #### Sprejemni testi
 
-:dart: **TO-DO**
-
-- Navedite sprejmne teste, kjer opišete:
-  - funkcijo, ki se testira,
-  - začetno stanje sistema,
-  - vhod in
-  - pričakovan rezultat.
+| Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
+| --- | --- | --- | --- |
+| Pregled predlogov | Začetna stran s predlogi | Izbira predloga | Prikaz informacij o predlogu, glasovi ter komentarji |
 
 ## 15. Brisanje predlogov
 Registriran uporabnik (autor predloga), predstavnik občine in administrator lahko brišejo predloge, za katere menijo, da ne ustrezajo standardom in pogojem uporabe aplikacije.
@@ -805,13 +760,10 @@ Funkcionalnost ima SHOULD have prioriteto. Spletna stran bo delovala tudi brez t
 
 #### Sprejemni testi
 
-:dart: **TO-DO**
-
-- Navedite sprejmne teste, kjer opišete:
-  - funkcijo, ki se testira,
-  - začetno stanje sistema,
-  - vhod in
-  - pričakovan rezultat.
+| Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
+| --- | --- | --- | --- |
+| Brisanje predlogov | Profil uporabnika | Izbira gumba za brisanje lastnega predloga | Obvestilo o uspešnem brisanju |
+| Brisanje predlogov | Začetna stran s predlogi | Izbira gumba za brisanje  predloga | Obvestilo o uspešnem brisanj |
 
 ## 16. Pošiljanje sporočil
 Registriran uporabnik, občni delavec, predstavnik občine in administrator si lahko izmenjujejo sporočila med sabo, kar bo močno olajšalo povezovanje in komunikacijo članov občine.
@@ -846,13 +798,9 @@ Funkcionalnost ima WOULD have prioriteto. Funkcionalnost ni potrebna, vendar je 
 
 #### Sprejemni testi
 
-:dart: **TO-DO**
-
-- Navedite sprejmne teste, kjer opišete:
-  - funkcijo, ki se testira,
-  - začetno stanje sistema,
-  - vhod in
-  - pričakovan rezultat.
+| Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
+| --- | --- | --- | --- |
+| Pošiljanj sporočil | Profil drugega uporabnika | Vnos ter pošiljanje sporočila | Obvestilo o poslanemu sporočilu |
 
 ## 17. Iskanje novic/predlogov
 Registriran uporabnik, občni delavec, predstavnik občine in administrator lahko iščejo novice in predloge, ki jih zanimajo. Na ta način bodo hitreje dostopali do zase koristnih vsebin.
@@ -885,13 +833,9 @@ Funkcionalnost ima WOULD have prioriteto. Uporabnik si lahko tudi brez te funkci
 
 #### Sprejemni testi
 
-:dart: **TO-DO**
-
-- Navedite sprejmne teste, kjer opišete:
-  - funkcijo, ki se testira,
-  - začetno stanje sistema,
-  - vhod in
-  - pričakovan rezultat.
+| Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
+| --- | --- | --- | --- |
+| Iskanje novic oz. predlogov | Začetna stran | Vnos iskalnega izraza | Prikaz zadetkov iskanja |
 
 ## 18. Pregled profilov ostalih uporabnikov
 Registriran uporabnik, občni delavec, predstavnik občine in administrator lahko pregledujejo profile ostalih uporabnikov in na ta način lažje ustvarijo interakcijo med sabo.
@@ -921,15 +865,11 @@ Ni posebnosti.
 
 Funkcionalnost ima SHOULD have prioriteto. ?????**
 
-#### Sprejemni testi
+#### Sprejemni 
 
-:dart: **TO-DO**
-
-- Navedite sprejmne teste, kjer opišete:
-  - funkcijo, ki se testira,
-  - začetno stanje sistema,
-  - vhod in
-  - pričakovan rezultat.
+| Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
+| --- | --- | --- | --- |
+| Pregled profilov ostalih uporabnikov | Začetna stran | Izbira profila drugega uporabnika | Prikazan profil drugega uporabnika |
 
 ## 19. Komentiranje
 Registriran uporabnik, občni delavec, predstavnik občine in administrator lahko komentirajo predloge/novice, kar bo prispevalo k lažjemu razumevanju ter hitrejši izmenjavi informacij, ki lahko koristijo večjem številu ljudi.
@@ -963,14 +903,9 @@ Funkcionalnost ima COULD have prioriteto. Komentari bi popestrili komunikacijo m
 
 #### Sprejemni testi
 
-:dart: **TO-DO**
-
-- Navedite sprejmne teste, kjer opišete:
-  - funkcijo, ki se testira,
-  - začetno stanje sistema,
-  - vhod in
-  - pričakovan rezultat.
-
+| Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
+| --- | --- | --- | --- |
+| Komentiranje | Začetna stran | Vnos ter pošiljanje komentara | Obvestilo o uspešno objavljenemu komentarju |
 
 ## 6. Nefunkcionalne zahteve
 
