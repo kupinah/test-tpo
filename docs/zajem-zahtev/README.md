@@ -91,9 +91,6 @@ nefunkcionalne zahteve: delovanje funkcionalnosti v 100 ms, dostopno za različn
 21. Izbira lokacije
 22. Ogled lokacije
 
-
-:dart: **TO-DO**
-
 ## 1. Registracija
 Neregistriran uporabnik lahko registrira račun, kar predstavlja osnovno funkcionalnost za omogočanje polne izkušnje pri uporabi naše aplikacije. Po izpolnjeni registracijski formi in uspešni registraciji, uporabnik si bo ustvaril račun s pomočjo, katerega bo lahko dostopal do različnih vsebin in funkionalnosti aplikacije.
 
@@ -917,7 +914,7 @@ Registriran uporabnik, občni delavec, predstavnik občine in administrator lahk
 
 1. Uporabnik izbere gumb za pregled svojega profila
 2. Uporabnik izbere svoj komentar
-3. Uporabnik izbere gumb za birsanje komentarja
+3. Uporabnik izbere gumb za brisanje komentarja
 4. Uporabnik dobi obvestio o uspešno izbrisanem komentarju
 
 #### Alternativni tok(ovi)
@@ -946,7 +943,8 @@ Funkcionalnost ima WOULD have prioriteto. *****TODO
 
 | Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
 | --- | --- | --- | --- |
-| Komentiranje | Začetna stran | Vnos ter pošiljanje komentara | Obvestilo o uspešno objavljenemu komentarju |
+| Brisanje lastnega komentarja | Stran lastnega uporabniškega profila | Izbira gumba za odstranjevanje določenega komentarja | Obvestilo o uspešno izbrisanem komentarju |
+| Administratorsko brisanje komentarja | Začetna stran |  Izbira gumba za odstranjevanje določenega komentarja | Obvestilo o uspešno izbrisanem komentarju |
 
 ## 22. Izbira lokacije
 
@@ -981,7 +979,7 @@ Funkcionalnost ima COULD have prioriteto. Lokacija bi izboljšala komunikacijo m
 
 | Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
 | --- | --- | --- | --- |
-| Komentiranje | Začetna stran | Vnos ter pošiljanje komentara | Obvestilo o uspešno objavljenemu komentarju |
+| Izbira lokacije | Proces dodajanja novice/predloga | Izbira lokacije | Uspešno dodana lokacija k novici/predlogu |
 
 ## 23. Ogled lokacije
 
@@ -1014,7 +1012,7 @@ Funkcionalnost ima COULD have prioriteto. Lokacija bi izboljšala komunikacijo m
 
 | Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
 | --- | --- | --- | --- |
-| Komentiranje | Začetna stran | Vnos ter pošiljanje komentara | Obvestilo o uspešno objavljenemu komentarju |
+| Ogled lokacije | Odprta določena novica/predlog | Izbira pogleda lokacije | Uspešno prikazana zemljevid ter naslov |
 
 ## 6. Nefunkcionalne zahteve
 
