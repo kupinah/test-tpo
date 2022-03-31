@@ -974,23 +974,23 @@ Funkcionalnost ima COULD have prioriteto. Komentari bi popestrili komunikacijo m
 
 ## 6. Nefunkcionalne zahteve
 
-# 1° Zahteve izdelka:
-1.1) Sistem mora biti zmožen hkrati obdelati vsaj 200 uporabniških zahtev.
-1.2) Sistem mora odgovoriti na vsako zahtevo znotraj 1000ms.
-1.3) Sistem uporabniku ne sme omogočiti dostopa do podatkov, za katere ni izrecno pooblaščen.
-1.4) Sistem mora biti na voljo najmanj 99,9 odstotkov časa.
-1.5) Proces prijave v sistem ne sme biti daljši od 3 sekunde.
-1.6) Sistem je odporen na XSS ter SQL injection napada (merljivo z OWASP ZAP).
+### 1° Zahteve izdelka:
+- Sistem mora biti zmožen hkrati obdelati vsaj 200 uporabniških zahtev.
+- Sistem mora odgovoriti na vsako zahtevo znotraj 1000ms.
+- Sistem uporabniku ne sme omogočiti dostopa do podatkov, za katere ni izrecno pooblaščen.
+- Sistem mora biti na voljo najmanj 99,9 odstotkov časa.
+- Proces prijave v sistem ne sme biti daljši od 3 sekunde.
+- Sistem je odporen na XSS ter SQL injection napada (merljivo z OWASP ZAP).
 
-# 2° Organizacijske zahteve
-2.1) Procesni model bo uporabljal RUP proces.
-2.2) Sistem omogoča enostavno dodajanje novih funkcionalnostih
-2.3) Sistem bo implementiran v GIT razvojnem okolju.
+### 2° Organizacijske zahteve
+- Procesni model bo uporabljal RUP proces.
+- Sistem omogoča enostavno dodajanje novih funkcionalnostih
+- Sistem bo implementiran v GIT razvojnem okolju.
 
-# 3° Zunanje zahteve
-3.1) Sistem sledi standarde definirane po GDPR zakonu.
-3.2) Sistem se mora biti sposoben izvajati na OS Red Hat Enterprise Linux z nameščenim spletnim strežnikom Apache.
-3.3) Sistem uporablja algoritem SHA256 za enkripcijo podatkov.
+### 3° Zunanje zahteve
+- Sistem sledi standarde definirane po GDPR zakonu.
+- Sistem se mora biti sposoben izvajati na OS Red Hat Enterprise Linux z nameščenim spletnim strežnikom Apache.
+- Sistem uporablja algoritem SHA256 za enkripcijo podatkov.
 
 ## 7. Prototipi vmesnikov
 
