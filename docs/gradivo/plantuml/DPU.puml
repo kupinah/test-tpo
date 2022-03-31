@@ -12,26 +12,56 @@ skinparam actorBackgroundColor white
 
 left to right direction
 
-actor "Uporabnik 1" AS U1
-actor "Uporabnik 2" AS U2
-actor "Zunanji\nsistem 1" AS S1
+actor "Neregistriran\nuporabnik" AS U1
+actor "Registriran\nuporabnik" AS U2
+actor "Občni\ndelavec" AS U3
+actor "Predstavnik\nobčine" AS U4
+actor "Administrator" AS U5
+
+actor "Google\nMaps\nAPI" AS S1
+actor "Mail" AS S2
 
 rectangle "Vaš sistem" {
-  usecase "Primer\nuporabe 1" AS PU1
-  usecase "Primer\nuporabe 2" AS PU2
-  usecase "Primer\nuporabe 3" AS PU3
-  usecase "Primer\nuporabe 4" AS PU4
-  usecase "Primer\nuporabe 5" AS PU5
+  usecase "Registracija" AS PU1
+  usecase "Prijava" AS PU2
+  usecase "Odjava" AS PU3
+  usecase "Pregled\nuporabniškega\nprofila" AS PU4
+  usecase "Ureditev\nprofila" AS PU5
+  usecase "Brisanje\nprofila" AS PU6
+  usecase "Dodajanje\nnovic" AS PU7
+  usecase "Urejanje\nnovic" AS PU8
+  usecase "Brisanje\nnovic" AS PU9
+  usecase "Pregled\nnovic" AS PU10
+  usecase "Dodajanje\npredlogov" AS PU11
+  usecase "Glasovanje" AS PU12
+  usecase "Urejanje\npredlogov" AS PU13
+  usecase "Pregled\npredlogov" AS PU14
+  usecase "Brisanje\npredlogov" AS PU15
+  usecase "Pošiljanje\nsporočil" AS PU16
+  usecase "Iskanje\nnovice/predlogov" AS PU17
+  usecase "Pregled\nprofilov\nostalih\nuporabnikov" AS PU18
+  usecase "Komentiranje" AS PU19
 }
 
-U2 -left-|> U1
+' U2 -left-|> U1
 
 U1 -> (PU1)
+U1 --> (PU10)
+U1 --> (PU14)
 U2 --> (PU2)
-(PU4) -down-> S1
+U2 --> (PU3)
+U2 --> (PU4)
+U2 --> (PU10)
+U2 --> (PU14)
 
-(PU3) .up.> (PU1) : extend
-(PU5) ..> (PU4) : include
-(PU5) -right-|> (PU2)
+(PU5) .up.> (PU4) : extend
+(PU6) .up.> (PU4) : extend
+(PU7) .up.> (PU10) : extend
+(PU8) .up.> (PU10) : extend
+(PU9) .up.> (PU10) : extend
+(PU11) .up.> (PU14) : extend
+(PU13) .up.> (PU14) : extend
+(PU15) .up.> (PU14) : extend
+(PU17) .up.> (PU14) : extend
 
 @enduml
