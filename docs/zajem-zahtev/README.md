@@ -48,6 +48,8 @@ nefunkcionalne zahteve: delovanje funkcionalnosti v 100 ms, dostopno za različn
 - **Predstavnik občine** - občni delavec zadolžen za preverjanje pristnosti in posredovanje uporabniških opažanj in priporočil.
 - **Občna organizacija** - normalna organizacija, ki se nahaja v občini (npr. gasilci), če v občini ni take organizacije se nanaša na najbližjo oziroma najprimernejšo organizacijo izven občine.
 - **XSS napadi** - križno izvajanje skriptov (Cross-Site Scripting), omogočajo napadalcem, da vnesejo skripte na strani odjemalca v spletne strani, ki si jih ogledujejo drugi uporabniki.
+- **RUP proces** - RUP oz. Rational Unified Process predstavlja iterativen proces razvoja programske opreme.
+- **GIT okolje** - odprtokodni sistem za upravljanje z izvorno kodo.
 
 ## 4. Diagram primerov uporabe
 
@@ -1060,9 +1062,23 @@ Registriran uporabnik, občni delavec, predstavnik občine in administrator lahk
 
 ## 6. Nefunkcionalne zahteve
 
-:dart: **TO-DO**
+# 1° Zahteve izdelka:
+1.1) Sistem mora biti zmožen hkrati obdelati vsaj 200 uporabniških zahtev.
+1.2) Sistem mora odgovoriti na vsako zahtevo znotraj 1000ms.
+1.3) Sistem uporabniku ne sme omogočiti dostopa do podatkov, za katere ni izrecno pooblaščen.
+1.4) Sistem mora biti na voljo najmanj 99,9 odstotkov časa.
+1.5) Proces prijave v sistem ne sme biti daljši od 3 sekunde.
+1.6) Sistem je odporen na XSS ter SQL injection napada (merljivo z OWASP ZAP).
 
-- Navedite splošne omejitve, ki jih moramo upoštevati v več funkcionalnostih ali celo skozi celoten razvoj aplikacije.
+# 2° Organizacijske zahteve
+2.1) Procesni model bo uporabljal RUP proces.
+2.2) Sistem omogoča enostavno dodajanje novih funkcionalnostih
+2.3) Sistem bo implementiran v GIT razvojnem okolju.
+
+# 3° Zunanje zahteve
+3.1) Sistem sledi standarde definirane po GDPR zakonu.
+3.2) Sistem se mora biti sposoben izvajati na OS Red Hat Enterprise Linux z nameščenim spletnim strežnikom Apache.
+3.3) Sistem uporablja algoritem SHA256 za enkripcijo podatkov.
 
 ## 7. Prototipi vmesnikov
 
