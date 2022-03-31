@@ -275,7 +275,7 @@ Registriran uporabnik, občni delavec, predstavnik občine in administrator lahk
 #### Osnovni tok
 
 1. Registrirani uporabnik izbere gumb za pregled profila
-2. Uporabniku se prikaže njegov profil kjer lahko pregleda svoje osebne podatke, izbrano občino, objavljene novice/predloge/komentarje
+2. Uporabniku se prikaže njegov profil kjer lahko pregleda svoje osebne podatke, izbrano občino, objavljene novice/predloge/komentarje in svoja sporočila
 
 #### Alternativni tok(ovi)
 
@@ -523,7 +523,7 @@ Občni delavec, predstavnik občine in administrator lahko tudi pobrišeta novic
 
 1. Občni delavec, predstavnik občine ali administrator izbere gumb za pregled svojega profila
 2. Občni delavec, predstavnik občine ali administrator izbere novico, ki jo je sam objavil
-3. Občni delavec, predstavnik občine ali administrator izbere gumb za briasnje novico
+3. Občni delavec, predstavnik občine ali administrator izbere gumb za brisanje novico
 4. Občni delavec, predstavnik občine ali administrator potrdi brisanje novico
 5. Občni delavec, predstavnik občine ali administrator dobi obvestilo o uspešnem brisanju
 
@@ -567,7 +567,7 @@ Registriran uporabnik, občni delavec, predstavnik občine in administrator lahk
 
 1. Uporabnik odpre začetno stran
 2. Uporabnik izbere novico ki ga zanima
-3. Uporabniku se prikaže več informacije o novice in komentarje
+3. Uporabniku se prikažejo informacije o novici in komentarji
 
 #### Alternativni tok(ovi)
 
@@ -735,38 +735,29 @@ Registriran uporabnik, občni delavec, predstavnik občine in administrator lahk
 
 #### Osnovni tok
 
-:dart: **TO-DO**
+1. Uporabnik odpre začetno stran
+2. Uporabnik izbere predlog ki ga zanima
+3. Uporabniku se prikažejo informacije o predlogu, njegovi glasovi in komentarji
 
 #### Alternativni tok(ovi)
 
-:dart: **TO-DO**
-
-- Navesti je potrebno vse alternativne tokove, ki jih označite kot **Alternativni tok 1**, **Alternativni tok 2**, itd.
+Ni alternativnih tokov.
 
 #### Pogoji
 
-:dart: **TO-DO**
-
-- Navesti je potrebno pogoje, ki morajo biti izpolnjeni, da se funkcionalnost lahko prične izvajati?
+Ni pogoji.
 
 #### Posledice
 
-:dart: **TO-DO**
-
-- Navedite, kakšen je rezultat izvedbe osnovnega toka funkcionalnosti?
+Uporabniku se prikaže predlog.
 
 #### Posebnosti
 
-:dart: **TO-DO**
-
-- Ali realizacija funkcionalnosti zahteva kakšne posebnosti, kot je npr. dodatna strojna oprema?
-- Se je potrebno držati kakšnih posebnih standardov?
+Ni posebnosti.
 
 #### Prioritete identificiranih funkcionalnosti
 
-:dart: **TO-DO**
-
-- Za identificirane funkcionalnosti se z metodo **MoSCoW** (MUST have, SHOULD have, COULD have in WOULD have) določi prioritete.
+Funkcionalnost ima MUST have funkcionalnost. Spletna stran ne bo uporabna brez pregleda predlogov.
 
 #### Sprejemni testi
 
@@ -779,42 +770,38 @@ Registriran uporabnik, občni delavec, predstavnik občine in administrator lahk
   - pričakovan rezultat.
 
 ## 15. Brisanje predlogov
-Registriran uporabnik (autor predloga), občni delavec, predstavnik občine in administrator lahko brišejo predloge, za katere menijo, da ne ustrezajo standardom in pogojem uporabe aplikacije.
+Registriran uporabnik (autor predloga), predstavnik občine in administrator lahko brišejo predloge, za katere menijo, da ne ustrezajo standardom in pogojem uporabe aplikacije.
 
 #### Osnovni tok
 
-:dart: **TO-DO**
+1. Registriran uporabnik izbere gumb za pregled svojega profila
+2. Registriran uporabnik izbere predlog, ki ga je sam objavil
+3. Registriran uporabnik izbere gumb za briasnje predloga
+4. Registriran uporavnik potrdi brisanje predloga
+5. Registriran uporabnik dobi obvestilo o uspešnem brisanju
 
 #### Alternativni tok(ovi)
 
-:dart: **TO-DO**
-
-- Navesti je potrebno vse alternativne tokove, ki jih označite kot **Alternativni tok 1**, **Alternativni tok 2**, itd.
+1. Predstavnik občine ali administrator izbere predlog za pregled iz seznama vseh predlogov
+3. Predstavnik občine ali administrator izbere gumb za brisanje predloga
+4. Predstavnik občine ali administrator potrdi brisanje predloga
+5. Predstavnik občine ali administrator dobi obvestilo o uspešnem brisanju
 
 #### Pogoji
 
-:dart: **TO-DO**
-
-- Navesti je potrebno pogoje, ki morajo biti izpolnjeni, da se funkcionalnost lahko prične izvajati?
+Uporabnik mora biti prijavljen.
 
 #### Posledice
 
-:dart: **TO-DO**
-
-- Navedite, kakšen je rezultat izvedbe osnovnega toka funkcionalnosti?
+Predlog je izbrisan iz podatkovne baze.
 
 #### Posebnosti
 
-:dart: **TO-DO**
-
-- Ali realizacija funkcionalnosti zahteva kakšne posebnosti, kot je npr. dodatna strojna oprema?
-- Se je potrebno držati kakšnih posebnih standardov?
+Ni posebnosti.
 
 #### Prioritete identificiranih funkcionalnosti
 
-:dart: **TO-DO**
-
-- Za identificirane funkcionalnosti se z metodo **MoSCoW** (MUST have, SHOULD have, COULD have in WOULD have) določi prioritete.
+Funkcionalnost ima SHOULD have prioriteto. Spletna stran bo delovala tudi brez te funkcionalnosti, vendar je pomembna v primeru da je prelog neprimeren.
 
 #### Sprejemni testi
 
@@ -829,40 +816,33 @@ Registriran uporabnik (autor predloga), občni delavec, predstavnik občine in a
 ## 16. Pošiljanje sporočil
 Registriran uporabnik, občni delavec, predstavnik občine in administrator si lahko izmenjujejo sporočila med sabo, kar bo močno olajšalo povezovanje in komunikacijo članov občine.
 
-#### Osnovni tok
+#### Osnovni tok ****vaje dali site ili uporabnik
 
-:dart: **TO-DO**
+1. Uporabnik odpre profil drugega uporabnika
+2. Uporabnik izbere gumb za pošiljanje sporočila
+3. Uporabnik izpolni vnosno polje za sporočila
+4. Uporabnik pošlje sporočilo
+5. Uporabnik dobi obvestilo da je sporočilo poslano
 
 #### Alternativni tok(ovi)
 
-:dart: **TO-DO**
-
-- Navesti je potrebno vse alternativne tokove, ki jih označite kot **Alternativni tok 1**, **Alternativni tok 2**, itd.
+Ni alternativnih tokov.
 
 #### Pogoji
 
-:dart: **TO-DO**
-
-- Navesti je potrebno pogoje, ki morajo biti izpolnjeni, da se funkcionalnost lahko prične izvajati?
+Uporabnik mora biti prijavljen.
 
 #### Posledice
 
-:dart: **TO-DO**
-
-- Navedite, kakšen je rezultat izvedbe osnovnega toka funkcionalnosti?
+Sporočilo je poslano.
 
 #### Posebnosti
 
-:dart: **TO-DO**
-
-- Ali realizacija funkcionalnosti zahteva kakšne posebnosti, kot je npr. dodatna strojna oprema?
-- Se je potrebno držati kakšnih posebnih standardov?
+Ni posebnosti.
 
 #### Prioritete identificiranih funkcionalnosti
 
-:dart: **TO-DO**
-
-- Za identificirane funkcionalnosti se z metodo **MoSCoW** (MUST have, SHOULD have, COULD have in WOULD have) določi prioritete.
+Funkcionalnost ima WOULD have prioriteto. Funkcionalnost ni potrebna, vendar je komunikacija med uporabniki zaželjena.
 
 #### Sprejemni testi
 
@@ -879,38 +859,29 @@ Registriran uporabnik, občni delavec, predstavnik občine in administrator lahk
 
 #### Osnovni tok
 
-:dart: **TO-DO**
+1. Uporabnik izbere vnosno polje za iskanje
+2. Uporabnik vnese iskalni izraz
+3. Uporabniku se prikažejo zadetki iskanja
 
 #### Alternativni tok(ovi)
 
-:dart: **TO-DO**
-
-- Navesti je potrebno vse alternativne tokove, ki jih označite kot **Alternativni tok 1**, **Alternativni tok 2**, itd.
+Ni alternativnih tokov.
 
 #### Pogoji
 
-:dart: **TO-DO**
-
-- Navesti je potrebno pogoje, ki morajo biti izpolnjeni, da se funkcionalnost lahko prične izvajati?
+Ni pogojev.
 
 #### Posledice
 
-:dart: **TO-DO**
-
-- Navedite, kakšen je rezultat izvedbe osnovnega toka funkcionalnosti?
+Uporabnik dobi rezultata iskanja.
 
 #### Posebnosti
 
-:dart: **TO-DO**
-
-- Ali realizacija funkcionalnosti zahteva kakšne posebnosti, kot je npr. dodatna strojna oprema?
-- Se je potrebno držati kakšnih posebnih standardov?
+Ni posebnosti.
 
 #### Prioritete identificiranih funkcionalnosti
 
-:dart: **TO-DO**
-
-- Za identificirane funkcionalnosti se z metodo **MoSCoW** (MUST have, SHOULD have, COULD have in WOULD have) določi prioritete.
+Funkcionalnost ima WOULD have prioriteto. Uporabnik si lahko tudi brez te funkcionalnosti ogleda vse novice in predloge.
 
 #### Sprejemni testi
 
@@ -927,38 +898,28 @@ Registriran uporabnik, občni delavec, predstavnik občine in administrator lahk
 
 #### Osnovni tok
 
-:dart: **TO-DO**
+1. Uporabnik izbere in odpre željen profil
+2. Uporabnik lahko pregleda podatke in objavljene novice oz. predloge izbranega profila
 
 #### Alternativni tok(ovi)
 
-:dart: **TO-DO**
-
-- Navesti je potrebno vse alternativne tokove, ki jih označite kot **Alternativni tok 1**, **Alternativni tok 2**, itd.
+Ni alternativnih tokov.
 
 #### Pogoji
 
-:dart: **TO-DO**
-
-- Navesti je potrebno pogoje, ki morajo biti izpolnjeni, da se funkcionalnost lahko prične izvajati?
+Ni pogojev.
 
 #### Posledice
 
-:dart: **TO-DO**
-
-- Navedite, kakšen je rezultat izvedbe osnovnega toka funkcionalnosti?
+Uporabnik pregleda profil drugega uporabnika.
 
 #### Posebnosti
 
-:dart: **TO-DO**
-
-- Ali realizacija funkcionalnosti zahteva kakšne posebnosti, kot je npr. dodatna strojna oprema?
-- Se je potrebno držati kakšnih posebnih standardov?
+Ni posebnosti.
 
 #### Prioritete identificiranih funkcionalnosti
 
-:dart: **TO-DO**
-
-- Za identificirane funkcionalnosti se z metodo **MoSCoW** (MUST have, SHOULD have, COULD have in WOULD have) določi prioritete.
+Funkcionalnost ima SHOULD have prioriteto. ?????**
 
 #### Sprejemni testi
 
@@ -975,38 +936,30 @@ Registriran uporabnik, občni delavec, predstavnik občine in administrator lahk
 
 #### Osnovni tok
 
-:dart: **TO-DO**
+1. Uporabnik izbere predlog/novico
+2. Uporabnik v vnosno polje napiše komentar
+3. Uporabnik pošlje komentar
+4. Uporabnik dobi obvestio o uspešno objavljen komentar
 
 #### Alternativni tok(ovi)
 
-:dart: **TO-DO**
-
-- Navesti je potrebno vse alternativne tokove, ki jih označite kot **Alternativni tok 1**, **Alternativni tok 2**, itd.
+Ni alternativnih tokov.
 
 #### Pogoji
 
-:dart: **TO-DO**
-
-- Navesti je potrebno pogoje, ki morajo biti izpolnjeni, da se funkcionalnost lahko prične izvajati?
+Uporabnik mora biti prijavljen.
 
 #### Posledice
 
-:dart: **TO-DO**
-
-- Navedite, kakšen je rezultat izvedbe osnovnega toka funkcionalnosti?
+Komentar je dodan k predlogu oz. novice.
 
 #### Posebnosti
 
-:dart: **TO-DO**
-
-- Ali realizacija funkcionalnosti zahteva kakšne posebnosti, kot je npr. dodatna strojna oprema?
-- Se je potrebno držati kakšnih posebnih standardov?
+Ni posebnosti.
 
 #### Prioritete identificiranih funkcionalnosti
 
-:dart: **TO-DO**
-
-- Za identificirane funkcionalnosti se z metodo **MoSCoW** (MUST have, SHOULD have, COULD have in WOULD have) določi prioritete.
+Funkcionalnost ima COULD have prioriteto. Komentari bi popestrili komunikacijo med uporabniki in občnimi delavci.
 
 #### Sprejemni testi
 
@@ -1017,6 +970,7 @@ Registriran uporabnik, občni delavec, predstavnik občine in administrator lahk
   - začetno stanje sistema,
   - vhod in
   - pričakovan rezultat.
+
 
 ## 6. Nefunkcionalne zahteve
 
