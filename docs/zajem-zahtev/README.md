@@ -86,7 +86,10 @@ nefunkcionalne zahteve: delovanje funkcionalnosti v 100 ms, dostopno za različn
 16. Pošiljanje sporočil
 17. Iskanje novice/predlogov
 18. Pregled profilov ostalih uporabnikov
-19. Komentiranje
+19. Dodajanje komentarja
+20. Brisanje komentarja
+21. Izbira lokacije
+22. Ogled lokacije
 
 
 :dart: **TO-DO**
@@ -871,7 +874,7 @@ Funkcionalnost ima SHOULD have prioriteto. ?????**
 | --- | --- | --- | --- |
 | Pregled profilov ostalih uporabnikov | Začetna stran | Izbira profila drugega uporabnika | Prikazan profil drugega uporabnika |
 
-## 19. Komentiranje
+## 19. Dodajanje komentarja
 Registriran uporabnik, občni delavec, predstavnik občine in administrator lahko komentirajo predloge/novice, kar bo prispevalo k lažjemu razumevanju ter hitrejši izmenjavi informacij, ki lahko koristijo večjem številu ljudi.
 
 #### Osnovni tok
@@ -900,6 +903,112 @@ Ni posebnosti.
 #### Prioritete identificiranih funkcionalnosti
 
 Funkcionalnost ima COULD have prioriteto. Komentari bi popestrili komunikacijo med uporabniki in občnimi delavci.
+
+#### Sprejemni testi
+
+| Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
+| --- | --- | --- | --- |
+| Komentiranje | Začetna stran | Vnos ter pošiljanje komentara | Obvestilo o uspešno objavljenemu komentarju |
+
+## 20. Brisanje komentarja
+Registriran uporabnik, občni delavec, predstavnik občine in administrator lahko izbrišejo svoje komentarje. Prav tako lahko administrator in predstavnik občine izbrišeta tudi komentarje ostalih uporabnikov.
+
+#### Osnovni tok
+
+1. Uporabnik izbere gumb za pregled svojega profila
+2. Uporabnik izbere svoj komentar
+3. Uporabnik izbere gumb za birsanje komentarja
+4. Uporabnik dobi obvestio o uspešno izbrisanem komentarju
+
+#### Alternativni tok(ovi)
+
+1. Administrator ali predstavnik občine izbere komentar
+2. Administrator ali predstavnik občine izbere gumb za birsanje komentarja
+3. Administrator ali predstavnik občine dobi obvestio o uspešno izbrisanem komentarju
+
+#### Pogoji
+
+Uporabnik mora biti prijavljen.
+
+#### Posledice
+
+Komentar je izbrisan.
+
+#### Posebnosti
+
+Ni posebnosti.
+
+#### Prioritete identificiranih funkcionalnosti
+
+Funkcionalnost ima WOULD have prioriteto. *****TODO
+
+#### Sprejemni testi
+
+| Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
+| --- | --- | --- | --- |
+| Komentiranje | Začetna stran | Vnos ter pošiljanje komentara | Obvestilo o uspešno objavljenemu komentarju |
+
+## 22. Izbira lokacije
+
+#### Osnovni tok
+
+1. Uporabnik med dodajanjem novice oz. predloga izbere gumb za dodajanje lokacije
+2. Uporabniku se prikaže zemljevid
+3. Uporabnik izbere natančno lokacijo oz. vpiše naslov
+4. Uporabnik nadaljuje z izpolnjevanjem obrazca
+
+#### Alternativni tok(ovi)
+
+Ni alternativnih tokov.
+
+#### Pogoji
+
+Uporabnik mora biti prijavljen in mora izpolnjevati obrazec za dodajanje novice oz. predloga.
+
+#### Posledice
+
+K predlogu oz. novice je dodana lokacija.
+
+#### Posebnosti
+
+Za izbiro lokacije bo aplikacija uporabljala Google Maps.
+
+#### Prioritete identificiranih funkcionalnosti
+
+Funkcionalnost ima COULD have prioriteto. Lokacija bi izboljšala komunikacijo med uporabniki in občnimi delavci.
+
+#### Sprejemni testi
+
+| Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
+| --- | --- | --- | --- |
+| Komentiranje | Začetna stran | Vnos ter pošiljanje komentara | Obvestilo o uspešno objavljenemu komentarju |
+
+## 23. Ogled lokacije
+
+#### Osnovni tok
+
+1. Uporabnik izbere predlog/novico
+2. Uporabnik pogleda lokacijo, prikaže se mu tako zemljevid kot naslov.
+
+#### Alternativni tok(ovi)
+
+Ni alternativnih tokov.
+
+#### Pogoji
+
+Ni pogojev.
+
+#### Posledice
+
+Prikazana lokacija na zemljevidu.
+
+#### Posebnosti
+
+Za prikaz lokacije bo aplikacija uporabljala Google Maps.
+
+#### Prioritete identificiranih funkcionalnosti
+
+Funkcionalnost ima COULD have prioriteto. Lokacija bi izboljšala komunikacijo med uporabniki in občnimi delavci.
 
 #### Sprejemni testi
 
