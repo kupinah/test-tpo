@@ -117,16 +117,16 @@ Neregistriran uporabnik lahko registrira račun, kar predstavlja osnovno funkcio
 #### Osnovni tok
 
 1. Neregistriran uporabnik lahko izbere gumb za registracijo.
-2. Uporabnik dobi regrstracijski obrazec
+2. Uporabnik dobi registracijski obrazec
 3. Uporabnik izpolni osebne podatke
-4. Uporabnik izbere občino v kateri živi
+4. Uporabnik izbere občino, v kateri živi
 5. Uporabnik odda vlogo za registracijo
 6. Uporabnik prejme potrdilo o uspešni registraciji
 
 #### Alternativni tok 1
 
 1. Neregistriran uporabnik lahko izbere gumb za registracijo.
-2. Uporabnik dobi regrstracijski obrazec
+2. Uporabnik dobi registracijski obrazec
 3. Uporabnik neustrezno izpolni osebne podatke
 4. Uporabnik izbere občino v kateri živi
 5. Uporabnik odda vlogo za registracijo
@@ -135,9 +135,9 @@ Neregistriran uporabnik lahko registrira račun, kar predstavlja osnovno funkcio
 #### Alternativni tok 2
 
 1. Registriran uporabnik lahko izbere gumb za registracijo.
-2. Uporabnik dobi regrstracijski obrazec
+2. Uporabnik dobi registracijski obrazec
 3. Uporabnik izpolni osebne podatke
-4. Uporabnik izbere občino v kateri živi
+4. Uporabnik izbere občino, v kateri živi
 5. Uporabnik odda vlogo za registracijo
 7. Uporabnik dobi obvestilo da je uporabnik že registriran in zavrne registracijo
 
@@ -161,13 +161,15 @@ Funkcionalnost spada pod MUST have prioriteto, saj brez možnosti registracije a
 
 - Za identificirane funkcionalnosti se z metodo **MoSCoW** (MUST have, SHOULD have, COULD have in WOULD have) določi prioritete.
 
-#### Sprejemni testi ? vaje - en test na en osnoven tok ali?
+#### Sprejemni testi 
 
-| Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
-| --- | --- | --- | --- |
-| Registracija | Uporabnik še ni registriran | Vnos podatkov za registracijo | Uspešno registriran uporabnik vpisan v podatkovno bazo |
-| Registracija | Uporabnik še ni registriran | Vnos pomanjkljivih podatkov za registracijo | Neuspešna registracija uporabnika | 
-| Registracija | Uporabnik je že registriran | Vnos podatkov za registracijo | Neuspešna registracija uporabnika | 
+| Primer uporabe | Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
+| --- | --- | --- | --- | --- |
+| Registracija | Samostalna registracija uporabnika | Uporabnik še ni registriran | Vnos podatkov za registracijo | Uspešno registriran uporabnik vpisan v podatkovno bazo |
+| Registracija | Administratorska registracija uporabnika | Uporabnik še ni registriran | Vnos podatkov za registracijo | Uspešno registriran uporabnik vpisan v podatkovno bazo |
+| Registracija | Sporočanje o nepravilni registraciji | Uporabnik še ni registriran | Vnos pomanjkljivih podatkov za registracijo | Obvestilo o neuspešna registraciji uporabnika |
+| Registracija | Zahteva po vsemi podatki | Uporabnik še ni registriran | Vnos vseh podatkov za registracijo razen občine | Obvestilo o neuspešna registraciji uporabnika |
+| Registracija | Uporabnik že obstaja | Uporabnik je že registriran | Vnos podatkov za registracijo | Obvestilo o neuspešni registraciji uporabnika |
 
 ## 2. Prijava
 Registiran uporabnik, občni delavec, predstavnik občine ter administrator lahko s procesom prijave dostopajo do svojih računov in vseh funkcionalnosti, ki jih njihova vloga omogoča.
@@ -207,10 +209,12 @@ Prijava spada pod MUST have prioriteto, saj brez prijavo uporabniki ne morejo do
 
 #### Sprejemni testi
 
-| Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
-| --- | --- | --- | --- |
-| Prijava | Registriran uporabnik | Vnos podatkov za prijavo | Uspešno prijavljenemu uporabniku se prikaže začetna stran |
-| Prijava | Registriran uporabnik | Vnos napačnih podatkov za prijavo | Ob neuspešni prijavi se uporabniku prikaže obvestilo, da so podatki napačni |
+| Primer uporabe | Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
+| --- | --- | --- | --- | --- |
+| Prijava | Prikaz prijavne forme | Registriran uporabnik na začetni strani | Izbira gumba za prijavo | Uspešno prikazana prijavna stran |
+| Prijava | Prijava uporabnika | Registriran uporabnik na prijavni strani | Vnos podatkov za prijavo | Uspešno prijavljen uporabnik |
+| Prijava | Neobstoječa stran zaradi tehničnih težav | Registriran uporabnik na začetni strani | Izbira gumba za prijavo | Obvestilo o neuspešnem nalaganju prijavne strani |
+| Prijava | Napačni podatki za prijavo | Registriran uporabnik na prijavni strani | Vnos napačnih podatkov za prijavo | Obvestilo o neuspešni prijavi |
 
 ## 3. Odjava
 Registiran uporabnik, občni delavec, predstavnik občine ter administrator se lahko tudi odjavijo iz svojega računa ter aplikaciji pristopijo kot gostje.
@@ -243,9 +247,10 @@ Funkcionalnost ima MUST have prioriteto, da se lahko drug uporabnik prijavi v ap
 
 #### Sprejemni testi
 
-| Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
-| --- | --- | --- | --- |
-| Odjava | Prijavljen uporabnik | Izbira gumba za odjavo | Uporabnik je odjavljen iz sistema |
+| Primer uporabe | Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
+| --- | --- | --- | --- | --- |
+| Odjava | Lastnoročno odjavljanje iz sistema | Prijavljen uporabnik | Izbira gumba za odjavo | Uporabnik je odjavljen iz sistema |
+| Odjava | Administratorska odjava iz sistema | Prijavljen uporabnik | Administratorska izbira uporabnika za odjavo | Uporabnik je odjavljen iz sistema |
 
 ## 4. Pregled uporabniškega profila
 Registriran uporabnik, občni delavec, predstavnik občine in administrator lahko pregledajo svoj račun ter informacije, ki jih delijo z drugimi.
@@ -277,9 +282,10 @@ Funkcionalnost ima SHOULD have prioriteto. Spletna stran bo še vedno delovala b
 
 #### Sprejemni testi
 
-| Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
-| --- | --- | --- | --- |
-| Pregled uporabniškega profila | Prijavljen uporabnik | Izbira gumba za prikaz profila | Neuspešna registracija uporabnika |
+| Primer uporabe | Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
+| --- | --- | --- | --- | --- |
+| Pregled uporabniškega profila | Pregled lastnega profila | Prijavljen uporabnik | Izbira gumba za prikaz profila | Uspešno prikazan lastni profil |
+| Pregled uporabniškega profila | Administratorski pregled tujega profila | Administrator prijavljen v aplikacijo | Izbira gumba za prikaz uporabnikovega profila | Uspešno prikazan profila uporabnika |
 
 ## 5. Ureditev profila
 Registriran uporabnik, občni delavec, predstavnik občine in administrator lahko urejajo svoj profil ter posodabljajo osnovne informacije, kot so ime, priimek, geslo, itn.
@@ -328,7 +334,8 @@ Funkcionalnost ima SHOULD have prioriteto. Aplikacija bo delovala brez nje, vend
 
 #### Sprejemni testi
 
-| --- | --- | --- | --- |
+| Primer uporabe | Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
+| --- | --- | --- | --- | --- |
 | Urejanje profila | Prijavljen uporabnik na strani svojega profila | Izbira gumba za urejanje profila ter vnos novih podatkov | Stran uporabniškega profila z spremenjenimi podatki | 
 | Urejanje profila | Administrator na uporabnikovemu profilu | Izbira gumba za urejanje profila ter vnos novih podatkov | Stran uporabniškega profila z spremenjenimi podatki |
 | Urejanje profila | Prijavljen uporabnik na strani svojega profila | Izbira gumba za urejanje profila ter vnos neustreznih podatkov | Prikaz obvestila o neuspešni spremembi |
@@ -371,10 +378,12 @@ Funkcionalnost ima MUST have prioriteto. Če uporabnik lahko ustavi nov profil, 
 
 #### Sprejemni testi
 
-| Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
-| --- | --- | --- | --- |
-| Brisanje profila | Prijavljen uporabnik na svojemu profilu | Izbira gumba za brisanje profila | Zbrisan profil uporabnika in odprta začetna stran |
-| Brisanje profila | Administrator na profilu uporabnika | Izbira gumba za brisanje profila | Zbrisan profil uporabnika in odprta začetna stran |
+| Primer uporabe | Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
+| --- | --- | --- | --- | --- |
+| Brisanje profila | Prikaz sporočila o potrditvi brisanja | Prijavljen uporabnik na svojemu profilu | Izbira gumba za brisanje profila | Sporočilo o potrditvi akcije |
+| Brisanje profila | Prikaz sporočila o potrditvi brisanja | Prijavljen uporabnik na svojemu profilu | Izbira gumba za potrditev brisanje profila | Zbrisan profil uporabnika in odprta začetna stran |
+| Brisanje profila | Administratorsko brisanje profila | Administrator na profilu uporabnika | Izbira gumba za brisanje profila | Zbrisan profil uporabnika in odprta začetna stran |
+| Brisanje profila | Ohranjanje uporabnika v sistemu po zavrnitvi brisanja | Administrator na profilu uporabnika | Izbira gumba za preklic akcije brisanja | Uporabnik še vedno prisoten v bazi |
 
 ## 7. Dodajanje novic o dogodkih, spremembah v občini, aktualnih dogajanj...
 Občni delavec in predstavnik občine lahko dodajajo novice o trenutnih dogajanj v občini. S promocijo dogodkov in del v občini, promovirajo tudi svoje delo in pa tudi obveščajo stanovalce o vseh aktualnostih.
@@ -410,11 +419,12 @@ Funkcionalnost ima MUST have prioriteto, ker to je glavni namen spletno strani.
 
 #### Sprejemni testi
 
-| Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
-| --- | --- | --- | --- |
-| Dodajanje nove vsebine | Stran z vsebino | Nova vsebina in dodajanje gumba za objavo | Nova vsebina dodana med že obstoječo vsebino |
-| Dodajanje nove vsebine | Stran z vsebino | Nova vsebin z neustrezno izpolnjenimi podatki | Obvestilo o neuspešni objavi |
-
+| Primer uporabe | Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
+| --- | --- | --- | --- | --- |
+| Dodajanje nove vsebine | Prikaz forme za dodajanje vsebine | Začetna stran | Izbira gumba za dodajanje vsebine | Odprta forma za dodajanje vsebine |
+| Dodajanje nove vsebine | Dodajanje vsebine | Forma za dodajanje vsebine | Nova vsebina in izbira gumba za objavo | Nova vsebina dodana med že obstoječo vsebino |
+| Dodajanje nove vsebine | Neobstoječa stran zaradi tehničnih težav | Stran z vsebino | Izbira gumba za dodajenj vsebine | Obvestilo o neuspešni naloženi formi |
+| Dodajanje nove vsebine | Neustrezno dodajanje vsebine | Stran z vsebino | Nova vsebina z neustrezno izpolnjenimi podatki | Obvestilo o neuspešni objavi |
 
 ## 8. Urejanje novic
 Občni delavec in predstavnik občine lahko urejata objavljenje novice. To je lahko potrebno zgolj zaradi manjše pravopisne napake ali pa kakšne bolj resne spremembe.
@@ -453,11 +463,12 @@ Funkcionalnost ima SHOULD have prioriteto. Spletna stran bo delovaval tudi brez 
 
 #### Sprejemni testi
 
-| Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
-| --- | --- | --- | --- |
-| Urejanje novic | Stran z vsebino | Izbira gumba za ureditev določene strani ter vnos in oddaja podatkov | Prikazana začetna stran |
-| Urejanje novic | Stran z vsebino | Izbira gumba za ureditev določene strani ter vnos in oddaja neustreznih podatkov | Obvestilo o neuspešni spremembi |
-
+| Primer uporabe | Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
+| --- | --- | --- | --- | --- |
+| Urejanje novic | Delovanje gumba za urejanje novic | Stran z vsebino | Izbira gumba za ureditev določene novice | Prikazana forma za urejanje |
+| Urejanje novic | Urejanje vsebine | Forma za urejanje | Vnos in oddaja novih podatkov | Prikazana začetna stran |
+| Urejanje novic | Neuspešno urejanje vsebine | Forma za urejanje | Vnos in oddaja neustreznih podatkov | Obvestilo o neuspešni spremembi |
+| Urejanje novic | Neuspešna oddaja obrazca | Forma za urejanje | Izbira gumba za oddajo sprememb | Obvestilo o neuspešni spremembi |
 
 ## 9. Brisanje novic
 Občni delavec, predstavnik občine in administrator lahko tudi pobrišeta novice, kar je izjemno koristno v primeru, da ugotovita, da je novica napačna ali pa, da je prišlo do neke spremembe.
@@ -473,8 +484,8 @@ Občni delavec, predstavnik občine in administrator lahko tudi pobrišeta novic
 #### Alternativni tok 1
 
 1. Predstavnik občine ali administrator izbere novico za pregled iz seznama vseh novic
-3. Predstavnik občine ali administrator izbere gumb za briasnje novico
-4. Predstavnik občine ali administrator potrdi brisanje novico
+3. Predstavnik občine ali administrator izbere gumb za brisanje novice
+4. Predstavnik občine ali administrator potrdi brisanje novice
 5. Predstavnik občine ali administrator dobi obvestilo o uspešnem brisanju
 
 #### Pogoji
@@ -495,11 +506,12 @@ Funkcionalnost ima SHOULD have prioriteto. Spletna stran bo delovala tudi brez t
 
 #### Sprejemni testi
 
-| Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
-| --- | --- | --- | --- |
-| Brisanje lastne novic | Profil uporabnika | Izbira gumba za brisanje določene lastne novice ter potrditev brisanja | Obvestilo o uspešnem brisanju |
-| Brisanje novic | Stran z vsebino | Izbira gumba za brisanje določene novice ter potrditev brisanja | Obvestilo o uspešnem brisanju 
-
+| Primer uporabe | Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
+| --- | --- | --- | --- | --- |
+| Brisanje novic | Delovanje gumba za brisanje novice | Lastni profil uporabnika | Izbira gumba za brisanje določene lastne novice | Sporočilo o potrditvi brisanja |
+| Brisanje novic | Brisanje lastne novice | Sporočilo o potrditvi brisanja | Izbira gumba za potrditev brisanja | Obvestilo o uspešnem brisanju |
+| Brisanje novic | Delovanje gumba za brisanje novice | Stran z vsebino | Izbira gumba za brisanje določene novice | Sporočilo o potrditvi brisanja |
+| Brisanje novic | Brisanje tuje novice | Sporočilo o potrditvi brisanja | Potrditev brisanja | Obvestilo o uspešnem brisanju |
 
 ## 10. Pregled novic
 Registriran uporabnik, občni delavec, predstavnik občine in administrator lahko pregledujejo novice o aktualnih dogajanj v občini, del, aktivnosti, ipd.
@@ -507,7 +519,7 @@ Registriran uporabnik, občni delavec, predstavnik občine in administrator lahk
 #### Osnovni tok
 
 1. Uporabnik odpre začetno stran
-2. Uporabnik izbere novico ki ga zanima
+2. Uporabnik izbere novico, ki ga zanima
 3. Uporabniku se prikažejo informacije o novici in komentarji
 
 #### Alternativni tok
@@ -532,9 +544,10 @@ Funkcionalnost ima MUST have funkcionalnost. Spletna stran ne bo uporabna brez p
 
 #### Sprejemni testi
 
-| Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
-| --- | --- | --- | --- |
-| Pregled novic | Začetna stran | Izbira novice | Prikaz dodatnih informacij o izbrani novici |
+| Primer uporabe | Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
+| --- | --- | --- | --- | --- |
+| Pregled novic | Prikaz novice | Začetna stran | Izbira novice | Prikaz dodatnih informacij o izbrani novici |
+| Pregled novic | Prikaz komentarja | Začetna stran | Izbira novice | Prikaz dodatnih komentarjev na izbrani novici |
 
 ## 11. Dodajanje predlogov o odpravljanju poškodb, novih idej, težavah...
 Registrirani uporabniki lahko dodajajo predloge, kako bi popravili neko poškodbo, kaj bi radi imeli v svoji občini ali pa kako bi odpravili neko težavo.
@@ -544,7 +557,7 @@ Registrirani uporabniki lahko dodajajo predloge, kako bi popravili neko poškodb
 1. Registrirani uporabnik izbere gumb za dodajanje predlog
 2. Registrirani uporabnik napiše predlog in zahtevane podatke v prikazanem obrazec
 3. Registrirani uporabnik izbere gumb za objavo
-4. Ob uspešni objavi, je predlog prikzan med predlogami in se uporabniku prikaže začetno stran
+4. Ob uspešni objavi, je predlog prikazan med predlogami in se uporabniku prikaže začetno stran
 
 #### Alternativni tok
 
@@ -571,8 +584,8 @@ Funkcionalnost ima MUST have prioriteto, ker to je to ena od najbolj pomembnih f
 
 #### Sprejemni testi
 
-| Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
-| --- | --- | --- | --- |
+| Primer uporabe | Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
+| --- | --- | --- | --- | --- |
 | Dodajanje predlogov | Začetna stran | Izbira gumba za dodajanje predlogov ter vnos in oddaja podatkov | Prikaz novega predloga na začetni strani |
 | Dodajanje predlogov | Začetna stran | Izbira gumba za dodajanje predlogov ter vnos in oddaja neustreznih podatkov | Prikaz obvestila o neuspešni objavi |
 
@@ -609,9 +622,10 @@ Funkcionalnost ima COULD have prioriteto. Spletna stran bo delovala in bo korist
 
 #### Sprejemni testi
 
-| Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
-| --- | --- | --- | --- |
-| Glasovanje za predloge | Začetna stran s predlogi | Glas za ali proti predlogu | Obvestilo o uspešnem glasovanju |
+| Primer uporabe | Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
+| --- | --- | --- | --- | --- |
+| Glasovanje za predloge | Oddaja glasa za predlog | Predlog s trenutnim številom ZA glasov | Glas za predlog | Obvestilo o uspešnem glasovanju |
+| Glasovanje za predloge | Oddaja glasa proti predlogu | Predlog s trenutnim številom PROTI glasov | Glas proti predlogu | Obvestilo o uspešnem glasovanju |
 
 ## 13. Urejanje predlogov
 Registriran uporabnik (avtor predloga) in administrator lahko urejajo predloge, kar bo še posebej koristno za boljše oblikovanje cilja predlogov, odpravljanje pravopisnih napak, ipd.
@@ -649,8 +663,8 @@ Funkcionalnost ima SHOULD have prioriteto. Spletna stran bo delovala tudi brez n
 
 #### Sprejemni testi
 
-| Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
-| --- | --- | --- | --- |
+| Primer uporabe | Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
+| --- | --- | --- | --- | --- |
 | Urejanje predlogov | Lastni profil uporabnika | Izbira gumba za urejanje lastnega predloga ter vnos in oddaja novih podatkov | Začetna stran |
 | Urejanje predlogov | Profil uporabnika | Izbira gumba za urejanje predloga ter vnos in oddaja novih podatkov | Začetna stran |
 
@@ -660,7 +674,7 @@ Registriran uporabnik, občni delavec, predstavnik občine in administrator lahk
 #### Osnovni tok
 
 1. Uporabnik odpre začetno stran
-2. Uporabnik izbere predlog ki ga zanima
+2. Uporabnik izbere predlog, ki ga zanima
 3. Uporabniku se prikažejo informacije o predlogu, njegovi glasovi in komentarji
 
 #### Alternativni tok(ovi)
@@ -685,9 +699,10 @@ Funkcionalnost ima MUST have funkcionalnost. Spletna stran ne bo uporabna brez p
 
 #### Sprejemni testi
 
-| Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
-| --- | --- | --- | --- |
-| Pregled predlogov | Začetna stran s predlogi | Izbira predloga | Prikaz informacij o predlogu, glasovi ter komentarji |
+| Primer uporabe | Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
+| --- | --- | --- | --- | --- |
+| Pregled predlogov | Prikaz informacij o predlogu | Začetna stran s predlogi | Izbira predloga | Prikaz informacij o predlogu |
+| Pregled predlogov | Prikaz glasov predloga | Začetna stran s predlogi | Izbira predloga | Prikaz glasov za/proti predlogu |
 
 ## 15. Brisanje predlogov
 Registriran uporabnik (autor predloga), predstavnik občine in administrator lahko brišejo predloge, za katere menijo, da ne ustrezajo standardom in pogojem uporabe aplikacije.
@@ -725,8 +740,8 @@ Funkcionalnost ima SHOULD have prioriteto. Spletna stran bo delovala tudi brez t
 
 #### Sprejemni testi
 
-| Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
-| --- | --- | --- | --- |
+| Primer uporabe | Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
+| --- | --- | --- | --- | --- |
 | Brisanje predlogov | Profil uporabnika | Izbira gumba za brisanje lastnega predloga | Obvestilo o uspešnem brisanju |
 | Brisanje predlogov | Začetna stran s predlogi | Izbira gumba za brisanje  predloga | Obvestilo o uspešnem brisanj |
 
@@ -763,18 +778,19 @@ Funkcionalnost ima WOULD have prioriteto. Funkcionalnost ni potrebna, vendar je 
 
 #### Sprejemni testi
 
-| Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
-| --- | --- | --- | --- |
-| Pošiljanj sporočil | Profil drugega uporabnika | Vnos ter pošiljanje sporočila | Obvestilo o poslanemu sporočilu |
+| Primer uporabe | Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
+| --- | --- | --- | --- | --- |
+| Pošiljanje sporočil | Delovanje gumba za prikaz forme | Profil drugega uporabnika | Izbira gumba za prikaz forme za pošiljanje sporočil | Prikazana forma za pošiljanje sporočil |
+| Pošiljanje sporočil | Pošiljanje sporočila | Profil drugega uporabnika | Vnos ter pošiljanje sporočila | Obvestilo o poslanemu sporočilu |
 
 ## 17. Iskanje novic/predlogov
 Registriran uporabnik, občni delavec, predstavnik občine in administrator lahko iščejo novice in predloge, ki jih zanimajo. Na ta način bodo hitreje dostopali do zase koristnih vsebin.
 
 #### Osnovni tok
 
-1. Uporabnik izbere vnosno polje za iskanje
-2. Uporabnik vnese iskalni izraz
-3. Uporabniku se prikažejo zadetki iskanja
+1. Uporabnik izbere vnosno polje za iskanje.
+2. Uporabnik vnese iskalni izraz.
+3. Uporabniku se prikažejo zadetki iskanja.
 
 #### Alternativni tok
 
@@ -798,9 +814,10 @@ Funkcionalnost ima WOULD have prioriteto. Uporabnik si lahko tudi brez te funkci
 
 #### Sprejemni testi
 
-| Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
-| --- | --- | --- | --- |
-| Iskanje novic oz. predlogov | Začetna stran | Vnos iskalnega izraza | Prikaz zadetkov iskanja |
+| Primer uporabe | Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
+| --- | --- | --- | --- | --- |
+| Iskanje novic/predlogov | Iskanje obstoječe novice/predloga | Začetna stran | Vnos iskalnega izraza | Prikaz zadetkov iskanja |
+| Iskanje novic/predlogov | Iskanje neobstoječe novice/predloga | Začetna stran | Vnos iskalnega izraza | Prikaz sporočila o neobstoju ujemanja |
 
 ## 18. Pregled profilov ostalih uporabnikov
 Registriran uporabnik, občni delavec, predstavnik občine in administrator lahko pregledujejo profile ostalih uporabnikov in na ta način lažje ustvarijo interakcijo med sabo.
@@ -830,11 +847,12 @@ Ni posebnosti.
 
 Funkcionalnost ima SHOULD have prioriteto. Vzpostavljanje lažje interakcije med uporabniki ni ena izmed glavnik funkcij aplikacije.
 
-#### Sprejemni 
+#### Sprejemni testi
 
-| Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
-| --- | --- | --- | --- |
-| Pregled profilov ostalih uporabnikov | Začetna stran | Izbira profila drugega uporabnika | Prikazan profil drugega uporabnika |
+| Primer uporabe | Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
+| --- | --- | --- | --- | --- |
+| Pregled profilov ostalih uporabnikov | Prikaz objav na tujem profilu | Začetna stran | Izbira profila drugega uporabnika | Prikazane objave drugega uporabnika |
+| Pregled profilov ostalih uporabnikov | Prikaz podatkov o tujem profilu | Začetna stran | Izbira profila drugega uporabnika | Prikazani podatki  drugega uporabnika |
 
 ## 19. Dodajanje komentarja
 Registriran uporabnik, občni delavec, predstavnik občine in administrator lahko komentirajo predloge/novice, kar bo prispevalo k lažjemu razumevanju ter hitrejši izmenjavi informacij, ki lahko koristijo večjem številu ljudi.
@@ -868,25 +886,26 @@ Funkcionalnost ima COULD have prioriteto. Komentari bi popestrili komunikacijo m
 
 #### Sprejemni testi
 
-| Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
-| --- | --- | --- | --- |
-| Komentiranje | Začetna stran | Vnos ter pošiljanje komentara | Obvestilo o uspešno objavljenemu komentarju |
+| Primer uporabe | Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
+| --- | --- | --- | --- | --- |
+| Komentiranje | Prikaz vnosne forme | Predlog/novica brez komentarja | Izbira gumba za dodajanje komentarja | Prikazana forma za dodajanje komentarja |
+| Komentiranje | Dodajanje komentarja | Predlog/novica brez komentarja | Vnos ter pošiljanje komentara | Obvestilo o uspešno objavljenemu komentarju |
 
 ## 20. Brisanje komentarja
 Registriran uporabnik, občni delavec, predstavnik občine in administrator lahko izbrišejo svoje komentarje. Prav tako lahko administrator in predstavnik občine izbrišeta tudi komentarje ostalih uporabnikov.
 
 #### Osnovni tok
 
-1. Uporabnik izbere gumb za pregled svojega profila
-2. Uporabnik izbere svoj komentar
-3. Uporabnik izbere gumb za brisanje komentarja
-4. Uporabnik dobi obvestio o uspešno izbrisanem komentarju
+1. Uporabnik izbere gumb za pregled svojega profila.
+2. Uporabnik izbere svoj komentar.
+3. Uporabnik izbere gumb za brisanje komentarja.
+4. Uporabnik dobi obvestio o uspešno izbrisanem komentarju.
 
 #### Alternativni tok
 
-1. Administrator ali predstavnik občine izbere komentar
-2. Administrator ali predstavnik občine izbere gumb za birsanje komentarja
-3. Administrator ali predstavnik občine dobi obvestio o uspešno izbrisanem komentarju
+1. Administrator ali predstavnik občine izbere komentar.
+2. Administrator ali predstavnik občine izbere gumb za brisanje komentarja.
+3. Administrator ali predstavnik občine dobi obvestilo o uspešno izbrisanem komentarju.
 
 #### Pogoji
 
@@ -906,20 +925,22 @@ Funkcionalnost ima WOULD have prioriteto. Vsa komunikacija s pomočjo komentarje
 
 #### Sprejemni testi
 
-| Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
-| --- | --- | --- | --- |
-| Brisanje lastnega komentarja | Stran lastnega uporabniškega profila | Izbira gumba za odstranjevanje določenega komentarja | Obvestilo o uspešno izbrisanem komentarju |
-| Administratorsko brisanje komentarja | Začetna stran |  Izbira gumba za odstranjevanje določenega komentarja | Obvestilo o uspešno izbrisanem komentarju |
+| Primer uporabe | Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
+| --- | --- | --- | --- | --- |
+| Brisanje komentarja | Delovanje gumba za potrditev brisanja | Stran lastnega uporabniškega profila | Izbira gumba za odstranjevanje določenega komentarja | Sporočilo o potrditvi brisanja komentarja |
+| Brisanje komentarja | Odstranjevanje lastnega komentarja iz baze | Komentar v bazi | Izbira gumba za potrditeva odstranjevanja določenega komentarja | Obvestilo o uspešno izbrisanem komentarju |
+| Brisanje komentarja | Delovanje gumba za brisanje komentarja iz začetne strani | Začetna stran | Izbira gumba za odstranjevanje določenega komentarja | Sporočilo o potrditvi akcije |
+| Brisanje komentarja | Administratorsko brisanje komentarja | Komentar v bazi | Potrditev gumba za odstranjevanje določenega komentarja | Obvestilo o uspešno izbrisanem komentarju |
 
 ## 22. Izbira lokacije
 Registriran uporabnik, občni delavec in predstavnik občine lahko med dodajanjem novice oz. predloga dodajo lokacijo z uporabo Google Maps.
 
 #### Osnovni tok
 
-1. Uporabnik med dodajanjem novice oz. predloga izbere gumb za dodajanje lokacije
-2. Uporabniku se prikaže zemljevid
-3. Uporabnik izbere natančno lokacijo oz. vpiše naslov
-4. Uporabnik nadaljuje z izpolnjevanjem obrazca
+1. Uporabnik med dodajanjem novice oz. predloga izbere gumb za dodajanje lokacije.
+2. Uporabniku se prikaže zemljevid.
+3. Uporabnik izbere natančno lokacijo oz. vpiše naslov.
+4. Uporabnik nadaljuje z izpolnjevanjem obrazca.
 
 #### Alternativni tok
 
@@ -943,16 +964,17 @@ Funkcionalnost ima COULD have prioriteto. Lokacija bi izboljšala komunikacijo m
 
 #### Sprejemni testi
 
-| Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
-| --- | --- | --- | --- |
-| Izbira lokacije | Proces dodajanja novice/predloga | Izbira lokacije | Uspešno dodana lokacija k novici/predlogu |
+| Primer uporabe | Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
+| --- | --- | --- | --- | --- |
+| Izbira lokacije | Prikaz zemljevida | Proces dodajanja novice/predloga | Izbira gumba za dodajanje lokacije | Uspešno prikazan zemljevid |
+| Izbira lokacije | Dodajanje lokacije | Proces dodajanja novice/predloga | Izbira lokacije | Uspešno dodana lokacija k novici/predlogu |
 
 ## 23. Ogled lokacije
 Registriran uporabnik, občni delavec, predstavnik občinev in administrator si lahko med pregledovanjem predloga oz. novice ogleda tudi lokacijo na zemljevidu katero omenja predlog oz. novica. Lokacija na zemljevidu bralcu poda ključno informacijo o predlogu oz. novici.
 
 #### Osnovni tok
 
-1. Uporabnik izbere predlog/novico
+1. Uporabnik izbere predlog/novico.
 2. Uporabnik pogleda lokacijo, prikaže se mu tako zemljevid kot naslov.
 
 #### Alternativni tok
@@ -977,9 +999,10 @@ Funkcionalnost ima COULD have prioriteto. Lokacija bi izboljšala komunikacijo m
 
 #### Sprejemni testi
 
-| Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
-| --- | --- | --- | --- |
-| Ogled lokacije | Odprta določena novica/predlog | Izbira pogleda lokacije | Uspešno prikazana zemljevid ter naslov |
+| Primer uporabe | Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
+| --- | --- | --- | --- | --- |
+| Ogled lokacije | Ogled lokacije na predlogu | Odprt določen predlog | Izbira pogleda lokacije | Uspešno prikazana zemljevid ter naslov |
+| Ogled lokacije | Ogled lokacije na novici | Odprta določena novica | Izbira pogleda lokacije | Uspešno prikazana zemljevid ter naslov |
 
 ## 6. Nefunkcionalne zahteve
 
