@@ -14,13 +14,15 @@ Na trgu že obstajajo podobne rešitve za zadan problem. Od naše aplikacije se 
 
 ## 1. Uvod
 
-  Naša aplikacija se bo ukvarjala s problemom komunikacije med občani oziroma prebivalci in občinskimi delavci. Veliko krat se je že zgodilo da povprečen občan opazi napake oziroma poškodbe prometne in javne infrastrukture (npr. nevzdrževana cesta ali pa vandaliziran prometni znak) v svoji občini. Lahko se zgodi tudi da posameznik pride do ideje, ki bi lahko izboljšala življenje vseh prebivalcev njegove občine (npr. postavitev nove klopce v lokalnem parku). Dokler se ta opažnja problema oziroma ideja ne prijavi na upravni enoti in pride do občinskega delavca, je enako, kot da je nihče ne bi zaznal oziroma si ideje izmislil. Tukaj pride do našega problema komunikacije med prebivalci in občnimi delavci. Na upravnih enotah je ponavadi potrebno čakati na prost termin, hkrati pa je kategorizacija vseh prijav odvisna od občnega delavca zadolženega za komunikacij s prebivalci. Naša rešitev je aplikacija, ki bi uporabnikom omogočila prijavo problemov ter idej, ki se navezujejo na njihovo občino, občnim delavcem pa informiranje prebivalcev s splošnimi sporočili ter kategoriziranje prijav na ideje, probleme in pa drugo.
+  Naša aplikacija se bo ukvarjala s problemom komunikacije med občani oziroma prebivalci in občinskimi delavci. Veliko krat se je že zgodilo da povprečen občan opazi napake oziroma poškodbe prometne in javne infrastrukture (npr. nevzdrževana cesta ali pa vandaliziran prometni znak) v svoji občini. Lahko se zgodi tudi da posameznik pride do ideje, ki bi lahko izboljšala življenje vseh prebivalcev njegove občine (npr. postavitev nove klopce v lokalnem parku). Dokler se ta opažnja problema oziroma ideja ne prijavi na upravni enoti in pride do občnega delavca, je enako, kot da je nihče ne bi zaznal oziroma si ideje izmislil. Tukaj pride do našega problema komunikacije med prebivalci in občnimi delavci. Na upravnih enotah je ponavadi potrebno čakati na prost termin, hkrati pa je kategorizacija vseh prijav odvisna od občnega delavca zadolženega za komunikacij s prebivalci. Naša rešitev je aplikacija, ki bi uporabnikom omogočila prijavo problemov ter idej, ki se navezujejo na njihovo občino, občnim delavcem pa informiranje prebivalcev s splošnimi sporočili ter kategoriziranje prijav na ideje, probleme in pa drugo.
 
-  Uporabnike bi sprva razdelili na občne delavce in pa prebivalce. Vsi občni delavci bodo imeli sposobnost pošiljanja splošnih novic, ki jih bodo videli vsi prebivalci občine. Poseben član občnih delavcev bo predstavnik občine. Ta je zadolžen da pregleda predloge prebivalcev ter preveri njihovo pristnost. Te ki so verodostojni nato posreduje primernim občnim organizacijam. Predstavnik občine bo imel dostop do podatkovne baze, ki bo sprejemala predloge prebivalcev. Ko bo predlog obdelal, ga bo lahko arhiviral - dodal v primarno podatkovno bazo in izbrisal iz baze za sprejem predlogov.
+  Uporabnike bi sprva razdelili na občne delavce in pa prebivalce. Vsi občni delavci bodo imeli sposobnost pošiljanja splošnih novic, ki jih bodo videli vsi prebivalci občine. Poseben član občnih delavcev bo predstavnik občine. Ta je zadolžen da pregleda predloge prebivalcev ter preveri njihovo pristnost. Te, ki so verodostojni nato posreduje primernim občnim organizacijam. Predstavnik občine bo imel dostop do podatkovne baze, ki bo sprejemala predloge prebivalcev. Ko bo predlog obdelal, ga bo lahko arhiviral - dodal v primarno podatkovno bazo in izbrisal iz baze za sprejem predlogov.
   
   Druga in pomembnejša skupina uporabnikov so prebivalci. Med njih spadajo navadni prebivalci (brez prijavljenega stalnega prebivališča) ter sami občani. Imeli bodo opcijo, da do aplikacije dostopajo brez registracije. Tako bodo lahko dobivali novice za občino v kateri se nahajajo, ne bodo pa mogli komunicirati z občnimi delavci ter objavljati pritožb oziroma predlogov. Druga opcija so registrirani uporabniki. Poleg dovoljenj neregistriranih uporabnikov bodo lahko sporočali pritožbe in predloge v trenutni poobčini. Za registrirane uporabnike se bo tudi vedelo, katera je njihova matična občina (glede na stalno prebivališče). V njej bodo imeli dodatne pravice kot so glasovanje o predlogih, ki jih je obdelal predstavnik občine, ter možnost najavljene komunikacije z občnimi delavci.
   
   Spletna aplikacija bo delala v vseh občinah, ki jo podpirajo. Na aplikaciji se bo uporabniku (ob dovoljenju uporabljanja GPS) samodejno spreminjala občina v kateri se nahaja. Tako se bodo prijave od uporabnika navezovala na to občino. Obstajala bo tudi opcija, da pred prijavo problema oziroma ideje spremeni občino na katero se bo navezovalo.
+  
+  Spletna aplikacija bo imela tudi integriran dostop do Google Maps, ki se bo uporabljal med ustvarjanjem novega predloga ali novice. Tako bo lahko avtor specificiral natančno lokacijo na katero se nanaša ustvarjena novica oz. predlog. Zemljevid z lokacijo se bo nato prikazal bralcu med pregledovanjem novice oz. predloga.
 
 :dart: **TO-DO** dodaj še malo več uvoda. Npr. boljše opiši zahteve (tudi nefunkcionalne). Obvezno omeni kje in kako se bo uporabljal rest api.
 
@@ -28,12 +30,30 @@ zunanji sistemi: transakcijska PB, PB sprejeti predlogi, REST API vmesnik
 funkcionalne zahteve: dodajanje novic, prijava poškodbe, priporočilo ideje, glasovanje na idejah 
 nefunkcionalne zahteve: delovanje funkcionalnosti v 100 ms, dostopno za različne občine, uporabniku dovoliti le določene funkcionalnosti v tuji občini 
 
+### 1° Zahteve izdelka:
+- Sistem mora biti zmožen hkrati obdelati vsaj 200 uporabniških zahtev.
+- Sistem mora odgovoriti na vsako zahtevo znotraj 1000ms.
+- Sistem uporabniku ne sme omogočiti dostopa do podatkov, za katere ni izrecno pooblaščen.
+- Sistem mora biti na voljo najmanj 99,9 odstotkov časa.
+- Proces prijave v sistem ne sme biti daljši od 3 sekunde.
+- Sistem je odporen na XSS ter SQL injection napada (merljivo z OWASP ZAP).
+
+### 2° Organizacijske zahteve
+- Procesni model bo uporabljal RUP proces.
+- Sistem omogoča enostavno dodajanje novih funkcionalnostih
+- Sistem bo implementiran v GIT razvojnem okolju.
+
+### 3° Zunanje zahteve
+- Sistem sledi standarde definirane po GDPR zakonu.
+- Sistem se mora biti sposoben izvajati na OS Red Hat Enterprise Linux z nameščenim spletnim strežnikom Apache.
+- Sistem uporablja algoritem SHA256 za enkripcijo podatkov.
+
 ## 2. Uporabniške vloge
 
 - **Neregistriran uporabnik** - Vsak uporabnik, ki ni registriran. Neregistriran uporabnik si lahko ogleda novice, vendar ne more objavljati, pošiljati predloge in komunicirati s ostalimi uporabniki.  
 - **Registriran uporabnik** - Uporabniki ki so že naredili registracijo in prijavo na spletno stran. Registrirani uporabniki lahko sledijo novice za svojo občino, pošiljajo predloge in komunicirati s ostalimi uporabniki. 
 - **Občni delavec** - Občni delavci so zaposleni na občinskem uradu. Upravljateli lahko objavljajo novice, pregledajo predloge, komunicirajo z ostalimi oupravljateli in z uporabniki. 
--**Predstavnik občine** - Predstavnik občine je občni delavec, ki je zadolžen za preverjanje pristnosti predlog uporabnikov ter jih nato posreduje primernim organizacijam.
+- **Predstavnik občine** - Predstavnik občine je občni delavec, ki je zadolžen za preverjanje pristnosti predlog uporabnikov ter jih nato posreduje primernim organizacijam.
 - **Administrator** - Administrator skrbi za pravilno delovanje in uporabljanje spletno stran. Lahko ogleda in briše objave in profilov. 
 
 - Opredelite glavne tipe uporabnikov vaše aplikacije glede na funkcionalnosti, ki jih imajo na voljo.
@@ -103,7 +123,7 @@ Neregistriran uporabnik lahko registrira račun, kar predstavlja osnovno funkcio
 5. Uporabnik odda vlogo za registracijo
 6. Uporabnik prejme potrdilo o uspešni registraciji
 
-#### Alternativni tok 1  ***ali je izjemna? vaje
+#### Alternativni tok 1
 
 1. Neregistriran uporabnik lahko izbere gumb za registracijo.
 2. Uporabnik dobi regrstracijski obrazec
@@ -121,31 +141,23 @@ Neregistriran uporabnik lahko registrira račun, kar predstavlja osnovno funkcio
 5. Uporabnik odda vlogo za registracijo
 7. Uporabnik dobi obvestilo da je uporabnik že registriran in zavrne registracijo
 
-- Navesti je potrebno vse alternativne tokove, ki jih označite kot **Alternativni tok 1**, **Alternativni tok 2**, itd.
-
 #### Pogoji
 
 Uporabnik ne sme biti že registriran.
 Ne obstaja uporabnik z istimi osebnimi podatki.
-- Navesti je potrebno pogoje, ki morajo biti izpolnjeni, da se funkcionalnost lahko prične izvajati?
 
 #### Posledice
 
 Ob uspešni registraciji, se v bazi doda nov račun. Registriran uporabnik lahko nadaljuje s prijavo in dostopa do ostalih funkcionalnosti.
-
-- Navedite, kakšen je rezultat izvedbe osnovnega toka funkcionalnosti?
 
 #### Posebnosti
 
 - Geslo mora biti sestavljeni iz vsaj 8 znakov, vsebovati mora vsaj eno številko in znak
 - Vsi podatki so shranjeni u skladu z varstvom osebnih podatkov v EU
 
-- Ali realizacija funkcionalnosti zahteva kakšne posebnosti, kot je npr. dodatna strojna oprema?
-- Se je potrebno držati kakšnih posebnih standardov?
-
 #### Prioritete identificiranih funkcionalnosti
 
-Funkcionalnost spada pod MUST have prioriteto, saj brez registracije je aplikacija nima uporabnikov.
+Funkcionalnost spada pod MUST have prioriteto, saj brez možnosti registracije aplikacija nima uporabnikov.
 
 - Za identificirane funkcionalnosti se z metodo **MoSCoW** (MUST have, SHOULD have, COULD have in WOULD have) določi prioritete.
 
@@ -162,46 +174,36 @@ Registiran uporabnik, občni delavec, predstavnik občine ter administrator lahk
 
 #### Osnovni tok
 
-1. Registriran uporabnik izbere gumb za prijavo
-2. Registriran uporabnik dobi prijavni obrazec
-3. Registriran uporabnik izpolni obrazec s email-om in geslom
-4. Registriran uporabnik odda obrazec
-5. Registriran uporabnik ob uspešni prijavi dobi začetno stran
-6. Uporabnik lahko uporablja funkcionalnosti glede njegovo vlogo  *** ali različni tokovi? 
+1. Uporabnik izbere gumb za prijavo
+2. Uporabnik dobi prijavni obrazec
+3. Uporabnik izpolni obrazec s email-om in geslom
+4. Uporabnik odda obrazec
+5. Uporabnik ob uspešni prijavi dobi začetno stran
+6. Uporabnik lahko uporablja funkcionalnosti glede njegovo vlogo
 
 #### Alternativni tok 1
 
 1. Registriran uporabnik izbere gumb za prijavo
 2. Registriran uporabnik dobi prijavni obrazec
-3. Registriran uporabnik napačno izpolni obrazec s email-om in geslom
+3. Registriran uporabnik napačno izpolni obrazec z email-om in geslom
 4. Registriran uporabnik odda obrazec
 5. Registriran uporabnik dobi obvestilo da je email ali geslo napačno in je prijava zavrnjena
-
-- Navesti je potrebno vse alternativne tokove, ki jih označite kot **Alternativni tok 1**, **Alternativni tok 2**, itd.
 
 #### Pogoji
 
 Uporabnik je že registriran in ni prijavljen. 
-- Navesti je potrebno pogoje, ki morajo biti izpolnjeni, da se funkcionalnost lahko prične izvajati?
 
 #### Posledice
 
-Ob prijavi, uporabnik lahko uporablja funkcionalosti glede njegovo vlogo. Registriran uporabnik lahko pregleda/objavlja/briše predloge, bere novice, komenitra, glasuje, uredi svoj profil. Administrator lahko pregleda in briše predloge in novice, pa tudi poregleda/spremeni/briše uporabniške račune. Občni delavec lahko doda/spemeni/briše novice in pregleda predloge. Pretstavnik občine lahko obdela predloge in novice. 
-
-- Navedite, kakšen je rezultat izvedbe osnovnega toka funkcionalnosti?
+Ob prijavi, uporabnik lahko uporablja funkcionalosti glede njegovo vlogo. Registriran uporabnik lahko pregleda/objavlja/briše predloge, bere novice, komenitra, glasuje, uredi svoj profil. Administrator lahko pregleda in briše predloge in novice, pa tudi poregleda/spremeni/briše uporabniške račune. Občni delavec lahko doda/spemeni/briše novice in pregleda predloge. Pretstavnik občine lahko obdela predloge in novice.
 
 #### Posebnosti
 
 Ni posebnosti.
 
-- Ali realizacija funkcionalnosti zahteva kakšne posebnosti, kot je npr. dodatna strojna oprema?
-- Se je potrebno držati kakšnih posebnih standardov?
-
 #### Prioritete identificiranih funkcionalnosti
 
 Prijava spada pod MUST have prioriteto, saj brez prijavo uporabniki ne morejo dostopat do funkcionalnosti.
-
-- Za identificirane funkcionalnosti se z metodo **MoSCoW** (MUST have, SHOULD have, COULD have in WOULD have) določi prioritete.
 
 #### Sprejemni testi
 
@@ -227,26 +229,17 @@ Ni alternativnih tokov.
 
 Uporabnik mora biti prijavljen.
 
-- Navesti je potrebno pogoje, ki morajo biti izpolnjeni, da se funkcionalnost lahko prične izvajati?
-
 #### Posledice
 
 Uporabnik je odjavljen iz sistema in lahko uporablja aplikacijo kot neregistrirani uporabnik.
-
-- Navedite, kakšen je rezultat izvedbe osnovnega toka funkcionalnosti?
 
 #### Posebnosti
 
 Ni posebnosti.
 
-- Ali realizacija funkcionalnosti zahteva kakšne posebnosti, kot je npr. dodatna strojna oprema?
-- Se je potrebno držati kakšnih posebnih standardov?
-
 #### Prioritete identificiranih funkcionalnosti
 
 Funkcionalnost ima MUST have prioriteto, da se lahko drug uporabnik prijavi v aplikacijo.
-
-- Za identificirane funkcionalnosti se z metodo **MoSCoW** (MUST have, SHOULD have, COULD have in WOULD have) določi prioritete.
 
 #### Sprejemni testi
 
@@ -257,44 +250,30 @@ Funkcionalnost ima MUST have prioriteto, da se lahko drug uporabnik prijavi v ap
 ## 4. Pregled uporabniškega profila
 Registriran uporabnik, občni delavec, predstavnik občine in administrator lahko pregledajo svoj račun ter informacije, ki jih delijo z drugimi.
 
-- **Povzetek funkcionalnosti** v enem ali največ nekaj stavkih.
-- Prvi stavek naj se prične z nazivom uporabniške vloge (ali uporabniških vlog, če se funkcionalnost nanaša na več kot eno vlogo), nato pa naj sledita beseda **lahko** in navedba funkcionalnosti.
-
 #### Osnovni tok
 
-1. Registrirani uporabnik izbere gumb za pregled profila
+1. Uporabnik izbere gumb za pregled profila
 2. Uporabniku se prikaže njegov profil kjer lahko pregleda svoje osebne podatke, izbrano občino, objavljene novice/predloge/komentarje in svoja sporočila
 
 #### Alternativni tok(ovi)
 
-Ni alternativnih tokov.  ***vaje
-
-- Navesti je potrebno vse alternativne tokove, ki jih označite kot **Alternativni tok 1**, **Alternativni tok 2**, itd.
+Ni alternativnih tokov.
 
 #### Pogoji
 
 Uporabnik mora biti prijavljen.
 
-- Navesti je potrebno pogoje, ki morajo biti izpolnjeni, da se funkcionalnost lahko prične izvajati?
-
 #### Posledice
 
 Uporabnik lahko pregleda svoj profil in vse kar je povezano z njim.
-
-- Navedite, kakšen je rezultat izvedbe osnovnega toka funkcionalnosti?
 
 #### Posebnosti
 
 Ni posebnosti.
 
-- Ali realizacija funkcionalnosti zahteva kakšne posebnosti, kot je npr. dodatna strojna oprema?
-- Se je potrebno držati kakšnih posebnih standardov?
-
 #### Prioritete identificiranih funkcionalnosti
 
 Funkcionalnost ima SHOULD have prioriteto. Spletna stran bo še vedno delovala brez pregleda profila, vendar otežuje uporabo aplikacijo. 
-
-- Za identificirane funkcionalnosti se z metodo **MoSCoW** (MUST have, SHOULD have, COULD have in WOULD have) določi prioritete.
 
 #### Sprejemni testi
 
@@ -307,7 +286,7 @@ Registriran uporabnik, občni delavec, predstavnik občine in administrator lahk
 
 #### Osnovni tok
 
-1. Registrirani uporabnik izbere gumb za pregled profila
+1. Uporabnik izbere gumb za pregled profila
 2. Uporabniku se prikaže njegov profil
 3. Uporabnik izbere gumb za spremembo podatke
 4. Uporabnik izpolni obrazec z novimi podatki
@@ -322,9 +301,9 @@ Registriran uporabnik, občni delavec, predstavnik občine in administrator lahk
 4. Administrator odda obrazec
 5. Ob uspešni spremembi, se administratoru prikaže izbran profil s spremenjenimi podatki
 
-#### Alternativni tok 
+#### Alternativni tok 2
 
-1. Registrirani uporabnik izbere gumb za pregled profila
+1. Uporabnik izbere gumb za pregled profila
 2. Uporabniku se prikaže njegov profil
 3. Uporabnik izbere gumb za spremembo podatke
 4. Uporabnik izpolni obrazec z neustreznimi podatki
@@ -335,26 +314,17 @@ Registriran uporabnik, občni delavec, predstavnik občine in administrator lahk
 
 Uporabnik mora biti prijavljen.
 
-- Navesti je potrebno pogoje, ki morajo biti izpolnjeni, da se funkcionalnost lahko prične izvajati?
-
 #### Posledice
 
 Spremenjen profil.
-
-- Navedite, kakšen je rezultat izvedbe osnovnega toka funkcionalnosti?
 
 #### Posebnosti
 
 Ni posebnosti.
 
-- Ali realizacija funkcionalnosti zahteva kakšne posebnosti, kot je npr. dodatna strojna oprema?
-- Se je potrebno držati kakšnih posebnih standardov?
-
 #### Prioritete identificiranih funkcionalnosti
 
 Funkcionalnost ima SHOULD have prioriteto. Aplikacija bo delovala brez nje, vendar spreminjanje podatkov postane zelo neunčikovito.
-
-- Za identificirane funkcionalnosti se z metodo **MoSCoW** (MUST have, SHOULD have, COULD have in WOULD have) določi prioritete.
 
 #### Sprejemni testi
 
@@ -370,13 +340,13 @@ Registriran uporabnik, občni delavec, predstavnik občine in administrator lahk
 
 #### Osnovni tok
 
-1. Registrirani uporabnik izbere gumb za pregled profila
+1. Uporabnik izbere gumb za pregled profila
 2. Uporabniku se prikaže njegov profil
 3. Uporabnik izbere gumb za brisanje profila
 5. Uporabnik potrdi brisanje profila
 6. Profil je zbrisan in uporabniku se odpre začetno stran
 
-#### Alternativni tok(ovi)
+#### Alternativni tok
 
 1. Administrator izbere uporabniški profil
 2. Administrator izbere gumb za brisanje profila
@@ -385,11 +355,11 @@ Registriran uporabnik, občni delavec, predstavnik občine in administrator lahk
 
 #### Pogoji
 
-Registrirani uporabnik mora biti prijavljen.
+Uporabnik mora biti prijavljen.
 
 #### Posledice
 
-Profil je izbrisan iz podatkovna baza.
+Profil je izbrisan iz podatkovne baze.
 
 #### Posebnosti
 
@@ -421,7 +391,6 @@ Občni delavec in predstavnik občine lahko dodajajo novice o trenutnih dogajanj
 1. Občni delavec ali predstavnik občine izbere gumb za dodajanje novice
 2. Občni delavec ali predstavnik občine neustrezno izpolni zahtevane podatke v prikazanem obrazecu
 3. Občni delavec ali predstavnik dobi obvestilo o neuspešni objavi
-
 
 #### Pogoji
 
@@ -458,7 +427,7 @@ Občni delavec in predstavnik občine lahko urejata objavljenje novice. To je la
 4. Občni delavec, predstavnik občine ali administrator odda obrazec
 5. Ob uspešni spremembi, uporabniku se prikaže začetno stran
 
-#### Alternativni tok(ovi)
+#### Alternativni tok
 
 1. Občni delavec, predstavnik občine ali administrator izbere in odpre novico
 2. Občni delavec, predstavnik občine ali administrator izbere gumb za ureditev novico
@@ -541,7 +510,7 @@ Registriran uporabnik, občni delavec, predstavnik občine in administrator lahk
 2. Uporabnik izbere novico ki ga zanima
 3. Uporabniku se prikažejo informacije o novici in komentarji
 
-#### Alternativni tok(ovi)
+#### Alternativni tok
 
 Ni alternativnih tokov.
 
@@ -567,12 +536,8 @@ Funkcionalnost ima MUST have funkcionalnost. Spletna stran ne bo uporabna brez p
 | --- | --- | --- | --- |
 | Pregled novic | Začetna stran | Izbira novice | Prikaz dodatnih informacij o izbrani novici |
 
-#### Povzetek funkcionalnosti
-
-:dart: **TO-DO**
-
 ## 11. Dodajanje predlogov o odpravljanju poškodb, novih idej, težavah...
-Registriran uporabnik, občni delavec, predstavnik občine in administrator lahko dodajajo predloge, kako bi popravili neko poškodbo, kaj bi radi imeli v svoji občini ali pa kako bi odpravili neko težavo.
+Registrirani uporabniki lahko dodajajo predloge, kako bi popravili neko poškodbo, kaj bi radi imeli v svoji občini ali pa kako bi odpravili neko težavo.
 
 #### Osnovni tok
 
@@ -581,7 +546,7 @@ Registriran uporabnik, občni delavec, predstavnik občine in administrator lahk
 3. Registrirani uporabnik izbere gumb za objavo
 4. Ob uspešni objavi, je predlog prikzan med predlogami in se uporabniku prikaže začetno stran
 
-#### Alternativni tok(ovi)
+#### Alternativni tok
 
 1. Registrirani uporabnik izbere gumb za dodajanje predlog
 2. Registrirani uporabnik neustrezno izpolni zahtevane podatke v prikazanem obrazec
@@ -613,7 +578,7 @@ Funkcionalnost ima MUST have prioriteto, ker to je to ena od najbolj pomembnih f
 
 
 ## 12. Glasovanje med predlogi
-Registriran uporabnik lahko glasujejo med predlogi, izbirajo tistega, ki njim najbolj ustreza in ki bo bil v največji meri pomagal prosperitetu občine.
+Registrirani uporabniki lahko glasujejo med predlogi, izbirajo tistega, ki njim najbolj ustreza in ki bo bil v največji meri pomagal prosperitetu občine.
 
 #### Osnovni tok
 
@@ -622,7 +587,7 @@ Registriran uporabnik lahko glasujejo med predlogi, izbirajo tistega, ki njim na
 4. Registriran uporabnik glasuje za ali proti predlogu
 5. Registriran uporabnik dobi obvestilo o uspešno glasovanje
 
-#### Alternativni tok(ovi)
+#### Alternativni tok
 
 Ni alternativnih tokov.
 
@@ -649,7 +614,7 @@ Funkcionalnost ima COULD have prioriteto. Spletna stran bo delovala in bo korist
 | Glasovanje za predloge | Začetna stran s predlogi | Glas za ali proti predlogu | Obvestilo o uspešnem glasovanju |
 
 ## 13. Urejanje predlogov
-Registriran uporabnik (autore predloga) in administrator lahko urejajo predloge, kar bo še posebej koristno za boljše oblikovanje cilja predlogov, odpravljanje pravopisnih napak, ipd.
+Registriran uporabnik (avtor predloga) in administrator lahko urejajo predloge, kar bo še posebej koristno za boljše oblikovanje cilja predlogov, odpravljanje pravopisnih napak, ipd.
 
 #### Osnovni tok
 
@@ -659,7 +624,7 @@ Registriran uporabnik (autore predloga) in administrator lahko urejajo predloge,
 4. Registriran uporabnik odda obrazec
 5. Ob uspešni spremembi, uporabniku se prikaže začetno stran
 
-#### Alternativni tok(ovi)
+#### Alternativni tok
 
 1. Administrator izbere predlog in gumb za spremembo
 3. Administrator izpolni zahtevane podatke v prikazanem obrazecu
@@ -735,7 +700,7 @@ Registriran uporabnik (autor predloga), predstavnik občine in administrator lah
 4. Registriran uporavnik potrdi brisanje predloga
 5. Registriran uporabnik dobi obvestilo o uspešnem brisanju
 
-#### Alternativni tok(ovi)
+#### Alternativni tok
 
 1. Predstavnik občine ali administrator izbere predlog za pregled iz seznama vseh predlogov
 3. Predstavnik občine ali administrator izbere gumb za brisanje predloga
@@ -768,7 +733,7 @@ Funkcionalnost ima SHOULD have prioriteto. Spletna stran bo delovala tudi brez t
 ## 16. Pošiljanje sporočil
 Registriran uporabnik, občni delavec, predstavnik občine in administrator si lahko izmenjujejo sporočila med sabo, kar bo močno olajšalo povezovanje in komunikacijo članov občine.
 
-#### Osnovni tok ****vaje dali site ili uporabnik
+#### Osnovni tok
 
 1. Uporabnik odpre profil drugega uporabnika
 2. Uporabnik izbere gumb za pošiljanje sporočila
@@ -776,7 +741,7 @@ Registriran uporabnik, občni delavec, predstavnik občine in administrator si l
 4. Uporabnik pošlje sporočilo
 5. Uporabnik dobi obvestilo da je sporočilo poslano
 
-#### Alternativni tok(ovi)
+#### Alternativni tok
 
 Ni alternativnih tokov.
 
@@ -811,7 +776,7 @@ Registriran uporabnik, občni delavec, predstavnik občine in administrator lahk
 2. Uporabnik vnese iskalni izraz
 3. Uporabniku se prikažejo zadetki iskanja
 
-#### Alternativni tok(ovi)
+#### Alternativni tok
 
 Ni alternativnih tokov.
 
@@ -845,7 +810,7 @@ Registriran uporabnik, občni delavec, predstavnik občine in administrator lahk
 1. Uporabnik izbere in odpre željen profil
 2. Uporabnik lahko pregleda podatke in objavljene novice oz. predloge izbranega profila
 
-#### Alternativni tok(ovi)
+#### Alternativni tok
 
 Ni alternativnih tokov.
 
@@ -863,7 +828,7 @@ Ni posebnosti.
 
 #### Prioritete identificiranih funkcionalnosti
 
-Funkcionalnost ima SHOULD have prioriteto. ?????**
+Funkcionalnost ima SHOULD have prioriteto. Vzpostavljanje lažje interakcije med uporabniki ni ena izmed glavnik funkcij aplikacije.
 
 #### Sprejemni 
 
@@ -881,7 +846,7 @@ Registriran uporabnik, občni delavec, predstavnik občine in administrator lahk
 3. Uporabnik pošlje komentar
 4. Uporabnik dobi obvestio o uspešno objavljen komentar
 
-#### Alternativni tok(ovi)
+#### Alternativni tok
 
 Ni alternativnih tokov.
 
@@ -917,7 +882,7 @@ Registriran uporabnik, občni delavec, predstavnik občine in administrator lahk
 3. Uporabnik izbere gumb za brisanje komentarja
 4. Uporabnik dobi obvestio o uspešno izbrisanem komentarju
 
-#### Alternativni tok(ovi)
+#### Alternativni tok
 
 1. Administrator ali predstavnik občine izbere komentar
 2. Administrator ali predstavnik občine izbere gumb za birsanje komentarja
@@ -937,7 +902,7 @@ Ni posebnosti.
 
 #### Prioritete identificiranih funkcionalnosti
 
-Funkcionalnost ima WOULD have prioriteto. *****TODO
+Funkcionalnost ima WOULD have prioriteto. Vsa komunikacija s pomočjo komentarjev bo potekala normalno tudi brez možnosti njihovega izbrisa.
 
 #### Sprejemni testi
 
@@ -947,6 +912,7 @@ Funkcionalnost ima WOULD have prioriteto. *****TODO
 | Administratorsko brisanje komentarja | Začetna stran |  Izbira gumba za odstranjevanje določenega komentarja | Obvestilo o uspešno izbrisanem komentarju |
 
 ## 22. Izbira lokacije
+Registriran uporabnik, občni delavec in predstavnik občine lahko med dodajanjem novice oz. predloga dodajo lokacijo z uporabo Google Maps.
 
 #### Osnovni tok
 
@@ -955,7 +921,7 @@ Funkcionalnost ima WOULD have prioriteto. *****TODO
 3. Uporabnik izbere natančno lokacijo oz. vpiše naslov
 4. Uporabnik nadaljuje z izpolnjevanjem obrazca
 
-#### Alternativni tok(ovi)
+#### Alternativni tok
 
 Ni alternativnih tokov.
 
@@ -982,13 +948,14 @@ Funkcionalnost ima COULD have prioriteto. Lokacija bi izboljšala komunikacijo m
 | Izbira lokacije | Proces dodajanja novice/predloga | Izbira lokacije | Uspešno dodana lokacija k novici/predlogu |
 
 ## 23. Ogled lokacije
+Registriran uporabnik, občni delavec, predstavnik občinev in administrator si lahko med pregledovanjem predloga oz. novice ogleda tudi lokacijo na zemljevidu katero omenja predlog oz. novica. Lokacija na zemljevidu bralcu poda ključno informacijo o predlogu oz. novici.
 
 #### Osnovni tok
 
 1. Uporabnik izbere predlog/novico
 2. Uporabnik pogleda lokacijo, prikaže se mu tako zemljevid kot naslov.
 
-#### Alternativni tok(ovi)
+#### Alternativni tok
 
 Ni alternativnih tokov.
 
