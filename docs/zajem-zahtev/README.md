@@ -294,7 +294,7 @@ Registriran uporabnik, občni delavec, predstavnik občine in administrator lahk
 
 1. Uporabnik izbere gumb za pregled profila
 2. Uporabniku se prikaže njegov profil
-3. Uporabnik izbere gumb za spremembo podatke
+3. Uporabnik izbere gumb za spremembo podatkov
 4. Uporabnik izpolni obrazec z novimi podatki
 5. Uporabnik odda obrazec
 6. Ob uspešni spremembi, se uporabniku prikaže njegov profil s spremenjenimi podatki
@@ -302,7 +302,7 @@ Registriran uporabnik, občni delavec, predstavnik občine in administrator lahk
 #### Alternativni tok 1
 
 1. Administrator izbere uporabniški profil
-2. Administrator izbere gumb za spemembo profila
+2. Administrator izbere gumb za spremembo profila
 3. Administrator izpolni obrazec z novimi podatki
 4. Administrator odda obrazec
 5. Ob uspešni spremembi, se administratoru prikaže izbran profil s spremenjenimi podatki
@@ -336,9 +336,12 @@ Funkcionalnost ima SHOULD have prioriteto. Aplikacija bo delovala brez nje, vend
 
 | Primer uporabe | Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
 | --- | --- | --- | --- | --- |
-| Urejanje profila | Prijavljen uporabnik na strani svojega profila | Izbira gumba za urejanje profila ter vnos novih podatkov | Stran uporabniškega profila z spremenjenimi podatki | 
-| Urejanje profila | Administrator na uporabnikovemu profilu | Izbira gumba za urejanje profila ter vnos novih podatkov | Stran uporabniškega profila z spremenjenimi podatki |
-| Urejanje profila | Prijavljen uporabnik na strani svojega profila | Izbira gumba za urejanje profila ter vnos neustreznih podatkov | Prikaz obvestila o neuspešni spremembi |
+| Urejanje profila | Spreminjanje priimka | Prijavljen uporabnik na strani svojega profila s trenutnim priimkom | Izbira gumba za urejanje profila ter vnos novega priimka | Stran uporabniškega profila z novim priimkom | 
+| Urejanje profila | Spreminjanje gesla | Prijavljen uporabnik na strani svojega profila s trenutnim geslom | Izbira gumba za urejanje profila ter vnos novega gesla | Stran uporabniškega profila z novim geslom | 
+| Urejanje profila | Dostop do funkcionalnosti spreminjanja tujega računa | Administrator na uporabnikovemu profilu | Izbira gumba za urejanje profila | Forma za vnos novih podatkov |
+| Urejanje profila | Administratorsko spreminjanje tujega računa | Forma za vnos novih podatkov | Vnos spremenjenih podatkov | Obvestilo o uspešni spremembi | 
+| Urejanje profila | Neustrezni podatki | Prijavljen uporabnik na strani svojega profila | Izbira gumba za urejanje profila ter vnos neustreznih podatkov | Prikaz obvestila o neuspešni spremembi |
+| Urejanje profila | Nedelovanje oddaje | Prijavljen uporabnik na strani svojega profila | Izbira gumba za urejanje profila ter vnos neustreznih podatkov | Prikaz obvestila o neuspešni spremembi |
 
 #### Povzetek funkcionalnosti
 
@@ -554,7 +557,7 @@ Registrirani uporabniki lahko dodajajo predloge, kako bi popravili neko poškodb
 
 #### Osnovni tok
 
-1. Registrirani uporabnik izbere gumb za dodajanje predlog
+1. Registrirani uporabnik izbere gumb za dodajanje predloga
 2. Registrirani uporabnik napiše predlog in zahtevane podatke v prikazanem obrazec
 3. Registrirani uporabnik izbere gumb za objavo
 4. Ob uspešni objavi, je predlog prikazan med predlogami in se uporabniku prikaže začetno stran
@@ -586,9 +589,10 @@ Funkcionalnost ima MUST have prioriteto, ker to je to ena od najbolj pomembnih f
 
 | Primer uporabe | Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
 | --- | --- | --- | --- | --- |
-| Dodajanje predlogov | Začetna stran | Izbira gumba za dodajanje predlogov ter vnos in oddaja podatkov | Prikaz novega predloga na začetni strani |
-| Dodajanje predlogov | Začetna stran | Izbira gumba za dodajanje predlogov ter vnos in oddaja neustreznih podatkov | Prikaz obvestila o neuspešni objavi |
-
+| Dodajanje predlogov | Prikaz forme za dodajanje predloga | Začetna stran | Izbira gumba za dodajanje predlogov | Prikaz forme za vnos podatkov |
+| Dodajanje predlogov | Prikaz forme za dodajanje predloga | Prikaz forme za vnos podatkov | Vnos in oddaja podatkov | Prikaz novega predloga na začetni strani |
+| Dodajanje predlogov | Neustreznost podatkov | Začetna stran | Izbira gumba za dodajanje predlogov ter vnos in oddaja neustreznih podatkov | Prikaz obvestila o neuspešni objavi |
+| Dodajanje predlogov | Delovanje gumba za oddajo | Prikaz forme za vnos podatkov | Izbira gumba za oddajo | Prikaz obvestila o neuspešni objavi |
 
 ## 12. Glasovanje med predlogi
 Registrirani uporabniki lahko glasujejo med predlogi, izbirajo tistega, ki njim najbolj ustreza in ki bo bil v največji meri pomagal prosperitetu občine.
@@ -633,7 +637,7 @@ Registriran uporabnik (avtor predloga) in administrator lahko urejajo predloge, 
 #### Osnovni tok
 
 1. Registriran uporabnik odpre svoj profil
-2. Registriran uporabnik izbere predlog ki ga želi spremeniti in gumb za spremembo
+2. Registriran uporabnik izbere predlog, ki ga želi spremeniti in gumb za spremembo
 3. Registriran uporabnik izpolni zahtevane podatke v prikazanem obrazecu
 4. Registriran uporabnik odda obrazec
 5. Ob uspešni spremembi, uporabniku se prikaže začetno stran
@@ -665,8 +669,10 @@ Funkcionalnost ima SHOULD have prioriteto. Spletna stran bo delovala tudi brez n
 
 | Primer uporabe | Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
 | --- | --- | --- | --- | --- |
-| Urejanje predlogov | Lastni profil uporabnika | Izbira gumba za urejanje lastnega predloga ter vnos in oddaja novih podatkov | Začetna stran |
-| Urejanje predlogov | Profil uporabnika | Izbira gumba za urejanje predloga ter vnos in oddaja novih podatkov | Začetna stran |
+| Urejanje predlogov | Sprememba opisa predloga | Lastni profil uporabnika | Izbira gumba za urejanje lastnega predloga ter vnos in oddaja novih podatkov | Začetna stran |
+| Urejanje predlogov | Sprememba lokacije predloga | Lastni profil uporabnika | Izbira gumba za urejanje lastnega predloga ter vnos in oddaja novih podatkov | Začetna stran |
+| Urejanje predlogov | Delovanje gumba za urejanje | Profil uporabnika | Izbira gumba za urejanje predloga | Prikaz vnosne forme |
+| Urejanje predlogov | Administratorsko urejanje | Prikaz vnosne forme na profilu uporabnika | Izbira gumba za urejanje predloga ter vnos in oddaja novih podatkov | Začetna stran |
 
 ## 14. Pregled predlogov
 Registriran uporabnik, občni delavec, predstavnik občine in administrator lahko pregledajo predloge in na podlagi tega vpogleda formirajo svoje mnenje o le-tem.
@@ -711,8 +717,8 @@ Registriran uporabnik (autor predloga), predstavnik občine in administrator lah
 
 1. Registriran uporabnik izbere gumb za pregled svojega profila
 2. Registriran uporabnik izbere predlog, ki ga je sam objavil
-3. Registriran uporabnik izbere gumb za briasnje predloga
-4. Registriran uporavnik potrdi brisanje predloga
+3. Registriran uporabnik izbere gumb za brisanje predloga
+4. Registriran uporabnik potrdi brisanje predloga
 5. Registriran uporabnik dobi obvestilo o uspešnem brisanju
 
 #### Alternativni tok
@@ -742,8 +748,10 @@ Funkcionalnost ima SHOULD have prioriteto. Spletna stran bo delovala tudi brez t
 
 | Primer uporabe | Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
 | --- | --- | --- | --- | --- |
-| Brisanje predlogov | Profil uporabnika | Izbira gumba za brisanje lastnega predloga | Obvestilo o uspešnem brisanju |
-| Brisanje predlogov | Začetna stran s predlogi | Izbira gumba za brisanje  predloga | Obvestilo o uspešnem brisanj |
+| Brisanje predlogov | Potrditev brisanja | Predlog v bazi | Izbira gumba za brisanje lastnega predloga | Sporočilo o potrditvi brisanja |
+| Brisanje predlogov | Brisanje predloga | Predlog v bazi | Potrditev akcije brisanja | Obvestilo u uspešnem brisanju in zbrisan predlog iz baze |
+| Brisanje predlogov | Prikaz opcije brisanja tujih predlogov | Predlog v bazi | Izbira gumba za brisanje  predloga | Sporočilo o potrditvi brisanja |
+| Brisanje predlogov | Brisanje tujega predloga | Predlog v bazi | Potrditev brisanja predloga | Obvestilo u uspešnem brisanju in zbrisan predlog iz baze |
 
 ## 16. Pošiljanje sporočil
 Registriran uporabnik, občni delavec, predstavnik občine in administrator si lahko izmenjujejo sporočila med sabo, kar bo močno olajšalo povezovanje in komunikacijo članov občine.
@@ -816,8 +824,8 @@ Funkcionalnost ima WOULD have prioriteto. Uporabnik si lahko tudi brez te funkci
 
 | Primer uporabe | Funkcija, ki se testira | Začetno stanje sistema | Vhod | Pričakovan rezultat |
 | --- | --- | --- | --- | --- |
-| Iskanje novic/predlogov | Iskanje obstoječe novice/predloga | Začetna stran | Vnos iskalnega izraza | Prikaz zadetkov iskanja |
-| Iskanje novic/predlogov | Iskanje neobstoječe novice/predloga | Začetna stran | Vnos iskalnega izraza | Prikaz sporočila o neobstoju ujemanja |
+| Iskanje novic/predlogov | Iskanje obstoječe novice/predloga | Baza, ki vsebuje iskano novico/predlog | Vnos iskalnega izraza | Prikaz zadetkov iskanja |
+| Iskanje novic/predlogov | Iskanje neobstoječe novice/predloga | Baza, ki ne vsebuje iskano novico/predlog | Vnos iskalnega izraza | Prikaz sporočila o neobstoju ujemanja |
 
 ## 18. Pregled profilov ostalih uporabnikov
 Registriran uporabnik, občni delavec, predstavnik občine in administrator lahko pregledujejo profile ostalih uporabnikov in na ta način lažje ustvarijo interakcijo med sabo.
