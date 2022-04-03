@@ -53,8 +53,6 @@ Na trgu že obstajajo podobne rešitve za zadan problem. Od naše aplikacije se 
 - **Predstavnik občine** - Predstavnik občine je občni delavec, ki je zadolžen za preverjanje pristnosti predlog uporabnikov ter jih nato posreduje primernim organizacijam.
 - **Administrator** - Administrator skrbi za pravilno delovanje in uporabljanje spletno stran. Lahko ogleda in briše objave in profilov. 
 
-- Opredelite glavne tipe uporabnikov vaše aplikacije glede na funkcionalnosti, ki jih imajo na voljo.
-- Zelo pomembno je, da uporabniške vloge konsistentno imenujete. Na primer, če ste definirali vlogo **učitelj**, morate povsod uporabljati samostalnik **učitelj**, ne pa morda **profesor** ali **pedagog**. Tehniška besedila žal ne morejo dosegati leposlovnih standardov, tudi če so še tako dobro napisana.
 
 ## 3. Slovar pojmov
 
@@ -340,7 +338,6 @@ Funkcionalnost ima SHOULD have prioriteto. Aplikacija bo delovala brez nje, vend
 | Urejanje profila | Neustrezni podatki | Prijavljen uporabnik na strani svojega profila | Izbira gumba za urejanje profila ter vnos neustreznih podatkov | Prikaz obvestila o neuspešni spremembi |
 | Urejanje profila | Nedelovanje oddaje | Prijavljen uporabnik na strani svojega profila | Izbira gumba za urejanje profila ter vnos neustreznih podatkov | Prikaz obvestila o neuspešni spremembi |
 
-#### Povzetek funkcionalnosti
 
 ## 6. Brisanje profila
 Registriran uporabnik, občni delavec, predstavnik občine in administrator lahko izbrišejo svoj račun. Razlogov zato je kar nekaj - selitev, prenehanje funkcije v občini, itn.
@@ -1031,6 +1028,9 @@ Funkcionalnost ima COULD have prioriteto. Lokacija bi izboljšala komunikacijo m
 
 ## 7. Prototipi vmesnikov
 
-:dart: **TO-DO**
+### 1° Zaslonske maske
 
+### 2° Sistemski vmesniki
+  [![zacetni_zaslon](../gradivo/img/ZM00.zacetni_zaslon.png)]
+  <img src="../gradivo/img/ZM01.registracija.png", width="500", height="150">
 - Navesti je potrebno: zaslonske maske, sistemske vmesnike in vmesnike do naprav, vključno z referencami do primerov uporabe.
