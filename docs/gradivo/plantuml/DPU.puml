@@ -19,49 +19,44 @@ actor "Predstavnik\nobčine" AS U4
 actor "Administrator" AS U5
 
 actor "Google\nMaps\nAPI" AS S1
-actor "Mail" AS S2
+actor "Upravna\nenota\nobčine" AS S2
+' actor "Mail" AS S3
 
 rectangle "Vaš sistem" {
   usecase "Registracija" AS PU1
   usecase "Prijava" AS PU2
   usecase "Odjava" AS PU3
-  usecase "Pregled\nuporabniškega\nprofila" AS PU4
-  usecase "Ureditev\nprofila" AS PU5
   usecase "Brisanje\nprofila" AS PU6
   usecase "Dodajanje\nnovic" AS PU7
-  usecase "Urejanje\nnovic" AS PU8
-  usecase "Brisanje\nnovic" AS PU9
   usecase "Pregled\nnovic" AS PU10
   usecase "Dodajanje\npredlogov" AS PU11
-  usecase "Glasovanje" AS PU12
-  usecase "Urejanje\npredlogov" AS PU13
   usecase "Pregled\npredlogov" AS PU14
-  usecase "Brisanje\npredlogov" AS PU15
-  usecase "Pošiljanje\nsporočil" AS PU16
-  usecase "Iskanje\nnovice/predlogov" AS PU17
-  usecase "Pregled\nprofilov\nostalih\nuporabnikov" AS PU18
+  usecase "Glasovanje" AS PU12
   usecase "Komentiranje" AS PU19
+  usecase "Izbira\nlokacije" AS PU19
+  usecase "Ogled\nlokacije" AS PU20
 }
 
-' U2 -left-|> U1
+U2 -left-|> U1
 
 U1 -> (PU1)
-U1 --> (PU10)
-U1 --> (PU14)
 U2 --> (PU2)
 U2 --> (PU3)
 U2 --> (PU4)
+U1 --> (PU10)
 U2 --> (PU10)
+U2 --> (PU12)
+U4 --> (PU12)
+U1 --> (PU14)
 U2 --> (PU14)
+U2 --> (PU19)
+U2 --> (PU20)
 
-(PU5) .up.> (PU4) : extend
 (PU6) .up.> (PU4) : extend
 (PU7) .up.> (PU10) : extend
-(PU8) .up.> (PU10) : extend
-(PU9) .up.> (PU10) : extend
 (PU11) .up.> (PU14) : extend
-(PU13) .up.> (PU14) : extend
-(PU15) .up.> (PU14) : extend
-(PU17) .up.> (PU14) : extend
+
+(PU19) -down-> S1
+(PU12) -down-> S2
 
 @enduml
