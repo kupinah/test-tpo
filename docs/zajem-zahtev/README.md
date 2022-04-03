@@ -1049,7 +1049,7 @@ Funkcionalnost ima COULD have prioriteto. Lokacija bi izboljšala komunikacijo m
   - ShraniLokacijo(loc: LatLng) - sprejme lokacijo označeno na zeljevidu in jo shrani za ogled(novice, predloga).
   - PoglejLokacijo(loc_id: int) - sprejme identifikacijo lokacije, ki jo prikaže uporabniku.
   - SpremeniLokacijo(loc_id: int, loc: LatLng) - spremeni lokacijo shranjeno na določenem mestu.
-  - IzbrišiLokacijo(loc_id) - zbriše lokacijo shranjeno pod določenim identifikatorjem.
+  - IzbrišiLokacijo(loc_id: int) - zbriše lokacijo shranjeno pod določenim identifikatorjem.
 
   Lokacijo pridobljeno preko vmesnika Google maps se lahko uporabi pri novicah in predlogih. Predvsem pa je pomembna da aplikacija prepozna v kateri občini se uporabnik nahaja.
 
