@@ -1029,8 +1029,34 @@ Funkcionalnost ima COULD have prioriteto. Lokacija bi izboljšala komunikacijo m
 ## 7. Prototipi vmesnikov
 
 ### 1° Zaslonske maske
+  ![zacetni_zaslon](../gradivo/img/ZM00.zacetni_zaslon.png)
+  ![registracija](../gradivo/img/ZM01.registracija.png)
+  ![prijava](../gradivo/img/ZM02.prijava.png)
+  ![odjava](../gradivo/img/ZM03.odjava.png)
+  ![pulldown_reg](../gradivo/img/ZM04.pulldown_reg.png)
+  ![pulldown_su](../gradivo/img/ZM05.pulldown_su.png)
+  ![pregled_profila](../gradivo/img/ZM06.pregled_profila.png)
+  ![urejanje_profila](../gradivo/img/ZM07.urejanje_profila.png)
+  ![brisanje_profila](../gradivo/img/ZM08.brisanje_profila.png)
+  ![ogled_komentarja](../gradivo/img/ZM09.ogled_komentarja.png)
+  ![brisanje_komentarja](../gradivo/img/ZM10.brisanje_komentarja.png)
+  ![iskanje](../gradivo/img/ZM11.iskanje.png)
+  ![rezultat_iskanja](../gradivo/img/ZM12.rezultat_iskanja.png)
+  ![pregled_tujega_profila](../gradivo/img/ZM13.pregled_tujega_profila.png)
+  ![pošiljanje_sporočil](../gradivo/img/ZM14.pošiljanje_sporočil.png)
+  ![objava_novice](../gradivo/img/ZM15.objava_novice.png)
+  ![izberi_lokacijo](../gradivo/img/ZM16.izberi_lokacijo.png)
+  ![novice_reg](../gradivo/img/ZM17.novice_reg.png)
+  ![novice_sudo](../gradivo/img/ZM18.novice_su.png)
+  ![komentiranje](../gradivo/img/ZM19.komentiranje.png)
+  ![ogled_lokacije](../gradivo/img/ZM20.ogled_lokacije.png)
+  ![urejanje_novic](../gradivo/img/ZM21.urejanje_novic.png)
+  ![brisanje_novice](../gradivo/img/ZM22.brisanje_novice.png)
+  ![objava_predloga](../gradivo/img/ZM23.objava_predloga.png)
+  ![lasten_predlog](../gradivo/img/ZM24.lasten_predlog.png)
+  ![tuj_predlog](../gradivo/img/ZM25.tuj_predlog.png)
+  ![urejanje_predloga](../gradivo/img/ZM26.urejanje_predloga.png)
+  ![brisanje_predloga](../gradivo/img/ZM27.brisanje_predloga.png)
 
 ### 2° Sistemski vmesniki
-  [![zacetni_zaslon](../gradivo/img/ZM00.zacetni_zaslon.png)]
-  <img src="../gradivo/img/ZM01.registracija.png", width="500", height="150">
 - Navesti je potrebno: zaslonske maske, sistemske vmesnike in vmesnike do naprav, vključno z referencami do primerov uporabe.
