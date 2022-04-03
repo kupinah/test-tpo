@@ -26,6 +26,7 @@ Na trgu že obstajajo podobne rešitve za zadan problem. Od naše aplikacije se 
   
   Spletna aplikacija bo imela tudi integriran dostop do Google Maps, ki se bo uporabljal med ustvarjanjem novega predloga ali novice. Tako bo lahko avtor specificiral natančno lokacijo na katero se nanaša ustvarjena novica oz. predlog. Zemljevid z lokacijo se bo nato prikazal bralcu med pregledovanjem novice oz. predloga, da bo uporabnik lahko spremljal, kje se zgodi kaj.
 
+  Končni izdelek bo celovita in zanesljiva spletna aplikacija. Sistem, ki bo dostopen vsej 200 uporabnikom hkrati bo tudi zelo hiter, z odgovori na zahteve znotraj sekunde. Sistem bo seveda tudi varen, z odpori na XSS in SQL injection napade. Varoval pa bo tudi uporabnikove osebne podatke, saj bo skladen z najsodobnejšimi GDPR zakoni.
 
 ### 1° Zahteve izdelka:
 - Sistem mora biti zmožen hkrati obdelati vsaj 200 uporabniških zahtev.
