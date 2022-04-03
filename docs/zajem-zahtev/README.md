@@ -28,23 +28,6 @@ Na trgu že obstajajo podobne rešitve za zadan problem. Od naše aplikacije se 
 
   Končni izdelek bo celovita in zanesljiva spletna aplikacija. Sistem, ki bo dostopen vsej 200 uporabnikom hkrati bo tudi zelo hiter, z odgovori na zahteve znotraj sekunde. Sistem bo seveda tudi varen, z odpori na XSS in SQL injection napade. Varoval pa bo tudi uporabnikove osebne podatke, saj bo skladen z najsodobnejšimi GDPR zakoni.
 
-### 1° Zahteve izdelka:
-- Sistem mora biti zmožen hkrati obdelati vsaj 200 uporabniških zahtev.
-- Sistem mora odgovoriti na vsako zahtevo znotraj 1000ms.
-- Sistem uporabniku ne sme omogočiti dostopa do podatkov, za katere ni izrecno pooblaščen.
-- Sistem mora biti na voljo najmanj 99,9 odstotkov časa.
-- Proces prijave v sistem ne sme biti daljši od 3 sekunde.
-- Sistem je odporen na XSS ter SQL injection napada (merljivo z OWASP ZAP).
-
-### 2° Organizacijske zahteve
-- Procesni model bo uporabljal RUP proces.
-- Sistem omogoča enostavno dodajanje novih funkcionalnostih
-- Sistem bo implementiran v GIT razvojnem okolju.
-
-### 3° Zunanje zahteve
-- Sistem sledi standarde definirane po GDPR zakonu.
-- Sistem se mora biti sposoben izvajati na OS Red Hat Enterprise Linux z nameščenim spletnim strežnikom Apache.
-- Sistem uporablja algoritem SHA256 za enkripcijo podatkov.
 
 ## 2. Uporabniške vloge
 
@@ -1059,5 +1042,29 @@ Funkcionalnost ima COULD have prioriteto. Lokacija bi izboljšala komunikacijo m
   ![urejanje_predloga](../gradivo/img/ZM26.urejanje_predloga.png)
   ![brisanje_predloga](../gradivo/img/ZM27.brisanje_predloga.png)
 
-### 2° Sistemski vmesniki
-- Navesti je potrebno: zaslonske maske, sistemske vmesnike in vmesnike do naprav, vključno z referencami do primerov uporabe.
+### 2° Vmesniki do zunanjih sistemov
+
+  Naš sistem bo povezan z Google maps, preko katerega bo mogoče uporabljanje geopozicije.
+  - PridobiLokacijo(loc: LatLng) - sprejme uporabnikovo trenutno lokacijo in vrne ime občine v kateri se nahaja.
+  - ShraniLokacijo(loc: LatLng) - sprejme lokacijo označeno na zeljevidu in jo shrani za ogled(novice, predloga).
+  - PoglejLokacijo(loc_id: int) - sprejme identifikacijo lokacije, ki jo prikaže uporabniku.
+  - SpremeniLokacijo(loc_id: int, loc: LatLng) - spremeni lokacijo shranjeno na določenem mestu.
+  - IzbrišiLokacijo(loc_id) - zbriše lokacijo shranjeno pod določenim identifikatorjem.
+
+  Lokacijo pridobljeno preko vmesnika Google maps se lahko uporabi pri novicah in predlogih. Predvsem pa je pomembna da aplikacija prepozna v kateri občini se uporabnik nahaja.
+
+### 3° Vmesniki do našega sistema
+
+  Z našo spletno aplikacijo bo možno komunicirati preko REST APIja. Preko njega bodo lahko uporabniki prejemali in oddajali novice in predloge.
+
+  - ObjaviNovico(id_n:int, vsebina: Novica) - Ustvari novico z določenim id-jem.
+  - ObjaviPredlog(id_p:int, vsebina: Predlog) - Ustvari predlog z določenim id-jem.
+  - UrediNovico(id_n:int, vsebina: Novica) - Novici z določenim id-jem spremeni vsebino.
+  - UrediPredlog(id_p:int, vsebina: Predlog) - Predlogu z določenim id-jem spremeni vsebino.
+  - IzbrišiNovico(id_n:int) - Izbriše določeno novico.
+  - IzbrišiPredlog(id_p:int) - Izbriše določen predlog.
+  - BeriNovico(id_n:int) - Sprejme id novice, ki jo vrne uporabniku.
+  - BeriPredlog(id_p:int) - Sprejme id predloga, ki ga vrne uporabniku.
+  - GlasujZaPredlog(glas:bool, id_p:int) - Odda določen glas za določen predlog.
+
+  Za komunikacijo z APIjem, sta ustvarjena razreda Novica in Predlog. Oba vsebujeta naslov, vsebino, datum in lokacijo, Predlog pa hrani tudi tabelo s števili glasov.
