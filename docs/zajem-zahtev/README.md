@@ -26,11 +26,6 @@ Na trgu že obstajajo podobne rešitve za zadan problem. Od naše aplikacije se 
   
   Spletna aplikacija bo imela tudi integriran dostop do Google Maps, ki se bo uporabljal med ustvarjanjem novega predloga ali novice. Tako bo lahko avtor specificiral natančno lokacijo na katero se nanaša ustvarjena novica oz. predlog. Zemljevid z lokacijo se bo nato prikazal bralcu med pregledovanjem novice oz. predloga, da bo uporabnik lahko spremljal, kje se zgodi kaj.
 
-:dart: **TO-DO** dodaj še malo več uvoda. Npr. boljše opiši zahteve (tudi nefunkcionalne). Obvezno omeni kje in kako se bo uporabljal rest api.
-
-zunanji sistemi: transakcijska PB, PB sprejeti predlogi, REST API vmesnik
-funkcionalne zahteve: dodajanje novic, prijava poškodbe, priporočilo ideje, glasovanje na idejah 
-nefunkcionalne zahteve: delovanje funkcionalnosti v 100 ms, dostopno za različne občine, uporabniku dovoliti le določene funkcionalnosti v tuji občini 
 
 ### 1° Zahteve izdelka:
 - Sistem mora biti zmožen hkrati obdelati vsaj 200 uporabniških zahtev.
