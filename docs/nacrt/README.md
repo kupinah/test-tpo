@@ -3,8 +3,8 @@
 |                             |                                                                |
 | :-------------------------- | :------------------------------------------------------------- |
 | **Naziv projekta**          | Občinski obveščevalnik                                         |
-| **Člani projektne skupine** | :dart: **TO-DO** 1. član, 2. član, 3. član, 4. član in 5. član |
-| **Kraj in datum**           | :dart: **TO-DO** kraj, datum                                   |
+| **Člani projektne skupine** | Luka Markićević, Haris Kupinić, Luka Brodnik, Elena Najdova, Luka Pantar |
+| **Kraj in datum**           | Ljubljana, 21.4.2022                                   |
 
 ## Povzetek
 
