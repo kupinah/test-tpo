@@ -16,8 +16,7 @@
 
 :dart: **TO-DO**
 
-- Za prikaz uporabite enostavne prikaze, kot je **postavitveni** ([deployment](https://plantuml.com/deployment-diagram)), **paketni** ([class](https://plantuml.com/class-diagram)) diagram oz. **komponentni** ([component](https://plantuml.com/component-diagram)) diagram. 
-- Pri predlogu upoštevajte tudi arhitekturne vzorce.
+[!komponentni](https://teaching.lavbic.net/plantuml/png/VL9DRu904BtxApRS_GicJIHcvKDIQWys7bRPaf5bTmEL9ZN-zo8328FARUQzUU_j35OSCv5AvaIRbUyk7NQPCVPLbV80Mdo2_DtVwhCrXJXeA3E82lCDgaUqgU1u9zf29igaM5zdzMSx0-yzu7x8FUVcSFVmYXoKXcoFNTGZpLQLT2UX2FvtraAV88RoH-PDcZvBi5cwFhwr9eQDPpiLeLTRRLkFJdCdStMI5IIDdZP9BRRRXc_XchEOnnzkm7lPbJ6faYmGjcpOewso-NpnO0UJ3lAwX4_WFlCJV91wT2549ziT7XKfz2gJ6Pg3391NFFwTaFJYgYymd1rSQxHzHCd_G6gwgNy0)
 
 ## 2. Načrt strukture
 
