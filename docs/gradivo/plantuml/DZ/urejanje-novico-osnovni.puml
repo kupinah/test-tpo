@@ -1,0 +1,30 @@
+@startuml
+hide footbox
+
+skinparam backgroundcolor transparent
+skinparam defaultTextAlignment center
+skinparam actorBorderColor black
+skinparam actorBackgroundColor white
+skinparam arrowColor black
+skinparam sequenceLifeLineBorderColor #5FB8EC
+skinparam sequenceParticipantBorderColor #5FB8EC
+skinparam sequenceParticipantBackgroundColor white
+
+actor "Prijavljeni uporabnik" AS U1 <<actor>>
+
+participant "Urejanje novice" as R5 <<boundary>>
+participant "Novice kontroler" as R2 <<control>>
+participant "Novica" as R4 <<entity>>
+
+activate U1
+U1 -> R5: p1 := urediNovico()
+activate R5
+R5 -> R2: p2 := urediNovico(novica)
+activate R2
+R2 -> R4: p5 := preveriPodatke(novica)
+R4 --> R2: // StatusCode
+R2 -> R4: p5 := shraniPodatke(novica)
+R2 --> R5: // StatusCode
+deactivate R2
+R5 --> U1: // Prikaži obvestilo o uspešno urejanje novico
+@enduml

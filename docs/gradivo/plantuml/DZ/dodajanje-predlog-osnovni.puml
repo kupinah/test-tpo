@@ -1,0 +1,31 @@
+@startuml
+hide footbox
+
+skinparam backgroundcolor transparent
+skinparam defaultTextAlignment center
+skinparam actorBorderColor black
+skinparam actorBackgroundColor white
+skinparam arrowColor black
+skinparam sequenceLifeLineBorderColor #5FB8EC
+skinparam sequenceParticipantBorderColor #5FB8EC
+skinparam sequenceParticipantBackgroundColor white
+
+actor "Prijavljeni uporabnik" AS U1 <<actor>>
+
+participant "Obrazec za\n dodajanje predloge" as R5 <<boundary>>
+participant "Predloge kontroler" as R2 <<control>>
+participant "Predlog" as R4 <<entity>>
+
+activate U1
+U1 -> R5: p1 := izpolniObrazec()
+activate R5
+R5 -> R2: p2 := dodajPredlog(predlog)
+activate R2
+R2 -> R4: p5 := preveriPodatke(predlog)
+R4 --> R2: // StatusCode
+R2 -> R4: p5 := dodajPredlog(predlog)
+R4 --> R2: // StatusCode
+R2 --> R5: // StatusCode
+deactivate R2
+R5 --> U1: // Prikaži obvestilo o uspešno dodajanje prelog
+@enduml
