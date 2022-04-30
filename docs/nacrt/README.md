@@ -65,32 +65,83 @@
 
 ## 3. Načrt obnašanja
 
-:dart: **TO-DO**
+1. Registracija
+  - Osnovni tok
+  ![image](https://teaching.lavbic.net/plantuml/png/bP5BJiD038RtEOLLDh10gAML489AW80D0bJe0Po9MqpIcU0uvN4R3iEzS992XzU2HH8f_ZxxzymTPmIp43GDJqbIvUnB55n0YYwVIwXzva8H15JGLrOYhn6LqGphGc_fIOyAdlk5bS7PYoIYq6cGuo0PoKdRB2si-m_WSs87FTwnKWo9XCV81uYA5JtKv1rTyCmUJ_6qZT7PyTxfoI_qDOgounAz_b_uDMxIhWAzInAQSwN2TcvGbq4mzPptuEW6fdquE6YvyJX9odLBw4qw2HtVst08gU0BkHvW1PEHMMap3-NPn2_Uz6C0GnwyIYX8EcjWbkj-_IbrvD18kpdMfdkp1ozHoT8c5dXxR07seUp3_Y7a1UUNU5ulqYWlRcwjfSaeiRoDD31fq4WIewl5OcEGMDR669gnsnYbq9A4hqE6cjDcsNvvA-Q63PTPuVvp6Op08MolCkpim8sYrfMTJuPjYzLAtoePVOaqQhbfl-MkqYLLoklhH0XGLoMzlNgE5-Ht)
+  - Alternativni tok 1
+  - Alternativni tok 2
 
-- Za izdelavo uporabite ogrodje PlantUML.
-- V poročilo vključite **izvorno kodo diagrama v jeziku PlantUML**, ki naj bo prisotna v repozitoriju, sliko diagrama pa vključite s povezavo (in ne preko neposredne vključitve binarne datoteke) preko storitve [`https://teaching.lavbic.net/plantuml`](https://teaching.lavbic.net/plantuml), kot prikazuje spodnji primer.
-- Diagram naj bo **jasno berljiv**.
-- Za izdelavo načrta obnašanja lahko uporabite **diagramske tehnike**, navedene v nadaljevanju.
-  - Uporabite zgolj tiste, ki se vam zdijo najbolj primerne za izbrano funkcionalnost. 
-  - Pri opredelitvi načrta ni treba uporabiti vseh predlaganih diagramskih tehnik.
-  - Najbolj se **priporoča** uporabo **diagramov zaporedja**.
+2. Prijava
+  - Osnovni tok
+  - Alternativni tok 1
 
-**Diagram zaporedja** ([Sequence Diagram](https://plantuml.com/sequence-diagram), izvorna koda :bar_chart: [PlantUML](../gradivo/plantuml/DZ.puml))
+3. Odjava
+  - Osnovni tok
 
-![DZ](https://teaching.lavbic.net/plantuml/svg/bPDFRvj04CNlyob6xiKvL14OgYfAhVnhJvLQkN4EKIu3Z9EjOOSk2qvTzRjt5YU69kwX1v1sv_VUl9s5iyQJysrLujKjm8Cf65SYFfD7W6PjR4sEAimeNzyxQMsHIoaElIFRQ8cj7r45hwWj_JK_-lFItDjAovZhYzs8ejoBkn1NiBlipR9ItLy1-uuxQFDWF8yXvsGpqYEEYWt_QDdc_DcizB4yxlOc_NJn_kFb0Vgh3iBafYRh_rzmC2xqHy79iXP7cJLhZ2Pu_WsN4PwUzhNv7A0UR72oeAtZ0jC9KeEBLBaik9BxgUWXCjwHiPAvME-a_0UOxC14GRqIuuDX26WwygoHG5EzdMlF4wmZFFc05NifwDtqQA0MAMYcGCLAnGCLJQFPc8i1If4QjuHTGsl1JYDOQJnWo1eS4dMO3Gw9za4S79909dio6SXqQcKpFJgCFsSBwuB_hhzSFmLH_FWOhzJvE_wgPq7y-yxgLgStlRLK0Ti28D1Fyz7QJSFxCvcUbgpWaYp3k4tSpqjbowYNVSawLW6spry40PoflVw0Vm00)
+4. Pregled uporabniškega profila
+  - Osnovni tok
 
-**Diagram aktivnosti** ([Activity Diagram](https://plantuml.com/activity-diagram-beta), izvorna koda :bar_chart: [PlantUML](../gradivo/plantuml/DA.puml))
+5. Ureditev profila
+  - Osnovni tok
+  - Alternativni tok 1
+  - Alternativni tok 2
 
-![DA](https://teaching.lavbic.net/plantuml/svg/VL5DJyCm3BtxLqJY0gTfV4Y8JcDbWpCI_06lyRhGrAaIbpAX_NVSRaWH1mwnvFTU_9wJLHACqhVUR4g0r3ZkC69hBEsmz_9ENr9wLtDBBARIGZ5JRR5gwXXwjbNm8Hg9o4afrMMgj4SR1iUrsQ5Fb35LOEl41NwJWoTZ7RQA02pIs2y1At6VJWuRX_Me_mQJUQudps7lX1JtZkc4NDozFDq_hnN36CCmtShvhTSHYXtrd2t_qHnXCJl7WUcn029rX68UoaRZSKXYveLgi_xwJtzJm9Xxm6WpzBRu7QLBwFwNhw4E7sR-U3LQXGvWHMprStu0)
+6. Brisanje profila
+  - Osnovni tok
+  - Alternativni tok 1
 
-**Diagram stanj** ([State Diagram](https://plantuml.com/state-diagram), izvorna koda :bar_chart: [PlantUML](../gradivo/plantuml/DS.puml))
+7. Dodajanje novic o dogodkih, spremembah v občini, aktualnih dogajanj...
+  - Osnovni tok
+  - Alternativni tok 1
 
-![DS](https://teaching.lavbic.net/plantuml/svg/NP91Ri8m44NtFiK8TfMG6Zkqm09HABs0kwkw66ANXYHsvJYYKjMxTuABIRoneZVFyx-bR5gFpdTD3S-IiROgpHSwRE20HNLqjZEgiBLru1sQbaRQ-86bz0TsjN_Lt_wfBe-ceJ4KT6WtiD0vUzvTrXngsZiOKRhNyCC0jZ4mcEVFqkkUMwUq2smwVzakzZkYic-TmltrxXNzqeik0HFopKb3DW5iGMPCPYjGTWLO5UK98Kj57aJE91-98XL540MJOYJEKp4FOivaFewcxBUxTvYj-rvK36Rz9uy2Zqn4Hbj4wZrGrzHxZDwDBIBB8rjIgz3WrkkU_KDgnzX66qL_oHy0)
+8. Urejanje novic
+  - Osnovni tok
+  - Alternativni tok 1
 
-**Psevdokoda**
+9. Brisanje novic
+  - Osnovni tok
+  - Alternativni tok 1
 
-> **assume** vrednost1 &subseteq; C, vrednost2 &subseteq; C  
-> **let** maxVrednost1 = max {r | (s,r) &in; vrednost1}  
-> **for** (s, r) **in** vrednost2:  
-> &nbsp;&nbsp;&nbsp;&nbsp;**if** r &le; maxVrednost1 **return false**  
-> **return true**
+10. Pregled novic
+  - Osnovni tok
+
+11. Dodajanje predlogov o odpravljanju poškodb, novih idej, težavah...
+  - Osnovni tok
+  - Alternativni tok 1
+
+12. Glasovanje med predlogi
+  - Osnovni tok
+
+13. Urejanje predlogov
+  - Osnovni tok
+  - Alternativni tok 1
+
+14. Pregled predlogov
+  - Osnovni tok
+
+15. Brisanje predlogov
+  - Osnovni tok
+  - Alternativni tok 1
+
+16. Pošiljanje sporočil
+  - Osnovni tok
+
+17. Iskanje novice/predlogov
+  - Osnovni tok
+
+18. Pregled profilov ostalih uporabnikov
+  - Osnovni tok
+
+19. Dodajanje komentarja
+  - Osnovni tok
+
+20. Brisanje komentarja
+  - Osnovni tok
+  - Alternativni tok 1
+
+21. Izbira lokacije
+  - Osnovni tok
+  - Alternativni tok 1
+
+22. Ogled lokacije
+  - Osnovni tok

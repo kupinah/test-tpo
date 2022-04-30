@@ -24,7 +24,7 @@ activate R2
 R2 -> R4: p3 := preveriPodatke(podatki)
 R2 -> R4: p4 := dodajUporabnika(podatki)
 R4 --> R2: // Status koda
-R2 --> R5: // Vse vrednosti\n// obdelane
+R2 --> R5: // Status koda
 deactivate R2
 R5 --> U1: // Obvesti uporabnika o uspešni registraciji
 @enduml
