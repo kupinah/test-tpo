@@ -1,0 +1,29 @@
+@startuml
+hide footbox
+
+skinparam backgroundcolor transparent
+skinparam defaultTextAlignment center
+skinparam actorBorderColor black
+skinparam actorBackgroundColor white
+skinparam arrowColor black  
+skinparam sequenceLifeLineBorderColor #5FB8EC
+skinparam sequenceParticipantBorderColor #5FB8EC
+skinparam sequenceParticipantBackgroundColor white
+
+actor "Prijavljen uporabnik" AS U1 <<actor>>
+
+participant "Ogled uporabniškega profila" as R5 <<boundary>>
+participant "Uporabniki kontroler" as R2 <<control>>
+participant "Uporabnik" as R4 <<entity>>
+
+activate U1
+U1 -> R5: p1 := klikNaGumbProfil()
+activate R5
+R5 -> R2: p2 := pridobiUporabnika(idUporabnika)
+activate R2
+R2 -> R4: p3 := vrniPodatke(idUporabnika)
+R4 --> R2: // Uporabnik
+R2 --> R5: // Uporabnik
+deactivate R2
+R5 --> U1: // Prikaži profil uporabnika
+@enduml
