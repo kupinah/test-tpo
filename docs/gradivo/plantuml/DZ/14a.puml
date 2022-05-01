@@ -1,0 +1,29 @@
+@startuml
+hide footbox
+
+skinparam backgroundcolor transparent
+skinparam defaultTextAlignment center
+skinparam actorBorderColor black
+skinparam actorBackgroundColor white
+skinparam arrowColor black  
+skinparam sequenceLifeLineBorderColor #5FB8EC
+skinparam sequenceParticipantBorderColor #5FB8EC
+skinparam sequenceParticipantBackgroundColor white
+
+actor "Neregistriran uporabnik" as U1 <<actor>>
+
+participant "Ogled predloga" as R5 <<boundary>>
+participant "Predlog kontroler" as R2 <<control>>
+participant "Predlog" as R4 <<entity>>
+
+activate U1
+U1 -> R5: klikniNaPredlog()
+activate R5
+R5 -> R2: prikaziPredlog(predlogId)
+activate R2
+R2 -> R4: prikaziPredlog(predlogId)
+R4 --> R2: //Predlog
+R2 --> R5: //Predlog
+deactivate R2
+R5 --> U1: //Prikaži predlog
+@enduml

@@ -1,0 +1,30 @@
+@startuml
+hide footbox
+
+skinparam backgroundcolor transparent
+skinparam defaultTextAlignment center
+skinparam actorBorderColor black
+skinparam actorBackgroundColor white
+skinparam arrowColor black  
+skinparam sequenceLifeLineBorderColor #5FB8EC
+skinparam sequenceParticipantBorderColor #5FB8EC
+skinparam sequenceParticipantBackgroundColor white
+
+actor "Neregistriran uporabnik" as U1 <<actor>>
+
+participant "Ogled lokacije" as R5 <<boundary>>
+participant "Zemljevid kontroler" as R2 <<control>>
+participant "Google Maps" as R4 <<external API>>
+
+
+activate U1
+U1 -> R5: prikazZemljevida()
+activate R5
+R5 -> R2: vrniZemljevid(objavaId)
+activate R2
+R2 -> R4: pridobiZemljevid(lokacija)
+R4 --> R2: //vrne zemljevid
+R2 --> R5: //posreduje zemljevid
+deactivate R2
+R5 --> U1: //Uporabniku se prikaže zemljevid vezan na trenutno objavo
+@enduml

@@ -1,0 +1,30 @@
+@startuml
+hide footbox
+
+skinparam backgroundcolor transparent
+skinparam defaultTextAlignment center
+skinparam actorBorderColor black
+skinparam actorBackgroundColor white
+skinparam arrowColor black  
+skinparam sequenceLifeLineBorderColor #5FB8EC
+skinparam sequenceParticipantBorderColor #5FB8EC
+skinparam sequenceParticipantBackgroundColor white
+
+actor "Prijavljen uporabnik" as U1 <<actor>>
+
+participant "Pregled profila" as R5 <<boundary>>
+participant "Uporabnik kontroler" as R2 <<control>>
+participant "Uporabnik" as R4 <<entity>>
+
+
+activate U1
+U1 -> R5: klikniNaProfil()
+activate R5
+R5 -> R2: prikaziProfil()
+activate R2
+R2 -> R4: vrniUporabnika(uporabnikId)
+R4 --> R2: //posreduje uporabnikov profil
+R2 --> R5: //posreduje uporabnikov profil
+deactivate R2
+R5 --> U1: //Prikaz uporabnikovega profila in njegove dejavnosti
+@enduml
