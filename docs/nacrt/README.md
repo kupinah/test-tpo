@@ -16,7 +16,7 @@
 
 :dart: **TO-DO**
 
-![Logični pogled](../gradivo/img/logicni pogled.png)
+![Logični pogled](../gradivo/img/logicnipogled.png)
 ![Fizični pogled](../gradivo/img/fizicnipogled.png)
 
 ## 2. Načrt strukture
