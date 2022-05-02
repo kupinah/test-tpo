@@ -297,7 +297,7 @@ crud?
 
 **12.Registracijski Obrazec (Boundary)**
 
-Predlog je razred v katerem shranjujemo predlog ki jih uporabnik dodaja
+Pogled za registracijo
 
 **Atributi:**
 
@@ -319,7 +319,7 @@ Predlog je razred v katerem shranjujemo predlog ki jih uporabnik dodaja
 
 **13.Prijavni obrazec (Boundary)**
 
-Predlog je razred v katerem shranjujemo predlog ki jih uporabnik dodaja
+Pogled za prijavo
 
 **Atributi:**
 
@@ -337,7 +337,7 @@ Predlog je razred v katerem shranjujemo predlog ki jih uporabnik dodaja
 
 **14.Odjava (Boundary)**
 
-Predlog je razred v katerem shranjujemo predlog ki jih uporabnik dodaja
+Pogled za odjavo
 
 **Nesamoumevne metode:**
 
@@ -349,7 +349,7 @@ Predlog je razred v katerem shranjujemo predlog ki jih uporabnik dodaja
 
 **15.Pregled profila (Boundary)**
 
-Predlog je razred v katerem shranjujemo predlog ki jih uporabnik dodaja
+Pogled za pregledovanje svojega profila
 
 **Nesamoumevne metode:**
 
@@ -363,7 +363,7 @@ Predlog je razred v katerem shranjujemo predlog ki jih uporabnik dodaja
 
 **16.Pregled tujega profila (Boundary)**
 
-Predlog je razred v katerem shranjujemo predlog ki jih uporabnik dodaja
+Pogled za pregledovanje tujega profila
 
 **Nesamoumevne metode:**
 
@@ -375,7 +375,7 @@ Predlog je razred v katerem shranjujemo predlog ki jih uporabnik dodaja
 
 **17.Urejanje profila (Boundary)**
 
-Predlog je razred v katerem shranjujemo predlog ki jih uporabnik dodaja
+Pogled za urejanje profila
 
 **Atributi:**
 
@@ -398,7 +398,7 @@ Predlog je razred v katerem shranjujemo predlog ki jih uporabnik dodaja
 
 **18.Brisanje profila (Boundary)**
 
-Predlog je razred v katerem shranjujemo predlog ki jih uporabnik dodaja
+Pogled za brisanje profila
 
 **Nesamoumevne metode:**
 
