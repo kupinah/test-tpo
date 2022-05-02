@@ -17,13 +17,13 @@ participant "Uporabniki kontroler" as R2 <<control>>
 participant "Uporabnik" as R4 <<entity>>
 
 activate U1
-U1 -> R5: p1 := klikNaGumbOdjava()
+U1 -> R5: p1 := odjava()
 activate R5
-R5 -> R2: p2 := odjava(idUporabnika)
+R5 -> R2: p2 := odjava(uporabnikId)
 activate R2
-R2 -> R4: p3 := izvediOdjavu(idUporabnika)
-R4 --> R2: // Status koda
-R2 --> R5: // Status koda
+R2 -> R4: p3 := odjaviUporabnika(uporabnikId)
+R4 --> R2: // StatusCode
+R2 --> R5: // StatusCode
 deactivate R2
 R5 --> U1: // Obvesti uporabnika o odjavi
 @enduml

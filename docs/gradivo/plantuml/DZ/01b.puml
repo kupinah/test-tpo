@@ -17,13 +17,13 @@ participant "Uporabniki kontroler" as R2 <<control>>
 participant "Uporabnik" as R4 <<entity>>
 
 activate U1
-U1 -> R5: p1 := klikNaGumbRegistracija()
+U1 -> R5: p1 := registracija()
 activate R5
-R5 -> R2: p2 := registracija(obrazec)
+R5 -> R2: p2 := registracija(podatki)
 activate R2
 R2 -> R4: p3 := preveriPodatke(podatki)
-R4 --> R2: // Status koda
-R2 --> R5: // Status koda
+R4 --> R2: // StatusCode
+R2 --> R5: // StatusCode
 deactivate R2
 R5 --> U1: // Obvesti uporabnika o neuspešni\n//registraciji zaradi neustrezno izpolnjenih podatkov
 @enduml

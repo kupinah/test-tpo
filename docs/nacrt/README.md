@@ -1,10 +1,10 @@
 # Načrt sistema
 
-|                             |                                                                |
-| :-------------------------- | :------------------------------------------------------------- |
-| **Naziv projekta**          | Občinski obveščevalnik                                         |
+|                             |                                                                          |
+| :-------------------------- | :----------------------------------------------------------------------- |
+| **Naziv projekta**          | Občinski obveščevalnik                                                   |
 | **Člani projektne skupine** | Luka Markićević, Haris Kupinić, Luka Brodnik, Elena Najdova, Luka Pantar |
-| **Kraj in datum**           | Ljubljana, 21.4.2022                                   |
+| **Kraj in datum**           | Ljubljana, 21.4.2022                                                     |
 
 ## Povzetek
 
@@ -68,11 +68,11 @@
 
 1. Registracija
   - Osnovni tok
-  ![image](https://teaching.lavbic.net/plantuml/png/bP5BJiD038RtEOLLDh10gAML489AW80D0bJe0Po9MqpIcU0uvN4R3iEzS992XzU2HH8f_ZxxzymTPmIp43GDJqbIvUnB55n0YYwVIwXzva8H15JGLrOYhn6LqGphGc_fIOyAdlk5bS7PYoIYq6cGuo0PoKdRB2si-m_WSs87FTwnKWo9XCV81uYA5JtKv1rTyCmUJ_6qZT7PyTxfoI_qDOgounAz_b_uDMxIhWAzInAQSwN2TcvGbq4mzPptuEW6fdquE6YvyJX9odLBw4qw2HtVst08gU0BkHvW1PEHMMap3-NPn2_Uz6C0GnwyIYX8EcjWbkj-_IbrvD18kpdMfdkp1ozHoT8c5dXxR07seUp3_Y7a1UUNU5ulqYWlRcwjfSaeiRoDD31fq4WIewl5OcEGMDR669gnsnYbq9A4hqE6cjDcsNvvA-Q63PTPuVvp6Op08MolCkpim8sYrfMTJuPjYzLAtoePVOaqQhbfl-MkqYLLoklhH0XGLoMzlNgE5-Ht)
+  ![image](https://teaching.lavbic.net/plantuml/png/bP71Jjj048RlVefHkD03GaaJgK8G2I9wgbeKcWSOhoTXiDbnn-D0-pPzcBvNnpR56nMazc0VlD_tpp_UEou8jYAMorEMDIN76XKV8CTGxbJQM0IfHC4KO-D752sX2jfYMzbNUhBBYdVnmOyX-8iqeJ2Ow9LeGRhgm_BAq_y2NYOEqECT6wMGgZmcFa1osD2tbcAWJxpr9r8wxMZnyUh3zUeL-WRLE72DqVvVUBLkrgy2ay-ajEF6bFs_GLkBOXwvdC3bBMocS7xUSyjbbjLZ94pMWuI1xtquIAxuWy84i87rmgsycuVwtSK3R_Dd04CfqLGgqi6QkHM6JszA0pbtqc-EhKllzk0z6ddRp0kVBBt06THJEBk0MamBJhhAyRjHM2yoxze9CnTcdQ0ZYiUr56WbfyOiyvwTCNVZVJz2QK_ADprBe-CjJvwZJq_Xrj3QPYK5fG7pBg1mu_vbG_p7XESr3myAEcYwwB7DjCU-v7jgZCSRHX1ecvf-_OoSxis_0G00)
   - Alternativni tok 1
-  ![img](https://teaching.lavbic.net/plantuml/png/bPB1RjD048Rl-nIZS6aFLPJGIAWgaTeAkA1IfUJ6PRoU95CxEyjudPQy3G_3Up6s0zb2EN2mBNc-R-OVhpTS4gn4KY5FpZKLXuYAMoZGLskLDfHUQb58Yg6n4eMKKIMjiAtJPtfALpMlmzRAuEr6cb7ea-YrQ4bwqpShQkl-5_1xuW0zRZXH3gdAO-O3PCM6lhOKF7tabLs1ycclPk-ltxoxUO6-GqtiEM98_o-y6DVrgy3ebfJMt2Hb-sxGHb4i0bSZkBg7vGGkBtjkFdSk7bl2Q358wFd1XeCKYdlo8y065ZEpYcuUwZSJdtdBNmCOAWb9fIOThAbPVdZrJsaWpusqa-FKTU_su1qcihJE0f_DBS05n0bSl8MgvkeMFxJR8ikB9wT7QJ5pbhUJfYPDEqbpzB1ORaoTPUsCSpDUTqPKsf7odPIOAZg9_PDFdIKzExGUZ-4-OMeRMxl4liCXwH-LafvDclNSSj9pdueTDOcFfuGW4AXj8ltu7lXB68-py0nx-oLAxecaj0y2l8zIXmSAl84Xfkn-0W00)
+  ![img](https://teaching.lavbic.net/plantuml/png/bPB1RjD048RlVefHk9H35IKq4gfAf3Q24u8g9JSkwzr9ChMxiup7QSdRy32y5sExu8qe1mxsmVDzy_zhUqy1OSki9JyLHLDHJ4xS0vJELplXDWRFDGkekDZO2ADcLC2jQslzWazwNTCkFjWOlDrGCifvPRbX2IYhVbbPs_Q_W3-90_Iu9yKS4k77p0V8XWr-Qp5w_4XRkoBcQQyM7sxUlb-zGDywKVAKNDJ_5rwiM_H7WSad5DnHeqBstg1DBAwCL4tW-WusCxYwwhdbiYZIk18cwq5odkuj7BWKTqG_0TV0Uc5MsUKv-MxYYRVv7K1GSLJX6cMmvcRvuT4_fO6yCDA-76ctlJi77PoYjIsiyFdI2bn2ci7bEqYi4YZhocUlHs6zAAnh9ynDc7U2ZAWxInoSLfGRyy9wTiQ56M_w2C432jtsB8wEjJn_NZsTmfqwRPiL1-mNF9Sy7GGyoLdqs6RMOv_B0pPAu_Tnm12nRHB-_17fQvnEi-e4H_iP0lM42XuZ0nqJr_4U8-rXACc7Nm00)
   - Alternativni tok 2
-  ![img](https://teaching.lavbic.net/plantuml/png/bP7FJjj04CRl-nIZz08752KbKeKW4Y3e1L4Ko8tBU3q9WvrTCnu7shVfY_J6Up6sqsRvT-Z1jkJvVj_tpUuTvmIB63MBJyxL1OSA1LUGeI-M4fkG-rX60HKCjOqeQABAQO5DgJVqfCSbByFAnk3jHPAeq6kKaoWvoMbdbfNc_axmBx4NFTwnKYeIYOy93v0CQtfeA7Ywu8KzWTAqBvFpaszdfn-ehr2KFLSOzF-13-kwRXKON9BGaciLjdE3feg2MU1Y0CVNC1_1uM6dcqwTgxQMC9Zr47g-jt28cU0lyWF06cOJex8s3-MdWQ-u-Ty0XY86bLYIzDJOAD__-XJgbVkcj9jZRTtRFNYDIjRMMU6zgHKuW6e41qTGb5nSulTcbILzSMTt2yqcplgsqDYWSGj9AjqibX9ZPrrROj-8horH2Qr9-2hcg0NjLDsNTvqrtTjO3uTmhQXDRMlds3bichwPvFGgQTBfvgDEzoDRKwsylIM4286QkgBdtu5lmt2ObBSJ9e5xWkS_1Cablm00)
+  ![img](https://teaching.lavbic.net/plantuml/png/bP6nRjj038PtFGNXBkaG67PZe0WI0udHJaKREFMMXJhH3YFbg5AKa_Pj-YBTybwbfBGw8-dGGHh4x-F_d-wM2uAjYENoc6LDoR56nNl8CPGxbJOMGIfHCCNO-8YY9LH1Msmh-qgFTb7nBjxx68A_I1CAWubUYXQagtvPNlds5y3Vn05wk6MZ55ALXyG7I8ODVMif1lh4MtyYfMbl5XylttzOlK9VeHe7hZ7Q_mklritwey3aCodjk35b_s_GrgAOHoudS74DcncSdVNSSfbbzRWI9kj1mi1t7WwIA_wWC05iOBrmA-_oKB-xUE1j_WGmb19DfI8ThBbROVZqJsaWJvpqcsFhjdVdu3qQUTlC2nyllS0fr3CuFOTQJ0jEkihHsr5OBpBlsWbp5-QTe2EAHxKKQ2MdnZppdfrnuiQxFa9fJyfNFKkZuosFdrTFft1jQ6spaeBw1Syb3mS57UGiUcmpwx4l-PuQu_5-40GYjKrDJpyZtyJfDAdk_vOKxWYUVX4ar_iR)
 
 2. Prijava
   - Osnovni tok

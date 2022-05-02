@@ -10,20 +10,20 @@ skinparam sequenceLifeLineBorderColor #5FB8EC
 skinparam sequenceParticipantBorderColor #5FB8EC
 skinparam sequenceParticipantBackgroundColor white
 
-actor "Neregistriran uporabnik" as U1 <<actor>>
+actor "Prijavljen uporabnik" as U1 <<actor>>
 
 participant "Ogled predloga" as R5 <<boundary>>
-participant "Predlog kontroler" as R2 <<control>>
+participant "PredlogKontroler" as R2 <<control>>
 participant "Predlog" as R4 <<entity>>
 
 activate U1
-U1 -> R5: klikniNaPredlog()
+U1 -> R5: prikaziPredlog()
 activate R5
-R5 -> R2: prikaziPredlog(predlogId)
+R5 -> R2: pridobiPredlog(predlogId)
 activate R2
-R2 -> R4: prikaziPredlog(predlogId)
-R4 --> R2: //Predlog
-R2 --> R5: //Predlog
+R2 -> R4: vrniPredlog(podatki)
+R4 --> R2: // Predlog
+R2 --> R5: // Predlog
 deactivate R2
-R5 --> U1: //Prikaži predlog
+R5 --> U1: // Prikaži predlog
 @enduml
