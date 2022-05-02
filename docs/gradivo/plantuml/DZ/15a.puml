@@ -5,25 +5,28 @@ skinparam backgroundcolor transparent
 skinparam defaultTextAlignment center
 skinparam actorBorderColor black
 skinparam actorBackgroundColor white
-skinparam arrowColor black  
+skinparam arrowColor black
 skinparam sequenceLifeLineBorderColor #5FB8EC
 skinparam sequenceParticipantBorderColor #5FB8EC
 skinparam sequenceParticipantBackgroundColor white
 
-actor "Prijavljen uporabnik" as U1 <<actor>>
+actor "Prijavljeni uporabnik" AS U1 <<actor>>
 
-participant "Brisanje predloga" as R5 <<boundary>>
+participant "Ogled predloga" as R6 <<boundary>>
+participant "Urejanje predloga" as R5 <<boundary>>
 participant "Predlog kontroler" as R2 <<control>>
-participant "Predlog" as R4 <<entity>>
+participant "Prelog" as R4 <<entity>>
 
 activate U1
-U1 -> R5: klikNaGumbZaBrisanje()
+U1 -> R6: p1 := preusmeritevIzbrisiPredlog()
+R6 --> U1: // Prikaz obrazca
+R6 -> R5: p2 := izbrisiPredlog()
 activate R5
-R5 -> R2: izbrisiPredlog(predlogId)
+R5 -> R2: p3 := izbrisiPredlog(predlogId)
 activate R2
-R2 -> R4: izbrisiPredlog(predlogId)
-R4 --> R2: //StatusCode
-R2 --> R5: //StatusCode
+R2 -> R4: p5 := izbrisiPredlog(predlogId)
+R4 --> R2: // StatusCode
+R2 --> R5: // StatusCode
 deactivate R2
-R5 --> U1: //Prikaži obvestilo o uspešnem brisanju
+R5 --> U1: // Prikaži obvestilo o uspešnem brisanju pedloga
 @enduml

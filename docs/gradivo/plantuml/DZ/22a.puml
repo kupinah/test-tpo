@@ -14,6 +14,7 @@ actor "Neregistriran uporabnik" as U1 <<actor>>
 
 participant "Ogled lokacije" as R5 <<boundary>>
 participant "Zemljevid kontroler" as R2 <<control>>
+participant "Dostop do API-ja" as R6 <<boundary>>
 participant "Google Maps" as R4 <<external API>>
 
 
@@ -21,9 +22,11 @@ activate U1
 U1 -> R5: prikazZemljevida()
 activate R5
 R5 -> R2: vrniZemljevid(objavaId)
+R2 -> R6: dostopDoLokacije()
 activate R2
-R2 -> R4: pridobiZemljevid(lokacija)
-R4 --> R2: //vrne zemljevid
+R6 -> R4: pridobiZemljevid(lokacija)
+R4 --> R6: //vrne zemljevid
+R6 --> R2: //StatusCode
 R2 --> R5: //posreduje zemljevid
 deactivate R2
 R5 --> U1: //Uporabniku se prikaže zemljevid vezan na trenutno objavo

@@ -18,8 +18,8 @@ participant "PredlogKontroler" as R2 <<control>>
 participant "Predlog" as R4 <<entity>>
 
 activate U1
-U1 -> R6: prikaziPredlog()
-R6 --> U1: // Prikaz predloga
+U1 -> R6: preusmeritevUrediPredlog()
+R6 --> U1: // Prikaz obrazca
 R6 -> R5: urediPredlog()
 activate R5
 R5 -> R2: urediPredlog(podatki)

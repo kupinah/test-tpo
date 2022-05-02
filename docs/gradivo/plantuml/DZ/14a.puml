@@ -21,7 +21,7 @@ U1 -> R5: prikaziPredlog()
 activate R5
 R5 -> R2: pridobiPredlog(predlogId)
 activate R2
-R2 -> R4: vrniPredlog(podatki)
+R2 -> R4: vrniPredlog(predlogId)
 R4 --> R2: // Predlog
 R2 --> R5: // Predlog
 deactivate R2

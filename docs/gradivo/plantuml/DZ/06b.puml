@@ -18,8 +18,8 @@ participant "Uporabniki kontroler" as R2 <<control>>
 participant "Uporabnik" as R4 <<entity>>
 
 activate U1
-U1 -> R6: p1 := prikaziProfil()
-R6 --> U1: // Prikaz profila
+U1 -> R6: p1 := preusmeritevIzbrisiProfil()
+R6 --> U1: // Prikaz obrazca
 activate R5
 R6 -> R5: p2 := izbrisi()
 R5 -> R2: p2 := brisanjeProfila(uporabnikId)
