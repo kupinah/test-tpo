@@ -406,6 +406,120 @@ Pogled za brisanje profila
 | :------------: | :--------------------------: | :---------------: | :------------------------------: |
 |    izbrisi     |              -               |       void        |    Izbriši profil uporabnika     |
 |    preklic     |              -               |       void        | Odpovedanje procesa registracije |
+  
+**6.Posiljanje sporocila (Boundary)**
+
+-?
+
+**Atributi:**
+
+| **Ime atributa** | **Podatkovni tip** |      **Pomen(če ni očiten)**      | **Zaloga vrednosti (če ni očiten)** |
+| :------------: | :--------------------------: | :---------------: | :---------------: |
+|prejemnikId| int| Identifikator prejemnika| -|
+|vsebina| string| Vsebina sporocila| - |
+
+**Nesamoumevne metode:**
+
+| **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |     **Pomen**     |
+| :------------: | :--------------------------: | :---------------: | :---------------: |
+|posljiSporocilo|-| StatusCode| -|
+|preklic|-| void| -|
+
+**6.Dodajanje komentarja (Boundary)**
+
+-?
+
+**Atributi:**
+
+| **Ime atributa** | **Podatkovni tip** |      **Pomen(če ni očiten)**      | **Zaloga vrednosti (če ni očiten)** |
+| :------------: | :--------------------------: | :---------------: | :---------------: |
+| komentar| string| Vsebina komentarja| -|
+
+
+**Nesamoumevne metode:**
+
+| **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |     **Pomen**     |
+| :------------: | :--------------------------: | :---------------: | :---------------: |
+|dodajKomentar|-| void| Dodajanje komentarja predloga|
+
+**6.Ogled komentarja (Boundary)**
+
+-?
+
+**Nesamoumevne metode:**
+
+| **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |     **Pomen**     |
+| :------------: | :--------------------------: | :---------------: | :---------------: |
+|preusmeritevIzbrisiKomentarja|-| void| Metoda za preusmeritev na streni za brisanje komentarja|
+|prikaziKomentar|-| Komentar| Prikazi komentar|
+
+**6.Brisanje komentarja (Boundary)**
+
+-?
+
+**Nesamoumevne metode:**
+
+| **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |     **Pomen**     |
+| :------------: | :--------------------------: | :---------------: | :---------------: |
+|izbrisiKomentar|-| void| Metoda za brisanje komentarja|
+
+**6.Objava novice (Boundary)**
+
+-?
+
+**Atributi:**
+
+| **Ime atributa** | **Podatkovni tip** |      **Pomen(če ni očiten)**      | **Zaloga vrednosti (če ni očiten)** |
+| :------------: | :--------------------------: | :---------------: | :---------------: |
+|naslov| string| Naslov novico| -|
+|vsebina| string| Vsebina novico| - |
+|obcinaId| int| Identifikator Občine| -|
+|datum| date| Datum objave|-|
+|lokacija| string| Lokacija za novico|
+
+
+**Nesamoumevne metode:**
+
+| **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |     **Pomen**     |
+| :------------: | :--------------------------: | :---------------: | :---------------: |
+|objaviNovico|-| void| -|
+|preklic|-| void|-|
+
+**6.Ogled novice (Boundary)**
+
+-?
+
+**Nesamoumevne metode:**
+
+| **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |     **Pomen**     |
+| :------------: | :--------------------------: | :---------------: | :---------------: |
+|prikaziNovico|-| void| Prikaz podatki o novico|
+|preusmeritevUrediNovico|-| void| Preusmeritev na strani urejanje novico|
+|preusmeritevIzbrisiNovico|-| void|Preusmeritev na strani brisanje novico|
+
+**6.Urejanje novice (Boundary)**
+
+-?
+
+**Atributi:**
+
+| **Ime atributa** | **Podatkovni tip** |      **Pomen(če ni očiten)**      | **Zaloga vrednosti (če ni očiten)** |
+| :------------: | :--------------------------: | :---------------: | :---------------: |
+|naslov| string| Naslov novico| -|
+|vsebina| string| Vsebina novico| - |
+|obcinaId| int| Identifikator Občine| -|
+|datum| date| Datum objave|-|
+|lokacija| string| Lokacija za novico|
+
+
+**Nesamoumevne metode:**
+
+| **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |     **Pomen**     |
+| :------------: | :--------------------------: | :---------------: | :---------------: |
+|urediNovico|-| void| -|
+|preklic|-| void|-|
+
+  
 ## 3. Načrt obnašanja
 
 1. Registracija
