@@ -1,0 +1,408 @@
+@startuml
+allowmixing
+hide circle
+skinparam class {
+BackgroundColor<<boundary>> #D1FFD7
+BorderColor<<boundary>> Green
+BackgroundColor<<control>> #FFD1D1
+BorderColor<<control>> Red
+BackgroundColor<<entity>> #D1F8FF
+BorderColor<<entity>> Blue
+}
+
+Class "Registracijski obrazec" as RegistracijskiObrazec <<boundary>>{
+  -ime: string
+  -priimek: string
+  -uporabniskoIme: string
+  -obcinaId: int
+  -email: string
+  -geslo: string
+  +registracija(): void
+  +preklic(): void
+}
+
+Class "Prijavni obrazec" as PrijavniObrazec <<boundary>> {
+  -email: string
+  -geslo: string
+  +prijava(): void
+  +preklic(): void
+}
+
+Class "Odjava" as Odjava <<boundary>> {
+  +odjava(): void
+  +potrdiOdjavo(): void
+  +preklic(): void
+}
+
+Class "Pregled profila" as PregledProfila <<boundary>> {
+  +prikaziProfil(): Uporabnik
+  +preusmeritevUrediProfil(): void
+  +preusmeritevIzbrisiProfil(): void
+  +prikaziObjave(): List<Novica/Predlog>
+  +prikaziPogovore(): List<Sporocilo>
+}
+
+Class "Pregled tujega profila" as PregledTujegaProfila <<boundary>> {
+  +prikaziTujProfil(): Uporabnik
+  +prikaziTujeObjave(): List<Novica/Predlog>
+  +prikaziPogovore(): List<Sporocilo>
+}
+
+Class "Urejanje profila" as UrejanjeProfila <<boundary>> {
+  -ime: string
+  -priimek: string
+  -uporabniskoIme: string
+  -obcinaId: int
+  -email: string
+  -geslo: string
+  -slika: Image
+  +posodobiProfil(): void
+  +preklic(): void
+}
+
+Class "Brisanje profila" as BrisanjeProfila <<boundary>> {
+  +izbrisi(): void
+  +preklic(): void
+}
+
+Class "Posiljanje sporocila" as PosiljanjeSporocila <<boundary>> {
+  -prejemnikId: int
+  -vsebina: string
+  +posljiSporocilo(): StatusCode
+  +preklic(): void
+}
+
+Class "Uporabniki kontroler" as UporabnikiKontroler <<control>> {
+  +registracija(podatki: Uporabnik): StatusCode
+  +prijava(email: string, geslo: string): StatusCode
+  +odjava(uporabnikId: int): StatusCode
+  +urejanjeProfila(podatki: Uporabnik): Uporabnik
+  +brisanjeProfila(uporabnikId: int): StatusCode
+  +posljiSporocilo(posljatelj: string, prejemnik: string, vsebina: string): StatusCode
+  +pridobiProfil(uporabnikId: int): Uporabnik
+}
+
+cloud Builder
+Builder -- UporabnikiKontroler
+
+RegistracijskiObrazec "1..1" --> "1..1" UporabnikiKontroler
+PrijavniObrazec "1..1" --> "1..1" UporabnikiKontroler
+Odjava "1..1" --> "1..1" UporabnikiKontroler
+PregledProfila "1..1" --> "1..1" UporabnikiKontroler
+PregledTujegaProfila "1..1" --> "1..1" UporabnikiKontroler
+UrejanjeProfila "1..1" --> "1..1" UporabnikiKontroler
+BrisanjeProfila "1..1" --> "1..1" UporabnikiKontroler
+PosiljanjeSporocila "1..1" --> "1..1" UporabnikiKontroler
+
+BrisanjeProfila "1..1" --* "1..1" PregledProfila
+UrejanjeProfila "1..1" --* "1..1" PregledProfila
+PosiljanjeSporocila "1..1" --* "1..1" PregledTujegaProfila
+
+Class "Uporabnik" as Uporabnik <<entity>> {
+  -uporabnikId: int
+  -ime: string
+  -priimek: string
+  -uporabnisko ime: string
+  -obcinaId: int
+  -email: string
+  -geslo: string
+  -slika: Image
+  -sporocila: List<Sporocilo>
+  +dodajUporabnika(uporabnik: Uporabnik): StatusCode
+  +posodobiUporabnika(uporabnik: Uporabnik): Uporabnik
+  +izbrisiUporabnika(uporabnikId: int): StatusCode
+  +posljiSporocilo(posljateljId: int, prejemnikId: int, vsebina: string): Sporocilo
+  +vrniUporabnika(uporabnikId: int): Uporabnik
+  +vrniVseUporabnike(): List<Uporabnik>
+  +preveriPodatke(podatki: Uporabnik): StatusCode
+  +preveriPodatkeZaPrijavo(email: string, geslo: string): StatusCode
+  +prijaviUporabnika(email: string, geslo: string): StatusCode
+  +odjaviUporabnika(uporabnikId: int): StatusCode
+}
+
+UporabnikiKontroler "0..1" --> "0..*" Uporabnik
+
+Class "Sporocilo" as Sporocilo <<entity>> {
+  -sporociloId: int
+  -posiljateljId: int
+  -prejemnikId: int
+  -vsebina: String
+  +dodajSporocilo(sporocilo: Sporocilo): StatusCode
+  +vrniSporocilo(sporociloId: int): Sporocilo
+  +vrniVsaSporocila(): List<Sporocilo>
+  +vrniVsePosiljatelj(posliljateljId: int): List<Sporocilo>
+  +vrniVsePrejemnik(prejemnikId: int): List<Sporocilo>
+  +preveriPodatke(podatki: Sporocilo): StatusCode
+}
+
+UporabnikiKontroler "0..1" --> "0..*" Sporocilo
+Sporocilo "0..*" --* "1..1" Uporabnik
+
+Class "Dodajanje komentarja" as DodajanjeKomentarja <<boundary>> {
+  -komentar: string
+  +dodajKomentar(): void
+}
+
+Class "Ogled komentarja" as OgledKomentarja <<boundary>> {
+  +preusmeritevIzbrisiKomentar(): void
+  +prikaziKomentar(): Komentar
+}
+
+Class "Brisanje komentarja" as BrisanjeKomentarja <<boundary>> {
+  +izbrisiKomentar(): void
+}
+
+Class "Komentar kontroler" as KomentarKontroler <<control>> {
+  +dodajKomentar(podatki: Komentar): StatusCode
+  +izbrisiKomentar(komentarId: int): StatusCode
+  +pridobiKomentar(komentarId: int): Komentar
+}
+
+cloud Observer
+Observer -- KomentarKontroler
+
+DodajanjeKomentarja "1..1" --> "1..1" KomentarKontroler
+OgledKomentarja "1..1" --> "1..1" KomentarKontroler
+BrisanjeKomentarja "1..1" --> "1..1" KomentarKontroler
+
+BrisanjeKomentarja "1..1" --* "1..1" OgledKomentarja
+
+Class "Komentar" as Komentar <<entity>> {
+  -komentarId: int
+  -uporabnikId: int
+  -objavaId: int
+  -komentar: string
+  +dodajKomentar(podatki: Komentar): StatusCode
+  +izbrisiKomentar(komentarId: int): StatusCode
+  +vrniKomentar(komentarId: int): Komentar
+  +vrniVseKomentarje(): List<Komentar>
+  +vrniKomentarjeUporabnika(uporabnikId: int): List<Komentar>
+  +preveriPodatke(podatki: Komentar): StatusCode
+}
+
+KomentarKontroler "0..1" --> "0..*" Komentar
+Komentar "0..*" -- "1..1" Uporabnik
+Komentar "0..*" --* "0..1" Novica
+Komentar "0..*" --* "0..1" Predlog
+
+Class "Iskanje" as Iskanje <<boundary>> {
+  -iskalnaBeseda: string
+  +iskanje(): List<Novica/Predlog>
+}
+
+Iskanje "1..1" --> "1..1" NovicaKontroler
+Iskanje "1..1" --> "1..1" PredlogKontroler
+
+Class "Objava novice" as ObjavaNovice <<boundary>> {
+  -naslov: string
+  -vsebina: string
+  -obcinaId: int
+  -datum: date
+  -lokacija: string
+  +objaviNovico(): void
+  +preklic(): void
+}
+
+Class "Ogled novice" as OgledNovice <<boundary>> {
+  +prikaziNovico(): Novica
+  +preusmeritevUrediNovico(): void
+  +preusmeritevIzbrisiNovico(): void
+}
+
+Class "Urejanje novice" as UrejanjeNovice <<boundary>> {
+  -naslov: string
+  -vsebina: string
+  -obcinaId: int
+  -datum: date
+  -lokacija: string
+  +urediNovico(): void
+  +preklic(): void
+}
+
+Class "Brisanje novice" as BrisanjeNovice <<boundary>> {
+  +izbrisiNovico(): void
+}
+
+Class "Novica kontroler" as NovicaKontroler <<control>> {
+  +dodajNovico(podatki: Novica): StatusCode
+  +posodobiNovico(podatki: Novica): StatusCode
+  +izbrisiNovico(novicaId: int): StatusCode
+  +izvediIskanje(iskalnaBeseda: string): List<Novica>
+  +pridobiNovico(novicaId: int): Novica
+}
+
+ObjavaNovice "1..1" --> "1..1" NovicaKontroler
+OgledNovice "1..1" --> "1..1" NovicaKontroler
+UrejanjeNovice "1..1" --> "1..1" NovicaKontroler
+BrisanjeNovice "1..1" --> "1..1" NovicaKontroler
+
+UrejanjeNovice "1..1" --* "1..1" OgledNovice
+BrisanjeNovice "1..1" --* "1..1" OgledNovice
+
+Class "Novica" as Novica <<entity>> {
+  -novicaId: int
+  -naslov: string
+  -avtorId: int
+  -vsebina: string
+  -obcinaId: int
+  -datum: date
+  -lokacija: string
+  +dodajNovico(podatki: Novica): StatusCode
+  +posodobiNovico(podatki: Novica): StatusCode
+  +izbrisiNovico(novicaId: int): StatusCode
+  +vrniNovico(novicaId: int): Novica
+  +vrniVseNovice(): List<Novica>
+  +vrniVseAvtorja(avtorId: int): List<Novica>
+  +vrniVseObcina(obcinaId: int): List<Novica>
+  +preveriPodatke(podatki: Novica): StatusCode
+  +izvediIskanje(iskalnaBeseda: string): List<Novica>
+}
+
+cloud Memento
+Memento -- Novica
+
+NovicaKontroler "0..1" --> "0..*" Novica
+Novica "0..*" -- "1..1" Uporabnik
+
+Class "Objava predloga" as ObjavaPredloga <<boundary>> {
+  -naslov: string
+  -vsebina: string
+  -obcinaId: int
+  -datum: date
+  -lokacija: string
+  +objaviPredlog(): void
+  +preklic(): void
+}
+
+Class "Ogled predloga" as OgledPredloga <<boundary>> {
+  +prikaziPredlog(): Predlog
+  +preusmeritevUrediPredlog(): void
+  +preusmeritevIzbrisiPredlog(): void
+}
+
+Class "Urejanje predloga" as UrejanjePredloga <<boundary>> {
+  -naslov: string
+  -vsebina: string
+  -obcinaId: int
+  -datum: date
+  -lokacija: string
+  +urediPredlog(): void
+  +preklic(): void
+}
+
+Class "Brisanje predloga" as BrisanjePredloga <<boundary>> {
+  +izbrisiPredlog(): void
+  +preklic(): void
+}
+
+Class "Glasovanje med predlogi" as GlasovanjeMedPredlogi <<boundary>> {
+  -glas: bool
+  +vseckanje(): void
+  +nevseckanje(): void
+}
+
+Class "Predlog kontroler" as PredlogKontroler <<control>> {
+  +dodajPredlog(podatki: Predlog): StatusCode
+  +urediPredlog(podatki: Predlog): StatusCode
+  +izbrisiPredlog(predlogId: int): StatusCode
+  +izvediIskanje(iskalnaBeseda: string): List<Predlog>
+  +glasovanje(predlogId: int, glas: bool): StatusCode
+  +pridobiPredlog(predlogId: int): Predlog
+}
+
+ObjavaPredloga "1..1" --> "1..1" PredlogKontroler
+OgledPredloga "1..1" --> "1..1" PredlogKontroler
+UrejanjePredloga "1..1" --> "1..1" PredlogKontroler
+BrisanjePredloga "1..1" --> "1..1" PredlogKontroler
+GlasovanjeMedPredlogi "1..1" --> "1..1" PredlogKontroler
+
+UrejanjePredloga "1..1" --* "1..1" OgledPredloga
+BrisanjePredloga "1..1" --* "1..1" OgledPredloga
+GlasovanjeMedPredlogi "1..1" --* "1..1" OgledPredloga
+
+Class "Predlog" as Predlog <<entity>> {
+  -predlogId: int
+  -naslov: string
+  -avtorId: int
+  -datum: date
+  -vsebina: string
+  -obcinaId: int
+  -steviloVseckov: int
+  -steviloNevseckov: int
+  -lokacija: string
+  +dodajPredlog(podatki: Predlog): StatusCode
+  +posodobiPredlog(podatki: Predlog): StatusCode
+  +izbrisiPredlog(predlogId: int): StatusCode
+  +vrniPredlog(predlogId: int): Predlog
+  +vrniVsePredloge(): List<Predlog>
+  +vrniVseAvtorja(avtorId: int): List<Predlog>
+  +vrniVseObcina(obcinaId: int): List<Predlog>
+  +preveriPodatke(podatki: Predlog): StatusCode
+  +izvediIskanje(iskalnaBeseda: string): List<Predlog>
+}
+
+Class "Sprejeti predlog" as SprejetiPredlog <<entity>> {
+  -predlogId: int
+  +sprejmiPredlog(predlogId: int): void
+}
+
+PredlogKontroler "0..1" --> "0..*" Predlog
+Predlog "0..*" -- "1..1" Uporabnik
+
+SprejetiPredlog "0..1" --^ "1..1" Predlog
+
+Class "Izbor lokacije" as IzborLokacije <<boundary>> {
+  -lokacije: string
+  +izborLokacije(): void
+  +preklic(): void
+}
+
+Class "Ogled lokacije" as OgledLokacije <<boundary>> {
+  +prikazZemljevida(): iframe
+}
+
+Class "Brisanje lokacije" as BrisanjeLokacije <<boundary>> {
+  +izbrisiLokacijo(): void
+}
+
+Class "Urejanje lokacije" as UrejanjeLokacije <<boundary>> {
+  -lokacija: string
+  +urediLokacijo(): void
+  +preklic(): void
+}
+
+Class "Zemljevid kontroler" as ZemljevidKontroler <<control>> {
+  +vrniZemljevid(objavaId: int): iframe
+  +urediLokacijo(objavaId: int, lokacija: string): StatusCode
+  +izbrisiLokacijo(objavaId: int): StatusCode
+  +izborLokacije(objavaId: int, lokacija: string): StatusCode
+}
+
+cloud Facade
+Facade -- ZemljevidKontroler
+
+ZemljevidKontroler "0..1" --> "0..*" Predlog
+ZemljevidKontroler "0..1" --> "0..*" Novica
+
+IzborLokacije "1..1" --> "1..1" ZemljevidKontroler
+OgledLokacije "1..1" --> "1..1" ZemljevidKontroler
+BrisanjeLokacije "1..1" --> "1..1" ZemljevidKontroler
+UrejanjeLokacije "1..1" --> "1..1" ZemljevidKontroler
+
+IzborLokacije "1..1" --* "1..1" OgledLokacije
+BrisanjeLokacije "1..1" --* "1..1" OgledLokacije
+UrejanjeLokacije "1..1" --* "1..1" OgledLokacije
+
+Class "Dostop do API-ja" as DostopApi <<boundary>> {
+  -napaka: string
+  +dostopDoLokacije(): StatusCode
+  +izpisNapake(napaka: string): void
+}
+
+Class "Google Maps" as GoogleMaps <<external API>> {
+  +pridobiZemljevid(lokacija: String): iframe
+}
+
+DostopApi "1..1" --> "1..1" GoogleMaps
+DostopApi "1..1" --> "1..1" ZemljevidKontroler
+@enduml
