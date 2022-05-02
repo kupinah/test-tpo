@@ -36,6 +36,69 @@ V dokumentu je opisan podroben načrt našega sistema. Na začetku je predstavlj
 
 **Razredni diagram** (izvorna koda :bar_chart: [PlantUML](../gradivo/plantuml/RD.puml))
 
+### Registracija
+![img](https://teaching.lavbic.net/plantuml/png/fLJ1ZjCm4BtdAwpbKWGvz0IggXxQggW2YMfNSE3cn4EPnFL4upGIM_7ls4cQE4gMRiKjVZFFdZVp9hzGWKYHKmsHpT4KakL9f5fQAoxHMgRvaUbir8OqyNAP-6_9lrShyMOxt-ss7w8riG8UnpynW1dVa98fcRI_mD7ds_dmWZxy26hC1bDYUNtzusut97VHjJv3z2UADhMEXqSueYrPffWvZO8Ibi-GFWXfnJ3qjOc8KCWb4YB64oo4oqDpzCU2qI5v29qBOfaOj3djXycKf6ZaNYq4cj83S9AemumZM4q1y8xxgkJixK9KXChZ1KEkCUsWNkAtzdadBszQ25mBx0EVhxW8stmPlLUGacMEYvxgddigPNcs6rBGrE4IApaRA7al1Zf6958rvzgelEt8AE_Ca4cJmO7f9-eNwkc-FIDXj27ZvXC5MPtXaqkZ53NDwhCiGMUz6DVh34xkaXwgB2Hkb2ygT6rHb61JnbGLVTKJankEImHsleG6omCdtMLBWV_hozXgp9ty_KaUeJwt7NJO5sUWPTVHbM-7SeFBEa71MFvfBRBactYRDx00FdiJJBBkDq7B23pG8HCMk5xWxwpOtAXXKBLF_swXmy1lTjt93bgrUry1uw7U17ZTXeQC7_9GRopTjx7DceU2xb_uru_4hSJqtpYELrE_iMZgrnR7VUfV)
+
+### Prijava
+![img](https://teaching.lavbic.net/plantuml/png/bLJ1Zfim4Btp5TRsachB8QTMKSGXYLAjMgbHL-sXDuEdTC1ua0r8tLN_lJO4C87TR6xmx3VpPkQD_w00bg1E90GcHrLopGkMI6uCUmvsFCbJJRKIUvAajzlOVNFzDuhOkyFwU3ny37Qa1UZv-MSDeEOH4bAL9ka2MFhwi9u668-_WvYpGLLOzTa_7OzJyd2wapK4_u9WtzPnTzAOyKOXerZp9qZk63Ui1xzr69k8VmuO2w7WA3VCL1fLwe0KZ2GFk2_R67prViCQGj51a4jC1cXKyQCapME5ERAygn9qgsGy-DBZpE-44tEl8KMRc2SsuweamQiSDoFLfdkiU5MRFGdmfKsA-C0c9Sn895fEtKTz41k6gfhTgpLaN6LmqlGRvGjwXc_7Y3KQdt4rHKb6PlXehr62abRjFwz0PcCnjjSP53R823K6ObJynGfjMmJ5sCbOKZ6gNfZST5pCSrnhcCjm3iC2V0lP_1R9VQXdcPpOnMsA4rkC5-sg9KCZCRVbFnGyXVR_t46BVRK6sWuTZLmxX1rSDXJaZULLQv4XryJhl8a5yCcPO95rkmdE3Cy30x9WWJw0YzbeTKN3HBMx_jF0W87RxBQJ0nITzxu1ZQTs4-1j6-epVl7kGQBRDhPRSx-WsnV-xIEnAx7qM8MXrxFBTpKCewKNxZy0)
+
+### Odjava
+![img](https://teaching.lavbic.net/plantuml/png/bLHDZzCm4BtdLrZBfGXow0bKLJcqLT4A92fMSE3cn4EOnF54TX89LlntRETxazrkR_ORlvatN_wD0bY2Ef4Gc1nLoJKlM2AvCUmnEF0aJpNLIXn9ajxlOtVc-ayKiJUdxVby-X0SI0lGI_id3Q2M7X9IbIRf75ZwzhITEnZDtq0isQ0ghFhe7y_dENcm7cGDmRyWEFeyxhwAZ3VyZd73sYERANqC67j7th1vksCDeN18IPKMw0aqmpNa4fC16kDyBqdpM66EB6_p0EsZZeRFFSwckNe56b8qbUO9PdnJak1LZhkHQiCzLBogpP44j3hGIuQ2ezmnIqMLlcSf64dzTK7gqgnxh_TYnr1LYtUrXeoh32wQVg5yHizmTenOevaoheOeoSWC7-mpIb3Injzv1J8Rax6rpg2mJaQeCH2ZuizcQCiYACPMnfgAKVLAv-RjOfEPSZqAdxfp61RGYt5N6zyY-HJgMIOdzkGrnObDPk9jraq7pFhf02Cnj-dV5pm5V-ygQB4lTe3sGqKZLmvX6vSD2KtQyk9eaI5NnEkysGZWNpS4gwpRXw1ZJ6PWG5P6e7VWV3PQNT4mK-sU_p0mOE0ssrToWA9kxnlGUF6R0A_Rq2dZ9x_uZQNRDhPTysb2jo_ywrjYLsBjimh3ISswFpGCexMFxJy0)
+
+### Pregled predlogov
+![img](https://teaching.lavbic.net/plantuml/png/hLJ1Rjim3BtxAuZkucBD8QSDHX2WIP0XMD4M6xQxR16POaKq95d0MlJV9xboAzNPsW8xsNvy91yV9VyI7A4Hkf5Oc5QeZcbsX4OoO-2-MB6ctMlg5L-J9BrOrE6TwT_B9NpOpBVRpQTYHPgZdiQ_Q4GrhT2GiffaAE3JvvjvNk0v_0tvD1kL5NRi_dcxpPEVeYlPO_5G5EjXZhERlKGEdKOkQS_EW1aOeDk8G2RylW3us6dHiZiH6ULv1V7rCOYzEQ8M5jqF3wSqHuA_vEpkQYtCXFKiC4QWVPmUzQ0nebz7459x1fMSE3kCPJl_OLlnfDIt-MwPxSsQE0PsdqfzbIroqT6z7Qz0A7k2xNpndMcPEc0f_5CgjaA3d5LWh1OgTBWInYvYnML8s_lvoGqvUOCB2A4AQY8vQUQNmwd-kxHnLHE3KriXEI_1p5bU9Y2A6Kbkr1yGvYpfXE4zx8yL-4SGDdC6Qw5Oca5ruv4anVW38IJzDDYqeNWENwDx4P3KiaOSqgBlt7j7XZA__k_gdLQlhoBo_DGHmVBKUOYSos3pWPMftV-WtmmUbvdLf-XUdVCtydQO7z_Ym_iFjJzp-RzbDbjERd8nkTe9wmy0)
+
+### Glasovanje med predlogi
+![img](https://teaching.lavbic.net/plantuml/png/hLHDRzim3BtxLn3T9LkNGquRZ230aY15i8yM6xgxR16UOaKq9Dd0Mko_JtBaM9xITGLsiltu-FX4KluXE48fT2anCxLG3TFi2ALani1ZjcPbNMbg5T-G9BrS5lwTwP-h5RpQBdQxxRjiJPgZJkCt6b6b2YKfgqbw0PU-s2wc0cFuA_8q6vKLTgZ-VhUR9f-ZQzbYzYlBDlqvhcxSWpgc3WX7vD1ev98gSGNCm1ZxZFmkH61oaiSCO5uvNWu5aNHVrvt1ilP9izSvT2Iu1nMcy6ZYjf9ZRTRNxg5GawKrhnijQlOW0iDhXjTJ45jpH2qiTlSEZcc3evYpVoYqC0bhD1WYK9z6WBht6D2F0mZnZ7gNd3Wx3BAD-x2rE3jrPRvPPbkp8OwUtSPMdsMBgUdGlJtFGIXxWTqvyRqvZK2ufrHiZGOvoy5OBPIly4aOkmoAAvzMdLVWZm9lOPnwKimDXrFnjBLXL4c3uxP2jBJzcarbFAAOaTGD_Zt2EaiwOhWUjiSStCCRcxibB8HYSGOLfKEY5ECMGaZwxlVLYq_XBwT5ZWAIQbQAGopwmhatP6ZIh_yx-awhvqSHUExK0UdlQR8FWVF1j_d0Pd6x_qA_xNiycxJw4jsvwzoDlElFZ__IXvSljTkvwRzbFbybDpbBhdR4oYx_5o_gF4LzC_t1_GO0)
+
+### Dodajanje predlogov
+![img](https://teaching.lavbic.net/plantuml/png/hLHDYzim4BtxLmpRYqkQGquj9WGs2IbBItTfeNVP6jAnjHeZAO9swN-lv2Y9lVQsMUX9zfitNq_F_a4IeI9JASniGxeLHZn2fOIry9IjHTNi3H-qtB1YiroMyLcOdwiLlDakThlj-spDHg8PnpyQH3skKB5sXbKi4D8NsyMmm2Ny5UKu6xKZT-h-ORSR9f-ZQtN0x7UMRRezRkxBMdW1hK6fU2zkG5WuOWy9Wi7eJnd0N0khs1TWdI6zZuYtM98MVOZBAY1tiW3IBW9IkCDZ0U70-Agu4HNL_PmPnywKEkTl2_1CCWR2V8sYwWnT5aXaQ8xgeEbMIEYd4mXz-U8ECybIrATERNXn3HMdlD3ccmlZsWtBEEpi472wcas_IaFsmZ-UIOe9jW_5xsmZT8qvXLDfiKQBygnDoFbCrYrJnLLCsuVzsNSvmmRl88OAA9dLg5bhI7BvycWfC1QuBolq_DGPObXcsYB2EpOls-4Q1rc7dXH_jrWriVWG_eB-MM3AOg-xzvOj3_JwlrVlZVxtLIHUs3eXc4_v8N5keyoroFjo_uL-tscS3wIUeeVfF1fwwFR7QtHulQc3vvxzUkRprUXJpaRVTe_r1m00)
+
+### Brisanje predlogov
+![img](https://teaching.lavbic.net/plantuml/png/hLHDZziW4BtpAz3sudxaa5ChAufK9qeLjUgkMdNls8nIOi9OW96wg_xtWeiJM7jtkr9Fnc_Up3pU03y51ze8tKWWfXMgOvgTQ2EPCVIULAnf3nfxnJSeKQzMTLWp_Mkzfg-sozrk-vvKg3deQVoJ1b3J2Wqggr660ZvzkLtc1IxXRy2dsQ2ii6Ft3xjTddoELh87yfkGpR2FgqeBmzGHQAU1IpomAyeC7T6R2D9C_ZsXzAsugpr9H4RnkgGE1GyHNwcLeZb3bsRN1mayxpH0JxJfj6ZPNTecBcEdtfn02mlkXuSVKNFcxESrNmJ626t_MWrwq1ZHpoD8qraCAZboTXpBTlx7jkAirBVvRfdjpGOv17QVIdsM_S3ewDwUbrGeEyDsllZUj65yXV1VgLW51ZWhgR5QgD3XYp1s5IkkGzh1xn_Ta9CtU4T3gAGrefmqyyFXM3ykRHpLnE3KLfeSpc3c8YyJ4CMCH3Vg3mXp5dN2y1xsfvBwJn2sS0PgeLYQWNNZaIJ5-0CX9DuQQDfGF8U_WdiGaDYoHXpJeY-SUuS6Cx_-x-YTLi-F8lByhYC2nTnvY9oFmUOZArAxdw1V3nuNcTLpTA_E-HjvC-mV_iM7bnzgV-RojsMnM4zkCfbSxOH59g_WR8aPrflyMVi3)
+
+### Pregled novic
+![img](https://teaching.lavbic.net/plantuml/png/pLF1Rjim3BtxAuJsug788QSEGH2WIP0YwB0E6zexRH4fOqKC95d0MkpV9yjE8ZifrjrwilpuI3u-IYyaKPHaIeMPhKZlmS1Eb0gi5M_P7CfgOxZMSi6ApNHQD6SmlsSpSRqShrRBsspEHg8vZzyRH7rUeMJj3AkcG4WVByVz0gVmJvJdsQWTkKFthwjLF_aOdQiQipzPjeXpN3rk54gXsLE9LmAiYC3t-2zwejyo8MxsXYfufHZd_Cj4n1Eq8Qpj3Wqvz4y6PKBoJ798MRyMXkoGT1BM5XOFxT1eehWMF68YDINgaonXszNSXxEhwA0njFZbmDLsmHAZ6hOikQ0FqgadE3e6QpaHfDq5hWy6h6q5UeivXQ_IC4UB4YR2EaDw4tA-aNNJjjkiCpVHC-pGEJrqAF5596jkt1ZrIaG0h69_aD0Wu1sRXE4j5gGXfN1H1YJX19_gtKI4JpFiI7459MtJdC-o1s_qF-piICyMspkVNzXBHxXhhDf2dbhsFlinkfRtpBkuS_JXGVo8G-C7Xl_lYnKkpF3PZ4Qpm_pfSp_1H-fV)
+
+### Dodajanje novic
+![img](https://teaching.lavbic.net/plantuml/png/pLJ1QXin4BtlLuZaiYNuu5FBOWorZKjeQKeBlSzAGpAxYiP8ig0D_VTAMdkjZHsQGWyzIVlqPjxC6saVIA6GPAN6olLaTc3XKKWDpecdQWMolxUyDshDckrYqQOzs1_BfRZUpBVRpTjgnLQXFJ__O17DUGR9nblMAK4Cds_cqmIduw-epgFHUF97zNVRxJHuF5tfFLQ_gcgT-xYwQpi880m7adWbm8a1-Pm1CIdxgH9YPi1f3ermtfAvJqXms9A14k9MHkHMDOACJu02ltziH5mmVMhkGL9NnjnmqgMio_MRHWGcbV2TnLwJ7A5JxPaBukFW2zfS_W2Ec2XzImtSA5RG7MHsSUzxQWvHKUARZvMwDIlCsknOSKklfDFFrf8xihEdHnCkS0CgkdKzc0vhYgisi4A7QdGbndmYvnU3sd8mWufwdYiCn3E72bz4SHE6SPOfBiyNWcTRCFxHlF-JEGHh_c3dWVJTuV0ewWjpEH3U9wiwg4lBNcRVPTVgYNaNPuu1BNt9JUChcl_hYnKlpFDdCvijZ_rFVWWdVEJ-1W00)
+
+### Brisanje novic
+![img](https://teaching.lavbic.net/plantuml/png/pLHDZzCm4BtdLrZB9O1ww0bKLPL8gw8An28Gt2Vng4pZUYhRiSIk-EyuJj9rqgwst3ZPUlFcpSppno-IA2eobSBCrgHFOE0eAWNMYiUiWAhU6swqNBDYiroMxHxCxzLAlDhCjzlDkwnW8z5SnZyQH7sfKB5sXbKh4DBdc_bOu2dy3ULbDcf7RgZ-VhiT9v-ZXMem-vDbwpZ7NM78WZwWqEofmZi1LWpObmY9KUkFcH1lwQ4C58fnpbylX6UIYUZzNg5C5IFmhDp9K0qFYLpSGHV2nXxHa4F_mw2SrfnGTYyqrWcBJvsJQ69p7NZ6HEfqx4-oX4ElUGfxLzFGOoZntO5hx9ebncxOikIIRgIFdOoEmKuk16btXUk30JjRjsUJKrYLXW8jIbW8wmpfVSZvJDOjksghtjoadsc5tkcfGual8haxhHkpaKG4m2hsGmij0jwnIHZUOaaQKWgNLK0IJl2fEIv4MDfXPufhgEYGvlmlv-2DVi7EdlJJzayelt8kFU53QzK1yjIovzdtqRLyPDxLCqSV7iJNE3JUCFm_NwnmOQRFPZPR3VEdp_q9FbEpoGTp4-LD-edy1G00)
+
+### Urejanje novic
+![img](https://teaching.lavbic.net/plantuml/png/pLHDYzim4BtxLuZTYzkIGquj8GGs2Lb2bztIihtBrf0TMz44IHPqb_xtol97P2UXAVIm9yjFRsQUtepqWW9OZZgNa9WIrO5hlcUvvCQmjsJ9ytAdgL9YHPBqV9xLQwv_BHRiTZtTRDQVaoLf0Vfq_ru3gDCCEIchITO9VFXqFHqcE6v_1t4Q3SgYxQf_sMo6mVtkKbQG_4wILJZ7pRE6Wgi2c2A7ETmmRbY7FGQ83QI_9OnD53UIt8mPgr7jQiGPo53n6A8izyXMp1WgMmE2sse_O_u3zQ-aakTOn36VAWq2GrbAFyoO8nGrVD1GIinxw2Z_QIT1nDe3S4cuJuGbVuqgX1LlQrHc3nejkEUBCdhAzZNJQCQaex0cCVlQz0nq4DU0FSRYdWPzWWGlsfm7lxObTXfzYH_MEsXM922e8KE2ChoIZWF1mR6kEMUupXkmDMKz1IdwhrHy2GP4toqVyu36pfjgYzRSIC-uGklqsA785nPDQJDcSOhpSyUT9Hqn_jCSlfC-EAt-OcTB-cdQovgUwKjBkAkjAdWQMtQP_HHSImVcdUqvE7yXleL3mnM7_-V1yWCplZQJoQ8xVtpTZt1FJKPFsLMKZ_4ZyWS0)
+
+### Iskanje novic/predlogov
+![img](https://teaching.lavbic.net/plantuml/png/nLN1Yjim4BtxAyJsuh8r9QSM4mnDGigoPRkqqBjiYLInLXCaMT0k_VTAjhoMx3XrOA4dspDlHZDlvba_6Q6eOhBYD54r4oSiyHEgE5OAFISRNDK72OqWM-0Wr-lIlMFvgoZGczrglzzzI3OW2PLJ_sT9gPXcg41e2TmbiE6htIfECBY_KJADfa8ptP_-SR-FWr-y6zxGv4-IRDi-RkvKZSMHtY2ia7z7KQtF2K8Pinuky8OgId2Eb9PC7ApZbdKXwTiSVM5Ahn_0i0g_VvIKS3WKxg0-QvOLg7FVTurG6VbypE3iI_GELFUUjjWn78K4kQ9l2H1yzB3qP3zqpV8-pXRyNMFTg2qGwj2DjRF5QFQxb4mD-EvvHtB4X3w3DZQvRpOzIsPFu0jpDknW-mVJniG7l4FEbQCIW4yEEqb6e9mlpJk27V2Ma5OKR4ox0N4QPn5OSJ31CcJOQ901mdBOFEN8FbnXcL6qP29SdmpAobg24AMfOHn-A5hLBdbiVg1cvE1GuueTevsyRkudK13nzRgZDrByUnGUPxlsba5GuJvup2T7yn6d8TqNu5zRZjE8wdDmMvsXaZss_TCbF5o_rCFETNy2T1zfUlHxc95qYuAXm2vgTh0BuNwi7YrQq2lekJkj28GvSq87d30Ky3BHP9HYcIINQ70asrc9_Vyvk0s_JESWWzOmlgYMocgAlgIgQERdHJNR_DMBPHTcSXK6rsaorjHm3Vy5)
+
+### Ogled lokacije
+![img](https://teaching.lavbic.net/plantuml/png/bLJBRjim4BphAuZqugBGmQSMHc0WZk70Q9e4BT13RsjnwzAYkG992ss2_dj9Yh8eAmhKawJTsSSCH_mbEB92w49YPagXAj1mP8K4OzXBjeAYt6iwANvBalJrzSw_W_wpNB9tw_bci_wOhKXprCFydKPKmmu5AQj9-WQkVBwUznjqwQ_8XzMehB3jz4-RJR_ud5t94sP_i-msyBXwt4laJ589XJZW5GF3GkW-HbXlyPUCiG-L5YKy_y2ZF60jECpUBvZuwRH9-vxJh6pMHXsQd-EVsp1BcOK1jLRYZ9lHxW0rRBaRecnlr2kzydp9dZHoIVknz0FLee0iwzFqcM71cSwQZAMASM8tJzly085B4xofn52aN4459IoOiLgelMV50tfDxKWlspSBzcHkYQD7YETAc0TVYBD-lOFM97YYxnsHsvzzWSg4NPfl_-cMmTyMjGBfbqrEZTCkqJMUEVWjuep1AKOfmuJupX8l1QPL4uy7r70takg4Umwr9PqWkADzN33tyCJpsk1Eg5Ijd7Q5YoGbnhgj9NqtM9I-UJ_yWFL5egEN7W67G-Gngzo7BSMY9JOuZeeCUSac5uZddHQcm_U46Q2zoqUXhOSZph6EaM2RUs7iTGmi4yoDb_a0irJkD-2FGUDPJ-hNu6wx6hLu2lnnYWurSh4r9IXdS-6UKi4A3VBKqFqndUUQ_pDOhdaTE4w5y7yPReh3BamvQg2m5NKoD5kEscSYF9edediKNxNE233URjqXXq3dcYO_rJH3z5kUIT1ZbXabFzanxH1dcEx-zRTtTmDU98RN-Zy0)
+
+### Izbira lokacije
+![img](https://teaching.lavbic.net/plantuml/png/bLHDZzem4BtdLrZR2zKg1qwjq0ff0R52tMvNhTH3RqCyfIR64zacQdVL_rxRSOX3o8fU89bvy_6UN_nBS6I5q8N4p9H2LQ3Xm0e9nh3NR055kTDqL7n9alJTtTO_W_updxDtg-bwlVgGBKXprCFyWqPKmmu5AQj9-WQkVBgQzXjqwQ_8XzMehB3jz8_hTR_ub5t88sP_ismPUDniNhQacQGI2h776mQ6XT1ZZB3UugyPOtaBdZ5ZjL0x5xkjj2ZXvGSUv1vhmM52sptKiE4p9fHzxtv_El7GGqNQVk9IDGdUzC1IYk8KwfOyzMLbem7giEaf_gaDirGcl-rjhPKuuSRMSgCkzChpENlMo2Njnj9FL8i2igolcSyC2qvqLcGiLOmJkt_Uv7i8N9hWVIKkAAwWWX9IlNb0hoZLyPi5UpHBub7cIfWdNuYJVlrGtmUYdKJs6IeJTcdU_QjR1dzRr0gaNxOLrHqtfssYQ_G4-2tYZ4xQE2LA6IR4PvOOCp2jcdWye8QxaLGdt7EeBUa4mHtjmuovFqyyhmrkXKhLocbRk4XIOgpRMj9tWqNfc_V3JrYV9JfwwH5ms4SUaygzs5BCMcA3uwZ8a9ViwWBtcMXXEdnFc07QktmKsdeuuXph60csUHJ6tiN0FC7SUvdtC4dbVWF-9MWywKbz2Uwsgr6Bvy0Vhz6XHYusfWJbR2xSlrImG8CyDNH_JEUvvliCbciU1uvJ8VnVXhl6OMUc73LGs8ew6PejH-rp9JoQ9w9x52zQPmGORxVka4EWSqsJlzOqG_HRdadGOvOP9N-rOzeXpZ3T_Ujlx-u6F4iCh_L_)
+
+### Pregled uporabniškega profila
+![img](https://teaching.lavbic.net/plantuml/png/bLJ1Zfim4Btp5TRsaggDgfnQHQiSaYXLrAgDkjeUUXlmb0uO1jc0r5trtsj301Deixd1yxpnctap_aKIHKGwKXYObF82D6GYKc2CU0ws4AMnvYgNErQix-z3zmtwzsOZNkrNXyF-VR1bBL5Fppzgn7oQ8UAyrAnS0ajVxLVZ1CFnDvHJDkObbTtj7mw7CRa_tQeAWpz1i6lgk3jfZ1LAKMZ-IGhk11Xnnauj94RIdmCXtXIQKdYYDc3nUYqU2zOGvfIsfrYP33MLM3zgb5vSpIGlGuvFeIOp6zJSyZLCe4Pty9bCUV-5QuhWdTKe5SSRNmx7NBCUGX-iAev8ySOhk9TA8cqRYhgfUZZurE72RtfJkUsCpQmXeWGM1KieK_BAjpS_b51MPiSIpzAiUbXW1gJMmb8fZz-A68tYxdT2OjbmgYxhKQu5vUKahjAOG9xWsQXvFIDhNATznjKh2ZOgeRwHY-OVIbJ9K8mrCy7C9XcWsc18EVopGjiMoM7d-OoAGVMCSsExX3VSpgFbPJg7KOQT6FThxxT8waCTowGiBg8vZ6mnNhQHcmuO-Ua0e-n8hiKnWnYR_tC7OJgQjXtI6fVq1Ncs_7UqsB1hudNUQ0IeNRSvrkr3S6PuCz0ZCoFG9N0vQvrVqJ1IxSA_6-onOSbxwFmKO6sVbLEp2VYo3VKPF-3KR2pVjh7jcli5tRxmBxV4hiJSOxLSUZsxUCENoytS0_SN)
+
+### Brisanje profila
+![img](https://teaching.lavbic.net/plantuml/png/bLLBZzCm4BxdLrZBfJmgr1Eegdfegw8A11MhvS1j4WzX4YSJsMaaTiL_nqxpS9eitTxYp_FuPhuPvpT9517fI65WKieBq929I84nuYdOG9J6ca-vtB9YlLg5xXlqd_LQlDejzllTXs33Mg8Utt_IYFauGiHvgLcv0DPziLiC0_JNtr6ElJ4lgMopVzplXyxTxKQTCFWR1DkwZhkD9WDvWgBG_8iKt0ameWMFPqmCo3y5Ghobnz3QqEprKbHCqa65nbHHr45zZgF6MA4Sf6YmvpCKcb9ufBE12_fGi8OmfxH9TZ8PQYgnUj0eFJkFJsToEDETCggpV0iJgD1TV25JhhvoHH6yjnobudZjq-6OAzQzwRrbnH4fNdi5TrH9f6VHKDTLznUVMrpumjQLsyxOo1eYIc1Mi8Go9Qzyc_c-XF9ajYoneMRPmmmp8BKKrfNo-9s8qIXkZoCdbhNFgOrwa4j1UJcoEsbCl56OvZEG9XmEp_KK1HkLKDV8MNs64bNI5sF5J32pGNgeCXXI3izMQDiYEMmrds3HivvGRYYNy1R8QJI_3ESmoh0buuuslqLI7sgzJChYmfh3o1RZHHkewO21dWumoexaKXmoYB4-Dns4yMZQTaWhND8LvCdotz5Ymww9r_q68z2y3bDUjmz1u-7DG8TCZ40RmCMiT7w5mu2rC_zXiCFw9U-WvYd0oZuhnteJy6KRwdlyX6EziNpRnfxNt2_ezeL_kIHs9QOUg_dSwzd56pwVhwSUkE3oR_9okpSNlub_)
+
+### Urejanje profila
+![img](https://teaching.lavbic.net/plantuml/png/hLLBZzCm4BxdLrZBfJmYr1EegdheLaKL22fMkmTkJZo4IPnCP2UHs8h_ZlEsconj9MxnU1xVp7oVymi5i11LAC7J2MOvLpnbeUHQivEtvM4IAIepSK-Ir7eTrDzS_TvisAlTSh_VVV2sf0IewVqd1P1DCuIK5OfadS24BtTBDy5u_Ht4D1go0ek--iVztWqURhUo1E-FvzqtVTmzAeXv5WFB5Vr4oUyOrwmt7biRSy2VFCPyJ675TA4mY-fZhj1O4jjKvgHuaA5EwE0wKn1YnWzYnJ0hQWEa7ANj4O6MP1kqn8Ils27b4PZpsvmq2Ggm1RXulM8LeMXk52GImy4qTdfK44aGJgETxSK-JJfJ-DcgyzYrbNJ5Ifs2mW8gCpCnZsTmEJm72lMiKrFbMn3p2kgBBwYBzLUgCEJl3KOXAThOS2YYYjJe-c1GKOYIDlPgUwZ8afOweDhr3XUVUpkpwTLqRYPZCYiUOimNEGbU96YrRoe_5BmezJq9wA0Pz7pXBFCTSrOv2IBHnFHSIJfIJFnAbv3pU9pLr9Es8owMC9IICGw3N3HdNe2CnsRCCcD8JPBHL6a839jVxD2CnIBg38eHzSpct7KnIyOdMsE99QQRbCdmVqlJrzq4-PIQPXp2B2uU6hBMyazgTMg_7ETG05kvpKNTJe8kmkB0O9cXG9-Wpbcfx0861tNj_gHXi8qY7qpTKm2LULQEZHBWEeNQ4J_uiL4itQROLkPsGxSB_lgL64dCFLQ-Rytix0tt_StS0-UT_zEkztjpzflu2m00)
+
+### Pošiljanje sporočil
+![img](https://teaching.lavbic.net/plantuml/png/bLLBZzCm4BxdLrZBfJmYr1Eegdfegw8L22eME71puY5CucOYsud4hlZls6aUJcFHxQtvvk5lPhwP_aO1B4MLIeXqWMN55J-nL7AjsLEqvMcHAQfBiID9QhrEt6-k_cmsxCL-UJZitqLRKWBKtFv10PJp32cLHf5q2MpuSh-S9XZDNq7Cew4qQFhNtnyEq-31kfKrH7-ZQDVMSNSaZJBdPGvCLwGeHSdl6DTiD3pqE9iKyHGn5bSASZYLMDoB5SFIEApHa639LqmRXMLceTSLQPbZduWMBrVimN1Jwnq9Q1qK519JPsW8XKzGGIP1C5Fda75MAVerK3oRlhMMuzamvsXpOy4VqRgTVTmZtoqLdbZUKmVuakIy0UVn2RLPVwO6K_xMFYGaPHlF-KWPDQH6rw6uZKT-U0PPSPuUg9RwQFZOuyoVS4lSbcSpAvvYpXSL2MuAzAW7ccWT6xw04qVPj_yDoq1BwZzdGIJQcBhFsWrovbVRIJirT7qEyvcqDL6e_OYhJrogfFtc1cG-5ZC8ReGkz1PgYw04k-47M8oi0vERZejvczGkm6KwX-49FF7R7K6B53xKH-c2s8Kt9QajniiscQO39lDqW9PMaYjsV-8PjD_zmiwbQTiXxE3oeI1lBF-L5cboJRmUDv40FZeH1ADk5q4NuMbWG08Iw1Eud8qght2Oi7RkFpGCsBZa0zIT0cX0sLFWDW6Ujw5-n4zxjDp6qcqRUrvplw3R5_xv8x4h4JfMSUprB7Y8utWJEdDHw8ybZby5h_a_)
+
+### Pregled profilov ostalih uporabnikov
+![img](https://teaching.lavbic.net/plantuml/png/bLHBZzCm4BxdLrZBfGWgr1EeMlNGLaKh45GiSE0sYOSmYUk9x2GIk-A_OwTvE9j0jpTxPhwPRvw_IA98o2GA8vkJBi30IIGAh1MFqHQIF3LSQRbZnURsDlPlCByt6_5YlpeSzc-ZBHk9Pgf_Rn3rr4F2kZIil0C7N-rNOmU3-WlAAHfrIMKN_TtXC0RtsgsgCFeJHRicZvkZmLIX56MLOGgYCFoJ5Dm8iA9LVMqqnxD2ZF9uZ8HuLHZAuO6SsTbcyN8jlXLi8DQKZmtmSvn1ZTxY8zdozXFNbC0R5qWgJZU1yP5JhjaCflVE8oUaU1EGxyEGoC_5GTDG7nGVEha82zWGT-avpmOIoc1Hi8Gofu2wYtnVGbdP7KjigJdsiC0Ja5eB1oMTlXOfMiNTTm9YsM2gpkkTN0lIvSIkCfY1ph2jypoVKLbZGpP4N0nHi5KPzOLSD7yeKML3CeMZWIVdP13L5cFIyCyCNLaanzGsVuR5m7gcS-DsYM1GVO-MJzrv6Psm8-E_BhwJvA6eGzcSnHDhZXENJE1jr4ql6FNJ2wno8xaMToT8iVct5OJfQBfoIDUuh4yeQCj_Huij-o9Uner6W1xy4CoYhX-25X7CG2-P6O7EWVTP6ts1muYrD_zkiPSDIzwBsbE0DHft2lmcuFCsD4JyS4VBRonVjx7dDGyJkdxXdzyIjn9pnsgv36esUuYNoytScViB)
+
+### Dodajanje komentarja
+![img](https://teaching.lavbic.net/plantuml/png/hL9DJuD04BtlhvZefSRqq9E6D1nQWZ7rO3HwNzX97Q2xP7OXqSR_Bf0kXT9O3zxWVSpiUxiVf11IuhH0ONFIfMIvWxIGri9Uh6IQRzbKMgrDONYvJDfloPzX2DVH8ewZEx4oh92d_0CZwkc4r6Z7fcW7DFP5j1WFED8lgAPkr8wSttuVnsDppwwA2iMt4EiknrLabCoapX1oisj4aZDv1T92Jsnw74OXzW9Wxaq1MCUajmrsgrgdTyrk0gWDgS5AJpKRkq38tK8FRpmAmyZxwUIo-NCv1RspMVNgfAlisYXizVILC5dg7VwqZoe0qcwYBvcKINxJU-fCd54863G-AkemgeMgqh1CDEK3p2IPhEK0k5pm_zTGi_vJ1mVfkps-4Mpl-uciMteeF9sOuPiFBcUd7PnrbumrCZrtGV5IuEPcfazfFW-Fvpxtj8U2tlO3)
+
+### Brisanje komentarja
+![img](https://teaching.lavbic.net/plantuml/png/lLFBJiCm4BpdAwnoAQ0UUW9LLGzf5LGL2GI2-oPU5IUf7QsTIBJYtt42pfl2YPipEplU6M_U14SM2OfIz7GYP0O41nQbe3KxUJv4oPvKBlbQfOgMox0y0xslLknYCm-2pOtdA-98m_eT8SgXGgIa8PMM0hPzlfbt1Pho4_9XDqeZZBlzDWYwpNNLJtFqFZnlNVcOFEnJv2nH1qi0Yc72GBCAtDKOwmn_yXYxpWXpVK0I1eljCIIXXUDFBnUiK89_qKG2nqx9dLip-BOTP8pzCHn-TXBnm-sDl2jP-If0f4hTmJk7idR4bJPN7E9QERDV9X6D1NlLim6JwxNYE3QByxFb2oQa6V1jF5o5v_WZQJceOuArNhWSVTQJAg4yKmIX54aBKs4C1RG0rxTWsf2G-_-8eI3vfmo-gQ-wsGWit_jUQBDqqAgl6EEBCmxJVWQZtNQv2xlQZvLH_CsmVPdXAircgsRkaJrkr-ikh__VZRD6vQxwF-qd)
+
 ### 2.2 Opis razredov
 
 :dart: **TO-DO**
@@ -519,9 +582,125 @@ Pogled za urejanje novice
 |  urediNovico   |              -               |       void        |     -     |
 |    preklic     |              -               |       void        |     -     |
 
-  
-## 3. Načrt obnašanja
+**26. Brisanje novice (Boundary)**
 
+**Nesamoumevne metode:**
+
+| **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |     **Pomen**     |
+| :------------: | :--------------------------: | :---------------: | :---------------: |
+| izbrisiNovico |        void         |      void       | Izbriši novico |
+
+**27. Objava predloga (Boundary)**
+
+**Atributi:**
+
+| **Ime atributa** | **Podatkovni tip** |      **Pomen(če ni očiten)**      | **Zaloga vrednosti (če ni očiten)** |
+| :------------: | :--------------------------: | :---------------: | :---------------: |
+| naslov           |  String            | Naslov predloga                         |           -                   |
+| vsebina          |  String            | Vsebina predloga                        |           -                   |
+| obcinaId         |  Int               | Id občine na katero se navezuje predlog |           -                   |
+| datum            |  Date              | Datum objave                            |           -                   |
+| lokacija         |  String            | Lokacija na katero se navezuje predlog  |           -                   |
+
+**Nesamoumevne metode:**  
+
+| **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |     **Pomen**     |
+| :------------: | :--------------------------: | :---------------: | :---------------: |
+| objaviPredlog  |        void         |      void       | Objavi predlog |
+| preklic        |        void         |      void       | Prekliči objavo predloga | 
+
+**28. Ogled predloga (Boundary)**
+
+**Nesamoumevne metode:**
+
+| **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |     **Pomen**     |
+| :------------: | :--------------------------: | :---------------: | :---------------: |
+| prikaziPredlog   |        void         |      Predlog       | Prikaže predlog |
+| preusmeritevUrediPredlog | void | void | Uporabnika preusmeri na urejanje predloga |
+| preusmeritevIzbrisiPredlog | void | void | Uporabnika preusmeri na izbris predloga
+
+**29. Urejanje predloga (Boundsary)**
+
+**Atributi:**
+
+| **Ime atributa** | **Podatkovni tip** |      **Pomen(če ni očiten)**      | **Zaloga vrednosti (če ni očiten)** |
+| :------------: | :--------------------------: | :---------------: | :---------------: |
+| naslov           |  String            | Naslov predloga                         |           -                   |
+| vsebina          |  String            | Vsebina predloga                        |           -                   |
+| obcinaId         |  Int               | Id občine na katero se navezuje predlog |           -                   |
+| datum            |  Date              | Datum spremembe                         |           -                   |
+| lokacija         |  String            | Lokacija na katero se navezuje predlog  |           -                   |
+
+**Nesamoumevne metode:**
+
+| **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |     **Pomen**     |
+| :------------: | :--------------------------: | :---------------: | :---------------: |
+| urediPredlog  |        void         |      void       | Shrani novo urejen predlog |
+| preklic        |        void         |      void       | Prekliči urejanje predloga | 
+
+**30. Brisanje predloga (Boundary)**
+
+**Nesamoumevne metode:**
+
+| **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |     **Pomen**     |
+| :------------: | :--------------------------: | :---------------: | :---------------: |
+| izbrisiPredlog  |        void         |      void       | Izbriši predlog |
+| preklic        |        void         |      void       | Prekliči izbris predloga | 
+
+**31. Glasovanje med predlogi (Boundary)**
+
+**Atributi:**
+
+| **Ime atributa** | **Podatkovni tip** |      **Pomen(če ni očiten)**      | **Zaloga vrednosti (če ni očiten)** |
+| :------------: | :--------------------------: | :---------------: | :---------------: |
+| glas       |  Bool            | Glas za predlog (všeček ali nevšeček)                         |           -                   |
+
+**Nesamoumevne metode:**
+
+| **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |     **Pomen**     |
+| :------------: | :--------------------------: | :---------------: | :---------------: |
+| vseckanje  |        void         |      void       | Všečka trenutni predlog |
+| nevseckanje        |        void         |      void       | Nevšečka trenutni predlog |
+
+**32. Izbor lokacije (Boundary)**
+
+**Atributi:**
+
+| **Ime atributa** | **Podatkovni tip** |      **Pomen(če ni očiten)**      | **Zaloga vrednosti (če ni očiten)** |
+| :------------: | :--------------------------: | :---------------: | :---------------: |
+| lokacije       |  String            | Lokacija določene objave (novice ali predloga)                         |           -                   |
+| **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |     **Pomen**     |
+| :------------: | :--------------------------: | :---------------: | :---------------: |
+| prikazZemljevida  | objavaID : int            |  iframe           | Prikaže zemljevid okolice |
+| izborLokacije |        void         |      string       | Izbere določeno lokacijo   |
+| preklic        |        void         |      void       | Prekliči izbor lokacije | 
+
+**33. Ogled lokacije (Boundary)**
+
+**Nesamoumevne metode:**
+
+| **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |     **Pomen**     |
+| :------------: | :--------------------------: | :---------------: | :---------------: |
+| prikazZemljevida  |        void         |      iframe       | Prikaže zemljevid povezan s trenutno objavo |
+
+**34. Dostop API (Boundary)**
+
+**Atributi:**
+
+| **Ime atributa** | **Podatkovni tip** |      **Pomen(če ni očiten)**      | **Zaloga vrednosti (če ni očiten)** |
+| :------------: | :--------------------------: | :---------------: | :---------------: |
+| napaka       |  String            | Vrnjena vrednost v primeru napake pri dostopanju do APIja         |           -                   |
+
+**Nesamoumevne metode:**
+
+| **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |     **Pomen**     |
+| :------------: | :--------------------------: | :---------------: | :---------------: |
+| dostopDoLokacije  |      void         |      StatusCode       | Dostopi do lokacije na APIju |
+| izpisNapake  |  napaka : String | void  | Izpiše možno napako med dostopanjem do APIja |
+
+
+## 3. Načrt obnašanja
+             
 1. Registracija
   - Osnovni tok
   ![image](https://teaching.lavbic.net/plantuml/png/bP5DJlD038RtEOLLDh10gAML4EAh11Mi4A123-1Ct68IPeBZb9_RS1ZkXPFmaQa02HR98lCyhrzdRZaZM8QWQNXAaYfdNwBWFQJeyfM4scSk54501NrbH-GreZ9QObte3JtfSS4hVs_7uEn54b7eDCX9a8nareQbXQL_0JudTj3ZBIl5a4XuZ7o0wB2YXvgyetDUskCfdhOrEJivE9rzGr-XA3ikqUlVXM_h9kqgCBWWeHLNAcp_3Ueo2AQUym4SNyDY24T7BJUT9adPHy9Wtade-Cw6GqW5NyWD02kOJynActaepoPkU8l_0nZou5L2GT9P8xDSz-b7gIF7HjhDiJRfpHwyHYLhcrZXtQaLE8Ho28V_GFgMkBtJe_D9OYqRT6Jew0jQXWmrvzWO9TQmCSPcx3T6ARGcuQkMfTwnVhiVqNjxSAseTJKB6SK1uoOWC-FkSpVyPSB7Wfi76MqqdRJOOjXYb-cQAkN-RX42r5L9Rw-Uuxtv7G00)
