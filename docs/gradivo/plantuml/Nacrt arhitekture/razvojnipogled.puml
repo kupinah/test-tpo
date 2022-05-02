@@ -1,6 +1,9 @@
 @startuml
 !theme blueprint
 
+left to right direction
+skinparam linetype ortho
+
 () Uporabniki <<interface>>
 () Novice <<interface>>
 () Predlogi <<interface>>
@@ -31,33 +34,25 @@ component "Podatkovni strežnik" as PS <<subsystem>> {
    component "Podatkovna baza" as PB2 <<component>>
 }
 
-AV -[hidden]-> UN
-UN -[hidden]-> UP
-SU -[hidden]-> SN
-SN -[hidden]-> SP
-SP -[hidden]-> API
 
-Uporabniki -> AV
-UN <-left- Novice
-UP <-left- Predlogi
+Uporabniki --> AV
+Novice --> UN
+Predlogi --> UP
 
-AV -right-> AVI
-UN -right-> UNI
+AV --> AVI
+UN --> UNI
 
-AVI -right-> SU
-UNI -right-> SN
-UPI -right-> SP
+AVI --> SU
+UNI --> SN
+UPI --> SP
 GI --> SP
-API <-left- APII
+APII --> API
 UP --> UPI
 
 SU --> SQL 
 SN --> SQL
 SP --> SQL
 API --> SQL
-DPB -[hidden]-> PB2
 SP -> PB2
 SQL --> DPB
-Strežnik -[hidden]> PS
-
 @enduml
