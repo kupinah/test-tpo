@@ -19,16 +19,16 @@ participant "Novica" as R5 <<entity>>
 participant "Predlog" as R4 <<entity>>
 
 activate U1
-U1 -> R6: iskanje(iskalnaBeseda)
+U1 -> R6: iskanje()
 activate R6
 R6 -> R3: izvediIskanje(iskalnaBeseda)
 activate R3
 R6 -> R2: izvediIskanje(iskalnaBeseda)
 activate R2
 R3 -> R5: izvediIskanje(iskalnaBeseda)
-R5 --> R3: vrniNovice()
+R5 --> R3: //posreduj novice
 R2 -> R4: izvediIskanje(iskalnaBeseda)
-R4 --> R2: vrniPredloge()
+R4 --> R2: //posreduj predloge
 R3 --> R6: //posreduj novice
 deactivate R3
 R2 --> R6: //posreduj predloge

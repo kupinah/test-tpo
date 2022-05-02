@@ -20,11 +20,11 @@ participant "Komentar" as R4 <<entity>>
 activate U1
 U1 -> R5: dodajKomentar()
 activate R5
-R5 -> R2: dodajKomentar(komentar)
+R5 -> R2: dodajKomentar(podatki)
 activate R2
-R2 -> R4: //preveri komentar
+R2 -> R4: preveriPodatke(podatki)
 R4 --> R2: //StatusCode
-R2 -> R4: //dodajKomentar(komentar)
+R2 -> R4: dodajKomentar(podatki)
 R4 --> R2: //StatusCode
 R2 --> R5: //StatusCode
 deactivate R2

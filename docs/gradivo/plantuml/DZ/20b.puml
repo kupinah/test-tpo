@@ -10,21 +10,24 @@ skinparam sequenceLifeLineBorderColor #5FB8EC
 skinparam sequenceParticipantBorderColor #5FB8EC
 skinparam sequenceParticipantBackgroundColor white
 
-actor "Prijavljen uporabnik" as U1 <<actor>>
+actor "Administrator" as U1 <<actor>>
 
-participant "brisanje komentarja" as R5 <<boundary>>
+participant "Ogled komentarja" as R6 <<boundary>>
+participant "Brisanje komentarja" as R5 <<boundary>>
 participant "Komentar kontroler" as R2 <<control>>
 participant "Komentar" as R4 <<entity>>
 
 
 activate U1
-U1 -> R5: izbrisiKomentar()
+U1 -> R6: p1 := preusmeritevIzbrisiKomentar()
+R6 --> U1: // Prikaz obrazca
+R6 -> R5: p2 := izbrisiKomentar()
 activate R5
-R5 -> R2: izbrisiKomentar(komentarId)
+R5 -> R2: p3 := izbrisiKomentar(komentarId)
 activate R2
-R2 -> R4: izbrisiKomentar(komentarId)
-R4 --> R2: //StatusCode
-R2 --> R5: //StatusCode
+R2 -> R4: p5 := izbrisiKomentar(komentarId)
+R4 --> R2: // StatusCode
+R2 --> R5: // StatusCode
 deactivate R2
-R5 --> U1: //Prikazi obvestilo o neuspešno izbrisanem komentarju
+R5 --> U1: // Prikaži obvestilo o uspešnem brisanju komentarja
 @enduml

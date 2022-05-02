@@ -14,6 +14,7 @@ actor "Prijavljen uporabnik" as U1 <<actor>>
 
 participant "Izbor lokacije" as R5 <<boundary>>
 participant "Zemljevid kontroler" as R2 <<control>>
+participant "Dostop do API-ja" as R6 <<boundary>>
 participant "Google Maps" as R4 <<external API>>
 participant "Novica" as R7 <<entity>>
 participant "Predlog" as R8 <<entity>>
@@ -22,10 +23,12 @@ participant "Predlog" as R8 <<entity>>
 activate U1
 U1 -> R5: prikazZemljevida()
 activate R5
-R5 -> R2: vrniZemljevid()
+R5 -> R2: vrniZemljevid(objavaId)
+R2 -> R6: dostopDoLokacije()
 activate R2
-R2 -> R4: pridobiZemljevid(lokacija)
-R4 --> R2: //vrni Zemljevid
+R6 -> R4: pridobiZemljevid(lokacija)
+R4 --> R6: //vrni Zemljevid
+R6 --> R2: //StatusCode
 R2 --> R5: //vrni Zemljevid
 R5 --> U1: //prikazi Zemljevid s trenutno lokacijo
 U1 -> R5: //Izbira lokacije na zemljevidu
