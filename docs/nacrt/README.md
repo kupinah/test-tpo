@@ -76,32 +76,32 @@ U tem razredu shranimo podatke o uporabniki.
 
 **Atributi:**
 
-| **Ime atributa** | **Podatkovni tip** | **Pomen(če ni očiten)** | **Zaloga vrednosti (če ni očiten)** |
-| :-: | :-: | :-: | :-: |
-| uporabnikId | int | Identifikator uporabnika | - |
-| ime | string | Ime uporabnika | /^[a-zA-Z\s]\*$/ |
-|priimek|string|Priimek uporabnika|/^[a-zA-Z\s]\*$/|
-|uporabnisko ime|string|Uporabnisko ime|/^[a-zA-Z0-9]([._-](?![._-])|[a-zA-Z0-9]){3,18}[a-zA-Z0-9]$/|
-|obcinaId|int|Identifikator obcine v kateri zivi uporabnik|-|
-|email|string|Email uporabnika|/^\S+@\S+\.\S+$/|
-|geslo|string|Geslo uporabnika|/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/|
-|slika|Image|Slika uporabnika|-|
-|sporocila| List<Sporocilo> |Sporocila uporabnika|-|
+| **Ime atributa** | **Podatkovni tip** |           **Pomen(če ni očiten)**            |   **Zaloga vrednosti (če ni očiten)**    |
+| :--------------: | :----------------: | :------------------------------------------: | :--------------------------------------: |
+|   uporabnikId    |        int         |           Identifikator uporabnika           |                    -                     |
+|       ime        |       string       |                Ime uporabnika                |             /^[a-zA-Z\s]\*$/             |
+|     priimek      |       string       |              Priimek uporabnika              |             /^[a-zA-Z\s]\*$/             |
+| uporabnisko ime  |       string       |               Uporabnisko ime                |       /^[a-zA-Z0-9]([._-](?![._-])       | [a-zA-Z0-9]){3,18}[a-zA-Z0-9]$/ |
+|     obcinaId     |        int         | Identifikator obcine v kateri zivi uporabnik |                    -                     |
+|      email       |       string       |               Email uporabnika               |             /^\S+@\S+\.\S+$/             |
+|      geslo       |       string       |               Geslo uporabnika               | /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/ |
+|      slika       |       Image        |               Slika uporabnika               |                    -                     |
+|    sporocila     |  List<Sporocilo>   |             Sporocila uporabnika             |                    -                     |
 
 **Nesamoumevne metode:**
 
-|**Ime metode**|**Imena in tipi parametrov**|**Tip rezultata**|**Pomen**|
-| :-: | :-: | :-: | :-: |
-|dodajUporabnika|uporabnik: Uporabnik|StatusCode|Dodajanje uporabnika v bazi registriranih uporabnikov|
-|posodobiUporabnika|uporabnik: Uporabnik|Uporabnik|Posodabljanje uporabnika v bazi registriranih uporabnikov|
-|izbrisiUporabnika|uporabnikId: int|StatusCode|Brizanje uporabnika iz bazi registriranih uporabnikov|
-|posljiSporocilo|posljateljId: int, prejemnikId: int, vsebina: string|Sporocilo|Pošiljanje sporčila|
-|vrniUporabnika|uporabnikId: int|Uporabnik|Vrne podatke o uporabniku|
-|vrniVseUporabnike|-| List<Uporabnik>| Vrne seznam vseh uporabnikov|
-|preveriPodatke|podatki: Uporabnik| StatusCode| Preverja ustreznost podatkov preden jih shrani|
-|preveriPodatkeZaPrijavo|email: string, geslo: string| StatusCode| Preveri ustreznost podatkov za prijavo|
-|prijaviUporabnika|email: string, geslo: string| StatusCode| Doda uporabnik v seznamu prijavljenih|
-|odjaviUporabnika|uporabnikId: int| StatusCode| Odstrani uporabnik iz seznama prijavljenih|
+|     **Ime metode**      |             **Imena in tipi parametrov**             | **Tip rezultata** |                         **Pomen**                         |
+| :---------------------: | :--------------------------------------------------: | :---------------: | :-------------------------------------------------------: |
+|     dodajUporabnika     |                 uporabnik: Uporabnik                 |    StatusCode     |   Dodajanje uporabnika v bazi registriranih uporabnikov   |
+|   posodobiUporabnika    |                 uporabnik: Uporabnik                 |     Uporabnik     | Posodabljanje uporabnika v bazi registriranih uporabnikov |
+|    izbrisiUporabnika    |                   uporabnikId: int                   |    StatusCode     |   Brizanje uporabnika iz bazi registriranih uporabnikov   |
+|     posljiSporocilo     | posljateljId: int, prejemnikId: int, vsebina: string |     Sporocilo     |                    Pošiljanje sporčila                    |
+|     vrniUporabnika      |                   uporabnikId: int                   |     Uporabnik     |                 Vrne podatke o uporabniku                 |
+|    vrniVseUporabnike    |                          -                           |  List<Uporabnik>  |               Vrne seznam vseh uporabnikov                |
+|     preveriPodatke      |                  podatki: Uporabnik                  |    StatusCode     |      Preverja ustreznost podatkov preden jih shrani       |
+| preveriPodatkeZaPrijavo |             email: string, geslo: string             |    StatusCode     |          Preveri ustreznost podatkov za prijavo           |
+|    prijaviUporabnika    |             email: string, geslo: string             |    StatusCode     |           Doda uporabnik v seznamu prijavljenih           |
+|    odjaviUporabnika     |                   uporabnikId: int                   |    StatusCode     |        Odstrani uporabnik iz seznama prijavljenih         |
 
 **2.Sporočilo (Entity)**
 
@@ -109,23 +109,23 @@ U tem razredu shranimo podatke o uporabniki.
 
 **Atributi:**
 
-|**Ime atributa**|**Podatkovni tip**|**Pomen(če ni očiten)**|**Zaloga vrednosti (če ni očiten)**|
-| :-: | :-: | :-: | :-: |
-|sporociloId| int| Identifikator sporocila|-|
-|posiljateljId| int| Identifikator posljatelja|-|
-|prejemnikId| int| Identifikator prejemnika| - |
-|vsebina| String| Vsebina sporocila|-|
+| **Ime atributa** | **Podatkovni tip** |  **Pomen(če ni očiten)**  | **Zaloga vrednosti (če ni očiten)** |
+| :--------------: | :----------------: | :-----------------------: | :---------------------------------: |
+|   sporociloId    |        int         |  Identifikator sporocila  |                  -                  |
+|  posiljateljId   |        int         | Identifikator posljatelja |                  -                  |
+|   prejemnikId    |        int         | Identifikator prejemnika  |                  -                  |
+|     vsebina      |       String       |     Vsebina sporocila     |                  -                  |
 
 **Nesamoumevne metode:**
 
-|**Ime metode**|**Imena in tipi parametrov**|**Tip rezultata**|**Pomen**|
-| :-: | :-: | :-: | :-: |
-|dodajSporocilo|sporocilo: Sporocilo| StatusCode| Dodajanje sporočilo v bazi sporočila| 
-|vrniSporocilo|sporociloId: int| Sporocilo| Vrne podatke o sporočilu |
-|vrniVsaSporocila|-| List<Sporocilo>| Vrni seznam vseh sporočila uporabnika? |
-|vrniVsePosiljatelj|posliljateljId: int| List<Sporocilo>| ?|
-|vrniVsePrejemnik|prejemnikId: int| List<Sporocilo>| ?|
-|preveriPodatke|podatki: Sporocilo| StatusCode| Preveri ustreznost podatke preden pošlje sporočilo|
+|   **Ime metode**   | **Imena in tipi parametrov** | **Tip rezultata** |                     **Pomen**                      |
+| :----------------: | :--------------------------: | :---------------: | :------------------------------------------------: |
+|   dodajSporocilo   |     sporocilo: Sporocilo     |    StatusCode     |        Dodajanje sporočilo v bazi sporočila        |
+|   vrniSporocilo    |       sporociloId: int       |     Sporocilo     |              Vrne podatke o sporočilu              |
+|  vrniVsaSporocila  |              -               |  List<Sporocilo>  |       Vrni seznam vseh sporočila uporabnika?       |
+| vrniVsePosiljatelj |     posliljateljId: int      |  List<Sporocilo>  |                         ?                          |
+|  vrniVsePrejemnik  |       prejemnikId: int       |  List<Sporocilo>  |                         ?                          |
+|   preveriPodatke   |      podatki: Sporocilo      |    StatusCode     | Preveri ustreznost podatke preden pošlje sporočilo |
 
 **3.Komentar (Entity)**
 
@@ -133,23 +133,23 @@ U tem razredu shranimo podatke o uporabniki.
 
 **Atributi:**
 
-|**Ime atributa**|**Podatkovni tip**|**Pomen(če ni očiten)**|**Zaloga vrednosti (če ni očiten)**|
-| :-: | :-: | :-: | :-: |
-|komentarId| int| Identifikator komentarja| -|
-|uporabnikId| int| Identifikator uporabnika ki je dodal komentar| -|
-|predlogId| int| Identifikator predloga? na katero je komentiral|-|
-|komentar| string| Vsebina komentarja| -|
+| **Ime atributa** | **Podatkovni tip** |             **Pomen(če ni očiten)**             | **Zaloga vrednosti (če ni očiten)** |
+| :--------------: | :----------------: | :---------------------------------------------: | :---------------------------------: |
+|    komentarId    |        int         |            Identifikator komentarja             |                  -                  |
+|   uporabnikId    |        int         |  Identifikator uporabnika ki je dodal komentar  |                  -                  |
+|    predlogId     |        int         | Identifikator predloga? na katero je komentiral |                  -                  |
+|     komentar     |       string       |               Vsebina komentarja                |                  -                  |
 
 **Nesamoumevne metode:**
 
-|**Ime metode**|**Imena in tipi parametrov**|**Tip rezultata**|**Pomen**|
-| :-: | :-: | :-: | :-: |
-|dodajKomentar|podatki: Komentar| StatusCode| Dodajanje komentar|
-|izbrisiKomentar|komentarId: int| StatusCode| Brisanje komentar|
-|vrniKomentar|komentarId: int| Komentar| Vrne podatki o komentarja |
-|vrniVseKomentarje|-| List<Komentar>| Vrni seznam vseh komentarjev predloga|
-|vrniKomentarjeUporabnika|uporabnikId: int| List<Komentar>| Vrni seznam vseh komentarjev od dolocenega uporabnika|
-|preveriPodatke|podatki: Komentar| StatusCode| Preveri ustreznost podatki|
+|      **Ime metode**      | **Imena in tipi parametrov** | **Tip rezultata** |                       **Pomen**                       |
+| :----------------------: | :--------------------------: | :---------------: | :---------------------------------------------------: |
+|      dodajKomentar       |      podatki: Komentar       |    StatusCode     |                  Dodajanje komentar                   |
+|     izbrisiKomentar      |       komentarId: int        |    StatusCode     |                   Brisanje komentar                   |
+|       vrniKomentar       |       komentarId: int        |     Komentar      |               Vrne podatki o komentarja               |
+|    vrniVseKomentarje     |              -               |  List<Komentar>   |         Vrni seznam vseh komentarjev predloga         |
+| vrniKomentarjeUporabnika |       uporabnikId: int       |  List<Komentar>   | Vrni seznam vseh komentarjev od dolocenega uporabnika |
+|      preveriPodatke      |      podatki: Komentar       |    StatusCode     |              Preveri ustreznost podatki               |
 
 **4.Novica (Entity)**
 
@@ -157,30 +157,30 @@ U tem razredu shranimo podatke o uporabniki.
 
 **Atributi:**
 
-|**Ime atributa**|**Podatkovni tip**|**Pomen(če ni očiten)**|**Zaloga vrednosti (če ni očiten)**|
-| :-: | :-: | :-: | :-: |
-|novicaId| int| Identifikator novice| -|
-|naslov| string| Naslov novice| - |
-|avtorId| int| Identifikator avtorja novice| -|
-|vsebina| string| Vsebina novice| -|
-|obcinaId| int| Identifikator obcine na katera se nanaša novico| -|
-|datum| date| Datum objave novice| -|
-|lokacija| string| Podrobna lokacija za novici? | - |
+| **Ime atributa** | **Podatkovni tip** |             **Pomen(če ni očiten)**             | **Zaloga vrednosti (če ni očiten)** |
+| :--------------: | :----------------: | :---------------------------------------------: | :---------------------------------: |
+|     novicaId     |        int         |              Identifikator novice               |                  -                  |
+|      naslov      |       string       |                  Naslov novice                  |                  -                  |
+|     avtorId      |        int         |          Identifikator avtorja novice           |                  -                  |
+|     vsebina      |       string       |                 Vsebina novice                  |                  -                  |
+|     obcinaId     |        int         | Identifikator obcine na katera se nanaša novico |                  -                  |
+|      datum       |        date        |               Datum objave novice               |                  -                  |
+|     lokacija     |       string       |          Podrobna lokacija za novici?           |                  -                  |
 
 
 **Nesamoumevne metode:**
 
-|**Ime metode**|**Imena in tipi parametrov**|**Tip rezultata**|**Pomen**|
-| :-: | :-: | :-: | :-: |
-|dodajNovico|podatki: Novica| StatusCode| Dodaja novico v bazi|
-|posodobiNovico|podatki: Novica| StatusCode| Posodabljanje novico v bazi|
-|izbrisiNovico|novicaId: int| StatusCode| Brisanje novico iz bazi|
-|vrniNovico|novicaId: int| Novica| Vrne podatki o novico|
-|vrniVseNovice|-| List<Novica>| Vrne seznam vseh novice|
-|vrniVseAvtorja|avtorId: int| List<Novica>| Vrne seznam novice od določeni avtor|
-|vrniVseObcina|obcinaId: int| List<Novica>| Vrne seznam novic v določeni občini|
-|preveriPodatke|podatki: Novica| StatusCode| Preveri ustreznosti podatki preden doda novico v bazi|
-|izvediIskanje|iskalnaBeseda: string| List<Novica>| Izvede selekcijo novice glede iskalno besedo|
+| **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |                       **Pomen**                       |
+| :------------: | :--------------------------: | :---------------: | :---------------------------------------------------: |
+|  dodajNovico   |       podatki: Novica        |    StatusCode     |                 Dodaja novico v bazi                  |
+| posodobiNovico |       podatki: Novica        |    StatusCode     |              Posodabljanje novico v bazi              |
+| izbrisiNovico  |        novicaId: int         |    StatusCode     |                Brisanje novico iz bazi                |
+|   vrniNovico   |        novicaId: int         |      Novica       |                 Vrne podatki o novico                 |
+| vrniVseNovice  |              -               |   List<Novica>    |                Vrne seznam vseh novice                |
+| vrniVseAvtorja |         avtorId: int         |   List<Novica>    |         Vrne seznam novice od določeni avtor          |
+| vrniVseObcina  |        obcinaId: int         |   List<Novica>    |          Vrne seznam novic v določeni občini          |
+| preveriPodatke |       podatki: Novica        |    StatusCode     | Preveri ustreznosti podatki preden doda novico v bazi |
+| izvediIskanje  |    iskalnaBeseda: string     |   List<Novica>    |     Izvede selekcijo novice glede iskalno besedo      |
 
 
 **5.Predlog (Entity)**
@@ -189,31 +189,31 @@ U tem razredu shranimo podatke o uporabniki.
 
 **Atributi:**
 
-|**Ime atributa**|**Podatkovni tip**|**Pomen(če ni očiten)**|**Zaloga vrednosti (če ni očiten)**|
-| :-: | :-: | :-: | :-: |
-|predlogId| int| Identifikator predloga| -|
-|naslov| string| Naslov predloga| -|
-|avtorId| int| Identifikator avtorja predloga| -|
-|vsebina| string| Vsebina predloga| -|
-|obcinaId| int| Identifikator obcine na katera se nanaša predloga| -|
-|steviloVseckov| int| Število uporabniki ki so všečkali predlogo| - |
-|steviloNevseckov| int|Število uporabniki ki so nevšečkali? predlogo| -|
-|datum?| date| Datum objavo predloga| - |
-|lokacija| string| Podrobna lokacija za predloga| - |
+| **Ime atributa** | **Podatkovni tip** |              **Pomen(če ni očiten)**              | **Zaloga vrednosti (če ni očiten)** |
+| :--------------: | :----------------: | :-----------------------------------------------: | :---------------------------------: |
+|    predlogId     |        int         |              Identifikator predloga               |                  -                  |
+|      naslov      |       string       |                  Naslov predloga                  |                  -                  |
+|     avtorId      |        int         |          Identifikator avtorja predloga           |                  -                  |
+|     vsebina      |       string       |                 Vsebina predloga                  |                  -                  |
+|     obcinaId     |        int         | Identifikator obcine na katera se nanaša predloga |                  -                  |
+|  steviloVseckov  |        int         |    Število uporabniki ki so všečkali predlogo     |                  -                  |
+| steviloNevseckov |        int         |   Število uporabniki ki so nevšečkali? predlogo   |                  -                  |
+|      datum?      |        date        |               Datum objavo predloga               |                  -                  |
+|     lokacija     |       string       |           Podrobna lokacija za predloga           |                  -                  |
 
 **Nesamoumevne metode:**
 
-|**Ime metode**|**Imena in tipi parametrov**|**Tip rezultata**|**Pomen**|
-| :-: | :-: | :-: | :-: |
-|dodajPredlog|podatki: Predlog| StatusCode| Dodajanje predloga v bazi|
-|posodobiPredlog|podatki: Predlog| StatusCode| Posodabljanje predloga v bazi|
-|izbrisiPredlog|predlogId: int| StatusCode| Brisanje predloga|
-|vrniPredlog|predlogId: int| Predlog| Vrne podatke o predlogu|
-|vrniVsePredloge|-| List<Predlog>| Vrne seznam vseh predlogov|
-|vrniVseAvtorja|avtorId: int| List<Predlog>| Vrne seznam predlogov od določenega avtorja|
-|vrniVseObcina|obcinaId: int| List<Predlog>| Vrne seznam predlogov v določeni občini|
-|preveriPodatke|podatki: Predlog| StatusCode| Vreveri ustreznost podatke preden shrani predloga|
-|izvediIskanje|iskalnaBeseda: string| List<Predlog>| Vrne selektiranih predlogov glede iskalno besedo|
+| **Ime metode**  | **Imena in tipi parametrov** | **Tip rezultata** |                     **Pomen**                     |
+| :-------------: | :--------------------------: | :---------------: | :-----------------------------------------------: |
+|  dodajPredlog   |       podatki: Predlog       |    StatusCode     |             Dodajanje predloga v bazi             |
+| posodobiPredlog |       podatki: Predlog       |    StatusCode     |           Posodabljanje predloga v bazi           |
+| izbrisiPredlog  |        predlogId: int        |    StatusCode     |                 Brisanje predloga                 |
+|   vrniPredlog   |        predlogId: int        |      Predlog      |              Vrne podatke o predlogu              |
+| vrniVsePredloge |              -               |   List<Predlog>   |            Vrne seznam vseh predlogov             |
+| vrniVseAvtorja  |         avtorId: int         |   List<Predlog>   |    Vrne seznam predlogov od določenega avtorja    |
+|  vrniVseObcina  |        obcinaId: int         |   List<Predlog>   |      Vrne seznam predlogov v določeni občini      |
+| preveriPodatke  |       podatki: Predlog       |    StatusCode     | Vreveri ustreznost podatke preden shrani predloga |
+|  izvediIskanje  |    iskalnaBeseda: string     |   List<Predlog>   | Vrne selektiranih predlogov glede iskalno besedo  |
 
 **6.Sprejeti Predlog (Entity)**
 
@@ -221,15 +221,15 @@ Razred v katerem shranimo sprejeti predlogi od ?
 
 **Atributi:**
 
-|**Ime atributa**|**Podatkovni tip**|**Pomen(če ni očiten)**|**Zaloga vrednosti (če ni očiten)**|
-| :-: | :-: | :-: | :-: |
-|predlogId| int| Identifikator sprejetega predloga| -|
+| **Ime atributa** | **Podatkovni tip** |      **Pomen(če ni očiten)**      | **Zaloga vrednosti (če ni očiten)** |
+| :--------------: | :----------------: | :-------------------------------: | :---------------------------------: |
+|    predlogId     |        int         | Identifikator sprejetega predloga |                  -                  |
 
 **Nesamoumevne metode:**
 
-|**Ime metode**|**Imena in tipi parametrov**|**Tip rezultata**|**Pomen**|
-| :-: | :-: | :-: | :-: |
-|sprejmiPredlog|predlogId: int| void| Doda predloga v bazi sprejeti predlogi|
+| **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |               **Pomen**                |
+| :------------: | :--------------------------: | :---------------: | :------------------------------------: |
+| sprejmiPredlog |        predlogId: int        |       void        | Doda predloga v bazi sprejeti predlogi |
 
 **7.Uporabniki Kontroler (Control)**
 
@@ -237,15 +237,15 @@ Razred v katerem shranimo sprejeti predlogi od ?
 
 **Nesamoumevne metode:**
 
-|**Ime metode**|**Imena in tipi parametrov**|**Tip rezultata**|**Pomen**|
-| :-: | :-: | :-: | :-: |
-|registracija|podatki: Uporabnik| StatusCode| Registrira novega uporabnika |
-|prijava|email: string, geslo: string| StatusCode| Izvede prijavo uporabnika|
-|odjava|uporabnikId: int| StatusCode| Izvede odjavo uporabnika|
-|urejanjeProfila|podatki: Uporabnik| Uporabnik| Posodobi profila uporabnika|
-|brisanjeProfila|uporabnikId: int| StatusCode| Izbriše profila uporabnika|
-|posljiSporocilo|posljatelj: string, prejemnik: string, vsebina: string| StatusCode| Skrbi za pošiljanje sporočila|
-|pridobiProfil|uporabnikId: int| Uporabnik| Pridobi podrobne podatke o uporabniku|
+| **Ime metode**  |              **Imena in tipi parametrov**              | **Tip rezultata** |               **Pomen**               |
+| :-------------: | :----------------------------------------------------: | :---------------: | :-----------------------------------: |
+|  registracija   |                   podatki: Uporabnik                   |    StatusCode     |     Registrira novega uporabnika      |
+|     prijava     |              email: string, geslo: string              |    StatusCode     |       Izvede prijavo uporabnika       |
+|     odjava      |                    uporabnikId: int                    |    StatusCode     |       Izvede odjavo uporabnika        |
+| urejanjeProfila |                   podatki: Uporabnik                   |     Uporabnik     |      Posodobi profila uporabnika      |
+| brisanjeProfila |                    uporabnikId: int                    |    StatusCode     |      Izbriše profila uporabnika       |
+| posljiSporocilo | posljatelj: string, prejemnik: string, vsebina: string |    StatusCode     |     Skrbi za pošiljanje sporočila     |
+|  pridobiProfil  |                    uporabnikId: int                    |     Uporabnik     | Pridobi podrobne podatke o uporabniku |
 
 **8.Komentar Kontroler (Control)**
 
@@ -253,11 +253,11 @@ Razred v katerem shranimo sprejeti predlogi od ?
 
 **Nesamoumevne metode:**
 
-|**Ime metode**|**Imena in tipi parametrov**|**Tip rezultata**|**Pomen**|
-| :-: | :-: | :-: | :-: |
-|dodajKomentar|podatki: Komentar| StatusCode| Doda komentar|
-|izbrisiKomentar|komentarId: int| StatusCode| Briše komentar|
-|pridobiKomentar|komentarId: int| Komentar| Dobi podrobne podatke o komentarju|
+| **Ime metode**  | **Imena in tipi parametrov** | **Tip rezultata** |             **Pomen**              |
+| :-------------: | :--------------------------: | :---------------: | :--------------------------------: |
+|  dodajKomentar  |      podatki: Komentar       |    StatusCode     |           Doda komentar            |
+| izbrisiKomentar |       komentarId: int        |    StatusCode     |           Briše komentar           |
+| pridobiKomentar |       komentarId: int        |     Komentar      | Dobi podrobne podatke o komentarju |
 
 **9.Novica Kontroler (Control)**
 
@@ -265,27 +265,27 @@ Razred v katerem shranimo sprejeti predlogi od ?
 
 **Nesamoumevne metode:**
 
-|**Ime metode**|**Imena in tipi parametrov**|**Tip rezultata**|**Pomen**|
-| :-: | :-: | :-: | :-: |
-|dodajNovico|podatki: Novica| StatusCode| Doda novico|
-|posodobiNovico|podatki: Novica| StatusCode| Posodobi novico|
-|izbrisiNovico|novicaId: int| StatusCode| Briše novico|
-|izvediIskanje|iskalnaBeseda: string| List<Novica>| Izvede selekcijo novice glede iskalno besedo|
-|pridobiNovico|novicaId: int| Novica| Pridobi podrobne podatke o novici|
+| **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |                  **Pomen**                   |
+| :------------: | :--------------------------: | :---------------: | :------------------------------------------: |
+|  dodajNovico   |       podatki: Novica        |    StatusCode     |                 Doda novico                  |
+| posodobiNovico |       podatki: Novica        |    StatusCode     |               Posodobi novico                |
+| izbrisiNovico  |        novicaId: int         |    StatusCode     |                 Briše novico                 |
+| izvediIskanje  |    iskalnaBeseda: string     |   List<Novica>    | Izvede selekcijo novice glede iskalno besedo |
+| pridobiNovico  |        novicaId: int         |      Novica       |      Pridobi podrobne podatke o novici       |
 
 **10.Predlog Kontroler (Control)**
 -opis?
 
 **Nesamoumevne metode:**
 
-|**Ime metode**|**Imena in tipi parametrov**|**Tip rezultata**|**Pomen**|
-| :-: | :-: | :-: | :-: |
-|dodajPredlog|podatki: Predlog| StatusCode| Doda predloga|
-|urediPredlog|podatki: Predlog| StatusCode| Posodobi predloga|
-|izbrisiPredlog|predlogId: int| StatusCode| Briše predloga|
-|izvediIskanje|iskalnaBeseda: string| List<Predlog>| Izvede selekcijo predloge glede iskalno besedo|
-|glasovanje|predlogId: int, glas: bool|StatusCode| Poveča/Zmanjša število všečkov predloga|
-|pridobiPredlog|predlogId: int| Predlog| Pridobi podrobne podatke o predloga|
+| **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |                   **Pomen**                    |
+| :------------: | :--------------------------: | :---------------: | :--------------------------------------------: |
+|  dodajPredlog  |       podatki: Predlog       |    StatusCode     |                 Doda predloga                  |
+|  urediPredlog  |       podatki: Predlog       |    StatusCode     |               Posodobi predloga                |
+| izbrisiPredlog |        predlogId: int        |    StatusCode     |                 Briše predloga                 |
+| izvediIskanje  |    iskalnaBeseda: string     |   List<Predlog>   | Izvede selekcijo predloge glede iskalno besedo |
+|   glasovanje   |  predlogId: int, glas: bool  |    StatusCode     |    Poveča/Zmanjša število všečkov predloga     |
+| pridobiPredlog |        predlogId: int        |      Predlog      |      Pridobi podrobne podatke o predloga       |
 
 **11.Zemljevid Kontroler (Control)**
 
@@ -293,9 +293,9 @@ Razred v katerem shranimo sprejeti predlogi od ?
 
 **Nesamoumevne metode:**
 
-|**Ime metode**|**Imena in tipi parametrov**|**Tip rezultata**|**Pomen**|
-| :-: | :-: | :-: | :-: |
-|vrniZemljevid|objavaId: int| iframe| Pridobi zemljevid|
+| **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |     **Pomen**     |
+| :------------: | :--------------------------: | :---------------: | :---------------: |
+| vrniZemljevid  |        objavaId: int         |      iframe       | Pridobi zemljevid |
 
 crud?
 
@@ -303,68 +303,68 @@ crud?
 
 1. Registracija
   - Osnovni tok
-  ![image](https://teaching.lavbic.net/plantuml/png/bP71Jjj048RlVefHkD03GaaJgK8G2I9wgbeKcWSOhoTXiDbnn-D0-pPzcBvNnpR56nMazc0VlD_tpp_UEou8jYAMorEMDIN76XKV8CTGxbJQM0IfHC4KO-D752sX2jfYMzbNUhBBYdVnmOyX-8iqeJ2Ow9LeGRhgm_BAq_y2NYOEqECT6wMGgZmcFa1osD2tbcAWJxpr9r8wxMZnyUh3zUeL-WRLE72DqVvVUBLkrgy2ay-ajEF6bFs_GLkBOXwvdC3bBMocS7xUSyjbbjLZ94pMWuI1xtquIAxuWy84i87rmgsycuVwtSK3R_Dd04CfqLGgqi6QkHM6JszA0pbtqc-EhKllzk0z6ddRp0kVBBt06THJEBk0MamBJhhAyRjHM2yoxze9CnTcdQ0ZYiUr56WbfyOiyvwTCNVZVJz2QK_ADprBe-CjJvwZJq_Xrj3QPYK5fG7pBg1mu_vbG_p7XESr3myAEcYwwB7DjCU-v7jgZCSRHX1ecvf-_OoSxis_0G00)
+  ![image](https://teaching.lavbic.net/plantuml/png/bP5DJlD038RtEOLLDh10gAML4EAh11Mi4A123-1Ct68IPeBZb9_RS1ZkXPFmaQa02HR98lCyhrzdRZaZM8QWQNXAaYfdNwBWFQJeyfM4scSk54501NrbH-GreZ9QObte3JtfSS4hVs_7uEn54b7eDCX9a8nareQbXQL_0JudTj3ZBIl5a4XuZ7o0wB2YXvgyetDUskCfdhOrEJivE9rzGr-XA3ikqUlVXM_h9kqgCBWWeHLNAcp_3Ueo2AQUym4SNyDY24T7BJUT9adPHy9Wtade-Cw6GqW5NyWD02kOJynActaepoPkU8l_0nZou5L2GT9P8xDSz-b7gIF7HjhDiJRfpHwyHYLhcrZXtQaLE8Ho28V_GFgMkBtJe_D9OYqRT6Jew0jQXWmrvzWO9TQmCSPcx3T6ARGcuQkMfTwnVhiVqNjxSAseTJKB6SK1uoOWC-FkSpVyPSB7Wfi76MqqdRJOOjXYb-cQAkN-RX42r5L9Rw-Uuxtv7G00)
   - Alternativni tok 1
-  ![img](https://teaching.lavbic.net/plantuml/png/bPB1RjD048RlVefHk9H35IKq4gfAf3Q24u8g9JSkwzr9ChMxiup7QSdRy32y5sExu8qe1mxsmVDzy_zhUqy1OSki9JyLHLDHJ4xS0vJELplXDWRFDGkekDZO2ADcLC2jQslzWazwNTCkFjWOlDrGCifvPRbX2IYhVbbPs_Q_W3-90_Iu9yKS4k77p0V8XWr-Qp5w_4XRkoBcQQyM7sxUlb-zGDywKVAKNDJ_5rwiM_H7WSad5DnHeqBstg1DBAwCL4tW-WusCxYwwhdbiYZIk18cwq5odkuj7BWKTqG_0TV0Uc5MsUKv-MxYYRVv7K1GSLJX6cMmvcRvuT4_fO6yCDA-76ctlJi77PoYjIsiyFdI2bn2ci7bEqYi4YZhocUlHs6zAAnh9ynDc7U2ZAWxInoSLfGRyy9wTiQ56M_w2C432jtsB8wEjJn_NZsTmfqwRPiL1-mNF9Sy7GGyoLdqs6RMOv_B0pPAu_Tnm12nRHB-_17fQvnEi-e4H_iP0lM42XuZ0nqJr_4U8-rXACc7Nm00)
+  ![img](https://teaching.lavbic.net/plantuml/png/bPB1RjDG44Nt_efHsC2YYX8Q2LKbKXl12a6LaXsRyVCacTfzynYFqvA_uMFuByPsmOvQ5YpiXUUSkVVPtdD1i1MnN1wph2uv9bIyXnn3kLDfOX6a4WLJZBMFADg8AcYBJMLVwT6kAjx5Unz3y1lfYC9WejUY1UcgMvPNllqPy3UnXnxsR3I6LELXv0ECXZLzRoW6-iHRloADqrujFbw_-x1wWRv1DGwSCDh_2o_MpRgZmEGpAUsuDcL_Rz0aKSmZbnEukeND32ulEswvpB8qh8J9kfSmy9s7W-IAHmeJm1hM2xVoDW_rXuidtkPF04CfqLGgqjwQknNwH_-KUlBSIVzoREtszXnyG2DlctdXiwKNk80qWulte4DBVFrcGDUBp5kswDpH-JCqIO5MyjYOPzwmDSxTUDiQIUb0oZSTIuFZ_SwULa-dS6jeJRsIWhe5J_LE1mMTv2mwR3Fhi2_vWMhZuSiW24HgwaI_VaR-5gVJKNM6e_y61NU4AHsZ01-JLF6E8k-XBoc7tm00)
   - Alternativni tok 2
-  ![img](https://teaching.lavbic.net/plantuml/png/bP6nRjj038PtFGNXBkaG67PZe0WI0udHJaKREFMMXJhH3YFbg5AKa_Pj-YBTybwbfBGw8-dGGHh4x-F_d-wM2uAjYENoc6LDoR56nNl8CPGxbJOMGIfHCCNO-8YY9LH1Msmh-qgFTb7nBjxx68A_I1CAWubUYXQagtvPNlds5y3Vn05wk6MZ55ALXyG7I8ODVMif1lh4MtyYfMbl5XylttzOlK9VeHe7hZ7Q_mklritwey3aCodjk35b_s_GrgAOHoudS74DcncSdVNSSfbbzRWI9kj1mi1t7WwIA_wWC05iOBrmA-_oKB-xUE1j_WGmb19DfI8ThBbROVZqJsaWJvpqcsFhjdVdu3qQUTlC2nyllS0fr3CuFOTQJ0jEkihHsr5OBpBlsWbp5-QTe2EAHxKKQ2MdnZppdfrnuiQxFa9fJyfNFKkZuosFdrTFft1jQ6spaeBw1Syb3mS57UGiUcmpwx4l-PuQu_5-40GYjKrDJpyZtyJfDAdk_vOKxWYUVX4ar_iR)
+  ![img](https://teaching.lavbic.net/plantuml/png/bP6nRjj038PtFGNXBkqG67Pje0WI0uxHJaKIEFMMXJhHDYFvJgKe9ytRv4MwvRrAIMbrXfsXWsuGlu_yxxZbZ60TWgRXAKcgd7s9WZj8qUKR2RNFN2Y2W0hwoahaDQ8oMcDTw0zwqdd16x-pCZWxI28AdGQv2fAHBDfcQM7TZu1_4pleSSjACIGI7YCV82fMzBCcx-Wxh-tp54_xCFrszUNhuWHzYwBik4Il_o-SZ9kqLu71DGbjk59XUpUeoo2OUiu7CB-3rGWkBbfkDakIicy9WsKdeUC76muX5NmcDm2iO3arAstceVmoyS1R_Ht0a0Ul4WgIpXgRvRfVxqeTEJ7IDiVQT6_kmNjKihI91JwRMO1pA4TmVWdIfyIFdtfqEKqiPOEE3HqVeMN8K7EEZN5Y2HjZOiRdnYY5zYHysxBKEvRlxAtrS0XtYbfNYv1Hs-0jtc4XeuCvqnPRZLhi9jrJfTnl1Y60fxegwVN5yxqV3gFezgeay43m-fiWMkmV)
 
 2. Prijava
   - Osnovni tok
-  ![img](https://teaching.lavbic.net/plantuml/png/bP7TJjj048Nlzob6wGrS89IGI0ZHI83QtbGb2kG1nkj9cDhPDUDnWBvD7uRtOlnJihHKQYziIvxpdJbdzuvpWdMCciL7v-g2GuM2MyZG5nk9JSXzBAE02eRQHXGqKUMqngRKMthKYv8tOMjZyFOYILJeDSfbb9pagZFBIdF_G_2wiHSztB5IAXA93maFa0nhkcyeUFhAQti2fTi-p3vVddwwUaUzG57sN67G_mVUZUkwAZ1QqePh5RPJWwQAWbdWOWGNDx0Qm_bvfvhFdQlsXZ1Q27_7NM28cU0FyYF06fOpqsVj7fGdGzuGgr_M34KCAh4awQc9KRx_zLUeLqvDQJV6shgt-Nc7IfRJMTIZkGKuWseCPn-XABduXb-QRJRKGs-13mxtq7BcB6yBJGoQj92aqg5OIaoSPMs9gH4dBL49xKXu4NFKWWwgxik7pf8U3TR7nt2Zg4rjjNDC7QQzGtkG_5eK_zLagFlR9AStSMUTRZNkTDVPZchb_IKZH6ZgYfv_saKEGLu0)
+  ![img](https://teaching.lavbic.net/plantuml/png/bP71RjD048RlVefHUW69gaf895IraTe8JaX4ARbm6zkJTB2pOsR7QU5jU1ZUYx4TcWsKGm_smVFz_tphlUUIO2DYkJncMQmuDAYuWnoBQglIXhAGMXHCCKGVKR24Acc3RMsVwT5kQjw6dO-Xy1TfGc5XehUY9UcYByjhR_y7UDeuG0_tR9H2glAGv06IOQHlBOM2FlB6dq3fjhFPXzjtxnVFq4jKuu8R3FRomBEwMNyK6Areoz6K_Qz1suXY7hWQmSqThCTmTTLJytcMDST262sLl-8-C4Yk-8EA4M24rSpvlDk3-jqZ9udrdsg6IeAfrAH3QkAfOlZqtz10Jftq6sFhsZj_tgEHUsQkUZvtWKjend1v3KtlXwzU7wdLB7F1ZfeuDKafsY7NRs1BiPOqCSbShajCFV5sID2Ub9TIebNq1OV_87yrkEZvOT751TmPMXiNKb9QDpqAyDCnyIL5XmEV3aewqP_rs7hSOv_oFKNZuoqZ2BIneLy__IOFBhy1)
   - Alternativni tok 1
-  ![img](https://teaching.lavbic.net/plantuml/png/bPB1RjD048Rl-nIZS6aFLPJGIAWgaTeAk228KdBhPRoU91Cxkyjux9Qy3G_3Up6s0t6X73ZObZpV_yy_Exlbd60TesRnoRcgu91GS0yP-c8ZiGwvZsKKKC5GMOc23gYSrbYN-eMUzARaJTXR6RozI0OKUero6oKdkUlCijBS_m9-T-oXnoqh3I6H-3ZG0moA5NsjANZwo6jx0WsxlPgzlttpxku5Ue6Yx3bXqFyNl1ZNTQF0Q4aRhbJOJWtg50MpmCK8RkvXDO7hwuwQpvrB9qCOBOHts0I6c0aUo8y0ArZEZC_QFYZVJF9CiVfbpL34e19BaburDPNlV_rJr9ENHjh6M5ltDZytg6GvdKMzc5k0AqWJk7eBHSd59_nGxxC-APwTd_Zbp5dKbfyQFstvTAIEumpXgRE4BNnfyEiUfeQ45p57BUWiTLy-TvRlukWw7iEzejQL3PjZvt3CzqSbfsUTPXstcdJSvwoXIlcq5OG8WUegqO_lWH_2U2pzyj3pZk5W5o3dZb2XGuZ0XnJBiAF0M-XZnkOd)
+  ![img](https://teaching.lavbic.net/plantuml/png/bPBDRjD04CVlVefHk8145IKq4gfAf3Q24n9HIYuLb_5waapix2pZjLloDZmCxyLuNOW3vS31FdX-_u_TyOuBWer8pEKno-gIVK350-JeogrAumidbIX4HL_RY7mSK0LjiAdYPtgCDnLl_S76uEn5Eg3GHT5RqO9qaSpoojp_0dudzj33ZYCD8LLv6EW11iEQlZRa7NtaZJsUXcalPXzktxvVF4ClKICx3kZZ_mkUhPkbey1eHLkkexBT6ZH157FFvGXkxc0zWUlhHCtdMHPEXZ1QAk-nzGoIAnx9ZG1hMCsCpxiSr6ycELEiVrapbEAZIaNQgwQcSlsdVufwyj98snZ7phthpor6ifwPLRsOMu4h21EuUWSXzSENhqxKQfPPmOwQ6ZKTKdH0hbx3bkfAXeffPkKwnQKftlGAQabvAGN6akwnlmVvmy6ANZm5ZSTm5p4szK8AIdPFFSy71PsbpXAsdYJiKzvI7Vcq70G1JqqTwCTtpr_yUApz3j7ndk5e_q71YOXAHo_0no2LtvFd7OHKNTgV)
 
 3. Odjava
   - Osnovni tok
-  ![img](https://teaching.lavbic.net/plantuml/png/bP5DJy9048Rl-oicU8638I0aXY096lLYn83yW6btmB5bjqwteFnwforA_Jfuw1uwp_lEizadjWGhxqFaNut94tOP2cuWmZXPYo-SZNtg1OAWotL4BZGeIoiiql18hs6QyjfjT0on7YGD2kFWvTAB9Rcgog9Ksty0dnjhQFV4WPgGYDyryW2DOKul1RcOxdYbdwFcjfFXpUNvzTKlz0DAu9WpTE7_WLzrJNKLQ3q8F-CsVIO7HUO58yT92wOBMFPWFAwWoSIOxDW7hPdL2BO0SvWFbOhASfGt1Rzmouz2XiIx83ubgLDzJSNrhpz3DJbGKf-9GzbUIlCM0wcTKS7JYGgC8El1w0AIb9Dxl2qsKUtNxXpn-T2eQOdt5U-NkAyX7mdkAMwoVQD-9JjGzgnaURyborLjqSwynP1mnwZRwQ6osuL5m53aUb6BLVxWzcrYwSkUOSKjUnKtYxQK1pw-0uAlDVaT)
+  ![img](https://teaching.lavbic.net/plantuml/png/bP71Ji9048Rl-nIJUj438LIQ68CaG3GnCO60FC2qEy3IibktMy2tTzfYMHGF7hg7plV_ysrseoJ1oXWNcwCGHQfqZXPt46EIhgqfjKnCPYmuYxhW4MddKP9MM6RkdOvkbAcrtl4O4Zx8UXGcpjYniPBif2wBCsx_1RGR6-YmKOvyo5fpyF80th2WZv9qGczgnPycVzjDz39-U9vSeMTedKfKZjhzFt1LLzHNWM1crHRtsPOqbBcn66kL1Z1QmB87Wq4D3OT2vES-2AQI8nW05Z2Fc8ghShIV35vmo-z21QdHpfgCR9CAEPKql_uCDMIVINucvQhsIbhjqH7R2HRi35dW4V8UF3w1gQrkxyxGF1BiLq4XGw47jLTzbJuV2ZQh-3xpzoslMgSVIRRhdEgxNLWuT6KnCPBgcfFSvK3InRQenfQz6fl6UogSEhy3WZa9V040)
 
 4. Pregled uporabniškega profila
   - Osnovni tok
-  ![img](https://teaching.lavbic.net/plantuml/png/bP7FJi9048VlVOe9NlH032Y9CKW2HhqO9IeFCEqECEooMuSjwkFu8jvuBwS5eVZduA5DklDzCx_jJDaGZ4E8QNXDaeLbdwFW75BCx4H2uKqMN128WdwX9VAnHXaQO-7Y4xt6lkE9dsiPCdsHr2ZCOf1144DoMJLBdNR_0Mmdhg6NAKUgGoBXfUO3r8eBUYx8PtJBOtqyrQSTTAu7PrUNlz13bCWPv-ZZ_uLVuoRLLQ0n59xXqit8Gv47mTIpRK3_4KOjw7OhgDTBadpN3nht4qTcYw_UBKqGSWbZTjW0NC13Hzsq78doflgUFVeQms23Zn8SoTfggvMjZ_wKrkIfaheyZcNtyYgyn4YQET7OpPu6E8Uy1USNO1tRExmfvkcm2dXujCCVEeacBV6sukqIpuLDI7ax3W_Px3xgRZlHlALxgkv9wIx5yp0OZ9Q-MPgtkHbpV0pRIjLXatRltD3Ud4v5ZLeLfGkpkFhWpG_VRGq_0G00)
+  ![img](https://teaching.lavbic.net/plantuml/png/bP7FJi9048VlVOe9NlH024WJGv04Y2Oc7XgK1vYsKnXQTkkm_D67y-PxEIrGsgW73-rXz_j-yzlT9SS4YRKkj0VFswHiSXHSGuXHkX2xDN5aColW1Cr6jyYu6XLJWjlClTB1ZJDUcBLkGwG_aXg5aRCoiHAJJCkmCDFq7q0ryGZjb-oe3edOVSq7g6rkw6rB9g9dJlGpL9zsvJzExXwclz01YkE8SpJk_yAlTRtoAD0AX5UuorPaO9jRmT1mseBn2yoxC1oMq6ZaUVabht1eaL4CkTY4Csm1Rc3cAnuMKr3UrMW8ytCoGsgD4vkH7AsUMj5nwK_fIFQLrFTYLwGNxNc7ZhIcfqtR8oqmWBmBWtkjnIb-S52skxwvi3FVqve5srEsTs9Z6vxPwWQUuhhMyxHdeVLLkosqdHYk-c7JqwRjqunE1oggp3ZrRAp7r9ZabzIyMr91SPIlJpvTzUM9y1i0)
 
 5. Ureditev profila
   - Osnovni tok
-  ![img](https://teaching.lavbic.net/plantuml/png/bPB1Rjim38RlVWeXlQI7e4YM04FG1MYBRPTXCvhbqXjbCmrhMzHeEUtoDdkHtVfUe-KiyT0KGm_IGVg_dpyfRIX7isOEbf-If2x8UH2eZ8Mik1TkN9vnoMA2WAlr2btegN9SGrE6x_WKhagwTvLUcqmtb9uAii1opPAZt4GpMwhx2y6XOYTwt530laY47q_pDVveq6NuXTQw7FPhdSq-NR__U7D2dO84oiY32sy7JePDOYDca0ezmBPyG6SQpmBMKJ4mLqkp6flBooXQB9B47_tCOBKNFlygo7ZXDPK30xMvdIbYsqeWFvKw2IbIi0l29Kf7JPJAkgDNeKuvLQM-68NMlUs0jX1GeoQQThJG07FZnsR-mHGb5L_XSrFPDEORdYUQRgIQrNXkBYwCzbt0RfyU-loavMddkNJqpGhiCBk3fHUiiB8yvExe_5Z-TXQz5Pye_gx5FTUSiwL3VXXwpY4KrEScYVRUSbFbff4JtA9G6hLuPBJpqRw0Pby624sjOyoXxp1h7UgD_lx_6QHTlFZgXuZHQZ-4LpKv_XF_vKYVVzFVxYFQ3VZuj-0F)
+  ![img](https://teaching.lavbic.net/plantuml/png/bPB1Rjf048Rl-nGZUaaFA8BYga89KeAQKmvMKXvWx1t8OhFZZjSapSFrrlVgU4t0A10f1_lW_Vv__d-yJyuIB9b3nY_6r8Np5Gfk8CEyM0attkPSia0GzBKUaGyzoj8IcpByefTmKxgLt-WnvFeYwL6O1vPR5aioZsPPgUxlWFt43df-Se7wa0W_dzRNzBiXdzEzM-hZgJ_hIt9t--Fd_0ITeWINkmfz-BpWP5WJYy0W5RV6RRac3qt5WfbtnG1k7c4nWgkh2CrcnbG7lrP3gv8iLC9BL-80i8Q7xufdxHIKFweu4Yo4rkZNTAn8FbAyPN5Gi0_29Kcd6gigxpwT5NNaH4dzlowqxcrVjyL0Minej-5C8q-X6i7qMcDHKsz8T35RpMfT6dDUV3LQQwZeOZI5oqlGPHNu2fm9lkOO3zKcKPjnjE6QBMS7zNxcGsAqRWkF5VxMmirk9nsC5nLR38NhYyP6sxQYYOeckw1RZPb6bWuQxJhSkMlCnu2XgUTigM-Gz2FkLuNdJDAEZ3TZJqU_NUUpZAMZ2icx3Vxxwzw2H6btAmxt3_y3)
   - Alternativni tok 1
-  ![img](https://teaching.lavbic.net/plantuml/png/bPB1Rjf048RlVeeHlP03Yg0WLIX58b5xgbGKogMtMNi8Kzixs_4wINcRlaXlUQ-ERGgk8Afwy4hU-Rz__Xbxnnd1LYGwUKwIAcSVKB44Xsd-e5BxB9L25AAYhwn4FlPK6MsnBk8NUexBWXzyQML8xI3jgJ2DehUY6UbTQ-OASpyJ73jsegSTH-gBLENfCb_HzvfyIfzuQu-dVgytiu-txpxSNL2lK2Ed7D37_mSkXatQGM2mp4hsNDdEx7K0opLind1pqrONYoG99oCOR88eEiylFtE6eBBbOW1OmVtC4DUqGFrXr4N8a5nyL2b8EsfYLDfTlGfrogafxLDnRDoRwFo8aIngOcb72mimXp26-NlWlIFbLPjjU9LOif7LD-CvN5_3IZd7_I4vzjb9nmOfF7zsYdjAl-8wA9LKEXbATtLrQdq_QxqDdnZ-ji63L9A9usDs70R9CERSvoQ9pTrmK-EcBQVqs6HkjNHYREhHeO5bNqUCTMKhpF3CeThPB_ylWrKNh_X67euHMwl34bxLPFHN_FELllpYFzEtQBTWg8-B-0q0)
+  ![img](https://teaching.lavbic.net/plantuml/png/bPB1Rjf048Rl-nGZUaaFA8BYga8f4a7jgGShAGymzWvaiTbnnskIvk5wwtjrlAR6A52f1rkov_l__V-ndvmbs327Z5-CgGldAnJSGuPviHLklCsvP84Ww6iTaGy3oj86cp9yfvUmBDtMxtKCkTv81XJcWUMUnPAiebbMgliRe3-nWvwVNA0X9CBFb_Kr_MZ8v_JDRVJoD3phNVBr_jENrGKwHGakTnNwyF-2Ys5DB0AZfTqxxshTcJwEOFa8wmdStSNfOc5CTJA2KIgqBSb29Rnn9Ou0QtZug7ZMsgFyLCMPO2sqGx-ZSqNoBqN5WfbtXOE2VH0kIJhLL5Lvz-ggg2DdIkg7TQ5rRukw0mRIOaQxZHSQUGxL1EQVDHOrzPv4DtBGhDQbCUVDUwErnegk9tEulOLKN86lm9dWQuvng3Q9saoZ3TTiEJkf-pCV4gDrMtYgy8SMReuxwM2ygTXYADnGD3NQjXNDL3Gx1Zrep3IoTD9er_7HNMC-1WnDlM9BGuDa6B5V5LupIJkot967dev-nyvN6Kjd5P8t6_pzo_qD4gNTNm5Dd-aF)
   - Alternativni tok 2
-  ![img](https://teaching.lavbic.net/plantuml/png/bPB1Rjf048RlVeeHlP03Gb2GAfGY9L7RIzMWK2vLBsDx21ERdUruxQH-cpnCtgjZuuBJqaCFzc7t-sR-sTqTfmHRaH3BKnGL6JkFYdk8CSdkLKgN9fABGb1qXMsH2pqgfIsMUVXAJ-4gvtktjsr8x4VQep09ejUYAUbDMopEhVfVmB7Z0NhSSQ0-f2gFv_s2VfJa4lhCM_iSzNkzcN-yVlVXvWozGWsSi4SN_byu6pPg1u71Ila1g_o179HU56F7sG2krh2PmELb2osNKUHFzM2mwS2Nvup1gsmv7m0MS3St9MuweVuqwwnaIYOkgEIa1sjgLd9O-gTq86T6sernQAet4t25WIngP6b7Imkm03-1nNl8Siw-uATo7w_QVCEBoDADZDbC5Z0UWysTOTsbnxu_RNoklUIERsF5cf9lkFPAUzh7CfJ3qiMf_TsyhMtwrFItZUwba5HYFkR7ePSKGyPzRnhPx8qtCs_MUaeLAQzQbawEJJxg6bZsTS1G5dQCAROLkkH_xAJqgjEhwM_ZYeh0foj7471K5fvUdXr_T-DnqKriDzocaEhtOK5jJotbbWzAjPFkkEmHyUw8_m80)
+  ![img](https://teaching.lavbic.net/plantuml/png/bPB1RjfG44Nt_eeHtQGBXA1GLIX5Ib2xgbIKb5qsOxy11fitxlZPIVqt_PZ-LySs0QFIIbtO2y-vT-vzppjs11kH4CjB51Kf-nmL3n1ZacvLIkyIoKGXAFh2HkH3ZtAqmJ8Bt-Wbt6MyzGSRGs8lqXw5IH2z5tMaozOipipz3-2qiOEUTnoe3wdAytLzGTzByWbzuOqzdlgxtim-tt_ujBn2hr039voZ3_ylk1esQel0OAMynohRauSo5yNOSpg0kqTOZ-7sjeKMYoZAptwDXhOPESXLDfpX0B20X_U6nyqMr1-ck12ibVReztIfcFrByPg58HKVL3BIJZKnLT9z-gke8wT6slroQDoRlbnX82iMMRVXmYBF8H_3_AF5eh8uaDh1L9RLyQhDUVCsibf3GzVZEOn6O8ULOWqIAzO9jaEpcPdDfBMHGfp4P_LfvyCiiheDF37uNGENnpFfOBp9nM58kI-QHDQs4KrDD3q6hIpcgcNfhB6kmwExnNmC6CfYAOvQWsF6ou6ZYpspVislSKL5uFCFWI3WxOXo-lNJyvCVZGfBSg13pD1baEhrRg6s7z5nomUbsWjmdKjcLJtlJlXl)
 
 6. Brisanje profila
   - Osnovni tok
-  ![img](https://teaching.lavbic.net/plantuml/png/bP5DJi9G4CVtFSK4Dxem1c8JGvH4Y2OcBeZA0QRj04FBcpfznO_RU15ttCjfAzX6NBZeMtH-_u_9B3aXc8luI5w3e4ZPvQYuXWZZTA5IkYIMJ1IyeYjiHCwtg8JcM6R-YLxzTSOBjxOnnFQGjYYClUXOD26Tr6PHPkw_W7rY0xqisLCRKfMNm_g2dajoCTtpt3v7xQoZy7PySJCvG4zHFSUSe_F_5nmi6zIBG6-glC9DjY87PIwAaUEq1zUFCEl3vMKDZKP1aF_uGM-cb9Z71dALEMVO0opW8JG-gc9GtqpILUoi6L9nNYKZRLG3KyNDhpz53Nbkf9sBVULUrUSDUhAUWLKz7Lc18UHz65u1lqVA1H-V_50FOM05AsfWrA2YAWRTYgRD4iVxzU-Ijd0GMCTAU6x2i6M_hzTLMi_JxvopCtZqwCjY8WdLDjyrkuE4EcbXZStwDMRdIN7xoI3HXWhFcO10MUIq_N2oNs5tY2y0)
+  ![img](https://teaching.lavbic.net/plantuml/png/bP51RjfW48NtFiM8Rf85Ya1nLQ4KAQ16YjG5Iie1nlP01fj_dFb_avJRz2BTvLuTsq1iXLRgmbvutlVclV4JPmGhaP38QnJvd5s9Ybj8CCtNAfNBKYb48IWwRoDoeQFAQ8LL4NxGQxWjUEssDeRKNgGT5QP1T2QQaSuRiwGmzm-2qyPMzFB4WReYLNavptjwhiYbz9rNzZZgxleKtys-V9kVKIzG0wTSeWl_3vmD6pL5OB1Gtk2ks923gXJ5n74-WDj7M8xWvgOHJQTHLBxxrGoj2ygWL5bnWGD03m-VJPxKMr1_6j43PieUtORwHFmFOddCmf2B2oe5QKkDZKhRJt-5MkMrAUt_SgZTwxwymq1MBB9kmwb5da0vWibNYqMLtvBQONRt-yJIyg99Ud4PMR6XYPUZ2LnTWPqhnpr8ehXFyTtq8Mw4PXgRwRWsvTQejeYRoVWuIGxdQ7VWnUdmzzbbnt8SMTaQl3OmxbYUUlP9ApmyxB6aZm53vUUIKMDpYDOVPDJR5dze-lQRhUkEVE12GA3o9RtzSdAgSFoZVm00)
   - Alternativni tok 1
-  ![img](https://teaching.lavbic.net/plantuml/png/bP71Ji9048RlVOe9NlH038GcnYW944rCF12G1zXs1nrRTkhi5j6tyKMy-LvEMu4IyU2XJThvld_-RP_88YoPGyARAF8PkSA8MK5YqknHk7GsvPm5WXZdTOGkj2YBIrFcuG4tOPJJerlf65AzeRGeamQMCOj5cTHXIQxflu3TnWPwVQA0RKY4Nu_x7bzAT2dUqr8lX-rT9_7j-E9cSeIU6WcKKc5S-Bzmj6nK7mGw8xiYHrw_cJvsO3I7HG-khkhfS1X5nJu8EWj1g_8Q2k4bvQO3niCiLZwfyesygN9e52mcSPGHPEo2S8xIM7srqkRLdr933fJK_qIXIgzwqze4r9wHLkqEjS0b53sul0PwJuGydPxjgLaSQS6AwYlLhwYACUuPfyqXJiljkZlR5lkHTgp4WOfnAtvNxz3KdjsVFUVdC0ycb7x25kkOdvg70ui7s-8QM_HgR2gKcQzF0axMw0Fb30obB_3hm_7k2DiVyGq0)
+  ![img](https://teaching.lavbic.net/plantuml/png/bP71RjfG44Nt_eeHsIGB587Yga894g1MYjG5Iie7ZEs1J6tUkFEUIShVz4UwotzrR0En5Lef2rkovzupzxxtn1d1MYGayX95FcTNek8M4appZKhbibGAKGYApjk8NEYeCbfZLOJlz19c1M_SriQGsekqey8qYCv5Cz950qiAexyJd3QsekSd3jGLgShpUR-ddnMvbBxnsXv7tLqNyTVvvo-BC-ebQk2KItJXuuQpOQEc20ncsPOTUpip-np0x15M8xYzRQRJQHILRo0OB9Ks1MLGggovm06WXuTF9azgFEelS_GCSsMFxWVr7V5_7AjI51F7EKCkBgWKfArhRAwq_VLFKwkyCQLTB8UQNXVb7GQoOf5r6qujyWJA4KpkB1PLVajg9xAxtoUMbfTDqikho8eDJRmQJU3w6fRAEUv14iLzYc_GXxWH6ZGswBY6SWkg4N4p6HydoU4usXruMHrptsTN7UGuihArySQCSGTvwjbtMk7XOOybVGmOAh-GZ1hC8Lf_a55lM_okwUiVjguxye4B0O7Ab_Jwsycfml56_m80)
 
 7. Dodajanje novic o dogodkih, spremembah v občini, aktualnih dogajanj...
   - Osnovni tok
-  ![img](https://teaching.lavbic.net/plantuml/png/bP5DIiDG4CVtESLGDxeGQJ4WeWLRTADeyUC0asHgfublukGbwd6yY3llvRoas5IBu28XlFdzFrvcmHd1NCGdyXf5LSwkHCKdI33D7rLgbwLIY89NT9MDoFaUbT4SwyBVqwi_A_ZHFTaOKdkHzYXClUX4D2ETjcP9OUw_WE_43dfPiAS-f2els_KLFTVaKhhYkJsE-baxySNaw7owXPwXUawvHEV_BzXQDcel0eEPyXAROacEeIv5CN6S3-3i3Xw6S7BIKkDn59LhGnZS9AP1SD9mIWF02cvZWvCGWlfc_0P-ASwh5AJNGT3n8-FJxlmdtbBOOOU6sOxO1zFGcHlqPDqYgxS_jjnZA8TmV0eIEd6hbTszDNeRHrOke2D3Hm7D9CFbYYpjs-VS5umYQnS4XoQ8Ww1KQaXvrhAqrbYz_PNpmG7SUVHrDPMCVXbiJVnJlRhRvY2ZZPPnYpqCMymMcUFd1zkFQAZoN0W8r5L9d-zEkWBebjGjJRu0)
+  ![img](https://teaching.lavbic.net/plantuml/png/bP5DJiD034RtEOLLDh10LIiY8GILe88D22f-3k0aBhW9u-1C0Xo7Yx3ZNdYIYgOYGcAHA1g_PtyJFt56i1JnYRn5KPMpAr7n6H9CyqULscMf5ABW5Lrb9NA-HsMqnBhmz_JcJmj-TCzMXjHUf3qAKozw9fgHpjjcIM7TVm4_4plezOazzI5LUHtsAtgfoQLqnKjx7FLdxSGNPuVdym5wWUevvHAT_xym63PgBmAZXV8Acs95Zg4kHJ5nd8_Wz0uU9d1yt5ApMHILcuOmkadCGN3IS4eZm0fkOuEJC0JrtVWj_3fmU2dEgnIadJ0r8UsEXlaEEp3CbiG-T0sXkK5F5YwoVFip6tm4vGIEJa12A6vTsTtReBTnPEa2EZLq6j1CCbojoTA-VSvzOHfPkY0Sc107eLHgI7dHihHnBDx-klDu37SUVLtD9QDV3GOd_cclxxPTo6WhPTnY3vCMiqtc-FN9zYCQgZmN0W9rLTBNXvCk0BeLTLkJRm00)
   - Alternativni tok 1
-  - ![img](https://teaching.lavbic.net/plantuml/png/bT51JjjG40RWlKyn2XkwG2XHB5K88eK8DbHj1EK0OtiI9dRUcF6peSVfHRhZNftt7147ic4HA_Bx_fdVzXCN12iHdybhaZGbkneLjv1XNgvLMbVaKec2LtID7P7p0rNG2jlA_wPNFwzuxRPs3BbTI0SASozwBLgGBkAmhBBfdy3xnXwzFB6d8LALb-FvXfvRSZdzu9Nz70rtdQItrzzl5aVq4jLppZKw__N0qR99V10OBPKts5KRSWnjBOgPut84ymTu7CFbPLIpMPBK-u4m-fLP1i59npcD01kuJmrdOGdg7_C7_4wSLwb8VuP0xoVcy_x-HnuLzcngpBuH-p0qTEOEFLctnEgTpMpl1THZkBW22PquPkNqsvxUfucL2tHYT19e8GLkThAs_xxaOM2IMBiGc5eW3O5QgIFbPRIqprYziztaytDuyEZRPY45nG6xTeS71HtiIIDx74TcdwB4jtziZz9HuxaI473KDZMz_NNIrqQteVx5oty0)
+  - ![img](https://teaching.lavbic.net/plantuml/png/bP71JeD048RlFCMaNlHWJ1j9ZD4cskX5eutL1nXWsax17HmMrCVnHRprlPo5njBOYmS8sVs-V_vbbvmHp4Ly8XzHLENiIbHyXGJJVA5IkooLGXIyegjiYvplKHdDiIxyCttugu8NxjMs8RKNQO_2r8jUYsQaapOiAIpz3_0xiOFUb-of3wdA-tw_ehUQN4htFBV7KN_MGNnxVNOpsKDFKJsdNABp_nVsbetQWy1Wghp2fbYHOwXBKKmSvmEuci7B42ukMceyZg9o6mY3nyGS12SDfpG0hE0fDZW9Gr0_ZT_17mA7T-AyIa7Q2ICJqcvfFzzXfuRP9R4FgQ4qD-Z9oaNMxtXiWy-X7CBv9KWenQqhXqTRz2cEh5r0HuQE0ff9XgiDMTgtpxalZ29h5uHJ4-8Wb4eDAKzRbhQErJlU99-SmCoZhwk9PDG6RDhjRcIqCoTkiPTXYzbTvBZ-PZjAGvNdGa30KLsLjFvoqjL6jwBkpyiF)
 
 8. Urejanje novic
   - Osnovni tok
-  ![img](https://teaching.lavbic.net/plantuml/png/bP7DJkD03CVlynHMkS01eLP4MY6s4bIx5n2gW3w0at71JHW7PnBOnzaNsHllXJFb8rqA4eVa4F_-7uvlsHCiHM8kZyur9OSQ5UyWnwAyKMc3BwGIXQWO6XjHY0FAqnBRAbxJOpof-2RSsHWAUv4EA2oYwAce9vqbixmozm_0M-8QUhZbI4D8LHwswnkwRoaKTCvBUm8DitQotwS_Vissq7FKo0NN6EBt1LlBkhG8ZERAA-og5GM6jXR5F70vWfChM8pX-3XHqwbpzRiXZ1PAAmmhWY0T5pG2RE0oCpplOr3_c693S2OXgbIa5xrWpK-CBzRV_ySJXMliq32x4iVUj6_D7KQoTiuAxayjzmZgCHpzX5R9SvBAxjuxUPavwzQJ4oCdFLbB8rxoLxWMZx7aeMRYh5-lEJHDbZHA7IdF4qkxQNFSSzPl_yNxu02k8iQscOcdZ_fFChyqUDblS-1fesUMiCKuONRE4f_-CKZUKHEv4X1ecvgU_WRf_z3WRl8C)
+  ![img](https://teaching.lavbic.net/plantuml/png/bPB1Jjj048Rl-nIZS2c722MDgog2I12rbrOb0l80uzr9sDZPSSThGtcRlaXll5V7JW1RH94un8VCz__p_sFVUqUmOeufFnfJPZuKABY556ss5gw2ivopG1GCfOuen0xbQ8LL7k_eCLxcVXssEWQh3v8EXJQoNB4uadbhbkRg_WvutRY37kvzf2uamW-7zINzhYXO-kbN-WlKtNMIVB_w-cr-W5wWH6zzWI5-N70mh6cBm60XVeDrlg7WeIfOC0q-6y3bBIn7S7xUKhEPCSMR8Gokrpav25nxImF04cw-A9isEr3-ADwZbq8R31lg2P8ZWbyDXpyuHE6SP2SOgy3k_ZhCxx29OlfIVMnScvA-naXQncYVuKoJJg4OmVG22g6gt9BeDMgDw7nhmvzEZROPAheSJU7i3FH26Ju1fu9F5jkXsYHgCsvigfxqTU5DOhHZGuwL_Dmkv98TfozmmGvZvhkQiT6QZMQYcia-PAqH5orBRnhjEToRQyJRYB4gv-oeQv0SMthKO5-mFt3K2vgykz7pFwzNggcCFcTWgCg2dly6RaxK-G3uFm00)
   - Alternativni tok 1
-  ![img](https://teaching.lavbic.net/plantuml/png/bP71Jjj048Rl-nIZS843GecmL24Q2I9wAQeYQ6wzZBqJcDZicF7QKDwcBz8RxzNnEYrEoOM3z-3zlfb_TkxP4wn5OYxFpZKbXneL7o37ehnJQOClf1A5g1WQkw8GHvIdDRPL_4xFyQBYk_1Wrr3OGJgYi8YYbwAUT96AvPLLVmVywpX0J_SSQGofojD-lw77ba91rxosBz2urq7svVBJrM8FlKIDN72D8NvSs1lMfK5WibJUO5TjA32qjIZcWSi9NDp2QWhdvucQpvshtmh2PAMqmR0X2D9nGHF01cuom_E-3UfFCtQ4hnAYIaNwhHS6VcPyCVp_7qyK3jYfORObZdtHFZLt6CdIEGjuFBU-Pr1FuUmpj4gUaog7Hs_aJUOiMq_EZ9prP2sDUCd_mhLuZ2MFdPcpVBrpQawM7AMEb9U9fSCqEHuvotUyhNro0hSHOziin5Foj_5sBppjjCaIjfecpBPHukjl1iaxQY9N0WA1sgQcrrz1-X67X_yHXhSNUB6zUqvGL7gnDMx7-GC0)
+  ![img](https://teaching.lavbic.net/plantuml/png/bPB1RjD048Rl-nIZS853L2N424KbKXl11GHHIsvSnhkJT6DdnupNRidRy2BS-buTsw6rrQXI3_R1y_t__F-kRxmZs337bE-CAJCV2XJSGuessmfNmLdEMI0AXb9756AFShJ1Aey_wIvUv7uRzZe6go-I7eKsibooE99bQvRcwluCUDpOGRStFb8V4k7Rq_gIVbSKB7tp6tq2zNUzIRvSVloyF46lKAAtli0GNoyu6TQqHM2q4h_3EjzHy50LB9W6dutWuXhM4pW_Rwd5mfZYoH16FxOvEGXSUqiZm1AkFYYRDZjG_YW-eDT2Emmx6WYI5mJV6mw_SeZ2EKadcAh0TfzEynqsKqmlrSV6jIdfQuoaPOps6IyqwHoA2Sm_GI5KbNiIFOrQ8phVsl3RTqRRZ1LTJ-PmTWPwGXaUW5F1WyLsg3Q9samRcseWVLnubHZjs91J9T-t2xban-b_k627CVDzpTHepKOpKyti6BBMYAkMfIUDzXmVpJNYTSHObKjsr1eSymq7ZWPxacSLx_zvBLbJ6NtEm13qU0gw_nkuwTZTuA_GNIB3GNytvrie2XtqxpbcUm00)
 
 9. Brisanje novic
   - Osnovni tok
-  ![img](https://teaching.lavbic.net/plantuml/png/bP7DJi904CVlVOe9NlH038GcnYW944sCnXYL1vYs0moKdJhTuiVR-2BUV2-d2z4YnCJ3xc7dz__OtHbd11CHdyXB59KBTWKgBY71T35LgLoMIYuANj6LDYBd6rH64wno_qWlVf3pr2rj3Abjf0qAKoyw5Cr8Hy4ioSrz1_XEN4FFC_RKX5JbUR--fAUAN4etFB7bg9br45yEJov6U-WxLCyf5-Zy_mLxoqRX8j2wKvxZAf-JOwWAKKmSBremU81n1yxE0jNlHr7nOmYjeNA9RavmAojEgGLOmdriU5B7eBwQOajmBSwhvAH1iEQxngVhyzzue72DzGopNs9VczQjUOMUh5ra1Tjzops5eWEdvy1lYVNY89R3en_sFewiNSrsZUtkiYxaNMLDJJUoXhMcPvhuBurLR6_CZu_XmQElof5a50ms3RS76Mtbn04RTm9c7xB0pmy6ILPKUiu51AgoeCzt9v1iNluB)
+  ![img](https://teaching.lavbic.net/plantuml/png/bPFHRjDG38RlprDOvGOkggbbGQWQbROAf0a4qqOVm3bnExVfSV0voKRVXXVXRk-5arOZfTKaBfAB-Fj_-xULUou85Y8fbqVduff3XOeRoD6lbofrABoKef0KGxGIXTIZ2bfWNQRlz9WkIrw6ZPN1sukqHw5FebUY1UciCyjBSpy2dZlke8TxJjI7LENXj3xIZvg2fo-yi2TGlzUhxDFL-u-p4_GDQcBF5ORq_uAJmxek20nkb5VOb2iA37KbYddWzG0kxs0-WekBZffEdQl-6iBWsxAa0e8qx6a06E7sdR5vsmFrf-47z5nfXM551uBi1S7NbiFF4f9AIReJZ4tWTvzEyplit30xAgVMjGt93IQoCCxo3ASswGIg4Km-GALKnmsfRQEvtkRAaJiZUVt6MPwXmVFH1CxEm7QqnYr8hhZrs1NDA3EZSMl4_uYVczvcpdAsxDZOjyTijn2yBlgQiREehURSDDbB6iiwt9lRa7S9KnrdKb1di9_mi53GGP_iAEJJRxQO3SN4fO107Ijw-XN4VZ8RmOvOxu_u1m00)
   - Alternativni tok 1
-  ![img](https://teaching.lavbic.net/plantuml/png/bP71Ji9048RlVOe9NlH020rD344I89eOZI6W3x1j1nWfEtLt2-ZR-2BUU2-dMo95Y8c7Dcdd-_xvkrrGYZ1ZTZ5lWy0kIUVAg1N4AbdE3HSwJJXZ0yueRMM4sjMe56UgoDmpRjqWexbUoHWIkQ6fKIfnR8PiKZGZ7nPdadu2_6oieCs27DOXOtXpthVuLg1Ey95cSccixxg8xeRNjwCpz5WPHmdbIhl_2sVB1lv3e358LwJ9ofd9OmC6KtXfGw_df_r-4EI786WC3LcbNn6UU4q9Da1Pc4I2nsMyCkzY70aFh9tX38qNAZuKFgdU_yOzfIgi8vZy7N9bQDcMrigXj0kaOBClUxkGjw5x0_GHIo_oCbzU7TX954YxaWs53KzPxVVTftKd3AHXwNJ4YVvof69p7zvgmTGfLzWHf-W3zWsF1oaUxOayzjBssDZGKks-23XUetMKCJ0KDiVTfsQ8zoV_3G00)
+  ![img](https://teaching.lavbic.net/plantuml/png/bPF1Qjj048Rl-nI3UsaE9jYDIZ6fmJ4DX9Oq9FK3Z5PZPs9vHvbTEQdVfY_IMzwh8zcaScq2FKYWdU__P_uTTCy5mLmavVBiN5nog51n1JdwvKAb3eMNKXIIOeXMef0wL45phClqWvxJfEH5M5aPlBr8EnJw97eXMf1EMxEyDFS3uBNZ5dgwvqHTI5MUZkiZFTOKF7tZkJs1khtUPPSNdxvCZz0tg8azLnZI_mkE3klQ8D2R52iE7EtExBC7apkO3U3ylAsEnyvLVusWztrHKW51rkof1nZXzgEnUUED-jFmFNgcz83XWVO4sHk2wuR3hnAIIacw5GnDuBT7n_ajTcQOBPDJuzg4upKciZ3EylJ7Dka8gW6CFaEbLCSLgTt2-cgJAqTkZUJzYRCyVODdWn6SdiADyX8t8BdYncDRDAFCZ8QD4VyZVcrwcpdBsR13OpySiks5u5NHrGoTHMqqPwR9tj9OrlxEt8QyIvZgE9M2MeFTXFk5WlRwP0SXNtwpnLnJJ5mA2DInefTVGUpdiX5iYVLkYNy0)
 
 10. Pregled novic
   - Osnovni tok
-  ![img](https://teaching.lavbic.net/plantuml/png/bP71Ji9048Rl-nGJlEZ141gQ688aGFIYGOBo0DjsA9EMtJhT0lfmtdmlfriYHRXuQ0-pt_VFt-sQ4eILjIwoUwNAZ4oXMMyWqd6MigrC4jlSCZZMffGZDAv59RZILUxUSE_6EQLc8ySGomkvHUdOMPvOJf2dFYpA9VqC-DtOGBirEMn3p7PtsI_nlK8JupEjv37OtdKLFaxk7gONwBbcHp4LshZ_2nVBAlyXq9aXOqgbOv9RWwgmh2D3MGV6hx3imN3ekT58gU8O2PsNDCS4ZDrIZ1tG9In2OQDwY-OFmK_e9siSsnnvLWiD7mWVD_E_kATqW_K5avz4hWwjIzDMEvHgIjhTZcJl08eU3EwXOChq9tdPNjySsKMef5tD1i86vombpSQs4oXfM3jzSSBQsR8v5wJVxI6vsuLcwir3jUCmmPFmq2FBdaVcTPtlBsekrFu0)
+  ![img](https://teaching.lavbic.net/plantuml/png/bP7HJi8m58Rl-nGdUACNXB2mn10a0QA9qI11UO2kEuncevrd7Q0FvvtlvUc6Ci9kl5Wlsk_xpzzkesE4jRKkiWSXYbIRN9BSGYHLcf0jJQniPWaSILFm4HhNe69Sop9pRtXmaqmdPil7e7X1Qb1IEKjJIp7Ih0gBCaw_0Fucrj1-enqs8IAxR_SBV2_HA7pMQ_uCDcTTXG_Js_jP2xsGvBJIkJJk_q9hML5T13fp94nquKZpgq6PMvAHqMa79g-mwiDeL77ZiH3vAH8wBqc6CHYxqmex80jOXin6Vega3yRFwBddv9CrZco6L0i12whUQkThRC0O_oNjVAflhNVI8NSJNAyxvi53oFiml8EST2e_TINRwviJkmm5r_Dim6nmP6CR_RBLFUHZt7G2mGszCs0dzCwEpAN0_Rh7v5uFwkALUQnssepnB3oia5M_GXQ--lUNhb_K_W00)
   
 
 11. Dodajanje predlogov o odpravljanju poškodb, novih idej, težavah...
   - Osnovni tok
-  ![img](https://teaching.lavbic.net/plantuml/png/bP71Jjj048RlVefHk9G3GecmX12D155xeH8Hb0SOUoTXOhDZnci3ZzCNwOttwgnj6gU9Ad6m9Mk-xvz_lO_i25OY8PFN9AaBzXKgFa66UR5MQRpBfHI5eEXh6v4F8yhH2fio_AJNS5NosZ_P679xaOuep8FejQWZNNHXMMdfUy3VZJtqyiY1nf2gl1psQtfkoEVqWrVsU1hlEag_Nvz_MnoWbwY1SwxGXyyB1yictK5WibJUO5jko3CqbIXcdei9NDt3mnGkBpjgFa-IQXi8azlC78IbaYjbZHF06kvImxEu1lNDZ1tXHdnGAKa7HThUcPcJzxD_bO7ikJFZxAeunEHOdLiCP1KJQtaoj-KNK4tXuYj8hCQ3_ELuozwbYLMCxCpOMMITEDnye9LzX8B7nYonWj4uCoEDHgNKalAoOsdhMC6J8Vhq5Eu3XgPUYAEzWCCh_wiFnziTEDgfcNROmxJ3x4eBVF_DzYzQgWEN0W9DNT7xBozz0_GRYeUn5dy0)
+  ![img](https://teaching.lavbic.net/plantuml/png/bP5DRjj034RtEWNXRDf54DYmWC983IH6ksc16lav0AMX7LhoKAL6jdkSN2GxtoiSoQbbn2sGXGHe-1xvKVF4Zc0X4ZBP9KbTiAzGSGqPviLIfV4kbr8KWgAlhKG-z2X72spAy42xS5Foqg-j3BczI7iKva7qLjIHpjfcMMdTtm5_9tRGzea3zI5LsPxtQ_hTaC_f9o_iyTIVTP5-l_toRNQ6dgC6phb27pukd0sRj8l0OAwymasv8i_GLAAOUIu6S7CFZqEulcwfwJH9gcD36FpAp46OAxbIbZW0hE4kDJoBOr3_c74Y7CWVueDAITeP8pFoxkWVGiUDZREBuX3xnk2ymK0MCB6CbrCRFO5g29El834O7-HFdu_iNPfOmCYEZ1r5red3rHjQsKSek6-C4WiOZR4PQJGgfGqfprkMZeu5l3oqlhg2-u2XgMVYw5s3yoF_gn_MEoquEecPjjZZiCNiGWlSlx3zYmtLWKi1WQQkQF_ifKk0VaLn6Kln2W00)
   - Alternativni tok 1
-  ![img](https://teaching.lavbic.net/plantuml/png/bP71Jjj048RlVefHkBG7X19XgK8q4aHm0Oa8oetBs3i94viTTxmsbBVfY_J6Up5hkurJSk7WbQpvld_-rJwo8rY9X4nUagGks5Ue-0GPviLQfV4kbr8KWgAlRKG-Z2X7AspAy8DUmbd9Q_zaOyZj81rHc0VHSr57kkZ2ijBIFm3_DlRGyoC76aEgyhpVh-bdGpwdQrxPvscywo2zFFzsiTX3Br43vroX3vyNzfPDkel0PAcymRRSa6TeAb7CF1SJEBk3-ocSddRKV9uarJOG9ZUPEGXB9LVA6YU0DTocXcTn3UelCtQ4A_51fIGT56bxPsPEti_-LmQovuwDiwVY49DZTMuna5LChENXt9QVG3M5a-yWiHeFyfUlM_OsJQnYP6V6pYBhnE7cBrhPJoXuRCmIAnYDOpFIQ5HABIalEvQsZXKy7AAFZk0kO6ZgXJZg0eP-kmD7EtlI3hkVTfYzIO5lVzWkqr8Tk1GGyDJK5RtzzjBtHh-X1nyRMNjujTTtt451wTKJzDte7G00)
+  ![img](https://teaching.lavbic.net/plantuml/png/bP71RjD048RlVefHkC2XgXBL4gfAf3Q22qX4BRrn6NidwSJkZXcFqzAtuKMuzRsOjGDnH7hemPRi-Rv__jNUSI1OYLWXZrdMLXmRLBo70ijghTB5K4ej2gOOMnzHj14LQ8LTRT_eqIvhNiTx7qFfBz8HXQM9Nea6qaKVLjIU_X_mR-C0FTonqHXIbOVZVai_EeebVU6LFv76kzxadwxUVrmSePUenYKt6Etrmj6oMNyGc2oLDxYjDnGPkaOKYyZL12vlu7OA5nSzDPzdMRCFXCdNmXs4fLAePOqJm1QkSyUBj0Rrfni7mexyBD5KQjB1cBbH3hzU40Rkp3c_ABQKcuhp5esyOEOTJ-Q--XoQAPn_04d5U2U_VRTdh_FC2oPsvkmiiK42RlwYZNzOnMDZbdd1P9ovaIUZKTgIyh9dQUzumPDTzEaft1XQrouaK1-mwtSu27Im9--nsscF-OrK-FoR_J1RQerh0O58NTlGywyeGs-C6_eUKoDl3qz-zu5xo9IU8i7GZVu0)
 
 12. Glasovanje med predlogi
   - Osnovni tok
