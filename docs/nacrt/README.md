@@ -532,6 +532,7 @@ Pogled za urejanje novice
 **Atributi:**
 
 | **Ime atributa** | **Podatkovni tip** |      **Pomen(če ni očiten)**      | **Zaloga vrednosti (če ni očiten)** |
+| :------------: | :--------------------------: | :---------------: | :---------------: |
 | naslov           |  String            | Naslov predloga                         |           -                   |
 | vsebina          |  String            | Vsebina predloga                        |           -                   |
 | obcinaId         |  Int               | Id občine na katero se navezuje predlog |           -                   |
@@ -560,6 +561,7 @@ Pogled za urejanje novice
 **Atributi:**
 
 | **Ime atributa** | **Podatkovni tip** |      **Pomen(če ni očiten)**      | **Zaloga vrednosti (če ni očiten)** |
+| :------------: | :--------------------------: | :---------------: | :---------------: |
 | naslov           |  String            | Naslov predloga                         |           -                   |
 | vsebina          |  String            | Vsebina predloga                        |           -                   |
 | obcinaId         |  Int               | Id občine na katero se navezuje predlog |           -                   |
@@ -587,6 +589,7 @@ Pogled za urejanje novice
 **Atributi:**
 
 | **Ime atributa** | **Podatkovni tip** |      **Pomen(če ni očiten)**      | **Zaloga vrednosti (če ni očiten)** |
+| :------------: | :--------------------------: | :---------------: | :---------------: |
 | glas       |  Bool            | Glas za predlog (všeček ali nevšeček)                         |           -                   |
 
 **Nesamoumevne metode:**
@@ -601,6 +604,7 @@ Pogled za urejanje novice
 **Atributi:**
 
 | **Ime atributa** | **Podatkovni tip** |      **Pomen(če ni očiten)**      | **Zaloga vrednosti (če ni očiten)** |
+| :------------: | :--------------------------: | :---------------: | :---------------: |
 | lokacije       |  String            | Lokacija določene objave (novice ali predloga)                         |           -                   |
 | **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |     **Pomen**     |
 | :------------: | :--------------------------: | :---------------: | :---------------: |
@@ -621,6 +625,7 @@ Pogled za urejanje novice
 **Atributi:**
 
 | **Ime atributa** | **Podatkovni tip** |      **Pomen(če ni očiten)**      | **Zaloga vrednosti (če ni očiten)** |
+| :------------: | :--------------------------: | :---------------: | :---------------: |
 | napaka       |  String            | Vrnjena vrednost v primeru napake pri dostopanju do APIja         |           -                   |
 
 **Nesamoumevne metode:**
@@ -632,7 +637,7 @@ Pogled za urejanje novice
 
 
 ## 3. Načrt obnašanja
-
+             
 1. Registracija
   - Osnovni tok
   ![image](https://teaching.lavbic.net/plantuml/png/bP5DJlD038RtEOLLDh10gAML4EAh11Mi4A123-1Ct68IPeBZb9_RS1ZkXPFmaQa02HR98lCyhrzdRZaZM8QWQNXAaYfdNwBWFQJeyfM4scSk54501NrbH-GreZ9QObte3JtfSS4hVs_7uEn54b7eDCX9a8nareQbXQL_0JudTj3ZBIl5a4XuZ7o0wB2YXvgyetDUskCfdhOrEJivE9rzGr-XA3ikqUlVXM_h9kqgCBWWeHLNAcp_3Ueo2AQUym4SNyDY24T7BJUT9adPHy9Wtade-Cw6GqW5NyWD02kOJynActaepoPkU8l_0nZou5L2GT9P8xDSz-b7gIF7HjhDiJRfpHwyHYLhcrZXtQaLE8Ho28V_GFgMkBtJe_D9OYqRT6Jew0jQXWmrvzWO9TQmCSPcx3T6ARGcuQkMfTwnVhiVqNjxSAseTJKB6SK1uoOWC-FkSpVyPSB7Wfi76MqqdRJOOjXYb-cQAkN-RX42r5L9Rw-Uuxtv7G00)
