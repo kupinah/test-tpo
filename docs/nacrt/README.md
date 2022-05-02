@@ -8,13 +8,9 @@
 
 ## Povzetek
 
-:dart: **TO-DO**
-
 V dokumentu je opisan podroben načrt našega sistema. Na začetku je predstavljen načrt arhitekture, ki je prikazan s pomočjo treh pogledov: logičnega, razvojnega ter fizičnega, za katere je uporabljeno ogrodje PlantUML. Po arhitekturnem načrtu, sledi predstavitev uporabljenih načrtovalskih vzorcev. Zatem sledi načrt strukture, ki je predstavljen s pomočjo razrednega diagrama, kjer so prisotni vsi razredi ter povezave med njimi. Načrtu strukture sledi podrobna predstavitev razredov ter njihovih metod in atributov. Na koncu dokumenta je še predstavljen načrt obnašanja, kjer so, v obliki diagramov zaporedja, predstavljene vse funkcionalnosti sistema oz. njihovi osnovni in alternativni tokovi. 
 
 ## 1. Načrt arhitekture
-
-:dart: **TO-DO**
 
 ### Razvojni pogled
 ![Razvojni pogled](../gradivo/img/razvojnipogled.png)
@@ -105,7 +101,7 @@ U tem razredu shranimo podatke o uporabniki.
 
 **2.Sporočilo (Entity)**
 
--opis?
+Sporočilo shranjuje komunikacijo med uporabniki
 
 **Atributi:**
 
@@ -122,23 +118,23 @@ U tem razredu shranimo podatke o uporabniki.
 | :----------------: | :--------------------------: | :---------------: | :------------------------------------------------: |
 |   dodajSporocilo   |     sporocilo: Sporocilo     |    StatusCode     |        Dodajanje sporočilo v bazi sporočila        |
 |   vrniSporocilo    |       sporociloId: int       |     Sporocilo     |              Vrne podatke o sporočilu              |
-|  vrniVsaSporocila  |              -               |  List<Sporocilo>  |       Vrni seznam vseh sporočila uporabnika?       |
-| vrniVsePosiljatelj |     posliljateljId: int      |  List<Sporocilo>  |                         ?                          |
-|  vrniVsePrejemnik  |       prejemnikId: int       |  List<Sporocilo>  |                         ?                          |
+|  vrniVsaSporocila  |              -               |  List<Sporocilo>  |             Vrni seznam vseh sporočil              |
+| vrniVsePosiljatelj |     posliljateljId: int      |  List<Sporocilo>  |       Vrni seznam vseh sporočil pošiljatelja       |
+|  vrniVsePrejemnik  |       prejemnikId: int       |  List<Sporocilo>  |        Vrni seznam vseh sporočil prejemnika        |
 |   preveriPodatke   |      podatki: Sporocilo      |    StatusCode     | Preveri ustreznost podatke preden pošlje sporočilo |
 
 **3.Komentar (Entity)**
 
--opis?
+Komentar je razred v katerem shranjujemo komentarje ki jih uporabnik dodaja pod objavo
 
 **Atributi:**
 
-| **Ime atributa** | **Podatkovni tip** |             **Pomen(če ni očiten)**             | **Zaloga vrednosti (če ni očiten)** |
-| :--------------: | :----------------: | :---------------------------------------------: | :---------------------------------: |
-|    komentarId    |        int         |            Identifikator komentarja             |                  -                  |
-|   uporabnikId    |        int         |  Identifikator uporabnika ki je dodal komentar  |                  -                  |
-|    predlogId     |        int         | Identifikator predloga? na katero je komentiral |                  -                  |
-|     komentar     |       string       |               Vsebina komentarja                |                  -                  |
+| **Ime atributa** | **Podatkovni tip** |            **Pomen(če ni očiten)**            | **Zaloga vrednosti (če ni očiten)** |
+| :--------------: | :----------------: | :-------------------------------------------: | :---------------------------------: |
+|    komentarId    |        int         |           Identifikator komentarja            |                  -                  |
+|   uporabnikId    |        int         | Identifikator uporabnika ki je dodal komentar |                  -                  |
+|     objavaId     |        int         | Identifikator objave na katero je komentiral  |                  -                  |
+|     komentar     |       string       |              Vsebina komentarja               |                  -                  |
 
 **Nesamoumevne metode:**
 
@@ -153,7 +149,7 @@ U tem razredu shranimo podatke o uporabniki.
 
 **4.Novica (Entity)**
 
--opis?
+Novica je razred v katerem shranjujemo novice ki jih uporabnik dodaja
 
 **Atributi:**
 
@@ -165,7 +161,7 @@ U tem razredu shranimo podatke o uporabniki.
 |     vsebina      |       string       |                 Vsebina novice                  |                  -                  |
 |     obcinaId     |        int         | Identifikator obcine na katera se nanaša novico |                  -                  |
 |      datum       |        date        |               Datum objave novice               |                  -                  |
-|     lokacija     |       string       |          Podrobna lokacija za novici?           |                  -                  |
+|     lokacija     |       string       |           Podrobna lokacija za novici           |                  -                  |
 
 
 **Nesamoumevne metode:**
@@ -185,7 +181,7 @@ U tem razredu shranimo podatke o uporabniki.
 
 **5.Predlog (Entity)**
 
--opis?
+Predlog je razred v katerem shranjujemo predlog ki jih uporabnik dodaja
 
 **Atributi:**
 
@@ -197,7 +193,7 @@ U tem razredu shranimo podatke o uporabniki.
 |     vsebina      |       string       |                 Vsebina predloga                  |                  -                  |
 |     obcinaId     |        int         | Identifikator obcine na katera se nanaša predloga |                  -                  |
 |  steviloVseckov  |        int         |    Število uporabniki ki so všečkali predlogo     |                  -                  |
-| steviloNevseckov |        int         |   Število uporabniki ki so nevšečkali? predlogo   |                  -                  |
+| steviloNevseckov |        int         |   Število uporabniki ki so nevšečkali predlogo    |                  -                  |
 |      datum?      |        date        |               Datum objavo predloga               |                  -                  |
 |     lokacija     |       string       |           Podrobna lokacija za predloga           |                  -                  |
 
@@ -217,7 +213,7 @@ U tem razredu shranimo podatke o uporabniki.
 
 **6.Sprejeti Predlog (Entity)**
 
-Razred v katerem shranimo sprejeti predlogi od ?
+Razred v katerem shranimo sprejete predloge
 
 **Atributi:**
 
@@ -233,7 +229,7 @@ Razred v katerem shranimo sprejeti predlogi od ?
 
 **7.Uporabniki Kontroler (Control)**
 
--opis?
+Krmilnik za entitetni razred Uporabnik
 
 **Nesamoumevne metode:**
 
@@ -249,7 +245,7 @@ Razred v katerem shranimo sprejeti predlogi od ?
 
 **8.Komentar Kontroler (Control)**
 
--opis?
+Krmilnik za entitetni razred Komentar
 
 **Nesamoumevne metode:**
 
@@ -261,7 +257,7 @@ Razred v katerem shranimo sprejeti predlogi od ?
 
 **9.Novica Kontroler (Control)**
 
--opis?
+Krmilnik za entitetni razred Novica
 
 **Nesamoumevne metode:**
 
@@ -274,7 +270,8 @@ Razred v katerem shranimo sprejeti predlogi od ?
 | pridobiNovico  |        novicaId: int         |      Novica       |      Pridobi podrobne podatke o novici       |
 
 **10.Predlog Kontroler (Control)**
--opis?
+
+Krmilnik za entitetni razred Predlog
 
 **Nesamoumevne metode:**
 
@@ -289,23 +286,248 @@ Razred v katerem shranimo sprejeti predlogi od ?
 
 **11.Zemljevid Kontroler (Control)**
 
--opis?
+Krmilnik za entitetni razred Zemljevid
 
 **Nesamoumevne metode:**
 
 | **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |     **Pomen**     |
 | :------------: | :--------------------------: | :---------------: | :---------------: |
 | vrniZemljevid  |        objavaId: int         |      iframe       | Pridobi zemljevid |
-
 crud?
 
-**X. Brisanje novice (Boundary)**
+**12.Registracijski Obrazec (Boundary)**
+
+Pogled za registracijo
+
+**Atributi:**
+
+| **Ime atributa** | **Podatkovni tip** | **Pomen(če ni očiten)** | **Zaloga vrednosti (če ni očiten)** |
+| :--------------: | :----------------: | :---------------------: | :---------------------------------: |
+|       ime        |       string       |            -            |                  -                  |
+|     priimek      |       string       |            -            |                  -                  |
+|  uporabniskoIme  |       string       |            -            |                  -                  |
+|     obcinaId     |        int         |            -            |                  -                  |
+|      email       |       string       |            -            |                  -                  |
+|      geslo       |       string       |            -            |                  -                  |
+
+**Nesamoumevne metode:**
+
+| **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |            **Pomen**             |
+| :------------: | :--------------------------: | :---------------: | :------------------------------: |
+|  registracija  |              -               |       void        |     Registracija uporabnika      |
+|    preklic     |              -               |       void        | Odpovedanje procesa registracije |
+
+**13.Prijavni obrazec (Boundary)**
+
+Pogled za prijavo
+
+**Atributi:**
+
+| **Ime atributa** | **Podatkovni tip** | **Pomen(če ni očiten)** | **Zaloga vrednosti (če ni očiten)** |
+| :--------------: | :----------------: | :---------------------: | :---------------------------------: |
+|      email       |       string       |            -            |                  -                  |
+|      geslo       |       string       |            -            |                  -                  |
+
+**Nesamoumevne metode:**
+
+| **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |            **Pomen**             |
+| :------------: | :--------------------------: | :---------------: | :------------------------------: |
+|    prijava     |              -               |       void        |        Prijava uporabnika        |
+|    preklic     |              -               |       void        | Odpovedanje procesa registracije |
+
+**14.Odjava (Boundary)**
+
+Pogled za odjavo
+
+**Nesamoumevne metode:**
+
+| **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |            **Pomen**             |
+| :------------: | :--------------------------: | :---------------: | :------------------------------: |
+|     odjava     |              -               |       void        |        Odjava uporabnika         |
+|  potrdiOdjavo  |              -               |       void        |     Potrdi odjavo uporabnika     |
+|    preklic     |              -               |       void        | Odpovedanje procesa registracije |
+
+**15.Pregled profila (Boundary)**
+
+Pogled za pregledovanje svojega profila
+
+**Nesamoumevne metode:**
+
+|      **Ime metode**       | **Imena in tipi parametrov** |  **Tip rezultata**   |          **Pomen**          |
+| :-----------------------: | :--------------------------: | :------------------: | :-------------------------: |
+|       prikaziProfil       |              -               |      Uporabnik       |  Prikaz profila uporabnika  |
+|  preusmeritevUrediProfil  |              -               |         void         |  Preusmeritev uredi profil  |
+| preusmeritevIzbrisiProfil |              -               |         void         | Preusmeritev izbriši profil |
+|       prikaziObjave       |              -               | List<Novica/Predlog> |  Prikaz objave uporabnika   |
+|      prikaziPogovore      |              -               |   List<Sporocilo>    | Prikaz pogovorov uporabnika |
+
+**16.Pregled tujega profila (Boundary)**
+
+Pogled za pregledovanje tujega profila
+
+**Nesamoumevne metode:**
+
+|  **Ime metode**   | **Imena in tipi parametrov** |  **Tip rezultata**   |            **Pomen**             |
+| :---------------: | :--------------------------: | :------------------: | :------------------------------: |
+| prikaziTujProfil  |              -               |      Uporabnik       | Prikaz profila tujega uporabnika |
+| prikaziTujeObjave |              -               | List<Novica/Predlog> | Prikaz objave tujega uporabnika  |
+|  prikaziPogovore  |              -               |   List<Sporocilo>    |   Prikaz pogovore uporabnikov    |
+
+**17.Urejanje profila (Boundary)**
+
+Pogled za urejanje profila
+
+**Atributi:**
+
+| **Ime atributa** | **Podatkovni tip** |  **Pomen(če ni očiten)**  | **Zaloga vrednosti (če ni očiten)** |
+| :--------------: | :----------------: | :-----------------------: | :---------------------------------: |
+|       ime        |       string       |             -             |                  -                  |
+|     priimek      |       string       |             -             |                  -                  |
+|  uporabniskoIme  |       string       |             -             |                  -                  |
+|     obcinaId     |        int         |   Identifikator obcine    |                  -                  |
+|      email       |       string       |             -             |                  -                  |
+|      geslo       |       string       |             -             |                  -                  |
+|      slika       |       Image        | Profilna slika uporabnika |                  -                  |
+
+**Nesamoumevne metode:**
+
+| **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |            **Pomen**             |
+| :------------: | :--------------------------: | :---------------: | :------------------------------: |
+| posodobiProfil |              -               |       void        |    Posodobi profil uporabnika    |
+|    preklic     |              -               |       void        | Odpovedanje procesa registracije |
+
+**18.Brisanje profila (Boundary)**
+
+Pogled za brisanje profila
+
+**Nesamoumevne metode:**
+
+| **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |            **Pomen**             |
+| :------------: | :--------------------------: | :---------------: | :------------------------------: |
+|    izbrisi     |              -               |       void        |    Izbriši profil uporabnika     |
+|    preklic     |              -               |       void        | Odpovedanje procesa registracije |
+  
+**19.Pošiljanje sporočila (Boundary)**
+
+Pogled za pošiljanje sporočila
+
+**Atributi:**
+
+| **Ime atributa** | **Podatkovni tip** | **Pomen(če ni očiten)**  | **Zaloga vrednosti (če ni očiten)** |
+| :--------------: | :----------------: | :----------------------: | :---------------------------------: |
+|   prejemnikId    |        int         | Identifikator prejemnika |                  -                  |
+|     vsebina      |       string       |    Vsebina sporocila     |                  -                  |
+
+**Nesamoumevne metode:**
+
+| **Ime metode**  | **Imena in tipi parametrov** | **Tip rezultata** | **Pomen** |
+| :-------------: | :--------------------------: | :---------------: | :-------: |
+| posljiSporocilo |              -               |    StatusCode     |     -     |
+|     preklic     |              -               |       void        |     -     |
+
+**20.Dodajanje komentarja (Boundary)**
+
+Pogled za dodajanje komentarja
+
+**Atributi:**
+
+| **Ime atributa** | **Podatkovni tip** | **Pomen(če ni očiten)** | **Zaloga vrednosti (če ni očiten)** |
+| :--------------: | :----------------: | :---------------------: | :---------------------------------: |
+|     komentar     |       string       |   Vsebina komentarja    |                  -                  |
+
+
+**Nesamoumevne metode:**
+
+| **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |           **Pomen**           |
+| :------------: | :--------------------------: | :---------------: | :---------------------------: |
+| dodajKomentar  |              -               |       void        | Dodajanje komentarja predloga |
+
+**21.Ogled komentarja (Boundary)**
+
+Pogled za ogled komentarja
+
+**Nesamoumevne metode:**
+
+|        **Ime metode**         | **Imena in tipi parametrov** | **Tip rezultata** |                        **Pomen**                        |
+| :---------------------------: | :--------------------------: | :---------------: | :-----------------------------------------------------: |
+| preusmeritevIzbrisiKomentarja |              -               |       void        | Metoda za preusmeritev na streni za brisanje komentarja |
+|        prikaziKomentar        |              -               |     Komentar      |                    Prikazi komentar                     |
+
+**22.Brisanje komentarja (Boundary)**
+
+Pogled za brisanje komentarja
+
+**Nesamoumevne metode:**
+
+| **Ime metode**  | **Imena in tipi parametrov** | **Tip rezultata** |           **Pomen**           |
+| :-------------: | :--------------------------: | :---------------: | :---------------------------: |
+| izbrisiKomentar |              -               |       void        | Metoda za brisanje komentarja |
+
+**23.Objava novice (Boundary)**
+
+Pogled za objavo novice
+
+**Atributi:**
+
+| **Ime atributa** | **Podatkovni tip** | **Pomen(če ni očiten)** | **Zaloga vrednosti (če ni očiten)** |
+| :--------------: | :----------------: | :---------------------: | :---------------------------------: |
+|      naslov      |       string       |      Naslov novico      |                  -                  |
+|     vsebina      |       string       |     Vsebina novico      |                  -                  |
+|     obcinaId     |        int         |  Identifikator Občine   |                  -                  |
+|      datum       |        date        |      Datum objave       |                  -                  |
+|     lokacija     |       string       |   Lokacija za novico    |
+
+
+**Nesamoumevne metode:**
+
+| **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** | **Pomen** |
+| :------------: | :--------------------------: | :---------------: | :-------: |
+|  objaviNovico  |              -               |       void        |     -     |
+|    preklic     |              -               |       void        |     -     |
+
+**24.Ogled novice (Boundary)**
+
+Pogled za ogled novice
+
+**Nesamoumevne metode:**
+
+|      **Ime metode**       | **Imena in tipi parametrov** | **Tip rezultata** |               **Pomen**                |
+| :-----------------------: | :--------------------------: | :---------------: | :------------------------------------: |
+|       prikaziNovico       |              -               |       void        |        Prikaz podatki o novico         |
+|  preusmeritevUrediNovico  |              -               |       void        | Preusmeritev na strani urejanje novico |
+| preusmeritevIzbrisiNovico |              -               |       void        | Preusmeritev na strani brisanje novico |
+
+**25.Urejanje novice (Boundary)**
+
+Pogled za urejanje novice
+
+**Atributi:**
+
+| **Ime atributa** | **Podatkovni tip** | **Pomen(če ni očiten)** | **Zaloga vrednosti (če ni očiten)** |
+| :--------------: | :----------------: | :---------------------: | :---------------------------------: |
+|      naslov      |       string       |      Naslov novico      |                  -                  |
+|     vsebina      |       string       |     Vsebina novico      |                  -                  |
+|     obcinaId     |        int         |  Identifikator Občine   |                  -                  |
+|      datum       |        date        |      Datum objave       |                  -                  |
+|     lokacija     |       string       |   Lokacija za novico    |
+
+
+**Nesamoumevne metode:**
+
+| **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** | **Pomen** |
+| :------------: | :--------------------------: | :---------------: | :-------: |
+|  urediNovico   |              -               |       void        |     -     |
+|    preklic     |              -               |       void        |     -     |
+
+**26. Brisanje novice (Boundary)**
+
 **Nesamoumevne metode:**
 | **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |     **Pomen**     |
 | :------------: | :--------------------------: | :---------------: | :---------------: |
 | izbrisiNovico |        void         |      void       | Izbriši novico |
 
-**X. Objava predloga (Boundary)**
+**27. Objava predloga (Boundary)**
+
 **Atributi:**
 | **Ime atributa** | **Podatkovni tip** |      **Pomen(če ni očiten)**      | **Zaloga vrednosti (če ni očiten)** |
 | naslov           |  String            | Naslov predloga                         |           -                   |
@@ -313,13 +535,15 @@ crud?
 | obcinaId         |  Int               | Id občine na katero se navezuje predlog |           -                   |
 | datum            |  Date              | Datum objave                            |           -                   |
 | lokacija         |  String            | Lokacija na katero se navezuje predlog  |           -                   |
+
 **Nesamoumevne metode:**  
 | **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |     **Pomen**     |
 | :------------: | :--------------------------: | :---------------: | :---------------: |
 | objaviPredlog  |        void         |      void       | Objavi predlog |
 | preklic        |        void         |      void       | Prekliči objavo predloga | 
 
-**X. Ogled predloga (Boundary)**
+**28. Ogled predloga (Boundary)**
+
 **Nesamoumevne metode:**
 | **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |     **Pomen**     |
 | :------------: | :--------------------------: | :---------------: | :---------------: |
@@ -327,7 +551,8 @@ crud?
 | preusmeritevUrediPredlog | void | void | Uporabnika preusmeri na urejanje predloga |
 | preusmeritevIzbrisiPredlog | void | void | Uporabnika preusmeri na izbris predloga
 
-**X. Urejanje predloga (Boundsary)**
+**29. Urejanje predloga (Boundsary)**
+
 **Atributi:**
 | **Ime atributa** | **Podatkovni tip** |      **Pomen(če ni očiten)**      | **Zaloga vrednosti (če ni očiten)** |
 | naslov           |  String            | Naslov predloga                         |           -                   |
@@ -335,30 +560,35 @@ crud?
 | obcinaId         |  Int               | Id občine na katero se navezuje predlog |           -                   |
 | datum            |  Date              | Datum spremembe                         |           -                   |
 | lokacija         |  String            | Lokacija na katero se navezuje predlog  |           -                   |
+
 **Nesamoumevne metode:**
 | **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |     **Pomen**     |
 | :------------: | :--------------------------: | :---------------: | :---------------: |
 | urediPredlog  |        void         |      void       | Shrani novo urejen predlog |
 | preklic        |        void         |      void       | Prekliči urejanje predloga | 
 
-**X. Brisanje predloga (Boundary)**
+**30. Brisanje predloga (Boundary)**
+
 **Nesamoumevne metode:**
 | **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |     **Pomen**     |
 | :------------: | :--------------------------: | :---------------: | :---------------: |
 | izbrisiPredlog  |        void         |      void       | Izbriši predlog |
 | preklic        |        void         |      void       | Prekliči izbris predloga | 
 
-**X. Glasovanje med predlogi (Boundary)**
+**31. Glasovanje med predlogi (Boundary)**
+
 **Atributi:**
 | **Ime atributa** | **Podatkovni tip** |      **Pomen(če ni očiten)**      | **Zaloga vrednosti (če ni očiten)** |
 | glas       |  Bool            | Glas za predlog (všeček ali nevšeček)                         |           -                   |
+
 **Nesamoumevne metode:**
 | **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |     **Pomen**     |
 | :------------: | :--------------------------: | :---------------: | :---------------: |
 | vseckanje  |        void         |      void       | Všečka trenutni predlog |
 | nevseckanje        |        void         |      void       | Nevšečka trenutni predlog |
 
-**X. Izbor lokacije (Boundary)**
+**32. Izbor lokacije (Boundary)**
+
 **Atributi:**
 | **Ime atributa** | **Podatkovni tip** |      **Pomen(če ni očiten)**      | **Zaloga vrednosti (če ni očiten)** |
 | lokacije       |  String            | Lokacija določene objave (novice ali predloga)                         |           -                   |
@@ -368,21 +598,26 @@ crud?
 | izborLokacije |        void         |      string       | Izbere določeno lokacijo   |
 | preklic        |        void         |      void       | Prekliči izbor lokacije | 
 
-**X. Ogled lokacije (Boundary)**
+**33. Ogled lokacije (Boundary)**
+
 **Nesamoumevne metode:**
 | **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |     **Pomen**     |
 | :------------: | :--------------------------: | :---------------: | :---------------: |
 | prikazZemljevida  |        void         |      iframe       | Prikaže zemljevid povezan s trenutno objavo |
 
-**X. Dostop API (Boundary)**
+**34. Dostop API (Boundary)**
+
 **Atributi:**
 | **Ime atributa** | **Podatkovni tip** |      **Pomen(če ni očiten)**      | **Zaloga vrednosti (če ni očiten)** |
 | napaka       |  String            | Vrnjena vrednost v primeru napake pri dostopanju do APIja         |           -                   |
+
 **Nesamoumevne metode:**
 | **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |     **Pomen**     |
 | :------------: | :--------------------------: | :---------------: | :---------------: |
 | dostopDoLokacije  |      void         |      StatusCode       | Dostopi do lokacije na APIju |
 | izpisNapake  |  napaka : String | void  | Izpiše možno napako med dostopanjem do APIja |
+
+
 ## 3. Načrt obnašanja
 
 1. Registracija
