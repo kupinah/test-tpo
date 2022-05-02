@@ -1,0 +1,52 @@
+@startuml
+!theme blueprint
+
+hide circle
+hide members
+
+left to right direction
+skinparam linetype ortho
+
+package View <<subsystem>> {
+  class registracijskiObrazecView
+  class prijavniObrazecView
+  class odjavaView
+  class urejanjeProfilaView
+  class pregledProfilaView
+  class brisanjeProfilaView
+  class posiljanjeSporocilView
+  class pregledTujegaProfilaView
+  class dodajanjeKomentarjaView
+  class ogledKomentarjaView
+  class brisanjeKomentarjaView
+  class objavaNoviceView
+  class urejanjeNoviceView
+  class ogledNoviceView
+  class brisanjeNoviceView
+  class iskanjeView
+  class izborLokacijeView
+  class objavaPredlogaView
+  class urejanjePredlogaView
+  class ogledPredlogaView
+  class glasovanjeMedPredlogiView
+  class ogledLokacijeView
+  class dostopDoAPIView
+}
+
+package Controller <<subsystem>> {
+  class uporabnikiController
+  class komentarController
+  class novicaController
+  class predlogController
+  class zemljevidController
+}
+
+package Model <<subsystem>> {
+  class relacijskaPodatkovnaBaza
+  class potrjeniPredlogi
+}
+
+View --> Controller
+Model <-d- Controller
+View -> Model
+@enduml

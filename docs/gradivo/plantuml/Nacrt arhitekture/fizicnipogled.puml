@@ -1,5 +1,7 @@
 @startuml
 !theme blueprint
+
+skinparam linetype ortho
 database "Podatkovna baza" as PB <<device>>{
  artifact "Relacijska\npodatkovna\nbaza" <<artifact>>
 }
