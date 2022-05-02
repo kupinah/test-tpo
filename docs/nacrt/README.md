@@ -70,6 +70,235 @@
   - tip rezultata,
   - pomen (če ta ni dovolj očiten iz naziva metode in njenih parametrov).
 
+**1.Uporabnik (Entity)**
+
+U tem razredu shranimo podatke o uporabniki.
+
+**Atributi:**
+
+| **Ime atributa** | **Podatkovni tip** | **Pomen(če ni očiten)** | **Zaloga vrednosti (če ni očiten)** |
+| :-: | :-: | :-: | :-: |
+| uporabnikId | int | Identifikator uporabnika | - |
+| ime | string | Ime uporabnika | /^[a-zA-Z\s]\*$/ |
+|priimek|string|Priimek uporabnika|/^[a-zA-Z\s]\*$/|
+|uporabnisko ime|string|Uporabnisko ime|/^[a-zA-Z0-9]([._-](?![._-])|[a-zA-Z0-9]){3,18}[a-zA-Z0-9]$/|
+|obcinaId|int|Identifikator obcine v kateri zivi uporabnik|-|
+|email|string|Email uporabnika|/^\S+@\S+\.\S+$/|
+|geslo|string|Geslo uporabnika|/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/|
+|slika|Image|Slika uporabnika|-|
+|sporocila| List<Sporocilo> |Sporocila uporabnika|-|
+
+**Nesamoumevne metode:**
+
+|**Ime metode**|**Imena in tipi parametrov**|**Tip rezultata**|**Pomen**|
+| :-: | :-: | :-: | :-: |
+|dodajUporabnika|uporabnik: Uporabnik|StatusCode|Dodajanje uporabnika v bazi registriranih uporabnikov|
+|posodobiUporabnika|uporabnik: Uporabnik|Uporabnik|Posodabljanje uporabnika v bazi registriranih uporabnikov|
+|izbrisiUporabnika|uporabnikId: int|StatusCode|Brizanje uporabnika iz bazi registriranih uporabnikov|
+|posljiSporocilo|posljateljId: int, prejemnikId: int, vsebina: string|Sporocilo|Pošiljanje sporčila|
+|vrniUporabnika|uporabnikId: int|Uporabnik|Vrne podatke o uporabniku|
+|vrniVseUporabnike|-| List<Uporabnik>| Vrne seznam vseh uporabnikov|
+|preveriPodatke|podatki: Uporabnik| StatusCode| Preverja ustreznost podatkov preden jih shrani|
+|preveriPodatkeZaPrijavo|email: string, geslo: string| StatusCode| Preveri ustreznost podatkov za prijavo|
+|prijaviUporabnika|email: string, geslo: string| StatusCode| Doda uporabnik v seznamu prijavljenih|
+|odjaviUporabnika|uporabnikId: int| StatusCode| Odstrani uporabnik iz seznama prijavljenih|
+
+**2.Sporočilo (Entity)**
+
+-opis?
+
+**Atributi:**
+
+|**Ime atributa**|**Podatkovni tip**|**Pomen(če ni očiten)**|**Zaloga vrednosti (če ni očiten)**|
+| :-: | :-: | :-: | :-: |
+|sporociloId| int| Identifikator sporocila|-|
+|posiljateljId| int| Identifikator posljatelja|-|
+|prejemnikId| int| Identifikator prejemnika| - |
+|vsebina| String| Vsebina sporocila|-|
+
+**Nesamoumevne metode:**
+
+|**Ime metode**|**Imena in tipi parametrov**|**Tip rezultata**|**Pomen**|
+| :-: | :-: | :-: | :-: |
+|dodajSporocilo|sporocilo: Sporocilo| StatusCode| Dodajanje sporočilo v bazi sporočila| 
+|vrniSporocilo|sporociloId: int| Sporocilo| Vrne podatke o sporočilu |
+|vrniVsaSporocila|-| List<Sporocilo>| Vrni seznam vseh sporočila uporabnika? |
+|vrniVsePosiljatelj|posliljateljId: int| List<Sporocilo>| ?|
+|vrniVsePrejemnik|prejemnikId: int| List<Sporocilo>| ?|
+|preveriPodatke|podatki: Sporocilo| StatusCode| Preveri ustreznost podatke preden pošlje sporočilo|
+
+**3.Komentar (Entity)**
+
+-opis?
+
+**Atributi:**
+
+|**Ime atributa**|**Podatkovni tip**|**Pomen(če ni očiten)**|**Zaloga vrednosti (če ni očiten)**|
+| :-: | :-: | :-: | :-: |
+|komentarId| int| Identifikator komentarja| -|
+|uporabnikId| int| Identifikator uporabnika ki je dodal komentar| -|
+|predlogId| int| Identifikator predloga? na katero je komentiral|-|
+|komentar| string| Vsebina komentarja| -|
+
+**Nesamoumevne metode:**
+
+|**Ime metode**|**Imena in tipi parametrov**|**Tip rezultata**|**Pomen**|
+| :-: | :-: | :-: | :-: |
+|dodajKomentar|podatki: Komentar| StatusCode| Dodajanje komentar|
+|izbrisiKomentar|komentarId: int| StatusCode| Brisanje komentar|
+|vrniKomentar|komentarId: int| Komentar| Vrne podatki o komentarja |
+|vrniVseKomentarje|-| List<Komentar>| Vrni seznam vseh komentarjev predloga|
+|vrniKomentarjeUporabnika|uporabnikId: int| List<Komentar>| Vrni seznam vseh komentarjev od dolocenega uporabnika|
+|preveriPodatke|podatki: Komentar| StatusCode| Preveri ustreznost podatki|
+
+**4.Novica (Entity)**
+
+-opis?
+
+**Atributi:**
+
+|**Ime atributa**|**Podatkovni tip**|**Pomen(če ni očiten)**|**Zaloga vrednosti (če ni očiten)**|
+| :-: | :-: | :-: | :-: |
+|novicaId| int| Identifikator novice| -|
+|naslov| string| Naslov novice| - |
+|avtorId| int| Identifikator avtorja novice| -|
+|vsebina| string| Vsebina novice| -|
+|obcinaId| int| Identifikator obcine na katera se nanaša novico| -|
+|datum| date| Datum objave novice| -|
+|lokacija| string| Podrobna lokacija za novici? | - |
+
+
+**Nesamoumevne metode:**
+
+|**Ime metode**|**Imena in tipi parametrov**|**Tip rezultata**|**Pomen**|
+| :-: | :-: | :-: | :-: |
+|dodajNovico|podatki: Novica| StatusCode| Dodaja novico v bazi|
+|posodobiNovico|podatki: Novica| StatusCode| Posodabljanje novico v bazi|
+|izbrisiNovico|novicaId: int| StatusCode| Brisanje novico iz bazi|
+|vrniNovico|novicaId: int| Novica| Vrne podatki o novico|
+|vrniVseNovice|-| List<Novica>| Vrne seznam vseh novice|
+|vrniVseAvtorja|avtorId: int| List<Novica>| Vrne seznam novice od določeni avtor|
+|vrniVseObcina|obcinaId: int| List<Novica>| Vrne seznam novic v določeni občini|
+|preveriPodatke|podatki: Novica| StatusCode| Preveri ustreznosti podatki preden doda novico v bazi|
+|izvediIskanje|iskalnaBeseda: string| List<Novica>| Izvede selekcijo novice glede iskalno besedo|
+
+
+**5.Predlog (Entity)**
+
+-opis?
+
+**Atributi:**
+
+|**Ime atributa**|**Podatkovni tip**|**Pomen(če ni očiten)**|**Zaloga vrednosti (če ni očiten)**|
+| :-: | :-: | :-: | :-: |
+|predlogId| int| Identifikator predloga| -|
+|naslov| string| Naslov predloga| -|
+|avtorId| int| Identifikator avtorja predloga| -|
+|vsebina| string| Vsebina predloga| -|
+|obcinaId| int| Identifikator obcine na katera se nanaša predloga| -|
+|steviloVseckov| int| Število uporabniki ki so všečkali predlogo| - |
+|steviloNevseckov| int|Število uporabniki ki so nevšečkali? predlogo| -|
+|datum?| date| Datum objavo predloga| - |
+|lokacija| string| Podrobna lokacija za predloga| - |
+
+**Nesamoumevne metode:**
+
+|**Ime metode**|**Imena in tipi parametrov**|**Tip rezultata**|**Pomen**|
+| :-: | :-: | :-: | :-: |
+|dodajPredlog|podatki: Predlog| StatusCode| Dodajanje predloga v bazi|
+|posodobiPredlog|podatki: Predlog| StatusCode| Posodabljanje predloga v bazi|
+|izbrisiPredlog|predlogId: int| StatusCode| Brisanje predloga|
+|vrniPredlog|predlogId: int| Predlog| Vrne podatke o predlogu|
+|vrniVsePredloge|-| List<Predlog>| Vrne seznam vseh predlogov|
+|vrniVseAvtorja|avtorId: int| List<Predlog>| Vrne seznam predlogov od določenega avtorja|
+|vrniVseObcina|obcinaId: int| List<Predlog>| Vrne seznam predlogov v določeni občini|
+|preveriPodatke|podatki: Predlog| StatusCode| Vreveri ustreznost podatke preden shrani predloga|
+|izvediIskanje|iskalnaBeseda: string| List<Predlog>| Vrne selektiranih predlogov glede iskalno besedo|
+
+**6.Sprejeti Predlog (Entity)**
+
+Razred v katerem shranimo sprejeti predlogi od ?
+
+**Atributi:**
+
+|**Ime atributa**|**Podatkovni tip**|**Pomen(če ni očiten)**|**Zaloga vrednosti (če ni očiten)**|
+| :-: | :-: | :-: | :-: |
+|predlogId| int| Identifikator sprejetega predloga| -|
+
+**Nesamoumevne metode:**
+
+|**Ime metode**|**Imena in tipi parametrov**|**Tip rezultata**|**Pomen**|
+| :-: | :-: | :-: | :-: |
+|sprejmiPredlog|predlogId: int| void| Doda predloga v bazi sprejeti predlogi|
+
+**7.Uporabniki Kontroler (Control)**
+
+-opis?
+
+**Nesamoumevne metode:**
+
+|**Ime metode**|**Imena in tipi parametrov**|**Tip rezultata**|**Pomen**|
+| :-: | :-: | :-: | :-: |
+|registracija|podatki: Uporabnik| StatusCode| Registrira novega uporabnika |
+|prijava|email: string, geslo: string| StatusCode| Izvede prijavo uporabnika|
+|odjava|uporabnikId: int| StatusCode| Izvede odjavo uporabnika|
+|urejanjeProfila|podatki: Uporabnik| Uporabnik| Posodobi profila uporabnika|
+|brisanjeProfila|uporabnikId: int| StatusCode| Izbriše profila uporabnika|
+|posljiSporocilo|posljatelj: string, prejemnik: string, vsebina: string| StatusCode| Skrbi za pošiljanje sporočila|
+|pridobiProfil|uporabnikId: int| Uporabnik| Pridobi podrobne podatke o uporabniku|
+
+**8.Komentar Kontroler (Control)**
+
+-opis?
+
+**Nesamoumevne metode:**
+
+|**Ime metode**|**Imena in tipi parametrov**|**Tip rezultata**|**Pomen**|
+| :-: | :-: | :-: | :-: |
+|dodajKomentar|podatki: Komentar| StatusCode| Doda komentar|
+|izbrisiKomentar|komentarId: int| StatusCode| Briše komentar|
+|pridobiKomentar|komentarId: int| Komentar| Dobi podrobne podatke o komentarju|
+
+**9.Novica Kontroler (Control)**
+
+-opis?
+
+**Nesamoumevne metode:**
+
+|**Ime metode**|**Imena in tipi parametrov**|**Tip rezultata**|**Pomen**|
+| :-: | :-: | :-: | :-: |
+|dodajNovico|podatki: Novica| StatusCode| Doda novico|
+|posodobiNovico|podatki: Novica| StatusCode| Posodobi novico|
+|izbrisiNovico|novicaId: int| StatusCode| Briše novico|
+|izvediIskanje|iskalnaBeseda: string| List<Novica>| Izvede selekcijo novice glede iskalno besedo|
+|pridobiNovico|novicaId: int| Novica| Pridobi podrobne podatke o novici|
+
+**10.Predlog Kontroler (Control)**
+-opis?
+
+**Nesamoumevne metode:**
+
+|**Ime metode**|**Imena in tipi parametrov**|**Tip rezultata**|**Pomen**|
+| :-: | :-: | :-: | :-: |
+|dodajPredlog|podatki: Predlog| StatusCode| Doda predloga|
+|urediPredlog|podatki: Predlog| StatusCode| Posodobi predloga|
+|izbrisiPredlog|predlogId: int| StatusCode| Briše predloga|
+|izvediIskanje|iskalnaBeseda: string| List<Predlog>| Izvede selekcijo predloge glede iskalno besedo|
+|glasovanje|predlogId: int, glas: bool|StatusCode| Poveča/Zmanjša število všečkov predloga|
+|pridobiPredlog|predlogId: int| Predlog| Pridobi podrobne podatke o predloga|
+
+**11.Zemljevid Kontroler (Control)**
+
+-opis?
+
+**Nesamoumevne metode:**
+
+|**Ime metode**|**Imena in tipi parametrov**|**Tip rezultata**|**Pomen**|
+| :-: | :-: | :-: | :-: |
+|vrniZemljevid|objavaId: int| iframe| Pridobi zemljevid|
+
+crud?
+
 ## 3. Načrt obnašanja
 
 1. Registracija
