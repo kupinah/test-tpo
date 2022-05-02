@@ -549,121 +549,139 @@ Pogled za urejanje novice
 
 **26. Brisanje novice (Boundary)**
 
+Pogled za brisanje novice
+
 **Nesamoumevne metode:**
 
-| **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |     **Pomen**     |
-| :------------: | :--------------------------: | :---------------: | :---------------: |
-| izbrisiNovico |        void         |      void       | Izbriši novico |
+| **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |   **Pomen**    |
+| :------------: | :--------------------------: | :---------------: | :------------: |
+| izbrisiNovico  |             void             |       void        | Izbriši novico |
 
 **27. Objava predloga (Boundary)**
 
+Pogled za objavo predloga
+
 **Atributi:**
 
-| **Ime atributa** | **Podatkovni tip** |      **Pomen(če ni očiten)**      | **Zaloga vrednosti (če ni očiten)** |
-| :------------: | :--------------------------: | :---------------: | :---------------: |
-| naslov           |  String            | Naslov predloga                         |           -                   |
-| vsebina          |  String            | Vsebina predloga                        |           -                   |
-| obcinaId         |  Int               | Id občine na katero se navezuje predlog |           -                   |
-| datum            |  Date              | Datum objave                            |           -                   |
-| lokacija         |  String            | Lokacija na katero se navezuje predlog  |           -                   |
+| **Ime atributa** | **Podatkovni tip** |         **Pomen(če ni očiten)**         | **Zaloga vrednosti (če ni očiten)** |
+| :--------------: | :----------------: | :-------------------------------------: | :---------------------------------: |
+|      naslov      |       String       |             Naslov predloga             |                  -                  |
+|     vsebina      |       String       |            Vsebina predloga             |                  -                  |
+|     obcinaId     |        Int         | Id občine na katero se navezuje predlog |                  -                  |
+|      datum       |        Date        |              Datum objave               |                  -                  |
+|     lokacija     |       String       | Lokacija na katero se navezuje predlog  |                  -                  |
 
 **Nesamoumevne metode:**  
 
-| **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |     **Pomen**     |
-| :------------: | :--------------------------: | :---------------: | :---------------: |
-| objaviPredlog  |        void         |      void       | Objavi predlog |
-| preklic        |        void         |      void       | Prekliči objavo predloga | 
+| **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |        **Pomen**         |
+| :------------: | :--------------------------: | :---------------: | :----------------------: |
+| objaviPredlog  |             void             |       void        |      Objavi predlog      |
+|    preklic     |             void             |       void        | Prekliči objavo predloga |
 
 **28. Ogled predloga (Boundary)**
 
+Pogled za odgled predloga
+
 **Nesamoumevne metode:**
 
-| **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |     **Pomen**     |
-| :------------: | :--------------------------: | :---------------: | :---------------: |
-| prikaziPredlog   |        void         |      Predlog       | Prikaže predlog |
-| preusmeritevUrediPredlog | void | void | Uporabnika preusmeri na urejanje predloga |
-| preusmeritevIzbrisiPredlog | void | void | Uporabnika preusmeri na izbris predloga
+|       **Ime metode**       | **Imena in tipi parametrov** | **Tip rezultata** |                 **Pomen**                 |
+| :------------------------: | :--------------------------: | :---------------: | :---------------------------------------: |
+|       prikaziPredlog       |             void             |      Predlog      |              Prikaže predlog              |
+|  preusmeritevUrediPredlog  |             void             |       void        | Uporabnika preusmeri na urejanje predloga |
+| preusmeritevIzbrisiPredlog |             void             |       void        |  Uporabnika preusmeri na izbris predloga  |
 
 **29. Urejanje predloga (Boundsary)**
 
+Pogled za urejanje predloga
+
 **Atributi:**
 
-| **Ime atributa** | **Podatkovni tip** |      **Pomen(če ni očiten)**      | **Zaloga vrednosti (če ni očiten)** |
-| :------------: | :--------------------------: | :---------------: | :---------------: |
-| naslov           |  String            | Naslov predloga                         |           -                   |
-| vsebina          |  String            | Vsebina predloga                        |           -                   |
-| obcinaId         |  Int               | Id občine na katero se navezuje predlog |           -                   |
-| datum            |  Date              | Datum spremembe                         |           -                   |
-| lokacija         |  String            | Lokacija na katero se navezuje predlog  |           -                   |
+| **Ime atributa** | **Podatkovni tip** |         **Pomen(če ni očiten)**         | **Zaloga vrednosti (če ni očiten)** |
+| :--------------: | :----------------: | :-------------------------------------: | :---------------------------------: |
+|      naslov      |       String       |             Naslov predloga             |                  -                  |
+|     vsebina      |       String       |            Vsebina predloga             |                  -                  |
+|     obcinaId     |        Int         | Id občine na katero se navezuje predlog |                  -                  |
+|      datum       |        Date        |             Datum spremembe             |                  -                  |
+|     lokacija     |       String       | Lokacija na katero se navezuje predlog  |                  -                  |
 
 **Nesamoumevne metode:**
 
-| **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |     **Pomen**     |
-| :------------: | :--------------------------: | :---------------: | :---------------: |
-| urediPredlog  |        void         |      void       | Shrani novo urejen predlog |
-| preklic        |        void         |      void       | Prekliči urejanje predloga | 
+| **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |         **Pomen**          |
+| :------------: | :--------------------------: | :---------------: | :------------------------: |
+|  urediPredlog  |             void             |       void        | Shrani novo urejen predlog |
+|    preklic     |             void             |       void        | Prekliči urejanje predloga |
 
 **30. Brisanje predloga (Boundary)**
 
+Pogled za brisanje predloga
+
 **Nesamoumevne metode:**
 
-| **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |     **Pomen**     |
-| :------------: | :--------------------------: | :---------------: | :---------------: |
-| izbrisiPredlog  |        void         |      void       | Izbriši predlog |
-| preklic        |        void         |      void       | Prekliči izbris predloga | 
+| **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |        **Pomen**         |
+| :------------: | :--------------------------: | :---------------: | :----------------------: |
+| izbrisiPredlog |             void             |       void        |     Izbriši predlog      |
+|    preklic     |             void             |       void        | Prekliči izbris predloga |
 
 **31. Glasovanje med predlogi (Boundary)**
 
+Pogled za glasovanje med predlogi
+
 **Atributi:**
 
-| **Ime atributa** | **Podatkovni tip** |      **Pomen(če ni očiten)**      | **Zaloga vrednosti (če ni očiten)** |
-| :------------: | :--------------------------: | :---------------: | :---------------: |
-| glas       |  Bool            | Glas za predlog (všeček ali nevšeček)                         |           -                   |
+| **Ime atributa** | **Podatkovni tip** |        **Pomen(če ni očiten)**        | **Zaloga vrednosti (če ni očiten)** |
+| :--------------: | :----------------: | :-----------------------------------: | :---------------------------------: |
+|       glas       |        Bool        | Glas za predlog (všeček ali nevšeček) |                  -                  |
 
 **Nesamoumevne metode:**
 
-| **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |     **Pomen**     |
-| :------------: | :--------------------------: | :---------------: | :---------------: |
-| vseckanje  |        void         |      void       | Všečka trenutni predlog |
-| nevseckanje        |        void         |      void       | Nevšečka trenutni predlog |
+| **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |         **Pomen**         |
+| :------------: | :--------------------------: | :---------------: | :-----------------------: |
+|   vseckanje    |             void             |       void        |  Všečka trenutni predlog  |
+|  nevseckanje   |             void             |       void        | Nevšečka trenutni predlog |
 
 **32. Izbor lokacije (Boundary)**
 
+Pogled za izbiro lokacije
+
 **Atributi:**
 
-| **Ime atributa** | **Podatkovni tip** |      **Pomen(če ni očiten)**      | **Zaloga vrednosti (če ni očiten)** |
-| :------------: | :--------------------------: | :---------------: | :---------------: |
-| lokacije       |  String            | Lokacija določene objave (novice ali predloga)                         |           -                   |
+| **Ime atributa** | **Podatkovni tip** |            **Pomen(če ni očiten)**             | **Zaloga vrednosti (če ni očiten)** |
+| :--------------: | :----------------: | :--------------------------------------------: | :---------------------------------: |
+|     lokacije     |       String       | Lokacija določene objave (novice ali predloga) |                  -                  |
 
 **Nesamoumevne metode:**
-| **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |     **Pomen**     |
-| :------------: | :--------------------------: | :---------------: | :---------------: |
-| prikazZemljevida  | objavaID : int            |  iframe           | Prikaže zemljevid okolice |
-| izborLokacije |        void         |      string       | Izbere določeno lokacijo   |
-| preklic        |        void         |      void       | Prekliči izbor lokacije | 
+|  **Ime metode**  | **Imena in tipi parametrov** | **Tip rezultata** |         **Pomen**         |
+| :--------------: | :--------------------------: | :---------------: | :-----------------------: |
+| prikazZemljevida |        objavaID : int        |      iframe       | Prikaže zemljevid okolice |
+|  izborLokacije   |             void             |      string       | Izbere določeno lokacijo  |
+|     preklic      |             void             |       void        |  Prekliči izbor lokacije  |
 
 **33. Ogled lokacije (Boundary)**
 
+Pogled za ogled lokacije
+
 **Nesamoumevne metode:**
 
-| **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |     **Pomen**     |
-| :------------: | :--------------------------: | :---------------: | :---------------: |
-| prikazZemljevida  |        void         |      iframe       | Prikaže zemljevid povezan s trenutno objavo |
+|  **Ime metode**  | **Imena in tipi parametrov** | **Tip rezultata** |                  **Pomen**                  |
+| :--------------: | :--------------------------: | :---------------: | :-----------------------------------------: |
+| prikazZemljevida |             void             |      iframe       | Prikaže zemljevid povezan s trenutno objavo |
 
 **34. Dostop API (Boundary)**
 
+Pogled za dostop do API-a
+
 **Atributi:**
 
-| **Ime atributa** | **Podatkovni tip** |      **Pomen(če ni očiten)**      | **Zaloga vrednosti (če ni očiten)** |
-| :------------: | :--------------------------: | :---------------: | :---------------: |
-| napaka       |  String            | Vrnjena vrednost v primeru napake pri dostopanju do APIja         |           -                   |
+| **Ime atributa** | **Podatkovni tip** |                  **Pomen(če ni očiten)**                  | **Zaloga vrednosti (če ni očiten)** |
+| :--------------: | :----------------: | :-------------------------------------------------------: | :---------------------------------: |
+|      napaka      |       String       | Vrnjena vrednost v primeru napake pri dostopanju do APIja |                  -                  |
 
 **Nesamoumevne metode:**
 
-| **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |     **Pomen**     |
-| :------------: | :--------------------------: | :---------------: | :---------------: |
-| dostopDoLokacije  |      void         |      StatusCode       | Dostopi do lokacije na APIju |
-| izpisNapake  |  napaka : String | void  | Izpiše možno napako med dostopanjem do APIja |
+|  **Ime metode**  | **Imena in tipi parametrov** | **Tip rezultata** |                  **Pomen**                   |
+| :--------------: | :--------------------------: | :---------------: | :------------------------------------------: |
+| dostopDoLokacije |             void             |    StatusCode     |         Dostopi do lokacije na APIju         |
+|   izpisNapake    |       napaka : String        |       void        | Izpiše možno napako med dostopanjem do APIja |
 
 
 ## 3. Načrt obnašanja
