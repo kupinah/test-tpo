@@ -299,6 +299,90 @@ Razred v katerem shranimo sprejeti predlogi od ?
 
 crud?
 
+**X. Brisanje novice (Boundary)**
+**Nesamoumevne metode:**
+| **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |     **Pomen**     |
+| :------------: | :--------------------------: | :---------------: | :---------------: |
+| izbrisiNovico |        void         |      void       | Izbriši novico |
+
+**X. Objava predloga (Boundary)**
+**Atributi:**
+| **Ime atributa** | **Podatkovni tip** |      **Pomen(če ni očiten)**      | **Zaloga vrednosti (če ni očiten)** |
+| naslov           |  String            | Naslov predloga                         |           -                   |
+| vsebina          |  String            | Vsebina predloga                        |           -                   |
+| obcinaId         |  Int               | Id občine na katero se navezuje predlog |           -                   |
+| datum            |  Date              | Datum objave                            |           -                   |
+| lokacija         |  String            | Lokacija na katero se navezuje predlog  |           -                   |
+**Nesamoumevne metode:**  
+| **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |     **Pomen**     |
+| :------------: | :--------------------------: | :---------------: | :---------------: |
+| objaviPredlog  |        void         |      void       | Objavi predlog |
+| preklic        |        void         |      void       | Prekliči objavo predloga | 
+
+**X. Ogled predloga (Boundary)**
+**Nesamoumevne metode:**
+| **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |     **Pomen**     |
+| :------------: | :--------------------------: | :---------------: | :---------------: |
+| prikaziPredlog   |        void         |      Predlog       | Prikaže predlog |
+| preusmeritevUrediPredlog | void | void | Uporabnika preusmeri na urejanje predloga |
+| preusmeritevIzbrisiPredlog | void | void | Uporabnika preusmeri na izbris predloga
+
+**X. Urejanje predloga (Boundsary)**
+**Atributi:**
+| **Ime atributa** | **Podatkovni tip** |      **Pomen(če ni očiten)**      | **Zaloga vrednosti (če ni očiten)** |
+| naslov           |  String            | Naslov predloga                         |           -                   |
+| vsebina          |  String            | Vsebina predloga                        |           -                   |
+| obcinaId         |  Int               | Id občine na katero se navezuje predlog |           -                   |
+| datum            |  Date              | Datum spremembe                         |           -                   |
+| lokacija         |  String            | Lokacija na katero se navezuje predlog  |           -                   |
+**Nesamoumevne metode:**
+| **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |     **Pomen**     |
+| :------------: | :--------------------------: | :---------------: | :---------------: |
+| urediPredlog  |        void         |      void       | Shrani novo urejen predlog |
+| preklic        |        void         |      void       | Prekliči urejanje predloga | 
+
+**X. Brisanje predloga (Boundary)**
+**Nesamoumevne metode:**
+| **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |     **Pomen**     |
+| :------------: | :--------------------------: | :---------------: | :---------------: |
+| izbrisiPredlog  |        void         |      void       | Izbriši predlog |
+| preklic        |        void         |      void       | Prekliči izbris predloga | 
+
+**X. Glasovanje med predlogi (Boundary)**
+**Atributi:**
+| **Ime atributa** | **Podatkovni tip** |      **Pomen(če ni očiten)**      | **Zaloga vrednosti (če ni očiten)** |
+| glas       |  Bool            | Glas za predlog (všeček ali nevšeček)                         |           -                   |
+**Nesamoumevne metode:**
+| **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |     **Pomen**     |
+| :------------: | :--------------------------: | :---------------: | :---------------: |
+| vseckanje  |        void         |      void       | Všečka trenutni predlog |
+| nevseckanje        |        void         |      void       | Nevšečka trenutni predlog |
+
+**X. Izbor lokacije (Boundary)**
+**Atributi:**
+| **Ime atributa** | **Podatkovni tip** |      **Pomen(če ni očiten)**      | **Zaloga vrednosti (če ni očiten)** |
+| lokacije       |  String            | Lokacija določene objave (novice ali predloga)                         |           -                   |
+| **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |     **Pomen**     |
+| :------------: | :--------------------------: | :---------------: | :---------------: |
+| prikazZemljevida  | objavaID : int            |  iframe           | Prikaže zemljevid okolice |
+| izborLokacije |        void         |      string       | Izbere določeno lokacijo   |
+| preklic        |        void         |      void       | Prekliči izbor lokacije | 
+
+**X. Ogled lokacije (Boundary)**
+**Nesamoumevne metode:**
+| **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |     **Pomen**     |
+| :------------: | :--------------------------: | :---------------: | :---------------: |
+| prikazZemljevida  |        void         |      iframe       | Prikaže zemljevid povezan s trenutno objavo |
+
+**X. Dostop API (Boundary)**
+**Atributi:**
+| **Ime atributa** | **Podatkovni tip** |      **Pomen(če ni očiten)**      | **Zaloga vrednosti (če ni očiten)** |
+| napaka       |  String            | Vrnjena vrednost v primeru napake pri dostopanju do APIja         |           -                   |
+**Nesamoumevne metode:**
+| **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |     **Pomen**     |
+| :------------: | :--------------------------: | :---------------: | :---------------: |
+| dostopDoLokacije  |      void         |      StatusCode       | Dostopi do lokacije na APIju |
+| izpisNapake  |  napaka : String | void  | Izpiše možno napako med dostopanjem do APIja |
 ## 3. Načrt obnašanja
 
 1. Registracija
