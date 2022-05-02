@@ -8,13 +8,9 @@
 
 ## Povzetek
 
-:dart: **TO-DO**
-
 V dokumentu je opisan podroben načrt našega sistema. Na začetku je predstavljen načrt arhitekture, ki je prikazan s pomočjo treh pogledov: logičnega, razvojnega ter fizičnega, za katere je uporabljeno ogrodje PlantUML. Po arhitekturnem načrtu, sledi predstavitev uporabljenih načrtovalskih vzorcev. Zatem sledi načrt strukture, ki je predstavljen s pomočjo razrednega diagrama, kjer so prisotni vsi razredi ter povezave med njimi. Načrtu strukture sledi podrobna predstavitev razredov ter njihovih metod in atributov. Na koncu dokumenta je še predstavljen načrt obnašanja, kjer so, v obliki diagramov zaporedja, predstavljene vse funkcionalnosti sistema oz. njihovi osnovni in alternativni tokovi. 
 
 ## 1. Načrt arhitekture
-
-:dart: **TO-DO**
 
 ### Razvojni pogled
 ![Razvojni pogled](../gradivo/img/razvojnipogled.png)
@@ -105,7 +101,7 @@ U tem razredu shranimo podatke o uporabniki.
 
 **2.Sporočilo (Entity)**
 
--opis?
+Sporočilo shranjuje komunikacijo med uporabniki
 
 **Atributi:**
 
@@ -122,23 +118,23 @@ U tem razredu shranimo podatke o uporabniki.
 | :----------------: | :--------------------------: | :---------------: | :------------------------------------------------: |
 |   dodajSporocilo   |     sporocilo: Sporocilo     |    StatusCode     |        Dodajanje sporočilo v bazi sporočila        |
 |   vrniSporocilo    |       sporociloId: int       |     Sporocilo     |              Vrne podatke o sporočilu              |
-|  vrniVsaSporocila  |              -               |  List<Sporocilo>  |       Vrni seznam vseh sporočila uporabnika?       |
-| vrniVsePosiljatelj |     posliljateljId: int      |  List<Sporocilo>  |                         ?                          |
-|  vrniVsePrejemnik  |       prejemnikId: int       |  List<Sporocilo>  |                         ?                          |
+|  vrniVsaSporocila  |              -               |  List<Sporocilo>  |             Vrni seznam vseh sporočil              |
+| vrniVsePosiljatelj |     posliljateljId: int      |  List<Sporocilo>  |       Vrni seznam vseh sporočil pošiljatelja       |
+|  vrniVsePrejemnik  |       prejemnikId: int       |  List<Sporocilo>  |        Vrni seznam vseh sporočil prejemnika        |
 |   preveriPodatke   |      podatki: Sporocilo      |    StatusCode     | Preveri ustreznost podatke preden pošlje sporočilo |
 
 **3.Komentar (Entity)**
 
--opis?
+Komentar je razred v katerem shranjujemo komentarje ki jih uporabnik dodaja pod objavo
 
 **Atributi:**
 
-| **Ime atributa** | **Podatkovni tip** |             **Pomen(če ni očiten)**             | **Zaloga vrednosti (če ni očiten)** |
-| :--------------: | :----------------: | :---------------------------------------------: | :---------------------------------: |
-|    komentarId    |        int         |            Identifikator komentarja             |                  -                  |
-|   uporabnikId    |        int         |  Identifikator uporabnika ki je dodal komentar  |                  -                  |
-|    predlogId     |        int         | Identifikator predloga? na katero je komentiral |                  -                  |
-|     komentar     |       string       |               Vsebina komentarja                |                  -                  |
+| **Ime atributa** | **Podatkovni tip** |            **Pomen(če ni očiten)**            | **Zaloga vrednosti (če ni očiten)** |
+| :--------------: | :----------------: | :-------------------------------------------: | :---------------------------------: |
+|    komentarId    |        int         |           Identifikator komentarja            |                  -                  |
+|   uporabnikId    |        int         | Identifikator uporabnika ki je dodal komentar |                  -                  |
+|     objavaId     |        int         | Identifikator objave na katero je komentiral  |                  -                  |
+|     komentar     |       string       |              Vsebina komentarja               |                  -                  |
 
 **Nesamoumevne metode:**
 
@@ -153,7 +149,7 @@ U tem razredu shranimo podatke o uporabniki.
 
 **4.Novica (Entity)**
 
--opis?
+Novica je razred v katerem shranjujemo novice ki jih uporabnik dodaja
 
 **Atributi:**
 
@@ -165,7 +161,7 @@ U tem razredu shranimo podatke o uporabniki.
 |     vsebina      |       string       |                 Vsebina novice                  |                  -                  |
 |     obcinaId     |        int         | Identifikator obcine na katera se nanaša novico |                  -                  |
 |      datum       |        date        |               Datum objave novice               |                  -                  |
-|     lokacija     |       string       |          Podrobna lokacija za novici?           |                  -                  |
+|     lokacija     |       string       |           Podrobna lokacija za novici           |                  -                  |
 
 
 **Nesamoumevne metode:**
@@ -185,7 +181,7 @@ U tem razredu shranimo podatke o uporabniki.
 
 **5.Predlog (Entity)**
 
--opis?
+Predlog je razred v katerem shranjujemo predlog ki jih uporabnik dodaja
 
 **Atributi:**
 
@@ -197,7 +193,7 @@ U tem razredu shranimo podatke o uporabniki.
 |     vsebina      |       string       |                 Vsebina predloga                  |                  -                  |
 |     obcinaId     |        int         | Identifikator obcine na katera se nanaša predloga |                  -                  |
 |  steviloVseckov  |        int         |    Število uporabniki ki so všečkali predlogo     |                  -                  |
-| steviloNevseckov |        int         |   Število uporabniki ki so nevšečkali? predlogo   |                  -                  |
+| steviloNevseckov |        int         |   Število uporabniki ki so nevšečkali predlogo    |                  -                  |
 |      datum?      |        date        |               Datum objavo predloga               |                  -                  |
 |     lokacija     |       string       |           Podrobna lokacija za predloga           |                  -                  |
 
@@ -217,7 +213,7 @@ U tem razredu shranimo podatke o uporabniki.
 
 **6.Sprejeti Predlog (Entity)**
 
-Razred v katerem shranimo sprejeti predlogi od ?
+Razred v katerem shranimo sprejete predloge
 
 **Atributi:**
 
@@ -233,7 +229,7 @@ Razred v katerem shranimo sprejeti predlogi od ?
 
 **7.Uporabniki Kontroler (Control)**
 
--opis?
+Krmilnik za entitetni razred Uporabnik
 
 **Nesamoumevne metode:**
 
@@ -249,7 +245,7 @@ Razred v katerem shranimo sprejeti predlogi od ?
 
 **8.Komentar Kontroler (Control)**
 
--opis?
+Krmilnik za entitetni razred Komentar
 
 **Nesamoumevne metode:**
 
@@ -261,7 +257,7 @@ Razred v katerem shranimo sprejeti predlogi od ?
 
 **9.Novica Kontroler (Control)**
 
--opis?
+Krmilnik za entitetni razred Novica
 
 **Nesamoumevne metode:**
 
@@ -274,7 +270,8 @@ Razred v katerem shranimo sprejeti predlogi od ?
 | pridobiNovico  |        novicaId: int         |      Novica       |      Pridobi podrobne podatke o novici       |
 
 **10.Predlog Kontroler (Control)**
--opis?
+
+Krmilnik za entitetni razred Predlog
 
 **Nesamoumevne metode:**
 
@@ -289,16 +286,126 @@ Razred v katerem shranimo sprejeti predlogi od ?
 
 **11.Zemljevid Kontroler (Control)**
 
--opis?
+Krmilnik za entitetni razred Zemljevid
 
 **Nesamoumevne metode:**
 
 | **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |     **Pomen**     |
 | :------------: | :--------------------------: | :---------------: | :---------------: |
 | vrniZemljevid  |        objavaId: int         |      iframe       | Pridobi zemljevid |
-
 crud?
 
+**12.Registracijski Obrazec (Boundary)**
+
+Predlog je razred v katerem shranjujemo predlog ki jih uporabnik dodaja
+
+**Atributi:**
+
+| **Ime atributa** | **Podatkovni tip** | **Pomen(če ni očiten)** | **Zaloga vrednosti (če ni očiten)** |
+| :--------------: | :----------------: | :---------------------: | :---------------------------------: |
+|       ime        |       string       |            -            |                  -                  |
+|     priimek      |       string       |            -            |                  -                  |
+|  uporabniskoIme  |       string       |            -            |                  -                  |
+|     obcinaId     |        int         |            -            |                  -                  |
+|      email       |       string       |            -            |                  -                  |
+|      geslo       |       string       |            -            |                  -                  |
+
+**Nesamoumevne metode:**
+
+| **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |            **Pomen**             |
+| :------------: | :--------------------------: | :---------------: | :------------------------------: |
+|  registracija  |              -               |       void        |     Registracija uporabnika      |
+|    preklic     |              -               |       void        | Odpovedanje procesa registracije |
+
+**13.Prijavni obrazec (Boundary)**
+
+Predlog je razred v katerem shranjujemo predlog ki jih uporabnik dodaja
+
+**Atributi:**
+
+| **Ime atributa** | **Podatkovni tip** | **Pomen(če ni očiten)** | **Zaloga vrednosti (če ni očiten)** |
+| :--------------: | :----------------: | :---------------------: | :---------------------------------: |
+|      email       |       string       |            -            |                  -                  |
+|      geslo       |       string       |            -            |                  -                  |
+
+**Nesamoumevne metode:**
+
+| **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |            **Pomen**             |
+| :------------: | :--------------------------: | :---------------: | :------------------------------: |
+|    prijava     |              -               |       void        |        Prijava uporabnika        |
+|    preklic     |              -               |       void        | Odpovedanje procesa registracije |
+
+**14.Odjava (Boundary)**
+
+Predlog je razred v katerem shranjujemo predlog ki jih uporabnik dodaja
+
+**Nesamoumevne metode:**
+
+| **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |            **Pomen**             |
+| :------------: | :--------------------------: | :---------------: | :------------------------------: |
+|     odjava     |              -               |       void        |        Odjava uporabnika         |
+|  potrdiOdjavo  |              -               |       void        |     Potrdi odjavo uporabnika     |
+|    preklic     |              -               |       void        | Odpovedanje procesa registracije |
+
+**15.Pregled profila (Boundary)**
+
+Predlog je razred v katerem shranjujemo predlog ki jih uporabnik dodaja
+
+**Nesamoumevne metode:**
+
+|      **Ime metode**       | **Imena in tipi parametrov** |  **Tip rezultata**   |          **Pomen**          |
+| :-----------------------: | :--------------------------: | :------------------: | :-------------------------: |
+|       prikaziProfil       |              -               |      Uporabnik       |  Prikaz profila uporabnika  |
+|  preusmeritevUrediProfil  |              -               |         void         |  Preusmeritev uredi profil  |
+| preusmeritevIzbrisiProfil |              -               |         void         | Preusmeritev izbriši profil |
+|       prikaziObjave       |              -               | List<Novica/Predlog> |  Prikaz objave uporabnika   |
+|      prikaziPogovore      |              -               |   List<Sporocilo>    | Prikaz pogovorov uporabnika |
+
+**16.Pregled tujega profila (Boundary)**
+
+Predlog je razred v katerem shranjujemo predlog ki jih uporabnik dodaja
+
+**Nesamoumevne metode:**
+
+|  **Ime metode**   | **Imena in tipi parametrov** |  **Tip rezultata**   |            **Pomen**             |
+| :---------------: | :--------------------------: | :------------------: | :------------------------------: |
+| prikaziTujProfil  |              -               |      Uporabnik       | Prikaz profila tujega uporabnika |
+| prikaziTujeObjave |              -               | List<Novica/Predlog> | Prikaz objave tujega uporabnika  |
+|  prikaziPogovore  |              -               |   List<Sporocilo>    |   Prikaz pogovore uporabnikov    |
+
+**17.Urejanje profila (Boundary)**
+
+Predlog je razred v katerem shranjujemo predlog ki jih uporabnik dodaja
+
+**Atributi:**
+
+| **Ime atributa** | **Podatkovni tip** |  **Pomen(če ni očiten)**  | **Zaloga vrednosti (če ni očiten)** |
+| :--------------: | :----------------: | :-----------------------: | :---------------------------------: |
+|       ime        |       string       |             -             |                  -                  |
+|     priimek      |       string       |             -             |                  -                  |
+|  uporabniskoIme  |       string       |             -             |                  -                  |
+|     obcinaId     |        int         |   Identifikator obcine    |                  -                  |
+|      email       |       string       |             -             |                  -                  |
+|      geslo       |       string       |             -             |                  -                  |
+|      slika       |       Image        | Profilna slika uporabnika |                  -                  |
+
+**Nesamoumevne metode:**
+
+| **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |            **Pomen**             |
+| :------------: | :--------------------------: | :---------------: | :------------------------------: |
+| posodobiProfil |              -               |       void        |    Posodobi profil uporabnika    |
+|    preklic     |              -               |       void        | Odpovedanje procesa registracije |
+
+**18.Brisanje profila (Boundary)**
+
+Predlog je razred v katerem shranjujemo predlog ki jih uporabnik dodaja
+
+**Nesamoumevne metode:**
+
+| **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |            **Pomen**             |
+| :------------: | :--------------------------: | :---------------: | :------------------------------: |
+|    izbrisi     |              -               |       void        |    Izbriši profil uporabnika     |
+|    preklic     |              -               |       void        | Odpovedanje procesa registracije |
 ## 3. Načrt obnašanja
 
 1. Registracija
