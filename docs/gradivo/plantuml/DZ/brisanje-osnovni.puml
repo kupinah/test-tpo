@@ -17,13 +17,15 @@ participant "Uporabniki kontroler" as R2 <<control>>
 participant "Uporabnik" as R4 <<entity>>
 
 activate U1
-U1 -> R5: p1 := klikNaGumbZaBrisanje()
+U1 -> R5: p1 := izbrisi()
 activate R5
-R5 -> R2: p2 := brisiUporabnika(idUporabnik)
+R5 -> R2: p2 := brisanjeProfila(uporabnikId)
 activate R2
-R2 -> R4: p5 := brisiUporabnika(idUporabnik)
+R2 -> R4: p5 := izbrisiUporabnik(uporabnikId)
 R4 --> R2: // StatusCode
 R2 --> R5: // StatusCode
 deactivate R2
 R5 --> U1: // Prikaži obvestilo o uspešno brisanje profila
 @enduml
+
+https://teaching.lavbic.net/plantuml/png/bP5DJi9G4CVtFSK4Dxem1c8JGvH4Y2OcBeZA0QRj04FBcpfznO_RU15ttCjfAzX6NBZeMtH-_u_9B3aXc8luI5w3e4ZPvQYuXWZZTA5IkYIMJ1IyeYjiHCwtg8JcM6R-YLxzTSOBjxOnnFQGjYYClUXOD26Tr6PHPkw_W7rY0xqisLCRKfMNm_g2dajoCTtpt3v7xQoZy7PySJCvG4zHFSUSe_F_5nmi6zIBG6-glC9DjY87PIwAaUEq1zUFCEl3vMKDZKP1aF_uGM-cb9Z71dALEMVO0opW8JG-gc9GtqpILUoi6L9nNYKZRLG3KyNDhpz53Nbkf9sBVULUrUSDUhAUWLKz7Lc18UHz65u1lqVA1H-V_50FOM05AsfWrA2YAWRTYgRD4iVxzU-Ijd0GMCTAU6x2i6M_hzTLMi_JxvopCtZqwCjY8WdLDjyrkuE4EcbXZStwDMRdIN7xoI3HXWhFcO10MUIq_N2oNs5tY2y0

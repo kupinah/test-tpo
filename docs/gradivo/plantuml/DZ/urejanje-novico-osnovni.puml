@@ -13,18 +13,21 @@ skinparam sequenceParticipantBackgroundColor white
 actor "Prijavljeni uporabnik" AS U1 <<actor>>
 
 participant "Urejanje novice" as R5 <<boundary>>
-participant "Novice kontroler" as R2 <<control>>
+participant "KontrolerNovic" as R2 <<control>>
 participant "Novica" as R4 <<entity>>
 
 activate U1
 U1 -> R5: p1 := urediNovico()
 activate R5
-R5 -> R2: p2 := urediNovico(novica)
+R5 -> R2: p2 := posodobiNovico(podatki)
 activate R2
 R2 -> R4: p5 := preveriPodatke(novica)
 R4 --> R2: // StatusCode
-R2 -> R4: p5 := shraniPodatke(novica)
+R2 -> R4: p5 := posodobiNovico(podatki)
+R4 --> R2: // StatusCode
 R2 --> R5: // StatusCode
 deactivate R2
 R5 --> U1: // Prikaži obvestilo o uspešno urejanje novico
 @enduml
+
+https://teaching.lavbic.net/plantuml/png/bP7DJkD03CVlynHMkS01eLP4MY6s4bIx5n2gW3w0at71JHW7PnBOnzaNsHllXJFb8rqA4eVa4F_-7uvlsHCiHM8kZyur9OSQ5UyWnwAyKMc3BwGIXQWO6XjHY0FAqnBRAbxJOpof-2RSsHWAUv4EA2oYwAce9vqbixmozm_0M-8QUhZbI4D8LHwswnkwRoaKTCvBUm8DitQotwS_Vissq7FKo0NN6EBt1LlBkhG8ZERAA-og5GM6jXR5F70vWfChM8pX-3XHqwbpzRiXZ1PAAmmhWY0T5pG2RE0oCpplOr3_c693S2OXgbIa5xrWpK-CBzRV_ySJXMliq32x4iVUj6_D7KQoTiuAxayjzmZgCHpzX5R9SvBAxjuxUPavwzQJ4oCdFLbB8rxoLxWMZx7aeMRYh5-lEJHDbZHA7IdF4qkxQNFSSzPl_yNxu02k8iQscOcdZ_fFChyqUDblS-1fesUMiCKuONRE4f_-CKZUKHEv4X1ecvgU_WRf_z3WRl8C
