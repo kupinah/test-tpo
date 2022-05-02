@@ -1,0 +1,25 @@
+@startuml
+!theme blueprint
+database "Podatkovna baza" as PB <<device>>{
+ artifact "Relacijska\npodatkovna\nbaza" <<artifact>>
+}
+
+node "Spletni strežnik" as SS <<device>>{
+ artifact Aplikacija <<artifact>>
+}
+
+node Odjemalec <<device>>{
+ node Brskalnik <<device>>{
+  artifact "index.hbs" <<artifact>>
+ }
+}
+
+database "Druga podatkovna baza" as DPB <<device>>{
+ artifact "Potrjeni predlogi" <<artifact>>
+}
+
+Odjemalec -> PB
+PB -> SS
+SS -> DPB
+
+@enduml

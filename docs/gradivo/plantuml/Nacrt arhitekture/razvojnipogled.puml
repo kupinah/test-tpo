@@ -1,0 +1,63 @@
+@startuml
+!theme blueprint
+
+() Uporabniki <<interface>>
+() Novice <<interface>>
+() Predlogi <<interface>>
+
+component "Spletna stran"  as SS <<subsystem>> {
+   component "Avtentikacija in verifikacija" <<component>> as AV
+   component "Upravljanje novic" <<component>> as UN
+   component "Upravljanje predlogov" <<component>> as UP
+}
+
+
+() "Avtentikacija in verifikacija" <<interface>> as AVI
+() "Upravljanje novic" <<interface>> as UNI
+() "Upravljanje predlogov" <<interface>> as UPI
+() "Glasovanje med predlogi" <<interface>> as GI
+() "Zunanji API vmesnik" <<interface>> as APII
+() "SQL vmesnik" <<interface>> as SQL
+
+component Strežnik <<subsystem>> {
+   component "Strežnik uporabnikov" <<component>> as SU
+   component "Strežnik novic" <<component>> as SN
+   component "Strežnik predlogov" <<component>> as SP
+   component "Zunanji API" <<component>> as API
+}
+
+component "Podatkovni strežnik" as PS <<subsystem>> {
+   component "Relacijska podatkovna baza" as DPB <<component>>
+   component "Podatkovna baza" as PB2 <<component>>
+}
+
+AV -[hidden]-> UN
+UN -[hidden]-> UP
+SU -[hidden]-> SN
+SN -[hidden]-> SP
+SP -[hidden]-> API
+
+Uporabniki -> AV
+UN <-left- Novice
+UP <-left- Predlogi
+
+AV -right-> AVI
+UN -right-> UNI
+
+AVI -right-> SU
+UNI -right-> SN
+UPI -right-> SP
+GI --> SP
+API <-left- APII
+UP --> UPI
+
+SU --> SQL 
+SN --> SQL
+SP --> SQL
+API --> SQL
+DPB -[hidden]-> PB2
+SP -> PB2
+SQL --> DPB
+Strežnik -[hidden]> PS
+
+@enduml
