@@ -606,6 +606,8 @@ Pogled za urejanje novice
 | **Ime atributa** | **Podatkovni tip** |      **Pomen(če ni očiten)**      | **Zaloga vrednosti (če ni očiten)** |
 | :------------: | :--------------------------: | :---------------: | :---------------: |
 | lokacije       |  String            | Lokacija določene objave (novice ali predloga)                         |           -                   |
+
+**Nesamoumevne metode:**
 | **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |     **Pomen**     |
 | :------------: | :--------------------------: | :---------------: | :---------------: |
 | prikazZemljevida  | objavaID : int            |  iframe           | Prikaže zemljevid okolice |
