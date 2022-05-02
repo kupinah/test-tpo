@@ -12,18 +12,20 @@ skinparam sequenceParticipantBackgroundColor white
 
 actor "Prijavljeni uporabnik" AS U1 <<actor>>
 
-participant "Urejanje novice" as R5 <<boundary>>
-participant "Novice kontroler" as R2 <<control>>
+participant "Brisanje Novice" as R5 <<boundary>>
+participant "KontrolerNovic" as R2 <<control>>
 participant "Novica" as R4 <<entity>>
 
 activate U1
-U1 -> R5: p1 := klikNaGumbZaBrisanje()
+U1 -> R5: p1 := izbrisiNovico()
 activate R5
-R5 -> R2: p2 := brisiNovico(idNovica)
+R5 -> R2: p2 := izbrisiNovico(novicaId)
 activate R2
-R2 -> R4: p5 := brisiNovico(idNovica)
+R2 -> R4: p5 := izbrisiNovico(novicaId)
 R4 --> R2: // StatusCode
 R2 --> R5: // StatusCode
 deactivate R2
 R5 --> U1: // Prikaži obvestilo o uspešno brisanje
 @enduml
+
+https://teaching.lavbic.net/plantuml/png/bP7DJi904CVlVOe9NlH038GcnYW944sCnXYL1vYs0moKdJhTuiVR-2BUV2-d2z4YnCJ3xc7dz__OtHbd11CHdyXB59KBTWKgBY71T35LgLoMIYuANj6LDYBd6rH64wno_qWlVf3pr2rj3Abjf0qAKoyw5Cr8Hy4ioSrz1_XEN4FFC_RKX5JbUR--fAUAN4etFB7bg9br45yEJov6U-WxLCyf5-Zy_mLxoqRX8j2wKvxZAf-JOwWAKKmSBremU81n1yxE0jNlHr7nOmYjeNA9RavmAojEgGLOmdriU5B7eBwQOajmBSwhvAH1iEQxngVhyzzue72DzGopNs9VczQjUOMUh5ra1Tjzops5eWEdvy1lYVNY89R3en_sFewiNSrsZUtkiYxaNMLDJJUoXhMcPvhuBurLR6_CZu_XmQElof5a50ms3RS76Mtbn04RTm9c7xB0pmy6ILPKUiu51AgoeCzt9v1iNluB
