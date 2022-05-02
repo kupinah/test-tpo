@@ -321,7 +321,9 @@ Krmilnik za entitetni razred Zemljevid
 | **Ime metode** | **Imena in tipi parametrov** | **Tip rezultata** |     **Pomen**     |
 | :------------: | :--------------------------: | :---------------: | :---------------: |
 | vrniZemljevid  |        objavaId: int         |      iframe       | Pridobi zemljevid |
-crud?
+| urediLokacijo | objavaId: int, lokacija : string  | StatusCode | Uredi lokacijo objave |
+| izbrisiLokacijo  |  objavaId : int  | StatusCode  | Izbrise lokacijo objave |
+| izborLokacije | objavaId: int, lokacija : string  | StatusCode  | Izbere lokacijo povezano z objavo |
 
 **12.Registracijski Obrazec (Boundary)**
 
@@ -666,7 +668,35 @@ Pogled za ogled lokacije
 | :--------------: | :--------------------------: | :---------------: | :-----------------------------------------: |
 | prikazZemljevida |             void             |      iframe       | Prikaže zemljevid povezan s trenutno objavo |
 
-**34. Dostop API (Boundary)**
+**34. Brisanje lokacije (boundary)**
+
+Izbriše lokacijo iz objave
+
+**Nesamoumevne metode:**
+
+|  **Ime metode**  | **Imena in tipi parametrov** | **Tip rezultata** |                  **Pomen**                  |
+| :--------------: | :--------------------------: | :---------------: | :-----------------------------------------: |
+| izbrisiLokacijo |             void             |      void       | Izbriše shranjeno lokacijo povezano s trenutno objavo |
+
+
+**35. Urejanje lokacije (boundary)**
+
+Uredi oziroma spremeni lokacijo trenutne objave
+
+**Atributi:**
+
+| **Ime atributa** | **Podatkovni tip** |            **Pomen(če ni očiten)**             | **Zaloga vrednosti (če ni očiten)** |
+| :--------------: | :----------------: | :--------------------------------------------: | :---------------------------------: |
+|     lokacija     |       String       | Lokacija določene objave (novice ali predloga) |                  -                  |
+
+**Nesamoumevne metode:**
+|  **Ime metode**  | **Imena in tipi parametrov** | **Tip rezultata** |         **Pomen**         |
+| :--------------: | :--------------------------: | :---------------: | :-----------------------: |
+| urediLokacijo |        void       |      void       | Uredi lokacijo trenutne objave |
+|     preklic      |             void             |       void        |  Prekliči urejanje lokacije  |
+
+
+**36. Dostop API (Boundary)**
 
 Pogled za dostop do API-a
 
@@ -682,6 +712,8 @@ Pogled za dostop do API-a
 | :--------------: | :--------------------------: | :---------------: | :------------------------------------------: |
 | dostopDoLokacije |             void             |    StatusCode     |         Dostopi do lokacije na APIju         |
 |   izpisNapake    |       napaka : String        |       void        | Izpiše možno napako med dostopanjem do APIja |
+
+
 
 
 ## 3. Načrt obnašanja
