@@ -13,8 +13,8 @@ CREATE TABLE Uporabnik(
 
 CREATE TABLE Sporocilo(
 	sporociloId int,
-	posiljatelj int,
-	prejemnik int,
+	posiljateljId int,
+	prejemnikId int,
 	vsebina varchar[],
 	primary key (sporociloId)
 );
