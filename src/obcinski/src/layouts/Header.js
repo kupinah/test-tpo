@@ -85,7 +85,11 @@ const Header = () => {
           </DropdownToggle>
           <DropdownMenu>
             <DropdownItem header>Info</DropdownItem>
-            <DropdownItem>My Account</DropdownItem>
+            <DropdownItem>
+            <Link to="/myprofile" className="nav-link">
+              MyProfile
+            </Link>
+            </DropdownItem>
             <DropdownItem>Edit Profile</DropdownItem>
             <DropdownItem divider />
             <DropdownItem>Inbox</DropdownItem>
