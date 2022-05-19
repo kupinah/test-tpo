@@ -126,6 +126,7 @@ return (
             </FormGroup>
             <FormGroup>
             <Label for="obcinaId">Selektiraj obcina:</Label>
+            
                 <Input id="obcinaId" name="select" type="select">
                   <option>Dol pri Ljubljani</option>
                   <option>Šentilj</option>
