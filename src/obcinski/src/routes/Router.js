@@ -6,7 +6,6 @@ const FullLayout = lazy(() => import("../layouts/FullLayout.js"));
 
 /***** Pages ****/
 
-const Starter = lazy(() => import("../views/Starter.js"));
 const About = lazy(() => import("../views/About.js"));
 const Cards = lazy(() => import("../views/ui/Cards"));
 const Forms = lazy(() => import("../views/ui/Forms"));
@@ -18,8 +17,7 @@ const ThemeRoutes = [
     path: "/",
     element: <FullLayout />,
     children: [
-      { path: "/", element: <Navigate to="/starter" /> },
-      { path: "/starter", exact: true, element: <Starter /> },
+      { path: "/", element: <Navigate to="/cards" /> },
       { path: "/about", exact: true, element: <About /> },
       { path: "/cards", exact: true, element: <Cards /> },
       { path: "/registracija", exact: true, element: <Forms /> },
