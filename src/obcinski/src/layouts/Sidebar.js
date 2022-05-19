@@ -15,8 +15,8 @@ const navigation = [
     icon: "bi bi-card-text",
   },
   {
-    title: "Forms",
-    href: "/forms",
+    title: "Registracija",
+    href: "/registracija",
     icon: "bi bi-textarea-resize",
   },
   {

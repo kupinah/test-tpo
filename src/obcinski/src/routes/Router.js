@@ -22,7 +22,7 @@ const ThemeRoutes = [
       { path: "/starter", exact: true, element: <Starter /> },
       { path: "/about", exact: true, element: <About /> },
       { path: "/cards", exact: true, element: <Cards /> },
-      { path: "/forms", exact: true, element: <Forms /> },
+      { path: "/registracija", exact: true, element: <Forms /> },
     ],
   },
 ];
