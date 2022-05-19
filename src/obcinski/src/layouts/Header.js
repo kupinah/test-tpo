@@ -90,7 +90,9 @@ const Header = () => {
               MyProfile
             </Link>
             </DropdownItem>
-            <DropdownItem>Edit Profile</DropdownItem>
+            <DropdownItem><Link to="/editmyprofile" className="nav-link">
+              Edit Profile
+            </Link></DropdownItem>
             <DropdownItem divider />
             <DropdownItem>Inbox</DropdownItem>
             <DropdownItem>Logout</DropdownItem>
