@@ -15,6 +15,7 @@ import {
   } from "reactstrap";
 
 import slika from "../../assets/images/users/user1.jpg";
+import { Link } from "react-router-dom";
 
 
 const MyProfileData = [
@@ -49,11 +50,15 @@ export default class MyProfile extends Component {
                                     <div><b>Moja obcina:</b> {blg.obcina}</div>
                                 </div>
                                 <div class="position-absolute bottom-0 end-0">
-                                    <Button className="btn" color="primary">
+                                    <Button className="btn" color="secondary">
+                                    <Link to="/editmyprofile" className="nav-link">
                                     Edit Profile
+                                    </Link>
                                     </Button>
                                     <Button className="btn" color="danger">
+                                    <Link to="/editmyprofile" className="nav-link">
                                     Delete Profile
+                                    </Link>
                                     </Button>
                                 </div>
                             </Col>

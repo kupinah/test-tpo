@@ -6,16 +6,11 @@ import probg from "../assets/images/bg/download.jpg";
 const navigation = [
   {
     title: "Homepage",
-    href: "/starter",
-    icon: "bi bi-speedometer2",
-  },
-  {
-    title: "Forum",
     href: "/cards",
     icon: "bi bi-card-text",
   },
   {
-    title: "Registracija",
+    title: "Registration",
     href: "/registracija",
     icon: "bi bi-textarea-resize",
   },
