@@ -64,13 +64,8 @@ const Header = () => {
       <Collapse navbar isOpen={isOpen}>
         <Nav className="me-auto" navbar>
           <NavItem>
-            <Link to="/starter" className="nav-link">
-              Starter
-            </Link>
-          </NavItem>
-          <NavItem>
-            <Link to="/about" className="nav-link">
-              About
+            <Link to="/cards" className="nav-link">
+              Občinski obveščevalnik
             </Link>
           </NavItem>
         </Nav>
@@ -94,7 +89,6 @@ const Header = () => {
               Edit Profile
             </Link></DropdownItem>
             <DropdownItem divider />
-            <DropdownItem>Inbox</DropdownItem>
             <DropdownItem>Logout</DropdownItem>
           </DropdownMenu>
         </Dropdown>
